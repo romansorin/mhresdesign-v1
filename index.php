@@ -42,6 +42,7 @@ html {
 	text-align: center;
 	text-transform: uppercase;
 	font-family: "Open Sans", sans-serif;
+	letter-spacing: 1px;
 }
 </style>
 <?php
@@ -58,77 +59,80 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 <section class = "news">
 	<div class = "container-fluid">
 		<div class = "newsHeader">
-			<div class = "col-sm-12">
-				<button type="button" class="btn btn-default btn-md">News</button>
-			</div>
+			<div class="row">
+				<div class = "col-sm-12">
+					<button type="button" class="btn btn-default btn-md">News</button>
+				</div>
+			</div>	
 		</div>
 	</div>
 	<div class= "container-fluid">
-		<div class = "row-top-index">
-			<div class = "col-sm-4">
-				<h3 class="headers">Athletics</h3>
-				<?php
-				$sql = "SELECT id, title, content FROM mainpage WHERE id = '4'";
-				$result = $conn->query($sql);
+		<div class="row">
+			<div class = "row-top-index">
+				<div class = "col-sm-4">
+					<h3 class="headers">Athletics</h3>
+					<?php
+					$sql = "SELECT content FROM mainpage WHERE title = 'athletics'";
+					$result = $conn->query($sql);
 
-				if ($result->num_rows > 0) {
-					while($row = $result->fetch_assoc()) {
-						echo "id: " . $row["id"]. " - title: " . $row["title"]. " " . $row["content"]. "<br>";
+					if ($result->num_rows > 0) {
+						while($row = $result->fetch_assoc()) {
+							echo " - content: " . $row["content"]. "<br>";
+						}
+					} else {
+						echo "0 results";
 					}
-				} else {
-					echo "0 results";
-				}
-				?>
+					?>
+				</div>
+				<div class = "col-sm-4">
+					<h3 class="headers" style="padding-right: 43px;">Guidance</h3>
+					<?php
+					$sql = "SELECT content FROM mainpage WHERE title = 'guidance'";
+					$result = $conn->query($sql);
+
+					if ($result->num_rows > 0) {
+						while($row = $result->fetch_assoc()) {
+							echo " - content: " . $row["content"]. "<br>";
+						}
+					} else {
+						echo "0 results";
+					}
+					?>
+				</div>
+				<div class = "col-sm-4">
+					<h3 class="headers">Clubs</h3>
+					<?php
+					$sql = "SELECT content FROM mainpage WHERE title = 'clubs'";
+					$result = $conn->query($sql);
+
+					if ($result->num_rows > 0) {
+						while($row = $result->fetch_assoc()) {
+							echo " - content: " . $row["content"]. "<br>";
+						}
+					} else {
+						echo "0 results";
+					}
+					?>
+				</div>
 			</div>
-			<div class = "col-sm-4">
-				<h3 class="headers">Guidance</h3>
-				<?php
-				$sql = "SELECT id, title, content FROM mainpage WHERE id = '3'";
-				$result = $conn->query($sql);
+			<div class = "row-bottom-index">
+				<div class = "col-sm-12">
+					<h3 class="headers" style="padding-right: 43px;">Announcements</h3>
+					<?php
+					$sql = "SELECT content FROM mainpage WHERE title = 'announcements'";
+					$result = $conn->query($sql);
 
-				if ($result->num_rows > 0) {
-					while($row = $result->fetch_assoc()) {
-						echo "id: " . $row["id"]. " - title: " . $row["title"]. " " . $row["content"]. "<br>";
+					if ($result->num_rows > 0) {
+						while($row = $result->fetch_assoc()) {
+							echo " - content: " . $row["content"]. "<br>";
+						}
+					} else {
+						echo "0 results";
 					}
-				} else {
-					echo "0 results";
-				}
-				?>
-			</div>
-			<div class = "col-sm-4">
-				<h3 class="headers">Clubs</h3>
-				<?php
-				$sql = "SELECT id, title, content FROM mainpage WHERE id = '2'";
-				$result = $conn->query($sql);
-
-				if ($result->num_rows > 0) {
-					while($row = $result->fetch_assoc()) {
-						echo "id: " . $row["id"]. " - title: " . $row["title"]. " " . $row["content"]. "<br>";
-					}
-				} else {
-					echo "0 results";
-				}
-				?>
+					$conn->close();
+					?>
+				</div>
 			</div>
 		</div>
-		<div class = "row-bottom-index">
-			<div class = "col-sm-12">
-				<h3 class="headers">Announcements</h3>
-				<?php
-				$sql = "SELECT id, title, content FROM mainpage WHERE id = '1'";
-				$result = $conn->query($sql);
-
-				if ($result->num_rows > 0) {
-					while($row = $result->fetch_assoc()) {
-						echo "id: " . $row["id"]. " - title: " . $row["title"]. " " . $row["content"]. "<br>";
-					}
-				} else {
-					echo "0 results";
-				}
-				$conn->close();
-				?>
-			</div>
-		</div>
-	</div>
-</section>
-<?php include 'inc/footer.php'; ?> 
+	</section>
+	<?php include 'inc/footer.php'; ?> 
