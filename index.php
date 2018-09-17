@@ -85,7 +85,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 					?>
 				</div>
 				<div class = "col-sm-4">
-					<h3 class="headers" style="padding-right: 43px;">Guidance</h3>
+					<h3 class="headers" style="padding-right: 40px;">Guidance</h3>
 					<?php
 					$sql = "SELECT content FROM mainpage WHERE title = 'guidance'";
 					$result = $conn->query($sql);
@@ -117,7 +117,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 			</div>
 			<div class = "row-bottom-index">
 				<div class = "col-sm-12">
-					<h3 class="headers" style="padding-right: 43px;">Announcements</h3>
+					<h3 class="headers" style="padding-right: 40px;">Announcements</h3>
 					<?php
 					$sql = "SELECT content FROM mainpage WHERE title = 'announcements'";
 					$result = $conn->query($sql);
