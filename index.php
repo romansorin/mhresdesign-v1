@@ -24,25 +24,17 @@
 	html {
 		height: 100%;	
 	}
-	.mainPhotos {
-	}
 </style>
 <?php
 $servername = "localhost";
 $username = "iread";
 $password = "ylnodaer";
 $dbname = "sorin";
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-echo "Connected successfully";
+$conn = new mysqli($servername, $username, $password, $dbname);
 ?>
 <div class = "mainPhotos">
-	<img src="#" alt="photos here">
+	<img class="img-responsive" src="" alt="photos here">
 </div>
 <section class = "news">
 	<div class = "container-fluid">
@@ -123,13 +115,6 @@ echo "Connected successfully";
 				}
 					$conn->close();
 				?>
-				<h1> CONTENT TO SIMULATE EXPANSION </h1>
-				<h1> CONTENT TO SIMULATE EXPANSION </h1>
-				<h1> CONTENT TO SIMULATE EXPANSION </h1>
-				<h1> CONTENT TO SIMULATE EXPANSION </h1>
-				<h1> CONTENT TO SIMULATE EXPANSION </h1>
-				<h1> CONTENT TO SIMULATE EXPANSION </h1>
-				<h1> CONTENT TO SIMULATE EXPANSION </h1>
 			</div>
 		</div>
 	</div>
