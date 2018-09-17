@@ -1,0 +1,13 @@
+UIUC fonts:
+1) proxima-nova-alt
+2) ff-meta-serif-web-pro
+
+UC Berkeley fonts:
+1) Open Sans
+2) Freight micro pro
+
+CWRU fonts:
+1) Titilliums web
+
+Stanford fonts:
+1) Source sans pro

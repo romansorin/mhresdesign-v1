@@ -1,0 +1,10 @@
+pseudocode for new mentorhigh.com footer
+
+brief layout:
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+Contact us, directory, map, calendars, resources for, social media, websites a-z
+
+this website/page is managed/maintained by mentor high web team, 2018
+contact us - redirects to mentorhigh.com/help, mentorhigh.com/contactus, mentorhigh.com/contact; 
+form can be filled out, form is then sent to web email (mentorwebteam@gmail.com)
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
