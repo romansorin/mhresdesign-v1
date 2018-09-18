@@ -134,5 +134,16 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 				</div>
 			</div>
 		</div>
-	</section>
-	<?php include 'inc/footer.php'; ?> 
+	</div>
+</section>
+<div class = "container">
+	<div class = "twitter-feeds">
+		<div class = "col-sm-6">
+			<a class="twitter-timeline" data-chrome="nofooter, noheader" data-lang="en" data-theme="light" data-link-color="#711717" data-height="800" data-width="500" href="https://twitter.com/PrincipalCrowe?ref_src=twsrc%5Etfw">Tweets by @PrincipalCrowe</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		<div class = "col-sm-6">
+			<a class="twitter-timeline" data-chrome="nofooter, noheader" data-lang="en" data-theme="light" data-link-color="#711717" data-height="800" data-width="500" href="https://twitter.com/MentorHigh?ref_src=twsrc%5Etfw">Tweets by @MentorHigh</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+	</div>
+</div>
+<?php include 'inc/footer.php'; ?> 
