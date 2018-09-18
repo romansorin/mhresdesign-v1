@@ -19,7 +19,7 @@ body {
 	min-width: 100%;
 }
 .news {
-	// background-color: #;
+	/* background-color: #; */
 }
 html {
 	height: 100%;	
@@ -32,7 +32,7 @@ html {
 	letter-spacing: 2px;
 	font-weight: bold;
 	width: 200px;
-	font-family: "Open Sans", sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	padding: 5px;
 	font-size: 18px;
 }
@@ -41,7 +41,7 @@ html {
 	border-bottom: 0px; 
 	text-align: center;
 	text-transform: uppercase;
-	font-family: "Open Sans", sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	letter-spacing: 1px;
 }
 .twitter-feeds {
@@ -140,7 +140,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 	</div>
 </section>
 <div class = container-fluid>
-	<div class = "calendar">
+	<div class = "calendar-widget">
 	</div>
 </div>
 <div class = "container">
