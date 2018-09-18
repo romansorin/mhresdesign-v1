@@ -44,6 +44,9 @@ html {
 	font-family: "Open Sans", sans-serif;
 	letter-spacing: 1px;
 }
+.twitter-feeds {
+	margin-top: 50px;
+}
 </style>
 <?php
 $servername = "localhost";
@@ -77,10 +80,10 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()) {
-							echo " - content: " . $row["content"]. "<br>";
+							echo $row["content"]. "<br>";
 						}
 					} else {
-						echo "0 results";
+						echo "0 results from selected table";
 					}
 					?>
 				</div>
@@ -92,10 +95,10 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()) {
-							echo " - content: " . $row["content"]. "<br>";
+							echo $row["content"]. "<br>";
 						}
 					} else {
-						echo "0 results";
+						echo "0 results from selected table";
 					}
 					?>
 				</div>
@@ -107,10 +110,10 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()) {
-							echo " - content: " . $row["content"]. "<br>";
+							echo $row["content"]. "<br>";
 						}
 					} else {
-						echo "0 results";
+						echo "0 results from selected table";
 					}
 					?>
 				</div>
@@ -124,10 +127,10 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()) {
-							echo " - content: " . $row["content"]. "<br>";
+							echo $row["content"]. "<br>";
 						}
 					} else {
-						echo "0 results";
+						echo "0 results from selected table";
 					}
 					$conn->close();
 					?>
@@ -136,6 +139,10 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 		</div>
 	</div>
 </section>
+<div class = container-fluid>
+	<div class = "calendar">
+	</div>
+</div>
 <div class = "container">
 	<div class = "twitter-feeds">
 		<div class = "col-sm-6">

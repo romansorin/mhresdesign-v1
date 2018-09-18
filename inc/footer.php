@@ -124,7 +124,7 @@ h3 {
 								<!-- column span for mentor.png and contact us -->
 						<!--<a class="brand-img-footer" href="/sorin/index.php" title="Mentor High School Homepage">
 							<img class="center-brand-footer" src="/sorin/inc/mentor.png" alt="Mentor High School footing"></a> -->
-							<li><a href="#">Contact Us</a></li>
+							<li><a href="contact">Contact Us</a></li>
 						</ul>
 					</ul>
 				</div>
