@@ -52,12 +52,18 @@ h3 {
 	position: absolute;
 	bottom: 36px;
 	text-align: center;
+	left: -85px;
+	overflow: hidden;
+}
+.brand-img-footer {
+	display: inline-block;
+	top: -30px;
+	bottom: 0px;
+	position: absolute;
 }
 </style>
 <footer>
-	<script>
-		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-	</script>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');</script>
 	<div class="footer">
 		<section class="footer-top">
 			<div class="container-fluid">
@@ -121,17 +127,13 @@ h3 {
 						</div>
 						<div class="col-sm-4">
 							<ul style="color: #FFFFFF;">
-								<!-- column span for mentor.png and contact us -->
-						<!--<a class="brand-img-footer" href="/sorin/index.php" title="Mentor High School Homepage">
-							<img class="center-brand-footer" src="/sorin/inc/mentor.png" alt="Mentor High School footing"></a> -->
-							<li><a href="#">Contact Us</a></li>
-						</ul>
-					</ul>
-				</div>
+								<a class="brand-img-footer" href="/sorin/index.php" title="Mentor High School Homepage"><img class="center-brand-footer" src="/sorin/inc/mentor.png" alt="Mentor High School footing"></a>
+								<li><a href="contact" style="float: right; position: absolute; bottom: -30px; right: 15px; font-size: 12px; text-transform: uppercase;">Contact Us</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
 			</div>
-		</div>
-	</section>
-</div>
-</footer>
-</body>
-</html>
+		</footer>
+	</body>
+	</html>

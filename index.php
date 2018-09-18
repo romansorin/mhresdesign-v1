@@ -19,7 +19,7 @@ body {
 	min-width: 100%;
 }
 .news {
-	// background-color: #;
+	/* background-color: #; */
 }
 html {
 	height: 100%;	
@@ -32,7 +32,7 @@ html {
 	letter-spacing: 2px;
 	font-weight: bold;
 	width: 200px;
-	font-family: "Open Sans", sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	padding: 5px;
 	font-size: 18px;
 }
@@ -41,8 +41,11 @@ html {
 	border-bottom: 0px; 
 	text-align: center;
 	text-transform: uppercase;
-	font-family: "Open Sans", sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	letter-spacing: 1px;
+}
+.twitter-feeds {
+	margin-top: 50px;
 }
 </style>
 <?php
@@ -77,10 +80,10 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()) {
-							echo " - content: " . $row["content"]. "<br>";
+							echo $row["content"]. "<br>";
 						}
 					} else {
-						echo "0 results";
+						echo "0 results from selected table";
 					}
 					?>
 				</div>
@@ -92,10 +95,10 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()) {
-							echo " - content: " . $row["content"]. "<br>";
+							echo $row["content"]. "<br>";
 						}
 					} else {
-						echo "0 results";
+						echo "0 results from selected table";
 					}
 					?>
 				</div>
@@ -107,10 +110,10 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()) {
-							echo " - content: " . $row["content"]. "<br>";
+							echo $row["content"]. "<br>";
 						}
 					} else {
-						echo "0 results";
+						echo "0 results from selected table";
 					}
 					?>
 				</div>
@@ -124,15 +127,30 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()) {
-							echo " - content: " . $row["content"]. "<br>";
+							echo $row["content"]. "<br>";
 						}
 					} else {
-						echo "0 results";
+						echo "0 results from selected table";
 					}
 					$conn->close();
 					?>
 				</div>
 			</div>
 		</div>
-	</section>
-	<?php include 'inc/footer.php'; ?> 
+	</div>
+</section>
+<div class = container-fluid>
+	<div class = "calendar-widget">
+	</div>
+</div>
+<div class = "container">
+	<div class = "twitter-feeds">
+		<div class = "col-sm-6">
+			<a class="twitter-timeline" data-chrome="nofooter, noheader" data-lang="en" data-theme="light" data-link-color="#711717" data-height="800" data-width="500" href="https://twitter.com/PrincipalCrowe?ref_src=twsrc%5Etfw">Tweets by @PrincipalCrowe</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		<div class = "col-sm-6">
+			<a class="twitter-timeline" data-chrome="nofooter, noheader" data-lang="en" data-theme="light" data-link-color="#711717" data-height="800" data-width="500" href="https://twitter.com/MentorHigh?ref_src=twsrc%5Etfw">Tweets by @MentorHigh</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+	</div>
+</div>
+<?php include 'inc/footer.php'; ?> 
