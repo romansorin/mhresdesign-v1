@@ -24,7 +24,7 @@ body {
 html {
 	height: 100%;	
 }
-.btn-default {
+.btn-news {
 	margin-bottom: 20px;
 	border-radius: 0 !important;
 	border: 2px solid #444D56;
@@ -35,6 +35,16 @@ html {
 	font-family: 'Open Sans', sans-serif;
 	padding: 5px;
 	font-size: 18px;
+}
+.btn-twitterl, .btn-twitterr {
+	border-radius: 0 !important;
+	border: 2px solid #444D56;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	margin-bottom: 5px;
 }
 .headers {
 	color: #000000; 
@@ -64,7 +74,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 		<div class = "newsHeader">
 			<div class="row">
 				<div class = "col-sm-12">
-					<button type="button" class="btn btn-default btn-md">News</button>
+					<button type="button" class="btn btn-default btn-md btn-news">News</button>
 				</div>
 			</div>	
 		</div>
@@ -146,9 +156,11 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 <div class = "container">
 	<div class = "twitter-feeds">
 		<div class = "col-sm-6">
+			<a href="https://www.twitter.com/PrincipalCrowe" class="btn btn-default btn-twitterl">Mr. Crowe</a>
 			<a class="twitter-timeline" data-chrome="nofooter, noheader" data-lang="en" data-theme="light" data-link-color="#711717" data-height="800" data-width="500" href="https://twitter.com/PrincipalCrowe?ref_src=twsrc%5Etfw">Tweets by @PrincipalCrowe</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 		</div>
 		<div class = "col-sm-6">
+			<a href="https://www.twitter.com/MentorHigh" class="btn btn-default btn-twitterr">Mentor High</a>
 			<a class="twitter-timeline" data-chrome="nofooter, noheader" data-lang="en" data-theme="light" data-link-color="#711717" data-height="800" data-width="500" href="https://twitter.com/MentorHigh?ref_src=twsrc%5Etfw">Tweets by @MentorHigh</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 		</div>
 	</div>
