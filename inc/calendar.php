@@ -1,5 +1,3 @@
-<?php include 'inc/header.php'; ?>
-
 <?php 
 class CalendarWidget {
     // Generates a calendar widget on the page, 
@@ -94,6 +92,3 @@ $calendar->generate(6);
 
 
 ?>
-
-
-<?php include 'inc/footer.php'; ?> 
