@@ -1,4 +1,10 @@
 <?php include 'inc/header.php'; ?>
+
+<?php
+ini_set('display_startup_errors',1);
+ini_set('display_errors',1);
+error_reporting(-1);
+?>
 <style>
 .newsHeader {
 	text-align: center;	
@@ -159,18 +165,11 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 <section class = "calendar">
 	<div class = "container-fluid">
 		<div class = "calendar-widget">
-			<div class = "col-sm-2">
-			</div>
-			<div class = "col-sm-2">
-			</div>
-			<div class = "col-sm-2">			
-			</div>
-			<div class = "col-sm-2">
-			</div>
-			<div class = "col-sm-2">
-			</div>
-			<div class = "col-sm-2">
-			</div>
+			<?php include 'inc/calendar.php'; ?>
+			<?php
+			$calendar = new CalendarWidget;
+			$calendar->generate(5);
+			?>
 		</div>
 	</div>
 </section>
@@ -178,11 +177,11 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 	<div class = "twitter-feeds">
 		<div class = "col-sm-6">
 			<a href="https://www.twitter.com/PrincipalCrowe" class="btn btn-default btn-twitterl">Mr. Crowe</a>
-			<a class="twitter-timeline" data-chrome="nofooter, noheader" data-lang="en" data-theme="light" data-link-color="#711717" data-height="800" data-width="500" href="https://twitter.com/PrincipalCrowe?ref_src=twsrc%5Etfw">Tweets by @PrincipalCrowe</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			<a class="twitter-timeline" data-chrome="nofooter, noheader" data-lang="en" data-theme="light" data-link-color="#711717" data-height="800" data-width="500" href="https://twitter.com/PrincipalCrowe?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 		</div>
 		<div class = "col-sm-6">
 			<a href="https://www.twitter.com/MentorHigh" class="btn btn-default btn-twitterr">Mentor High</a>
-			<a class="twitter-timeline" data-chrome="nofooter, noheader" data-lang="en" data-theme="light" data-link-color="#711717" data-height="800" data-width="500" href="https://twitter.com/MentorHigh?ref_src=twsrc%5Etfw">Tweets by @MentorHigh</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			<a class="twitter-timeline" data-chrome="nofooter, noheader" data-lang="en" data-theme="light" data-link-color="#711717" data-height="800" data-width="500" href="https://twitter.com/MentorHigh?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 		</div>
 	</div>
 </div>

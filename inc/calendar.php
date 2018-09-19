@@ -3,19 +3,20 @@ class CalendarWidget {
     // Generates a calendar widget on the page, 
     public function generate($range = 7, $start_date = null)
     {
+	date_default_timezone_set('America/New_York');
         // Accept a $start_date, otherwise set it to today's date (useful if you want
         // to start the calendar at a date in the past, for example.)
         if (is_null($start_date)){
-            $start_date = new DateTimeImmutable();
+            $start_date = new DateTime();
         }
         else{
-            $start_date = new DateTimeImmutable($start_date);
+            $start_date = new DateTime($start_date);
         }
 
         // Draw a calendar div for each day in $range
         for ($x = 0; $x<$range; $x++){
             // Increment the current date as we loop
-            $date = $start_date->modify("+{$x} day");
+            $date = $start_date->modify("+1 day");
 
             // Get the string to display for the date
             $date_string = $this->formatDateReadable($date);
@@ -29,16 +30,16 @@ class CalendarWidget {
             // Right now I have a hardcoded array as an example.
             // I would use a query like:
             // SELECT text, link, date FROM events WHERE date = $date_selector
-            $events = [
-                [
+            $events = array(
+                array(
                     "text" => "This is some text",
                     "link" => "http://example.com"
-                ],
-                [
+                ),
+                array(
                     "text" => "This is another post"
-                ]
+                )
 
-            ];
+            );
 
             // I pretend your database has the following rows:
             // 
@@ -71,7 +72,7 @@ class CalendarWidget {
             echo "</div>";
 
         }
-        echo "</div>";
+        echo "</div></div>";
     }
 
     // Helpers to format our DateTime
@@ -85,10 +86,5 @@ class CalendarWidget {
         return $date->format('Y-m-d');
     }
 }
-
-$calendar = new CalendarWidget;
-$calendar->generate(6);
-
-
 
 ?>
