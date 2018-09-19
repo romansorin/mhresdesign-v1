@@ -1,10 +1,4 @@
 <?php include 'inc/header.php'; ?>
-
-<?php
-ini_set('display_startup_errors',1);
-ini_set('display_errors',1);
-error_reporting(-1);
-?>
 <style>
 .newsHeader {
 	text-align: center;	
@@ -66,9 +60,14 @@ html {
 .twitter-feeds {
 	margin-top: 50px;
 }
-.calendar-widget {
+.calendar {
 	/* background-color: #BCBBBB !important;
 	height: 150px; */
+	border-top: 1px solid #444D56;
+	border-bottom: 1px solid #444D56;
+	padding-bottom: 30px;
+	padding-top: 25px;
+	margin-top: 50px;
 }
 </style>
 <?php

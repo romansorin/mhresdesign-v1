@@ -3,7 +3,7 @@ class CalendarWidget {
     // Generates a calendar widget on the page, 
     public function generate($range = 7, $start_date = null)
     {
-	date_default_timezone_set('America/New_York');
+    date_default_timezone_set('America/New_York');
         // Accept a $start_date, otherwise set it to today's date (useful if you want
         // to start the calendar at a date in the past, for example.)
         if (is_null($start_date)){
@@ -59,11 +59,11 @@ class CalendarWidget {
     // and then an array of $events.
     private function render($date_string, $events){
         echo "<div class=\"col-sm-2\">";
-        echo "<h3>{$date_string}</h3>";
+        echo "<h3 style=\"font-family: 'Open Sans', sans-serif; margin-left: -50px; border: none; margin-top: -15px; font-size: 16px;\">{$date_string}</h3>";
 
         echo "<div class=\"row\">";
         foreach ($events as $event){
-            echo "<div class=\"col-sm-12\" >";
+            echo "<div style=\"margin-left: -10px;\" class=\"col-sm-12\" >";
             echo $event['text'];
             if (array_key_exists('link', $event)){
                 echo "<br>";
@@ -78,7 +78,7 @@ class CalendarWidget {
     // Helpers to format our DateTime
     private function formatDateReadable($date){
         // returns like 'Monday, January 4, 2012'
-        return $date->format('l, F j, Y'); 
+        return $date->format('l, M j'); 
     }
 
     private function formatDateQueryable($date){
