@@ -61,8 +61,8 @@ html {
 	margin-top: 50px;
 }
 .calendar-widget {
-	background-color: #BCBBBB !important;
-	height: 150px;
+	/* background-color: #BCBBBB !important;
+	height: 150px; */
 }
 </style>
 <?php
@@ -149,7 +149,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 					} else {
 						echo "0 results from selected table";
 					}
-					// $conn->close();
+					$conn->close();
 					?>
 				</div>
 			</div>
@@ -160,110 +160,16 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 	<div class = "container-fluid">
 		<div class = "calendar-widget">
 			<div class = "col-sm-2">
-				<?php
-				$sql = "SELECT current_day, events FROM calendar WHERE dayPlus = '0'";
-				$result = $conn->query($sql);
-				$date = $row["current_day"];
-				$nameOfDay = date('l', strtotime($date));
-
-				if ($result->num_rows > 0) {
-					while($row = $result->fetch_assoc()) {
-						echo $nameOfDay. "<br>";
-						echo $row["events"]. "<br>";
-
-						// will look like this :
-						// September 19,
-						// Wednesday
-
-						// content
-					}
-				} else {
-					echo "0 results from selected table";
-				}
-				?>
 			</div>
 			<div class = "col-sm-2">
-				<?php
-				$sql = "SELECT current_day, events FROM calendar WHERE dayPlus = '1'";
-				$result = $conn->query($sql);
-				$date = $row["current_day"];
-				$nameOfDay = date('l', strtotime($date . "+1 day"));
-
-				if ($result->num_rows > 0) {
-					while($row = $result->fetch_assoc()) {
-						echo $nameOfDay. "<br>";
-						echo $row["events"]. "<br>";
-					}
-				} else {
-					echo "0 results from selected table";
-				}
-				?>
+			</div>
+			<div class = "col-sm-2">			
 			</div>
 			<div class = "col-sm-2">
-				<?php
-				$sql = "SELECT current_day, events FROM calendar WHERE dayPlus = '2'";
-				$result = $conn->query($sql);
-				$date = $row["current_day"];
-				$nameOfDay = date('l', strtotime($date . "+2 days"));
-
-				if ($result->num_rows > 0) {
-					while($row = $result->fetch_assoc()) {
-						echo $nameOfDay. "<br>";
-						echo $row["events"]. "<br>";
-					}
-				} else {
-					echo "0 results from selected table";
-				}
-				?>
 			</div>
 			<div class = "col-sm-2">
-				<?php
-				$sql = "SELECT current_day, events FROM calendar WHERE dayPlus = '3'";
-				$result = $conn->query($sql);
-				$date = $row["current_day"];
-				$nameOfDay = date('l', strtotime($date . "+3 days"));
-
-				if ($result->num_rows > 0) {
-					while($row = $result->fetch_assoc()) {
-						echo $nameOfDay. "<br>";
-						echo $row["events"]. "<br>";
-					}
-				} else {
-					echo "0 results from selected table";
-				}
-				?>
 			</div>
 			<div class = "col-sm-2">
-				<?php
-				$sql = "SELECT current_day, events FROM calendar WHERE dayPlus = '4'";
-				$result = $conn->query($sql);
-				$date = $row["current_day"];
-				$nameOfDay = date('l', strtotime($date . "+4 days"));
-
-				if ($result->num_rows > 0) {
-					while($row = $result->fetch_assoc()) {
-						echo $nameOfDay. "<br>";
-						echo $row["events"]. "<br>";
-					}
-				} else {
-					echo "0 results from selected table";
-				}
-				?>
-			</div>
-			<div class = "col-sm-2">
-				<?php
-				$sql = "SELECT events FROM calendar WHERE dayPlus IS NULL";
-				$result = $conn->query($sql);
-
-				if ($result->num_rows > 0) {
-					while ($row = $result->fetch_assoc()) {
-						echo $row["events"]. "<br>";
-					}
-				} else {
-					echo "0 results from selected table";
-				}
-				$conn->close();
-				?>
 			</div>
 		</div>
 	</div>
