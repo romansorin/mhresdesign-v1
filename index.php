@@ -1,7 +1,8 @@
 <?php include 'inc/header.php'; ?>
 <style>
 .newsHeader {
-	text-align: center;	
+	margin-top: 20px;
+	text-align: center;
 }
 .row-top-index {
 	text-align: center;
@@ -17,9 +18,8 @@ body {
 	display: inline-block;
 	min-height: 100%;
 	min-width: 100%;
-}
-.news {
-	/* background-color: #; */
+	margin: 0px;
+	padding: 0px;
 }
 html {
 	height: 100%;	
@@ -61,8 +61,7 @@ html {
 	margin-top: 50px;
 }
 .calendar {
-	/* background-color: #BCBBBB !important;
-	height: 150px; */
+	background-color: #f2f2f2 !important;
 	border-top: 1px solid #444D56;
 	border-bottom: 1px solid #444D56;
 	padding-bottom: 30px;
