@@ -113,29 +113,26 @@
 	.search-container button[type=submit]:focus {
 		outline-color: #570000 !important;
 	}
-	.head-branding {
-		min-height: 140px;
-		background-color: #7A7878;
-		text-align: center;
-		line-height: 140px;
-		width: 0 auto;
-		height: 175px;
-		position: relative;
-		padding-top: 40px;
-	}
 	.center-brand {
-		vertical-align: middle;		
+		vertical-align: middle;	
+		float: left;
+		padding-top: 65px;
+		padding-left: 100px;
+		padding-right: 15px;
+		position: absolute;
+		border-right: 1px solid #FFFFFF;
 	}
 	.bottomnav {
 		position: relative;
-		top: 0px;
-		left: 50%;
-		transform: translatex(-50%);
-		text-align: center;
+		min-height: 100px;
+		float:right;
+		padding-top: 80px;
+		padding-bottom: 30px;
 	}
 	.bottomnav > li {
 		padding-left: 8px;
 		padding-right: 8px;
+		vertical-align: middle;
 	}
 	.bottomnav > li:hover {
 		background-color: #FFFFFF;
@@ -143,7 +140,7 @@
 	}
 	.bottomnav > li > a {
 		font-family: 'Noto Serif JP', sans-serif;
-		font-size: 16px;
+		font-size: 18px;
 		font-weight: 400;
 		color: #FFFFFF !important;
 		transition-duration: 0.4s;
@@ -154,7 +151,7 @@
 	.bottomnav > li > a:hover {
 		color: #711717 !important;
 		font-weight: 400;
-		font-size: 16px;
+		font-size: 18px;
 	}
 	.hvr-underline-from-center {
 		display: inline-block;
@@ -243,12 +240,10 @@
 			</ul>
 		</div>
 	</nav>
-	<section class="head-branding">
-		<a class="brand-img" href="/sorin/index.php" title="Mentor High School Homepage">
-			<img class="center-brand" src="/sorin/inc/mentor.png" alt="Mentor High School heading"></a>
-		</section>
 		<nav class="navbar navbar-inverse navbar-static-top justify-content-center">
 			<div class="container-fluid">
+				<a class="brand-img" href="/sorin/index.php" title="Mentor High School Homepage">
+				<img class="center-brand" src="/sorin/inc/mentor.png" alt="Mentor High School heading"></a> 
 				<ul class="nav navbar-nav bottomnav">
 					<li><a href="/sorin/academics" class="hvr-underline-from-center">Academics/Curriculum</a></li>
 					<li><a href="/sorin/athletics" class="hvr-underline-from-center">Athletics</a></li>
