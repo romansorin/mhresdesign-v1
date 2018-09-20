@@ -116,7 +116,7 @@
 	.center-brand {
 		vertical-align: middle;	
 		float: left;
-		padding-top: 65px;
+		padding-top: 35px;
 		padding-left: 100px;
 		padding-right: 15px;
 		position: absolute;
@@ -126,7 +126,7 @@
 		position: relative;
 		min-height: 100px;
 		float:right;
-		padding-top: 80px;
+		padding-top: 50px;
 		padding-bottom: 30px;
 	}
 	.bottomnav > li {
@@ -216,43 +216,45 @@
 </style>
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top justify-content-between">
-		<div class="container-fluid">
-			<span class="restxt" style="color: #656256 !important;">Resources for:</span>
-			<ul class="nav navbar-nav topleft">	
-				<li><a href="/sorin/students" class="hvr-overline-reveal">Students</a></li>
-				<li><a href="/sorin/faculty-staff" class="hvr-overline-reveal">Faculty & Staff</a></li>
-				<li><a href="/sorin/parents" class="hvr-overline-reveal">Parents</a></li>
-				<li><a href="/sorin/alumni" class="hvr-overline-reveal">Alumni</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right topnavbar-right topright">
-				<li><a href="/sorin/directory">Directory</a></li>
-				<li><a href="/sorin/map">Campus Map</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right topnavbar-right search">
-				<div class="search-container">
-					<form action="/action_page.php">
-						<input type="text" placeholder="Search.." name="search">
-						<button type="submit"><i class="fa fa-search"></i></button>
-					</form>
-				</div>
-				<!-- search goes here -->
-			</ul>
-		</div>
-	</nav>
-		<nav class="navbar navbar-inverse navbar-static-top justify-content-center">
+	<div class = "totaltopnav">
+		<nav class="navbar navbar-default navbar-static-top justify-content-between" role = "navigation">
 			<div class="container-fluid">
-				<a class="brand-img" href="/sorin/index.php" title="Mentor High School Homepage">
-				<img class="center-brand" src="/sorin/inc/mentor.png" alt="Mentor High School heading"></a> 
-				<ul class="nav navbar-nav bottomnav">
-					<li><a href="/sorin/academics" class="hvr-underline-from-center">Academics/Curriculum</a></li>
-					<li><a href="/sorin/athletics" class="hvr-underline-from-center">Athletics</a></li>
-					<li><a href="/sorin/music" class="hvr-underline-from-center">Music</a></li>
-					<li><a href="/sorin/arts-theatre" class="hvr-underline-from-center">Arts & Theatre</a></li>
-					<li><a href="/sorin/activities" class="hvr-underline-from-center">Activities</a></li>
-					<li><a href="/sorin/guidance" class="hvr-underline-from-center">Guidance</a></li>
-					<li><a href="/sorin/about" class="hvr-underline-from-center">About</a></li>
+				<span class="restxt" style="color: #656256 !important;">Resources for:</span>
+				<ul class="nav navbar-nav topleft">	
+					<li><a href="/sorin/students" class="hvr-overline-reveal">Students</a></li>
+					<li><a href="/sorin/faculty-staff" class="hvr-overline-reveal">Faculty & Staff</a></li>
+					<li><a href="/sorin/parents" class="hvr-overline-reveal">Parents</a></li>
+					<li><a href="/sorin/alumni" class="hvr-overline-reveal">Alumni</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right topnavbar-right topright">
+					<li><a href="/sorin/directory">Directory</a></li>
+					<li><a href="/sorin/map">Campus Map</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right topnavbar-right search">
+					<div class="search-container">
+						<form action="/action_page.php">
+							<input type="text" placeholder="Search.." name="search">
+							<button type="submit"><i class="fa fa-search"></i></button>
+						</form>
+					</div>
+					<!-- search goes here -->
 				</ul>
 			</div>
 		</nav>
+		<nav class="navbar navbar-inverse navbar-static-top justify-content-center" role="navigation">
+			<div class="container-fluid">
+				<a class="brand-img" href="/sorin/index.php" title="Mentor High School Homepage">
+					<img class="center-brand" src="/sorin/inc/mentor.png" alt="Mentor High School heading"></a> 
+					<ul class="nav navbar-nav bottomnav">
+						<li><a href="/sorin/academics" class="hvr-underline-from-center">Academics/Curriculum</a></li>
+						<li><a href="/sorin/athletics" class="hvr-underline-from-center">Athletics</a></li>
+						<li><a href="/sorin/music" class="hvr-underline-from-center">Music</a></li>
+						<li><a href="/sorin/arts-theatre" class="hvr-underline-from-center">Arts & Theatre</a></li>
+						<li><a href="/sorin/activities" class="hvr-underline-from-center">Activities</a></li>
+						<li><a href="/sorin/guidance" class="hvr-underline-from-center">Guidance</a></li>
+						<li><a href="/sorin/about" class="hvr-underline-from-center">About</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 		<div class="container-fluid">
