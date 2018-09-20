@@ -1,4 +1,7 @@
 <?php include 'inc/header.php'; ?>
+<head>
+	<title>Home | Mentor High School</title>
+</head>
 <style>
 .newsHeader {
 	margin-top: 20px;

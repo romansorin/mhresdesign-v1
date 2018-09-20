@@ -1,3 +1,4 @@
+<?php include '../inc/header.php'; ?>
 <head>
     <title>Guidance | Mentor High School</title>
     <style>
@@ -13,8 +14,6 @@
 	}
 </style>
 </head>
-
-<?php include '../inc/header.php'; ?>
 
 <h1>Following will be on this webpage (not final)</h1>
 <h3>Guidance Resouces<br/>Resources Tab<br/>College, Naviance<br/></h3>

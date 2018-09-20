@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Home | Mentor High School</title>
 	<link href="/sorin/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/sorin/css/custom.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -21,6 +20,7 @@
 	}
 	.navbar-inverse {
 		background-color: #711717;
+		max-height: 130px;
 	}
 	.navbar {
 		min-height: 35px;
