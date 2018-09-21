@@ -71,10 +71,10 @@ h3 {
 					<div class="col-sm-4">
 						<h3>Resources</h3>
 						<ul>
-							<li><a href="/sorin/students">Students</li>
-							<li><a href="/sorin/faculty-staff">Faculty & Staff</a></li>
-							<li><a href="/sorin/parents">Parents</a></li>
 							<li><a href="/sorin/alumni">Alumni</a></li>
+							<li><a href="/sorin/parents">Parents</a></li>
+							<li><a href="/sorin/faculty-staff">Faculty & Staff</a></li>
+							<li><a href="/sorin/students">Students</li>
 						</ul>
 						</div>
 						<div class="col-sm-4">
