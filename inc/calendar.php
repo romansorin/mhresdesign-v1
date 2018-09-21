@@ -8,6 +8,7 @@ class CalendarWidget {
         // to start the calendar at a date in the past, for example.)
         if (is_null($start_date)){
             $start_date = new DateTime();
+            $start_date->modify("-1 day");
         }
         else{
             $start_date = new DateTime($start_date);

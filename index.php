@@ -169,7 +169,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 			<?php include 'inc/calendar.php'; ?>
 			<?php
 			$calendar = new CalendarWidget;
-			$calendar->generate(6, 20180918);
+			$calendar->generate(6);
 			?>
 		</div>
 	</div>
