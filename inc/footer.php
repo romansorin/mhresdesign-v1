@@ -71,11 +71,11 @@ h3 {
 					<div class="col-sm-4">
 						<h3>Resources</h3>
 						<ul>
-							<li><a href="students">Students</li>
-								<li><a href="faculty-staff">Faculty & Staff</a></li>
-								<li><a href="parents">Parents</a></li>
-								<li><a href="alumni">Alumni</a></li>
-							</ul>
+							<li><a href="/sorin/students">Students</li>
+							<li><a href="/sorin/faculty-staff">Faculty & Staff</a></li>
+							<li><a href="/sorin/parents">Parents</a></li>
+							<li><a href="/sorin/alumni">Alumni</a></li>
+						</ul>
 						</div>
 						<div class="col-sm-4">
 							<h3>Calendars</h3>
@@ -88,11 +88,11 @@ h3 {
 						<div class="col-sm-4">
 							<h3>Curriculum</h3>
 							<ul>
-								<li><a href="athletics">Athletics</a></li>
-								<li><a href="music">Music</a></li>
-								<li><a href="arts-theatre">Arts</a></li>
-								<li><a href="activities">Activities</a></li>
-								<li><a href="academics">Education</a></li>
+								<li><a href="/sorin/athletics">Athletics</a></li>
+								<li><a href="/sorin/music">Music</a></li>
+								<li><a href="/sorin/arts-theatre">Arts</a></li>
+								<li><a href="/sorin/activities">Activities</a></li>
+								<li><a href="/sorin/academics">Education</a></li>
 							</ul>
 						</div>
 					</div>
@@ -100,15 +100,15 @@ h3 {
 						<div class="col-sm-4">
 							<h3>Map</h3>
 							<ul>
-								<li><a href="map">Campus</a></li>
-								<li><a href="map">Directions</a></li>
+								<li><a href="/sorin/map">Campus</a></li>
+								<li><a href="/sorin/map">Directions</a></li>
 							</ul>
 						</div>
 						<div class="col-sm-4">
 							<h3>Directory</h3>
 							<ul>
-								<li><a href="directory">Staff</a></li>
-								<li><a href="directory">A-Z Index</a></li>
+								<li><a href="/sorin/directory">Staff</a></li>
+								<li><a href="/sorin/directory">A-Z Index</a></li>
 							</ul>
 						</div>
 					</div>
