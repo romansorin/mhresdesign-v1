@@ -174,7 +174,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 		</div>
 	</div>
 </section>
-<div class = "container-fluid">
+<div class = "container">
 	<div class = "twitter-feeds">
 		<div class = "col-sm-6">
 			<a href="https://www.twitter.com/PrincipalCrowe" class="btn btn-default btn-twitterl">Mr. Crowe</a>

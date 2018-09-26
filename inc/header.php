@@ -214,6 +214,21 @@
 		-webkit-transform: translateY(0);
 		transform: translateY(0);
 	}
+	@media screen and (max-width: 1024px) {
+		.navbar-default {
+			display: none;
+		}
+		.brand-img {
+			display: none;
+		}
+		.bottomnav {
+			display: none;
+		}
+		.navbar {
+			min-height: 70px;
+		}	
+
+	}
 </style>
 </head>
 <body>

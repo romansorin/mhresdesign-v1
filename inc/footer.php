@@ -61,6 +61,14 @@ h3 {
 	bottom: 0px;
 	position: absolute;
 }
+@media screen and (max-width: 768px) {
+   	.footer-top {
+        display:none;
+    }
+    .footer-bottom > li {
+    	padding-left: -500px;
+    }
+}
 </style>
 <footer>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');</script>
@@ -119,7 +127,7 @@ h3 {
 					<div class="row">
 						<div class="col-sm-4">
 							<ul style="color: #FFFFFF;">
-								<li><a class="weatherwidget-io" href="https://forecast7.com/en/41d67n81d34/mentor/?unit=us" data-label_1="MENTOR" data-label_2="WEATHER" data-font="Open Sans" data-mode="Current" data-textcolor="#ffffff">MENTOR WEATHER</a></li>
+								<!-- <li><a class="weatherwidget-io" href="https://forecast7.com/en/41d67n81d34/mentor/?unit=us" data-label_1="MENTOR" data-label_2="WEATHER" data-font="Open Sans" data-mode="Current" data-textcolor="#ffffff">MENTOR WEATHER</a></li> -->
 							</ul>
 						</div>
 						<div class="col-sm-4">
