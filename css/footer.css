@@ -1,0 +1,40 @@
+.footer {
+    background-color: #BCBBBB;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer-bottom {
+    background-color: #711717;
+}
+
+.footer h3 {
+    text-transform: uppercase; 
+    color: #570000; 
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 40px;
+    margin-top: 25px;
+    border-bottom: 1px solid #570000;
+}
+
+.footer ul, .footer-bottom ul {
+    list-style: none;
+    font-size: 16px;
+}
+
+.footer ul a {
+    color: black;
+}
+
+.footer-bottom a {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 12px; 
+    text-transform: uppercase;
+}
+
+.footer-contact {
+    padding-top:52px;
+    padding-right:6px;
+    padding-bottom:6px;
+}
