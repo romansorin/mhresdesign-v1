@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
 <?php include 'inc/includes.php'; ?>
+<?php include 'inc/connection.php' ?>
 	<title>Home | Mentor High School</title>
 </head>
 <style>
