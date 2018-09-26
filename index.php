@@ -1,5 +1,8 @@
-<?php include 'inc/header.php'; ?>
+<!DOCTYPE html>
+
+<html lang="en">
 <head>
+<?php include 'inc/includes.php'; ?>
 	<title>Home | Mentor High School</title>
 </head>
 <style>
