@@ -1,0 +1,144 @@
+.navbar {
+    font-family: 'Open Sans', sans-serif;
+    border: 0px;
+    padding: 0px;
+}
+
+/* Top navbar in white */
+
+.navbar-light {
+    color: #570000;
+    border-left: 1px solid #E0E0E0;
+    font-size: .85rem;
+}
+
+/* Target the "Resources for:" */
+.navbar-light span.navbar-brand {
+    color: #656256;
+    text-transform: uppercase;
+    font-size: .85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 8px 0px 8px 8px;
+}
+
+/* Hack to turn off the hover color change */
+.navbar-light span.navbar-brand:hover {
+    color: #656256;
+}
+
+
+.navbar-light .navbar-nav a {
+    color: #570000 !important;
+    padding:8px;
+    text-decoration: none;
+}
+
+.navbar-light .navbar-resources {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar-light .search {
+    border-left: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+}
+
+
+
+.navbar-dark {
+}
+
+.bg-dark {
+    background-color: #711717 !important;   
+}
+
+.search-container button {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: 35px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #FFFFFF;
+    border: none;
+    -webkit-transition-duration: 0.3s; /* safari transition */
+    transition-duration: 0.3s;
+}
+.search-container button:hover {
+    background-color: #E7E7E7;
+}
+.search-container button:focus {
+    -webkit-transition-duration: 0.05s; /* safari transition */
+    transition-duration: 0.05s;
+}
+.search-container input[type=text] {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    height: 35px;
+    display: inline-block;
+    vertical-align: middle;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-transition-duration: 0.05s; /* safari transition */
+    transition-duration: 0.05s;
+}
+.search-container input[type=text]:focus {
+    outline-color: #570000 !important;
+}
+.search-container button[type=submit]:focus {
+    outline-color: #570000 !important;
+}
+
+
+
+.navbar-dark .navbar-brand{
+    padding-left:100px;
+    padding-top:30px;
+    margin-bottom:20px;
+    border-right: 1px solid #FFFFFF;
+}
+
+@media(min-width:768px){
+
+#header-bottom-nav {
+    padding-top: 45px;
+    padding-bottom: 20px;
+}
+
+}
+#header-bottom-nav a {
+    font-family: 'Noto Serif JP', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    padding:10px 15px;
+}
+
+#header-bottom-nav li {
+    padding: 0px 15px;
+}
+
+#header-bottom-nav li a:hover {
+    background-color: #FFFFFF;
+    color: #711717;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.hvr-underline-from-center:before {
+    background: #711717;
+}
+
+
+.hvr-overline-reveal:before {
+    background: #711717;
+}
+
+
+

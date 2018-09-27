@@ -1,6 +1,7 @@
 .footer {
     background-color: #BCBBBB;
     font-family: 'Open Sans', sans-serif;
+    color:white;
 }
 
 .footer-bottom {
@@ -27,7 +28,6 @@
 }
 
 .footer-bottom a {
-    font-family: 'Open Sans', sans-serif;
     color: white;
     font-size: 12px; 
     text-transform: uppercase;
