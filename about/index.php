@@ -1,30 +1,22 @@
-<?php include '../inc/header.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title>About | Mentor High School</title>
-	<style>
-body {
-	font-family: 'Noto Serif JP', sans-serif;
-	height: 100%;
-	display: inline-block;
-	min-height: 100%;
-	min-width: 100%;
-	margin: 0px;
-	padding: 0px;
-}
-html {
-	height: 100%;	
-}
-</style>
-<?php
-$servername = "localhost";
-$username = "iread";
-$password = "ylnodaer";
-$dbname = "sorin";
-// connection for reading news from database
-$conn = new mysqli($servername, $username, $password, $dbname);
-?>
+    <?php include '../inc/includes.php'; ?>
+    <title>About | Mentor High School</title>
+    <meta name="description" content="This is a description">
+</head>
 
-	<h1>contact us</h1>
+<body>
+    <?php include '../inc/header.php' ?>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+               <h1> about </h1>
+            </div>
+        </div>
+    </div>
+    <?php include '../inc/footer.php'; ?>
+</body>
 
-
-<?php include '../inc/footer.php'; ?>
+</html>

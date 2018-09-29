@@ -48,7 +48,7 @@
             <p>Some weather stuff</p>
         </div>
         <div class="col-md-8 col-sm-12 footer-logo">
-            <a class="footer-contact pull-right" href="contact" >Contact Us</a>
+            <a class="footer-contact pull-right" href="/contact" >Contact Us</a>
             <a class="footer-brand pull-right" href="/index.php" title="Mentor High School Homepage"><img src="/inc/mentor.png" alt="Mentor High School footing"></a>
         </div>
     </div>
