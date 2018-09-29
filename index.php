@@ -25,8 +25,11 @@
                             <img class="d-block" src="images/sample.jpg" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block" src="images/sample.jpg" alt="Second slide">
-                        </div>
+                            <img class="d-block" src="images/1.jpg" alt="First slide">
+                        
+<img class="d-block" src="images/2.jpg" alt="Second slide">
+<img class="d-block" src="images/3.jpg" alt="Third  slide">
+				</div>
                         <div class="carousel-item">
                             <img class="d-block" src="images/sample.jpg" alt="Third slide">
                         </div>
