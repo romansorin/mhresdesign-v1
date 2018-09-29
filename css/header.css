@@ -90,8 +90,13 @@
 .search-container button[type=submit]:focus {
     outline-color: #570000 !important;
 }
-
-
+.navbar-extra-resources a {
+    -webkit-transition-duration: 0.3s; /* safari transition */
+    transition-duration: 0.3s;
+}
+.navbar-extra-resources a:hover {
+    background-color: #E7E7E7;
+}
 
 .navbar-dark .navbar-brand{
     padding-left:100px;
@@ -139,6 +144,5 @@
 .hvr-overline-reveal:before {
     background: #711717;
 }
-
 
 

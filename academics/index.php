@@ -3,7 +3,7 @@
 
 <head>
     <?php include '../inc/includes.php'; ?>
-    <title>About | Mentor High School</title>
+    <title>Curriculum | Mentor High School</title>
     <meta name="description" content="This is a description">
 </head>
 
@@ -12,7 +12,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-               <h1> about </h1>
+               <h1> academics / curriculum </h1>
             </div>
         </div>
     </div>
