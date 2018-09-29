@@ -2,6 +2,17 @@ body {
     font-family: 'Noto Serif JP', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6, h7 {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.section-header {
+    margin-left:auto;
+    border:2px solid grey;
+    display:inline-block;
+}
 
 .newsHeader {
     margin-top: 20px;
@@ -19,11 +30,9 @@ body {
     margin-bottom: 20px;
     border-radius: 0 !important;
     border: 2px solid #444D56;
-    text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: bold;
     width: 200px;
-    font-family: 'Open Sans', sans-serif;
     padding: 5px;
     font-size: 18px;
 }
@@ -40,14 +49,7 @@ body {
     font-size: 14px;
     margin-bottom: 5px;
 }
-.headers {
-    color: #000000; 
-    border-bottom: 0px; 
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
-    letter-spacing: 1px;
-}
+
 .twitter-feeds {
     margin-top: 50px;
 }
