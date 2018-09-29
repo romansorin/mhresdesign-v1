@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-sm navbar-light">
-    <span class="navbar-brand d-none d-md-block">Resources for:</span>
+<nav class="navbar navbar-expand-sm navbar-light d-none d-md-flex">
+    <span class="navbar-brand">Resources for:</span>
     <ul class="navbar-nav navbar-resources"> 
         <li class="nav-item"><a href="/students" class="nav-link hvr-overline-reveal">Students</a></li>
         <li class="nav-item"><a href="/faculty-staff" class="nav-link hvr-overline-reveal">Faculty & Staff</a></li>
