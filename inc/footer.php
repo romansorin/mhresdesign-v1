@@ -1,4 +1,4 @@
-<div class="footer">
+<div id="footer">
     <div class="container-fluid">
     <div class="row">
         <div class="col-md-2 offset-md-1">
@@ -43,14 +43,17 @@
             </ul>
         </div>
     </div>
-    <div class="row footer-bottom">
-        <div class="col-md-4 col-sm-12 footer-weather">
+    <div class="row" id="footer-bottom">
+        <div class="col-md-4 col-sm-12" id="footer-weather">
             <p>Some weather stuff</p>
         </div>
-        <div class="col-md-8 col-sm-12 footer-logo">
-            <a class="footer-contact pull-right" href="/contact" >Contact Us</a>
-            <a class="footer-brand pull-right" href="/index.php" title="Mentor High School Homepage"><img src="/inc/mentor.png" alt="Mentor High School footing"></a>
+        <div class="col-md-8 col-sm-12">
+            <div><a class="pull-right" id="footer-brand" href="/index.php" title="Mentor High School Homepage"><img src="/inc/mentor.png" alt="Mentor High School footing"></a></div>
         </div>
+        <div class="col-sm-12">
+            <div><a class="pull-right" id="footer-contact" href="/contact" >Contact Us</a></div>
+        </div>
+        
     </div>
 </div>
 </footer>
