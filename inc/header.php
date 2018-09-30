@@ -26,7 +26,7 @@
         <h1 id="branding-image">Mentor</h1>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-bottom-nav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="fa fa-reorder"></span>
     </button>
     <div class="collapse navbar-collapse" id="header-bottom-nav">
         <ul class="nav navbar-nav ml-auto">

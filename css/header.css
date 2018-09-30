@@ -46,7 +46,7 @@
 }
 
 .navbar-dark {
-    min-height: 115px;
+    min-height: 75px;
 }
 
 .bg-dark {
@@ -99,8 +99,6 @@
 
 .navbar-dark .navbar-brand {
     padding-left:100px;
-    padding-top:30px;
-    margin-bottom:20px;
     padding-right: 5px;
 }
 
@@ -115,12 +113,14 @@
     }
     .navbar-brand {
         font-size: 1em !important;
-        padding-left:50px !important;
+        padding-left: 20px !important;
     }
     .navbar-toggler {
-        padding-right: 50px;
+        padding-right: 0px;
         border: none;
         width: 100px;
+        color: white !important;
+        font-size: 25px;
     }
 }
 
