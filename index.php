@@ -23,13 +23,13 @@
                     <div class="carousel-inner" style="height: 400px">
                         <div class="carousel-item active">
                             <img class="d-block w-100" src="images/1.jpg" alt="First slide">
-			</div>
-			<div class="carousel-item">
-				<img class="d-block w-100" src="images/2.jpg" alt="Second slide">
-			</div>
-			<div class="carousel-item">
-				<img class="d-block w-100" src="images/3.jpg" alt="Third slide">
-			</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="images/2.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="images/3.jpg" alt="Third slide">
+                        </div>
                     </div>
                     <a class="carousel-control-prev" href="#frontpage-carousel" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -73,47 +73,47 @@
                 <h3 class="headers">Clubs</h3>
                 <div class="row">
                     <div col="col-12">
-                       <h4> Science Olympiad News: </h4>
-<p>Science Olympiad News: The Event Fair is this Sunday Sept 30 from 1-3 PM in B 203. Meet your coaches, learn more about the 23 events, but most importantly help figure out when your study and/or building event will meet every week. We also discuss the MIT trip</p>
-                    </div>
-                    <div class="col-12">
-                        <h4>HOMECOMING DANCE: </h4>
-<p>Mentor High Schools Homecoming Dance will be held on Saturday, October 6, 2018 from 8:00 p.m. to 11:00 p.m. Tickets will be on sale starting Monday, October 1st through Friday, October 5th. Tickets will be sold before school and during all lunch mods in the Student Center. Tickets are $13/single and $25/couple. Cash or Check (payable to MHS PTSA). If you are bringing a guest that does not attend MHS, please have your guest complete a Guest Form which can be picked up in all of the Unit Offices. This Guest Form must be completed before Homecoming tickets can be purchased for a guest.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <h3 class="headers" style="padding-right: 40px;">Announcements</h3>
-            </div>
-        </div>
-        <div class="row">
-            <?php 
-                include 'inc/calendar.php'; 
-                $calendar = new CalendarWidget;
-                $calendar->generate(6);
-            ?>
-        </div>
-        <div class="row twitter-feeds">
-            <div class="col-sm-12">
-                <h1>Connect with us</h1>
-            </div>
-            <div class="col-sm-6">
-                <div class="twitter-timeline">
-                    <p>Content..</p>
-                    <h4>@...</h4>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="twitter-timeline">
-                    <p>Content..</p>
-                    <h4>@...</h4>
+                     <h4> Science Olympiad News: </h4>
+                     <p>Science Olympiad News: The Event Fair is this Sunday Sept 30 from 1-3 PM in B 203. Meet your coaches, learn more about the 23 events, but most importantly help figure out when your study and/or building event will meet every week. We also discuss the MIT trip</p>
+                 </div>
+                 <div class="col-12">
+                    <h4>HOMECOMING DANCE: </h4>
+                    <p>Mentor High Schools Homecoming Dance will be held on Saturday, October 6, 2018 from 8:00 p.m. to 11:00 p.m. Tickets will be on sale starting Monday, October 1st through Friday, October 5th. Tickets will be sold before school and during all lunch mods in the Student Center. Tickets are $13/single and $25/couple. Cash or Check (payable to MHS PTSA). If you are bringing a guest that does not attend MHS, please have your guest complete a Guest Form which can be picked up in all of the Unit Offices. This Guest Form must be completed before Homecoming tickets can be purchased for a guest.</p>
                 </div>
             </div>
         </div>
     </div>
-    <?php include 'inc/footer.php'; ?>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="headers" style="padding-right: 40px;">Announcements</h3>
+        </div>
+    </div>
+    <div class="row">
+        <?php 
+        include 'inc/calendar.php'; 
+        $calendar = new CalendarWidget;
+        $calendar->generate(6);
+        ?>
+    </div>
+    <div class="row twitter-feeds">
+        <div class="col-sm-12">
+            <h1>Connect with us</h1>
+        </div>
+        <div class="col-sm-6">
+            <div class="twitter-timeline">
+                <p>Content..</p>
+                <h4>@...</h4>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="twitter-timeline">
+                <p>Content..</p>
+                <h4>@...</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<?php include 'inc/footer.php'; ?>
 </body>
 
 </html>

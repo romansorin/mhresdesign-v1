@@ -46,6 +46,7 @@
 }
 
 .navbar-dark {
+    height: 115px;
 }
 
 .bg-dark {
@@ -96,19 +97,24 @@
     background-color: #E7E7E7;
 }
 
-.navbar-dark .navbar-brand{
+.navbar-dark .navbar-brand {
     padding-left:100px;
     padding-top:30px;
     margin-bottom:20px;
     padding-right: 5px;
-    border-right: 1px solid #FFFFFF;
 }
 
-@media(min-width:768px){
+@media (max-width:768px) {
 
     #header-bottom-nav {
         padding-top: 45px;
         padding-bottom: 20px;
+    }
+    .navbar-dark {
+        border-top: 4px solid #FFFFFF; 
+    }
+    .navbar-brand {
+        font-size: 0.5em !important;
     }
 
 }
@@ -139,11 +145,10 @@
     background: #711717;
 }
 
-
 .hvr-overline-reveal:before {
     background: #711717;
 }
 #branding-image {
-    font-size: 3em !important; 
+    font-size: 2.5em !important; 
     font-family: 'Noto Serif JP', sans-serif !important;
 }

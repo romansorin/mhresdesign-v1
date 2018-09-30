@@ -45,7 +45,7 @@
     </div>
     <div class="row" id="footer-bottom">
         <div class="col-md-4 col-sm-12" id="footer-weather">
-            <p>Some weather stuff</p>
+            <!-- <p>Some weather stuff</p> -->
         </div>
         <div class="col-md-8 col-sm-12">
             <div>
