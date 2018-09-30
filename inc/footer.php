@@ -1,6 +1,6 @@
 <div id="footer">
     <div class="container-fluid">
-    <div class="row">
+    <div class="row d-none d-md-flex">
         <div class="col-md-2 offset-md-1">
             <h3>Resources</h3>
             <ul>
@@ -48,10 +48,14 @@
             <p>Some weather stuff</p>
         </div>
         <div class="col-md-8 col-sm-12">
-            <div><a class="pull-right" id="footer-brand" href="/index.php" title="Mentor High School Homepage"><img src="/inc/mentor.png" alt="Mentor High School footing"></a></div>
+            <div>
+                <a class="pull-right" href="/index.php" title="Mentor High School Homepage">
+                    <h1 id="footer-brand">Mentor</h1>
+                </a>
+            </div>
         </div>
         <div class="col-sm-12">
-            <div><a class="pull-right" id="footer-contact" href="/contact" >Contact Us</a></div>
+            <div><a class="pull-right" id="footer-contact" href="/contact">Contact Us</a></div>
         </div>
         
     </div>

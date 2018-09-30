@@ -20,7 +20,7 @@
                         <li data-target="#frontpage-carousel" data-slide-to="1"></li>
                         <li data-target="#frontpage-carousel" data-slide-to="2"></li>
                     </ol>
-                    <div class="carousel-inner">
+                    <div class="carousel-inner" style="height: 400px">
                         <div class="carousel-item active">
                             <img class="d-block w-100" src="images/1.jpg" alt="First slide">
 			</div>
@@ -89,7 +89,6 @@
             </div>
         </div>
         <div class="row">
-
             <?php 
                 include 'inc/calendar.php'; 
                 $calendar = new CalendarWidget;
@@ -97,15 +96,20 @@
             ?>
         </div>
         <div class="row twitter-feeds">
-            <div class="col-sm-6">
-                <a href="https://www.twitter.com/PrincipalCrowe" class="btn btn-default btn-twitterl">Mr. Crowe</a>
-                <a class="twitter-timeline" data-chrome="nofooter, noheader" data-lang="en" data-theme="light" data-link-color="#711717" data-height="800" data-width="500" href="https://twitter.com/PrincipalCrowe?ref_src=twsrc%5Etfw"></a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <div class="col-sm-12">
+                <h1>Connect with us</h1>
             </div>
             <div class="col-sm-6">
-                <a href="https://www.twitter.com/MentorHigh" class="btn btn-default btn-twitterr">Mentor High</a>
-                <a class="twitter-timeline" data-chrome="nofooter, noheader" data-lang="en" data-theme="light" data-link-color="#711717" data-height="800" data-width="500" href="https://twitter.com/MentorHigh?ref_src=twsrc%5Etfw"></a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <div class="twitter-timeline">
+                    <p>Content..</p>
+                    <h4>@...</h4>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="twitter-timeline">
+                    <p>Content..</p>
+                    <h4>@...</h4>
+                </div>
             </div>
         </div>
     </div>

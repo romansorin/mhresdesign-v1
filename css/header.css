@@ -45,8 +45,6 @@
     border-right: 1px solid #DDD;
 }
 
-
-
 .navbar-dark {
 }
 
@@ -102,15 +100,16 @@
     padding-left:100px;
     padding-top:30px;
     margin-bottom:20px;
+    padding-right: 5px;
     border-right: 1px solid #FFFFFF;
 }
 
 @media(min-width:768px){
 
-#header-bottom-nav {
-    padding-top: 45px;
-    padding-bottom: 20px;
-}
+    #header-bottom-nav {
+        padding-top: 45px;
+        padding-bottom: 20px;
+    }
 
 }
 #header-bottom-nav a {
@@ -144,5 +143,7 @@
 .hvr-overline-reveal:before {
     background: #711717;
 }
-
-
+#branding-image {
+    font-size: 3em; 
+    font-family: 'Noto Serif JP', sans-serif;
+}
