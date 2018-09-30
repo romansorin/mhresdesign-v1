@@ -34,7 +34,11 @@
 }
 
 #footer-brand {
-
+    font-size: 3.5em; 
+    font-family: 'Noto Serif JP', sans-serif;
+    margin-bottom: 0px;
+    text-decoration: none !important;
+    color: #FFFFFF;
 }
 
 #footer-contact {
