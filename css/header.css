@@ -46,7 +46,7 @@
 }
 
 .navbar-dark {
-    height: 115px;
+    min-height: 115px;
 }
 
 .bg-dark {
@@ -104,20 +104,26 @@
     padding-right: 5px;
 }
 
-@media (max-width:768px) {
+@media(max-width:768px){
 
     #header-bottom-nav {
         padding-top: 45px;
         padding-bottom: 20px;
     }
     .navbar-dark {
-        border-top: 4px solid #FFFFFF; 
+        border-top: 4px solid #FFFFFF;
     }
     .navbar-brand {
-        font-size: 0.5em !important;
+        font-size: 1em !important;
+        padding-left:50px !important;
     }
-
+    .navbar-toggler {
+        padding-right: 50px;
+        border: none;
+        width: 100px;
+    }
 }
+
 #header-bottom-nav a {
     font-family: 'Noto Serif JP', sans-serif;
     font-size: 18px;
