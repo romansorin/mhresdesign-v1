@@ -112,8 +112,9 @@
         border-top: 4px solid #FFFFFF;
     }
     .navbar-brand {
-        font-size: 1em !important;
-        padding-left: 20px !important;
+        font-size: 0.7em !important;
+        padding-left: 10px !important;
+        padding-top: 10px !important;
     }
     .navbar-toggler {
         padding-right: 0px;
