@@ -143,3 +143,7 @@
 .hvr-overline-reveal:before {
     background: #711717;
 }
+#branding-image {
+    font-size: 3em !important; 
+    font-family: 'Noto Serif JP', sans-serif !important;
+}
