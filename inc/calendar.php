@@ -64,7 +64,7 @@ class CalendarWidget {
 
         echo "<div class=\"row\">";
         foreach ($events as $event){
-            echo "<div style=\"margin-left: -10px;\" class=\"col-sm-12\" >";
+            echo "<div class=\"col-sm-12\" >";
             echo $event['text'];
             if (array_key_exists('link', $event)){
                 echo "<br>";
