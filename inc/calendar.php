@@ -60,7 +60,7 @@ class CalendarWidget {
     // and then an array of $events.
     private function render($date_string, $events){
         echo "<div class=\"col-sm-2\">";
-        echo "<h3 style=\"font-family: 'Open Sans', sans-serif; margin-left: -50px; border: none; margin-top: -15px; font-size: 16px;\">{$date_string}</h3>";
+        echo "<h3>{$date_string}</h3>";
 
         echo "<div class=\"row\">";
         foreach ($events as $event){
