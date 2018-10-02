@@ -19,10 +19,6 @@ h1, h2, h3, h4, h5, h6 {
     display:inline-block;
 }
 
-.newsHeader {
-    margin-top: 20px;
-    text-align: center;
-}
 .row-top-index {
     text-align: center;
     border-top: 1px solid #7A7878;
@@ -30,19 +26,6 @@ h1, h2, h3, h4, h5, h6 {
 .row-bottom-index {
     text-align: center;
     border-bottom: 50px transparent;
-}
-.btn-news {
-    margin-bottom: 20px;
-    border-radius: 0 !important;
-    border: 2px solid #444D56;
-    letter-spacing: 2px;
-    font-weight: bold;
-    width: 200px;
-    padding: 5px;
-    font-size: 18px;
-}
-.btn-news:focus {
-    outline-color: #570000 !important;
 }
 
 .calendar {
