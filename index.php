@@ -46,11 +46,11 @@
     <div class="container no-padding">
         <!-- main body, look back on github for reference -->
     </div>
-    <div class="container-fluid no-padding">
+    <div class="container no-padding">
         <div class="row">
             <?php include 'inc/calendar.php'; 
             $calendar = new CalendarWidget;
-            $calendar->generate(6);
+            $calendar->generate(4);
             ?>
         </div>
     </div>
