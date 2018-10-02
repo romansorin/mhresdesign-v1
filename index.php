@@ -99,7 +99,7 @@
             ?>
         </div>
     </div>
-    <div class="container no-padding">
+    <!-- <div class="container no-padding">
         <div class="row twitter-feeds">
             <div class="col-sm-12">
                 <h1>Connect with us</h1>
@@ -117,7 +117,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 <?php include 'inc/footer.php'; ?>
 </body>
 
