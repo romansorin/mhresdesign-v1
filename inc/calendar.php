@@ -20,8 +20,12 @@ class CalendarWidget {
             $date = $start_date->modify("+1 day");
 
             // Get the string to display for the date
-            $date_string = $this->formatDateReadable($date);
+            $date_month = $this->formatDateMonth($date);
             
+            // Get the int to display for the date
+
+            $date_day = $this->formatDateDay($date);
+
             // MYSQL date() command returns 'YEAR-MONTH-DAY' like '2003-12-31'
             // so let's get a string of our date formatted this way, in order to
             // search the database
@@ -49,7 +53,7 @@ class CalendarWidget {
             // You can customize this obviously, and then tweak the draw event below
 
 
-            $this->render($date_string, $events);
+            $this->render($date_month, $date_day, $events);
 
 
         }
@@ -58,11 +62,12 @@ class CalendarWidget {
 
     // draws one "row" of your calendar. Accepts a date string to display in the header
     // and then an array of $events.
-    private function render($date_string, $events){
-        echo "<div class=\"col-sm-2\">";
-        echo "<h3>{$date_string}</h3>";
+    private function render($date_month, $date_day, $events){
+        echo "<div class=\"col-sm-3\">";
+        echo "<div class=\"row date\">";
+        echo "<h3 class=\"month\">{$date_month}</h3>";
+        echo "<h3 class=\"day\">{$date_day}</h3>";
 
-        echo "<div class=\"row\">";
         foreach ($events as $event){
             echo "<div class=\"col-sm-12\" >";
             echo $event['text'];
@@ -77,11 +82,14 @@ class CalendarWidget {
     }
 
     // Helpers to format our DateTime
-    private function formatDateReadable($date){
-        // returns like 'Monday, January 4, 2012'
-        return $date->format('l, M j'); 
+    private function formatDateMonth($date){
+        // returns like 'Jan'
+        return $date->format('M'); 
     }
-
+    private function formatDateDay($date){
+        // returns like '4'
+        return $date->format('j'); 
+    }
     private function formatDateQueryable($date){
         // returns like '1999-12-31' 
         return $date->format('Y-m-d');

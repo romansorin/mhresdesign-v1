@@ -47,7 +47,7 @@
         <!-- main body, look back on github for reference -->
     </div>
     <div class="container no-padding">
-        <div class="row">
+        <div class="row calendar">
             <?php include 'inc/calendar.php'; 
             $calendar = new CalendarWidget;
             $calendar->generate(4);

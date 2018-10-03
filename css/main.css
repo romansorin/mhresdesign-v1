@@ -13,46 +13,32 @@ h1, h2, h3, h4, h5, h6 {
     padding-right: 0 !important;
 }
 
-.section-header {
-    margin-left:auto;
-    border:2px solid grey;
-    display:inline-block;
-}
-
-.row-top-index {
-    text-align: center;
-    border-top: 1px solid #7A7878;
-}
-.row-bottom-index {
-    text-align: center;
-    border-bottom: 50px transparent;
-}
-
 .calendar {
-    background-color: #f2f2f2 !important;
     border-top: 1px solid #444D56;
     border-bottom: 1px solid #444D56;
     padding-bottom: 30px;
-    padding-top: 25px;
+    padding-top: 15px;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
-
+.calendar h3 {
+    display: block;
+}
+.calendar .date {
+    display: block;
+}
+.calendar .month {
+    font-size: 1.1em;
+    letter-spacing: 0.09em;
+    padding-right: 200px;
+}
+.calendar .day {
+    font-size: 1.75em;
+    padding-right: 200px;
+}
 .disabled {
     pointer-events: none;
 }
-/*.twitter-feeds {
-    background-color: #FAF9FA;
-    min-height: 450px;
-    vertical-align: middle;
-    padding-bottom: 50px;
-}
-.twitter-timeline {
-    background-color: #FFFFFF;
-    height: 375px;
-    min-width: 200px;
-    width: 325px;
-    margin: auto;
-}*/
 .row {
     margin-right: 0px;
     margin-left: 0px;
