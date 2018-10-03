@@ -20,21 +20,22 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 15px;
     margin-top: 50px;
     margin-bottom: 50px;
+
 }
 .calendar h3 {
     display: block;
 }
-.calendar .date {
-    display: block;
-}
-.calendar .month {
-    font-size: 1.1em;
+.month {
+    font-size: 0.5em;
     letter-spacing: 0.09em;
-    padding-right: 200px;
 }
-.calendar .day {
-    font-size: 1.75em;
-    padding-right: 200px;
+.day {
+    font-size: 1em;
+}
+.calendar .date {
+    border-right: 1px solid;
+    padding-right: 20px;
+    height: 80px;
 }
 .disabled {
     pointer-events: none;

@@ -37,11 +37,8 @@ class CalendarWidget {
             // SELECT text, link, date FROM events WHERE date = $date_selector
             $events = array(
                 array(
-                    "text" => "This is some text",
+                    "text" => "This is some text and a larger text paragraph thing to test the text.",
                     "link" => "http://example.com"
-                ),
-                array(
-                    "text" => "This is another post"
                 )
 
             );
@@ -64,12 +61,11 @@ class CalendarWidget {
     // and then an array of $events.
     private function render($date_month, $date_day, $events){
         echo "<div class=\"col-sm-3\">";
-        echo "<div class=\"row date\">";
-        echo "<h3 class=\"month\">{$date_month}</h3>";
-        echo "<h3 class=\"day\">{$date_day}</h3>";
+        echo "<div class=\"row\">";
+        echo "<h3 class=\"date\"><span class=\"month\">{$date_month}</span><br><span class=\"day\">{$date_day}</span></h3>";
 
         foreach ($events as $event){
-            echo "<div class=\"col-sm-12\" >";
+            echo "<div class=\"col-sm-8\">";
             echo $event['text'];
             if (array_key_exists('link', $event)){
                 echo "<br>";
