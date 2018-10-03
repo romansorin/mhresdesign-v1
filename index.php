@@ -4,7 +4,7 @@
 <head>
     <?php include 'inc/includes.php'; ?>
     <?php //include 'inc/connection.php' ?>
-    <title>Home | Mentor High School</title>
+    <title>Mentor High</title>
     <meta name="description" content="This is a description">
 </head>
 

@@ -3,7 +3,7 @@
 
 <head>
     <?php include '../inc/includes.php'; ?>
-    <title>Curriculum | Mentor High School</title>
+    <title>Academics | Mentor High School</title>
     <meta name="description" content="This is a description">
 </head>
 
