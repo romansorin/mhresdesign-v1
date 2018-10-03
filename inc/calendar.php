@@ -75,6 +75,9 @@ class CalendarWidget {
 
         }
         echo "</div></div>";
+        echo "<div class=\"col-sm-12\">";
+        echo "button will be here";   
+        
     }
 
     // Helpers to format our DateTime
