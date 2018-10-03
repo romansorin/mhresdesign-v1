@@ -60,12 +60,12 @@ class CalendarWidget {
     // draws one "row" of your calendar. Accepts a date string to display in the header
     // and then an array of $events.
     private function render($date_month, $date_day, $events){
-        echo "<div class=\"col-sm-3\">";
+        echo "<div class=\"col-md-3\">";
         echo "<div class=\"row\">";
         echo "<h3 class=\"date\"><span class=\"month\">{$date_month}</span><br><span class=\"day\">{$date_day}</span></h3>";
 
         foreach ($events as $event){
-            echo "<div class=\"col-sm-8\">";
+            echo "<div class=\"col-md-9\">";
             echo $event['text'];
             if (array_key_exists('link', $event)){
                 echo "<br>";
