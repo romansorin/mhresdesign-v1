@@ -69,7 +69,7 @@ class CalendarWidget {
             echo $event['text'];
             if (array_key_exists('link', $event)){
                 echo "<br>";
-                echo "<a href=\"{$event['link']}\" style=\"color: #570000; text-transform: uppercase; letter-spacing: 0.9em; font-size: 0.8m;\"> Link </a>";
+                echo "<a href=\"{$event['link']}\" style=\"color: #570000; text-transform: uppercase; font-size: 0.8m;\"> Link </a>";
             }
             echo "</div>";
 
