@@ -1,6 +1,6 @@
 <div id="footer">
     <div class="container-fluid">
-    <div class="row d-none d-md-flex">
+   <!-- <div class="row d-none d-md-flex">
         <div class="col-md-2 offset-md-1">
             <h3>Resources</h3>
             <ul>
@@ -42,7 +42,7 @@
                 <li><a href="/directory">A-Z Index</a></li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <div class="row" id="footer-bottom">
         <div class="col-md-4 col-sm-12" id="footer-weather">
             <!-- <p>Some weather stuff</p> -->

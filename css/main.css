@@ -1,4 +1,4 @@
-body {
+ body {
     font-family: 'Noto Serif JP', sans-serif;
 }
 
@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 15px;
     margin-top: 50px;
     margin-bottom: 50px;
-
+    font-family: 'Open Sans', sans-serif;
 }
 .calendar h3 {
     display: block;
