@@ -30,7 +30,7 @@
     </button>
     <div class="collapse navbar-collapse" id="header-bottom-nav">
         <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item ml-auto mr-auto"><a href="/academics" class="nav-link hvr-underline-from-center">Academics/Curriculum</a></li>
+            <li class="nav-item ml-auto mr-auto"><a href="/academics" class="nav-link hvr-underline-from-center">Academics</a></li>
             <li class="nav-item ml-auto mr-auto"><a href="/athletics" class="nav-link hvr-underline-from-center">Athletics</a></li>
             <li class="nav-item ml-auto mr-auto"><a href="/music" class="nav-link hvr-underline-from-center">Music</a></li>
             <li class="nav-item ml-auto mr-auto"><a href="/arts-theatre" class="nav-link hvr-underline-from-center">Arts & Theatre</a></li>
