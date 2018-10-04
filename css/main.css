@@ -49,3 +49,35 @@ h1, h2, h3, h4, h5, h6 {
     padding-right: 0px;
     padding-left: 0px;
 }
+#news-header-label {
+    text-align: center;
+    text-transform: none;
+    font-weight: 900;
+    letter-spacing: -1.75px;
+    color: #000;
+    font-size: 3.0517578125em;
+    margin-bottom: 20px;
+    font-family: 'Noto Serif JP', sans-serif;
+}
+#news-header-desc {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.carousel {
+    margin-bottom: 25px;
+}
+#all-news-btn {
+    text-align: center;
+    border-radius: 0px;
+    background-color: #711717;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5em;
+    display: inline-block;
+    padding-left: 125px;
+    padding-right: 125px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 25px;
+}

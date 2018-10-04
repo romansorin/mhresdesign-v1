@@ -14,7 +14,7 @@
     <div class="container-fluid no-padding">
         <div class="row no-padding">
             <div class="col-12 no-padding">
-                <div id="frontpage-carousel" class="carousel slide" data-ride="carousel">
+                <div id="frontpage-carousel" class="carousel slide" data-ride="carousel" data-interval="10000">
                     <ol class="carousel-indicators">
                         <li data-target="#frontpage-carousel" data-slide-to="0" class="active"></li>
                         <li data-target="#frontpage-carousel" data-slide-to="1"></li>
@@ -44,10 +44,10 @@
         </div>
     </div>
     <div class="container-fluid no-padding">
-        <div class="row">
+        <div class="row news-header">
             <div class="col-sm-12">
-                <h1>Mentor Events</h1>
-                <h5>See what's happening at Mentor High</h5>
+                <h2 id="news-header-label">Mentor News</h2>
+                <p id="news-header-desc">See what's happening at Mentor</p>
             </div>
         </div>
         <div class="row">
@@ -61,8 +61,8 @@
             <div class="col-sm-4"></div>
         </div>
         <div class="row">
-            <div class="col-sm-12">
-                <h1>All Mentor News</h1>
+            <div class="col-sm-12" style="text-align: center;">
+                <a href="/news"><button type="button" class="btn btn-light" id="all-news-btn">All Mentor News</button></a>
             </div>
         </div>
     </div>

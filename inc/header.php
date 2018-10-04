@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-light d-none d-lg-flex">
+<nav class="navbar navbar-expand-lg navbar-light d-none d-lg-flex">
     <span class="navbar-brand">Resources for:</span>
     <ul class="navbar-nav navbar-resources"> 
         <li class="nav-item"><a href="/students" class="nav-link hvr-overline-reveal">Students</a></li>
@@ -21,7 +21,7 @@
     </ul>
 </nav>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="/index.php" title="Mentor High School Homepage">
         <h1 id="branding-image">Mentor</h1>
     </a>
