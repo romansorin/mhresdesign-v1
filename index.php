@@ -43,8 +43,28 @@
             </div>
         </div>
     </div>
-    <div class="container no-padding">
-        <!-- main body, look back on github for reference -->
+    <div class="container-fluid no-padding">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Mentor Events</h1>
+                <h5>See what's happening at Mentor High</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8"></div>
+            <div class="col-sm-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>All Mentor News</h1>
+            </div>
+        </div>
     </div>
     <div class="container no-padding">
         <div class="row calendar">
@@ -54,7 +74,7 @@
             ?>
         </div>
     </div>
-    <div class="container no-padding">
+    <div class="container-fluid no-padding">
         <div class="row twitter-feeds">
            <!-- twitters -->
         </div>
