@@ -15,7 +15,7 @@
 /* Target the "Resources for:" */
 .navbar-light span.navbar-brand {
     color: #656256;
-    text-transform: none;
+    text-transform: uppercase;
     font-size: .85rem;
     font-weight: bold;
     letter-spacing: 1px;
@@ -47,6 +47,7 @@
 
 .navbar-dark {
     min-height: 75px;
+    box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
 }
 
 .bg-dark {
@@ -124,10 +125,6 @@
         color: white !important;
         font-size: 25px;
     }
-}
-#header-bottom-nav {
-    box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
-    border-bottom: 1px solid #e6e6e6;
 }
 #header-bottom-nav a {
     font-family: 'Noto Serif JP', sans-serif;
