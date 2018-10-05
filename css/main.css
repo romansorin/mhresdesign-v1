@@ -66,6 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .carousel {
     margin-bottom: 25px;
+    overflow: hidden;
 }
 #all-news-btn {
     text-align: center;
@@ -80,4 +81,11 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 25px;
+}
+@media (max-width: 768px) {
+    #all-news-btn {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
 }

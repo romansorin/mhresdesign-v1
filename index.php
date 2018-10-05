@@ -4,13 +4,14 @@
 <head>
     <?php include 'inc/includes.php'; ?>
     <?php //include 'inc/connection.php' ?>
-    <title>Mentor High</title>
+    <title>Mentor High School</title>
     <meta name="description" content="This is a description">
 </head>
 
 <body>
     <?php include 'inc/header.php' ?>
     <!-- This is your main container. -->
+    <!-- This is the photo slideshow. -->
     <div class="container-fluid no-padding">
         <div class="row no-padding">
             <div class="col-12 no-padding">
@@ -43,6 +44,7 @@
             </div>
         </div>
     </div>
+    <!-- This is the news section of the main page. -->
     <div class="container-fluid no-padding">
         <div class="row news-header">
             <div class="col-sm-12">
@@ -52,13 +54,62 @@
         </div>
         <div class="row">
             <div class="col-sm-4">
+                <article>
+                    <figure class="article-img"></figure>
+                    <div class="content">
+                        <div class="post-meta">
+                            <p class="post-category">Clubs</p>
+                        </div>
+                        <h3>Main title of Clubs news</h3>
+                    </div>
+                </article>
             </div>
-            <div class="col-sm-4"></div>
-            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <article>
+                    <figure class="article-img"></figure>
+                    <div class="content">
+                        <div class="post-meta">
+                            <p class="post-category">Sports</p>
+                        </div>
+                        <h3>Main title of Sports news</h3>
+                    </div>
+                </article>
+            </div>
+            <div class="col-sm-4">
+                <article>
+                    <figure class="article-img"></figure>
+                    <div class="content">
+                        <div class="post-meta">
+                            <p class="post-category">Guidance</p>
+                        </div>
+                        <h3>Main title of Guidance news</h3>
+                    </div>
+                </article>
+            </div>
         </div>
         <div class="row">
-            <div class="col-sm-8"></div>
-            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <article>
+                    <figure class="article-img"></figure>
+                    <div class="content">
+                        <div class="post-meta">
+                            <p class="post-category">Miscellaneous</p>
+                        </div>
+                        <h3>Main title of Misc. news</h3>
+                    </div>
+                </article>
+            </div>
+            <div class="col-sm-4">
+                <article>
+                    <figure class="article-img"></figure>
+                    <div class="content">
+                        <div class="post-meta">
+                            <p class="post-category">Important Announcements</p>
+                        </div>
+                        <h3>Main title of Important Announcements</h3>
+                    </div>
+                </article>
+            </div>
         </div>
         <div class="row">
             <div class="col-sm-12" style="text-align: center;">
@@ -66,6 +117,7 @@
             </div>
         </div>
     </div>
+    <!-- This is the calendar of the main page. -->
     <div class="container no-padding">
         <div class="row calendar">
             <?php include 'inc/calendar.php'; 
@@ -74,6 +126,7 @@
             ?>
         </div>
     </div>
+    <!-- This is the social media section of the main page -->
     <div class="container-fluid no-padding">
         <div class="row twitter-feeds">
            <!-- twitters -->
