@@ -1,11 +1,13 @@
 #footer {
     background-color: #BCBBBB;
     font-family: 'Open Sans', sans-serif;
-    color:white;
+    color: white;
+    padding-top: 10px;
 }
 
 #footer-bottom {
     background-color: #711717;
+    border-top: 1px solid #444D56;
 }
 
 #footer h3 {
