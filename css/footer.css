@@ -1,7 +1,9 @@
 #footer {
     background-color: #BCBBBB;
     font-family: 'Open Sans', sans-serif;
-    color:white;
+    color: white;
+    border-top: 1px solid #444D56;
+    padding-top: 10px;
 }
 
 #footer-bottom {
