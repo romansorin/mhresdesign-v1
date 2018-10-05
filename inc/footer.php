@@ -50,7 +50,7 @@
         </div>
         <div class="col-md-8 col-sm-12">
             <div>
-                <a class="pull-right" href="/index.php" title="Mentor High School Homepage">
+                <a class="pull-right" href="/index.php" title="Mentor High School Homepage" style="text-decoration: none;">
                     <h1 id="footer-brand">Mentor</h1>
                 </a>
             </div>
