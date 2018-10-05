@@ -25,19 +25,20 @@
                 <li><a href="/music">Music</a></li>
                 <li><a href="/arts-theatre">Arts</a></li>
                 <li><a href="/activities">Activities</a></li>
-                <li><a href="/academics">Education</a></li>
+                <li><a href="/academics">Academics</a></li>
             </ul>
         </div>
         <div class="col-md-2">
-            <h3>Map</h3>
+            <h3>Campus</h3>
             <ul>
-                <li><a href="/map">Campus</a></li>
-                <li><a href="/map">Directions</a></li>
+                <li><a href="/campus">Map</a></li>
+                <li><a href="/campus">Directions</a></li>
             </ul>
         </div>
         <div class="col-md-2">
             <h3>Directory</h3>
             <ul>
+                <li><a href="/directory">Faculty</a></li>
                 <li><a href="/directory">Staff</a></li>
                 <li><a href="/directory">A-Z Index</a></li>
             </ul>

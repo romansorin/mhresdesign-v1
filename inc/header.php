@@ -17,7 +17,7 @@
     </ul>
     <ul class="nav navbar-nav navbar-extra-resources">
         <li class="nav-item"><a href="/directory">Directory</a></li>
-        <li class="nav-item"><a href="/map">Campus Map</a></li>
+        <li class="nav-item"><a href="/campus">Campus</a></li>
     </ul>
 </nav>
 
