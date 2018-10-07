@@ -1,5 +1,5 @@
 .navbar {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     border: 0px;
     padding: 0px;
 }
@@ -7,7 +7,7 @@
 /* Top navbar in white */
 
 .navbar-light {
-    color: #570000;
+    color: #910000;
     border-left: 1px solid #E0E0E0;
     font-size: .85rem;
 }
@@ -29,7 +29,7 @@
 
 
 .navbar-light .navbar-nav a {
-    color: #570000 !important;
+    color: #910000 !important;
     padding:8px;
     text-decoration: none;
 }
@@ -51,7 +51,7 @@
 }
 
 .bg-dark {
-    background-color: #711717 !important;   
+    background-color: #B1040E !important;   
 }
 
 .search-container button {
@@ -80,15 +80,15 @@
     display: inline-block;
     vertical-align: middle;
     border: none;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     -webkit-transition-duration: 0.05s; /* safari transition */
     transition-duration: 0.05s;
 }
 .search-container input[type=text]:focus {
-    outline-color: #570000 !important;
+    outline-color: #910000 !important;
 }
 .search-container button[type=submit]:focus {
-    outline-color: #570000 !important;
+    outline-color: #910000 !important;
 }
 .navbar-extra-resources a {
     -webkit-transition-duration: 0.3s; /* safari transition */
@@ -127,7 +127,7 @@
     }
 }
 #header-bottom-nav a {
-    font-family: 'Noto Serif JP', sans-serif;
+    font-family: 'Crimson Text', serif;
     font-size: 18px;
     font-weight: 400;
     color: #FFFFFF;
@@ -144,19 +144,19 @@
 
 #header-bottom-nav li a:hover {
     background-color: #FFFFFF;
-    color: #711717;
+    color: #B1040E;
     font-weight: 400;
     font-size: 18px;
 }
 
 .hvr-underline-from-center:before {
-    background: #711717;
+    background: #B1040E;
 }
 
 .hvr-overline-reveal:before {
-    background: #711717;
+    background: #B1040E;
 }
 #branding-image {
     font-size: 2.5em !important; 
-    font-family: 'Noto Serif JP', sans-serif !important;
+    font-family: 'Crimson Text', serif;
 }

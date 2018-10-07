@@ -1,22 +1,21 @@
 #footer {
     background-color: #BCBBBB;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     color: white;
 }
 
 #footer-bottom {
-    background-color: #711717;
-    border-top: 1px solid #444D56;
+    background-color: #B1040E;
 }
 
 #footer h3 {
     text-transform: uppercase; 
-    color: #570000; 
+    color: #910000; 
     font-size: 18px;
     font-weight: 700;
     padding-left: 40px;
     margin-top: 25px;
-    border-bottom: 1px solid #570000;
+    border-bottom: 1px solid #910000;
 }
 
 #footer ul, #footer-bottom ul {
@@ -36,7 +35,7 @@
 
 #footer-brand {
     font-size: 3.5em; 
-    font-family: 'Noto Serif JP', sans-serif;
+    font-family: 'Crimson Text', serif;
     margin-bottom: 0px;
     text-transform: none;
     color: #FFFFFF;
