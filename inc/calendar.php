@@ -3,7 +3,7 @@ class CalendarWidget {
     // Generates a calendar widget on the page, 
     public function generate($range = 7, $start_date = null)
     {
-    date_default_timezone_set('America/New_York');
+        date_default_timezone_set('America/New_York');
         // Accept a $start_date, otherwise set it to today's date (useful if you want
         // to start the calendar at a date in the past, for example.)
         if (is_null($start_date)){
@@ -37,7 +37,8 @@ class CalendarWidget {
             // SELECT text, link, date FROM events WHERE date = $date_selector
             $events = array(
                 array(
-                    "text" => "This is some text and a larger text paragraph thing to test the text.",
+                    "category" => "category",
+                    "text" => "A fake event.",
                     "link" => "http://example.com"
                 )
 
@@ -60,19 +61,32 @@ class CalendarWidget {
     // draws one "row" of your calendar. Accepts a date string to display in the header
     // and then an array of $events.
     private function render($date_month, $date_day, $events){
-        echo "<div class=\"col-md-3\">";
-        echo "<div class=\"row\">";
+        echo "<div class=\"col-sm-12\">";
+        echo "<div class=\"row calendar\">";
+        echo "<div class=\"col-sm-2\">";
         echo "<h3 class=\"date\"><span class=\"month\">{$date_month}</span><br><span class=\"day\">{$date_day}</span></h3>";
-
+        echo "</div>";
+        echo "<div class=\"col-sm-8\">";
         foreach ($events as $event){
-            echo "<div class=\"col-md-9\">";
+            echo "<div class=\"cal-meta\">";
+            echo "<div class=\"cal-category\">";
+            echo $event['category'];
+            echo "</div>";
+            echo "<div class=\"cal-content\">";
             echo $event['text'];
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
             if (array_key_exists('link', $event)){
                 echo "<br>";
-                echo "<a href=\"{$event['link']}\" style=\"color: #570000; text-transform: uppercase; font-size: 0.8m;\"> Link </a>";
+                echo "<div class=\"col-sm-2 text-center\">";
+                echo "<a href=\"{$event['link']}\" class=\"event-link\"><button type=\"button\" class=\"btn btn-light event-link-btn\">View</button></a>";
+            } else {
+                echo "<br>";
+                echo "<div class\"col-sm-2 text-center\">";
+                echo "<button type=\"button\" class=\"btn event-link-btn-disabled disabled\">View</button>";
             }
             echo "</div>";
-
         }
         echo "</div></div>";
     }
