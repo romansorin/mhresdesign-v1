@@ -17,7 +17,7 @@
     color: #656256;
     text-transform: uppercase;
     font-size: .85rem;
-    font-weight: bold;
+    font-weight: 600;
     letter-spacing: 1px;
     padding: 8px 0px 8px 8px;
 }
@@ -31,12 +31,12 @@
 .navbar-light .navbar-nav a {
     color: #910000 !important;
     padding:8px;
+    font-weight: 600;
     text-decoration: none;
 }
 
 .navbar-light .navbar-resources {
     text-transform: uppercase;
-    font-weight: bold;
     letter-spacing: 1px;
 }
 
@@ -93,6 +93,7 @@
 .navbar-extra-resources a {
     -webkit-transition-duration: 0.3s; /* safari transition */
     transition-duration: 0.3s;
+    font-color: 400;
 }
 .navbar-extra-resources a:hover {
     background-color: #E7E7E7;
@@ -127,7 +128,7 @@
     }
 }
 #header-bottom-nav a {
-    font-family: 'Crimson Text', serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
     font-weight: 400;
     color: #FFFFFF;
