@@ -2,7 +2,7 @@
 //Docs at http://simpleweatherjs.com
 $(document).ready(function() {
   $.simpleWeather({
-    location: 'Austin, TX',
+    location: 'Mentor, OH',
     woeid: '',
     unit: 'f',
     success: function(weather) {
