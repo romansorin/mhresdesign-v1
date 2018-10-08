@@ -147,6 +147,7 @@
         </div>  
         <div class="row">
             <div class="col-sm-12" style="text-align: center;">
+                <div id="weather"></div>
                 <a href="/events"><button type="button" class="btn btn-light" id="all-events-btn">View all events</button></a>
             </div>
         </div>

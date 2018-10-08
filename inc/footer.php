@@ -46,7 +46,6 @@
     </div> -->
     <div class="row" id="footer-bottom">
         <div class="col-md-4 col-sm-12" id="footer-weather">
-            <div id="weather"></div>
         </div>
         <div class="col-md-8 col-sm-12">
             <div>
