@@ -15,11 +15,11 @@
     src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'),
          url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff') format('woff'),
          url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf') format('truetype'),
-         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg'),
+         local('artill_clean_icons.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
-
 
 #weather {
   width: 500px;
@@ -90,7 +90,7 @@ i {
 #weather h2 {
   margin: 0 0 8px;
   color: #fff;
-  font-size: 100px;
+  font-size: 200px;
   font-weight: 300;
   text-align: center;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
@@ -102,11 +102,9 @@ i {
 }
 
 #weather li {
-  background: #fff;
-  background: rgba(255,255,255,0.90);
+  color: #fff;
   padding: 20px;
   display: inline-block;
-  border-radius: 5px;
 }
 
 #weather .currently {
