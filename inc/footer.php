@@ -56,6 +56,7 @@
             </div>
         </div>
         <div class="col-sm-12">
+            <div id="weather"></div>
             <div><a class="pull-right" id="footer-contact" href="/contact">Contact Us</a></div>
         </div>
         

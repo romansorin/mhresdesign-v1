@@ -69,7 +69,7 @@
                 </div>
                 <div class="col-sm-4" style="padding-left: 0px; padding-right: 0px;">
                     <article>
-                        <figure class="article-img">
+                        <figure class="article-img ">
                             <img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/GbbtDTW/new-york-city-nyc-sunset-night-skyline-view-brooklyn-bridge-water-4k-timelapse_41kywuhn__F0000.png" alt="test">
                         </figure>
                         <div class="content">
