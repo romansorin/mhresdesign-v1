@@ -11,6 +11,9 @@
     <?php include '../inc/header.php' ?>
     <div class="container-fluid">
         <div class="row">
+            <div id="weather"></div>
+        </div>
+        <div class="row">
             <div class="main-photos col-md-12">
                 <img class="img-responsive" src="" alt="photos here">
             </div>
