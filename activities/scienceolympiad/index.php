@@ -30,7 +30,7 @@
             </div>
         </div>
     </div>
-    <?php include 'srv/http/inc/footer.php'; ?>
+    <?php include '/srv/http/inc/footer.php'; ?>
 </body>
 
 </html>
