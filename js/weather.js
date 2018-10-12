@@ -5,7 +5,7 @@ $(document).ready(function() {
     unit: 'f',
     success: function(weather) {
       html = '<h2><span id="temp">'+weather.temp+'&deg;'+weather.units.temp+'</span>';
-      html += '<i class="icon-'+weather.code+'"></i></h2>';
+      html += '<i id="weather-icon" class="icon-'+weather.code+'"></i></h2>';
       html += '<h2><span id="location">'+weather.city+', '+weather.region+'</span>'+ ' | ';
       html += '<span id="currently">'+weather.currently+'</span></h2>';
   
