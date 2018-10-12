@@ -93,7 +93,7 @@
 .navbar-extra-resources a {
     -webkit-transition-duration: 0.3s; /* safari transition */
     transition-duration: 0.3s;
-    font-color: 400;
+    font-weight: 400;
 }
 .navbar-extra-resources a:hover {
     background-color: #E7E7E7;

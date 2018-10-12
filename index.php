@@ -161,7 +161,7 @@
         </div>
         <div class="row social-media">
             <div class="col-sm-4 crowe-twitter">    
-                <a href="https://twitter.com/PrincipalCrowe" alt="Official account of MHS principal">
+                <a href="https://twitter.com/PrincipalCrowe">
                     <i class="fa fa-twitter"></i>
                     <h4 class="sm-title">@PrincipalCrowe</h4>
                 </a>
@@ -169,14 +169,14 @@
                 <h4 class="time-span">About 7 minutes ago</h4>
             </div>
             <div class="col-sm-4 instagram">
-                <a href="https://instagram.com/rm.sorin" alt="I made this website">
+                <a href="https://instagram.com/rm.sorin">
                     <i class="fa fa-instagram"></i>
                     <h4 class="sm-title">rm.sorin</h4>
-                    <a href="https://www.instagram.com/p/BmDycX-HLD-/?taken-by=rm.sorin" alt="test insta post"><img src="https://scontent-iad3-1.cdninstagram.com/vp/c2fbf259b3bb22bf664d9596d3f688e1/5C612A60/t51.2885-15/e35/38057971_512894979140557_5238749822009212928_n.jpg" alt="test photo" id="embed-ig"></a>
                 </a>
+                    <a href="https://www.instagram.com/p/BmDycX-HLD-/?taken-by=rm.sorin" alt="test insta post"><img src="https://scontent-iad3-1.cdninstagram.com/vp/c2fbf259b3bb22bf664d9596d3f688e1/5C612A60/t51.2885-15/e35/38057971_512894979140557_5238749822009212928_n.jpg" alt="test photo" id="embed-ig"></a>
             </div>
             <div class="col-sm-4 general-twitter">
-                <a href="https://twitter.com/mentorhigh" alt="Official Mentor High School account">
+                <a href="https://twitter.com/mentorhigh">
                     <i class="fa fa-twitter"></i>
                     <h4 class="sm-title">@MentorHigh</h4>
                 </a>
