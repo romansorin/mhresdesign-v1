@@ -316,7 +316,7 @@ article {
     margin-bottom: 40px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
     #all-news-btn, #all-events-btn {
         padding-left: 50px;
         padding-right: 50px;
@@ -386,4 +386,4 @@ article {
   background: #000 !important;
   color: #0f0 !important;
   outline: solid #f00 1px !important;
-}*/
+} */

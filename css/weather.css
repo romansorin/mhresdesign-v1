@@ -1,41 +1,25 @@
-/*
-  Docs at http://http://simpleweatherjs.com
-
-  Look inspired by http://www.degreees.com/
-  Used for demo purposes.
-
-  Weather icon font from http://fonts.artill.de/collection/artill-weather-icons
-
-  DO NOT hotlink the assets/font included in this demo. If you wish to use the same font icon then download it to your local assets at the link above. If you use the links below odds are at some point they will be removed and your version will break.
-*/
-
+/* icon specific */
 @font-face {
     font-family: 'weather';
     src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot');
     src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'),
          url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff') format('woff'),
          url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf') format('truetype'),
-         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg'),
-         local('artill_clean_icons.otf') format('opentype');
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
     font-weight: normal;
     font-style: normal;
-}
-
-#weather {
-  width: 500px;
-  margin: 0px auto;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 i {
   color: #fff;
   font-family: weather;
-  font-size: 150px;
+  font-size: 60px;
   font-weight: normal;
   font-style: normal;
-  line-height: 1.0;
+  line-height: 0.5;
   text-transform: none;
+  margin-left: 15px;
+  padding-left: 0px;
 }
 
 .icon-0:before { content: ":"; }
@@ -87,26 +71,47 @@ i {
 .icon-46:before { content: "U"; }
 .icon-47:before { content: "S"; }
 
+/* 'actual' content */
+#weather {
+  text-transform: none;
+  margin-top: 18px;
+  margin-right: 55px;
+}
+
 #weather h2 {
-  margin: 0 0 8px;
   color: #fff;
-  font-size: 200px;
-  font-weight: 300;
-  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+  margin: 0px;
 }
 
-#weather ul {
-  margin: 0;
-  padding: 0;
+#location, #currently {
+  text-transform: none;
 }
 
-#weather li {
-  color: #fff;
-  padding: 20px;
-  display: inline-block;
+#temp {
+  padding-left: 50px;
+  font-size: 24px;
 }
 
-#weather .currently {
-  margin: 0 20px;
+@media (max-width: 767.98px) { 
+  i {
+    font-size: 50px;
+  }
+
+  #weather {
+    margin-top: 34px;
+    margin-right: 15px;
+  }
+
+  #weather h2 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  #temp {
+    font-size: 20px;
+  }
 }
+

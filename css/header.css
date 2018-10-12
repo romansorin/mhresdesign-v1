@@ -136,7 +136,7 @@
     -webkit-transition-duration: 0.4s;
     -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
-    padding:10px 15px;
+    padding: 10px 15px;
 }
 
 #header-bottom-nav li {
@@ -160,4 +160,7 @@
 #branding-image {
     font-size: 2.5em !important; 
     font-family: 'Crimson Text', serif;
+    text-transform: none;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
