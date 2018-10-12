@@ -93,7 +93,7 @@
 .navbar-extra-resources a {
     -webkit-transition-duration: 0.3s; /* safari transition */
     transition-duration: 0.3s;
-    font-weight: 400;
+    font-weight: 600;
 }
 .navbar-extra-resources a:hover {
     background-color: #E7E7E7;
@@ -115,6 +115,7 @@
     }
     .navbar-brand {
         font-size: 0.7em !important;
+        letter-spacing: -0.75px;
         padding-left: 10px !important;
         padding-top: 20px !important;
         padding-bottom: 12px !important;
@@ -160,6 +161,7 @@
 #branding-image {
     font-size: 2.5em !important; 
     font-family: 'Crimson Text', serif;
+    letter-spacing: -0.75px;
     text-transform: none;
     margin-bottom: 0px;
     margin-top: 0px;
