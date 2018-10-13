@@ -8,18 +8,38 @@
     </ul>
     <ul class="nav navbar-nav ml-auto search">
         <div class="search-container">
-            <form action="/action_page.php">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
+            <button type="button" class="toggle" onclick="showDiv()"><i class="fa fa-search"></i></button>
+            <script>
+                function showDiv() {
+                    document.getElementById('search-div').style.display = "block";
+                }
+            </script>
         </div>
-        <!-- search goes here -->
     </ul>
     <ul class="nav navbar-nav navbar-extra-resources">
         <li class="nav-item"><a href="/directory">Directory</a></li>
         <li class="nav-item"><a href="/campus">Campus</a></li>
     </ul>
 </nav>
+
+<div id="search-div" class="container-fluid" style="display: none;">
+    <div class="row">
+        <!-- F4F4F4 form container color -->
+        <!-- this style for buttons https://gyazo.com/83f4a7d25ff7abbda3c0f4c2a3946a25 -->
+        <div class="col-md-6">
+            <form class="search-input" action="action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form class="search-input" action="action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="/index.php" title="Mentor High School Homepage">
@@ -40,3 +60,4 @@
         </ul>
     </div>
 </nav>
+
