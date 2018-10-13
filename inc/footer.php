@@ -47,6 +47,7 @@
                     <ul>
                         <li><a href="../campus">Directions</a></li>
                         <li><a href="../campus">Map</a></li>
+                        <li><a href="../events">Events</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
