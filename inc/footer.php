@@ -8,11 +8,11 @@
                 <div class="col-md-4">
                     <h3>Curriculum</h3>
                     <ul>
-                        <li><a href="#">Academics</a></li>
-                        <li><a href="#">Activities</a></li>
-                        <li><a href="#">Athletics</a></li>
-                        <li><a href="#">Arts & Theatre</a></li>
-                        <li><a href="#">Music</a></li>
+                        <li><a href="../academics">Academics</a></li>
+                        <li><a href="../activities">Activities</a></li>
+                        <li><a href="../athletics">Athletics</a></li>
+                        <li><a href="../arts-theatre">Arts & Theatre</a></li>
+                        <li><a href="../music">Music</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -26,10 +26,10 @@
                 <div class="col-md-4">
                     <h3>Resources</h3>
                     <ul>
-                        <li><a href="#">Students</a></li>
-                        <li><a href="#">Faculty & Staff</a></li>
-                        <li><a href="#">Parents</a></li>
-                        <li><a href="#">Alumni</a></li>
+                        <li><a href="../students">Students</a></li>
+                        <li><a href="../faculty-staff">Faculty & Staff</a></li>
+                        <li><a href="../parents">Parents</a></li>
+                        <li><a href="../alumni">Alumni</a></li>
                     </ul>
                 </div>
             </div>
@@ -37,16 +37,16 @@
                 <div class="col-md-4">
                     <h3>Directory</h3>
                     <ul>
-                        <li><a href="#">A-Z Index</a></li>
-                        <li><a href="#">Staff</a></li>
-                        <li><a href="#">Faculty</a></li>
+                        <li><a href="../directory">A-Z Index</a></li>
+                        <li><a href="../directory">Staff</a></li>
+                        <li><a href="../directory">Faculty</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h3>Campus</h3>
                     <ul>
-                        <li><a href="#">Directions</a></li>
-                        <li><a href="#">Map</a></li>
+                        <li><a href="../campus">Directions</a></li>
+                        <li><a href="../campus">Map</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
