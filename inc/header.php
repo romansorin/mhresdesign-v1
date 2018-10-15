@@ -8,22 +8,35 @@
     </ul>
     <ul class="nav navbar-nav ml-auto search">
         <div class="search-container">
-            <button type="button" class="toggle" onclick="showDiv()"><i class="fa fa-search"></i></button>
+            <button type="button" class="dropbtn" onclick="showDiv()"><i class="fa fa-search"></i></button>
             <script>
                 function showDiv() {
-                    document.getElementById('search-div').style.display = "block";
+                    document.getElementById('search-div').classList.toggle("show");
                 }
-            </script>
-        </div>
-    </ul>
-    <ul class="nav navbar-nav navbar-extra-resources">
-        <li class="nav-item"><a href="/directory">Directory</a></li>
-        <li class="nav-item"><a href="/campus">Campus</a></li>
-    </ul>
+                window.onclick = function(event) {
+                  if (!event.target.matches('.dropbtn')) {
+
+                    var dropdowns = document.getElementsByClassName("search-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                      var openDropdown = dropdowns[i];
+                      if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</div>
+</ul>
+<ul class="nav navbar-nav navbar-extra-resources">
+    <li class="nav-item"><a href="/directory">Directory</a></li>
+    <li class="nav-item"><a href="/campus">Campus</a></li>
+</ul>
 </nav>
 
 <div id="search-div" class="container-fluid" style="display: none;">
-    <div class="row">
+    <div class="row search-content">
         <!-- F4F4F4 form container color -->
         <!-- this style for buttons https://gyazo.com/83f4a7d25ff7abbda3c0f4c2a3946a25 -->
         <div class="col-md-6">
