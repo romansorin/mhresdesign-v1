@@ -89,9 +89,13 @@ class CalendarWidget {
             echo "</div>";
         }
         echo "</div></div>";
+        echo "<div class=\"col-sm-12\">";
+        echo "button will be here";   
+        
     }
 
     // Helpers to format our DateTime
+<<<<<<< Updated upstream
     private function formatDateMonth($date){
         // returns like 'Jan'
         return $date->format('M'); 
@@ -99,6 +103,11 @@ class CalendarWidget {
     private function formatDateDay($date){
         // returns like '4'
         return $date->format('j'); 
+=======
+    private function formatDateReadable($date){
+        // returns like 'Monday, Jan 4'
+        return $date->format('l, M j'); 
+>>>>>>> Stashed changes
     }
     private function formatDateQueryable($date){
         // returns like '1999-12-31' 
