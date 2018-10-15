@@ -9,39 +9,30 @@
     <ul class="nav navbar-nav ml-auto search">
         <div class="search-container">
             <button type="button" class="dropbtn" onclick="showDiv()"><i class="fa fa-search"></i></button>
-            div id="search-div" class="container-fluid" style="display: none;">
-            <div class="row">
-                <!-- F4F4F4 form container color -->
-                <!-- this style for buttons https://gyazo.com/83f4a7d25ff7abbda3c0f4c2a3946a25 -->
-                <div class="col-md-6">
-                    <form class="search-input" action="action_page.php">
-                        <input type="text" placeholder="Search.." name="search">
-                        <button type="submit">Submit</button>
-                    </form>
-                </div>
-                <div class="col-md-6">
-                    <form class="search-input" action="action_page.php">
-                        <input type="text" placeholder="Search.." name="search">
-                        <button type="submit">Submit</button>
-                    </form>
+            <div id="search-div" class="container-fluid" style="display: none;">
+                <div class="row">
+                    <!-- F4F4F4 form container color -->
+                    <!-- this style for buttons https://gyazo.com/83f4a7d25ff7abbda3c0f4c2a3946a25 -->
+                    <div class="col-md-6">
+                        <form class="search-input" action="action_page.php">
+                            <input type="text" placeholder="Search.." name="search">
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <form class="search-input" action="action_page.php">
+                            <input type="text" placeholder="Search.." name="search">
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-        <script>
-            function showDiv() {
-                document.getElementById('search-div').classList.toggle("show");
-            }
-            window.onclick = function(event) {
-              if (!event.target.matches('dropbtn')) {
-                var dropdowns = document.getElementsById('search-div');
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                  var openDropdown = dropdowns[i];
-                  if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
+            <script>
+                function showDiv() {
+                    document.getElementById('search-div').classList.toggle("show");
                 }
                 window.onclick = function(event) {
-                  if (!event.target.matches('.dropbtn')) {
+                  if (!event.target.matches('dropbtn')) {
                     var dropdowns = document.getElementsById('search-div');
                     var i;
                     for (i = 0; i < dropdowns.length; i++) {
@@ -49,11 +40,20 @@
                       if (openDropdown.classList.contains('show')) {
                         openDropdown.classList.remove('show');
                     }
+                    window.onclick = function(event) {
+                      if (!event.target.matches('.dropbtn')) {
+                        var dropdowns = document.getElementsById('search-div');
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                          var openDropdown = dropdowns[i];
+                          if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
                 }
             }
         }
-    }
-</script>
+    </script>
 </div>
 </ul>
 <ul class="nav navbar-nav navbar-extra-resources">
@@ -61,8 +61,6 @@
     <li class="nav-item"><a href="/campus">Campus</a></li>
 </ul>
 </nav>
-
-<
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="/index.php" title="Mentor High School Homepage">
