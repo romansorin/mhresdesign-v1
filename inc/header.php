@@ -14,7 +14,7 @@
                     document.getElementById('search-div').classList.toggle("show");
                 }
                 window.onclick = function(event) {
-                  if (!event.target.matches('.dropbtn')) {
+                  if (!event.target.matches('dropbtn')) {
                     var dropdowns = document.getElementsById('search-div');
                     var i;
                     for (i = 0; i < dropdowns.length; i++) {
