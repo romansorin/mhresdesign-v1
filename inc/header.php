@@ -15,8 +15,7 @@
                 }
                 window.onclick = function(event) {
                   if (!event.target.matches('.dropbtn')) {
-
-                    var dropdowns = document.getElementsByClassName("search-content");
+                    var dropdowns = document.getElementsById('search-div');
                     var i;
                     for (i = 0; i < dropdowns.length; i++) {
                       var openDropdown = dropdowns[i];
@@ -36,7 +35,7 @@
 </nav>
 
 <div id="search-div" class="container-fluid" style="display: none;">
-    <div class="row search-content">
+    <div class="row">
         <!-- F4F4F4 form container color -->
         <!-- this style for buttons https://gyazo.com/83f4a7d25ff7abbda3c0f4c2a3946a25 -->
         <div class="col-md-6">
