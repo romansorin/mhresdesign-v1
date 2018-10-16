@@ -41,8 +41,6 @@
 }
 
 .navbar-light .search {
-    border-left: 1px solid #DDD;
-    border-right: 1px solid #DDD;
 }
 
 .navbar-dark {
@@ -60,12 +58,46 @@
     position: absolute;
     width: 100%;
     height: 300px;
-    top: 35px;
+    top: 110px;
     left: 0;
     z-index: 10;
-    background-color: #F4F4F2;
-    border-top: 1px solid #E7E7E7;
-    border-bottom: 1px solid #E7E7E7;
+    background-color: #F4F4F4;
+    border-top: 1px solid #69605F;
+    border-bottom: 1px solid #E0E0E0;
+    text-align: center;
+}
+.search-input {
+    margin-top: 70px;
+}
+.search-input input {
+    background-color: #E0E0E0;
+    height: 75px;
+    width: 30em;
+    border: none;
+}
+.search-input input:focus {
+    outline-color: #910000;
+}
+.search-input input[type="text"] {
+     color: #544948;
+     font-family: "Source Sans Pro", sans-serif;
+     font-size: 24px;
+     padding-left: 1em;
+     font-weight: 500;
+}
+.search-input button {
+    margin-top: 50px;
+    border: 1px solid #544948;
+    width: 200px;
+    height: 50px;
+    color: #544948;
+    background-color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+.search-input button:focus {
+    outline-color: #910000;
 }
 .search-container button {
     padding-top: 8px;
@@ -82,8 +114,7 @@
     background-color: #E7E7E7;
 }
 .search-container button:focus {
-    -webkit-transition-duration: 0.05s; /* safari transition */
-    transition-duration: 0.05s;
+    outline-color: #910000;
 }
 .search-container input[type=text] {
     padding-top: 8px;
@@ -96,12 +127,6 @@
     font-family: 'Source Sans Pro', sans-serif;
     -webkit-transition-duration: 0.05s; /* safari transition */
     transition-duration: 0.05s;
-}
-.search-container input[type=text]:focus {
-    outline-color: #910000 !important;
-}
-.search-container button[type=submit]:focus {
-    outline-color: #910000 !important;
 }
 .navbar-extra-resources a {
     -webkit-transition-duration: 0.3s; /* safari transition */
@@ -143,7 +168,7 @@
 }
 #header-bottom-nav a {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     color: #FFFFFF;
     transition-duration: 0.4s;
@@ -161,7 +186,7 @@
     background-color: #FFFFFF;
     color: #B1040E;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .hvr-underline-from-center:before {
@@ -171,8 +196,9 @@
 .hvr-overline-reveal:before {
     background: #B1040E;
 }
+
 #branding-image {
-    font-size: 2.5em !important; 
+    font-size: 2.85em !important; 
     font-family: 'Crimson Text', serif;
     letter-spacing: -0.75px;
     text-transform: none;

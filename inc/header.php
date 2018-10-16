@@ -1,3 +1,4 @@
+<!-- top part of navbar -->
 <nav class="navbar navbar-expand-lg navbar-light d-none d-lg-flex">
     <span class="navbar-brand">Resources for:</span>
     <ul class="navbar-nav navbar-resources"> 
@@ -22,25 +23,8 @@
     </ul>
 </nav>
 
-<div id="search-div" class="container-fluid" style="display: none;">
-    <div class="row">
-        <!-- F4F4F4 form container color -->
-        <!-- this style for buttons https://gyazo.com/83f4a7d25ff7abbda3c0f4c2a3946a25 -->
-        <div class="col-md-6">
-            <form class="search-input" action="action_page.php">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-        <div class="col-md-6">
-            <form class="search-input" action="action_page.php">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-</div>
 
+<!-- bottom part of navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="/index.php" title="Mentor High School Homepage">
         <h1 id="branding-image">Mentor</h1>
@@ -60,4 +44,25 @@
         </ul>
     </div>
 </nav>
+
+<!-- hidden search container -->
+<div id="search-div" class="container-fluid" style="display: none;">
+    <div class="row" style="height: 100%">
+        <!-- this style for buttons https://gyazo.com/83f4a7d25ff7abbda3c0f4c2a3946a25 -->
+        <div class="col-md-6" style="border-right: 1px solid #E0E0E0">
+            <form class="search-input" action="action_page.php">
+                <input type="text" value="Articles, Keywords, Phrases" onfocus="this.value='';" name="search">
+                <br>
+                <button type="submit">Search Index</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form class="search-input" action="action_page.php">
+                <input type="text" value="Person or Department" onfocus="this.value='';" name="search">
+                <br>
+                <button type="submit">Search Directory</button>
+            </form>
+        </div>
+    </div>
+</div>
 
