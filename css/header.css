@@ -72,22 +72,23 @@
 .search-input input {
     background-color: #E0E0E0;
     height: 75px;
-    width: 30em;
+    width: 80%;
     border: none;
 }
 .search-input input:focus {
     outline-color: #910000;
 }
 .search-input input[type="text"] {
-     color: #544948;
-     font-family: "Source Sans Pro", sans-serif;
-     font-size: 24px;
-     padding-left: 1em;
-     font-weight: 500;
+    color: #544948;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 24px;
+    padding-left: 1em;
+    font-weight: 500;
 }
 .search-input button {
     margin-top: 50px;
     border: 1px solid #544948;
+    padding: 6px 6px;
     width: 200px;
     height: 50px;
     color: #544948;
