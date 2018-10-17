@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <?php include '../../../inc/includes.php'; ?>
+    <?php include '/srv/http/inc/includes.php'; ?>
     <title>String Sinfonia | Mentor High School</title>
     <meta name="description" content="This is a description">
 </head>
@@ -16,7 +16,7 @@
             </div>
         </div>
     </div>
-    <?php include '../../../inc/footer.php'; ?>
+    <?php include '/srv/http/inc/footer.php'; ?>
 </body>
 
 </html>
