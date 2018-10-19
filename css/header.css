@@ -10,6 +10,7 @@
     color: #910000;
     border-left: 1px solid #E0E0E0;
     font-size: .85rem;
+    background-color: #fff;
 }
 
 /* Target the "Resources for:" */
@@ -142,29 +143,44 @@
     padding-left: 45px;
     padding-right: 5px;
 }
-
-@media(max-width:768px) {
+@media (min-width: 992px) {
+    .collapsed-search-container {
+        display: none;
+    }
+    .collapse-hide {
+        display: none;
+    }
+}
+@media(max-width: 992px) {
 
     #header-bottom-nav {
         padding-top: 60px;
         padding-bottom: 20px;
+        height: 500px;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch; /* mobile safari */
     }
     .navbar-dark {
         border-top: 4px solid #FFFFFF;
     }
     .navbar-brand {
-        font-size: 0.7em !important;
+        font-size: 0.75em !important;
         letter-spacing: -0.75px;
-        padding-left: 10px !important;
-        padding-top: 20px !important;
-        padding-bottom: 12px !important;
+        padding-left: 15px !important;
+        padding-top: 15px !important;
+        padding-bottom: 16px !important;
     }
     .navbar-toggler {
         padding-right: 0px;
         border: none;
-        width: 100px;
+        width: 75px;
         color: white !important;
         font-size: 25px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+    }
+    .navbar-light {
+        display: none;
     }
 }
 #header-bottom-nav a {

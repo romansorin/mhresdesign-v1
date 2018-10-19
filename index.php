@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <div class="push-down"></div>
     <?php include 'inc/header.php' ?>
     <!-- This is your main container. -->
     <!-- This is the photo slideshow. -->
@@ -29,7 +30,7 @@
                             <img class="d-block w-100" src="http://orig07.deviantart.net/bd5d/f/2014/334/d/c/new_york_skyline_wallpaper_by_neokeitaro-d8839i9.jpg" alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="images/3.jpg" alt="Third slide">
+                            <img class="d-block w-100" src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.optoma.co.uk%2Fimages%2FProductApplicationFeatures%2F4kuhd%2Fbanner.jpg&f=1" alt="Third slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#frontpage-carousel" role="button" data-slide="prev">
@@ -54,10 +55,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4" style="padding-left: 0px; padding-right: 0px;">
+                <div class="col-xl-4" style="padding-left: 0px; padding-right: 0px;">
                     <article>
                         <figure class="article-img">
-                            <img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/GbbtDTW/new-york-city-nyc-sunset-night-skyline-view-brooklyn-bridge-water-4k-timelapse_41kywuhn__F0000.png" alt="test">
+                            <img src="https://gratisography.com/thumbnails/gratisography-subway-train-arrival-thumbnail.jpg" alt="test">
                         </figure>
                         <div class="content">
                             <div class="post-meta">
@@ -67,10 +68,10 @@
                         </div>
                     </article>
                 </div>
-                <div class="col-sm-4" style="padding-left: 0px; padding-right: 0px;">
+                <div class="col-xl-4" style="padding-left: 0px; padding-right: 0px;">
                     <article>
                         <figure class="article-img ">
-                            <img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/GbbtDTW/new-york-city-nyc-sunset-night-skyline-view-brooklyn-bridge-water-4k-timelapse_41kywuhn__F0000.png" alt="test">
+                            <img src="https://images.unsplash.com/photo-1539934675566-f6889aa8f6a2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=148236f5e96a5fc0076a4d13128751bd&auto=format&fit=crop&w=701&q=80" alt="test">
                         </figure>
                         <div class="content">
                             <div class="post-meta">
@@ -80,10 +81,10 @@
                         </div>
                     </article>
                 </div>
-                <div class="col-sm-4" style="padding-left: 0px; padding-right: 0px;">
+                <div class="col-xl-4" style="padding-left: 0px; padding-right: 0px;">
                     <article>
                         <figure class="article-img">
-                            <img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/GbbtDTW/new-york-city-nyc-sunset-night-skyline-view-brooklyn-bridge-water-4k-timelapse_41kywuhn__F0000.png" alt="test">
+                            <img src="https://images.unsplash.com/photo-1539895284193-9a389687ee95?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=909631c97e5f1b79bb7e9aea9a0344fc&auto=format&fit=crop&w=700&q=80" alt="test">
                         </figure>
                         <div class="content">
                             <div class="post-meta">
@@ -95,10 +96,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-8" style="padding-left: 0px; padding-right: 0px;">
+                <div class="col-xl-8" style="padding-left: 0px; padding-right: 0px;">
                     <article class="article-long">
                         <figure class="article-img">
-                            <img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/GbbtDTW/new-york-city-nyc-sunset-night-skyline-view-brooklyn-bridge-water-4k-timelapse_41kywuhn__F0000.png" alt="test">
+                            <img src="https://images.unsplash.com/photo-1539964452237-866f0522db8b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=739184a0c7d9ae7e54d3516bf6eb76e5&auto=format&fit=crop&w=628&q=80" alt="test">
                         </figure>
                         <div class="content">
                             <div class="post-meta">
@@ -108,10 +109,10 @@
                         </div>
                     </article>
                 </div>
-                <div class="col-sm-4" style="padding-left: 0px; padding-right: 0px;">
+                <div class="col-xl-4" style="padding-left: 0px; padding-right: 0px;">
                     <article>
                         <figure class="article-img">
-                            <img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/GbbtDTW/new-york-city-nyc-sunset-night-skyline-view-brooklyn-bridge-water-4k-timelapse_41kywuhn__F0000.png" alt="test">
+                            <img src="https://images.unsplash.com/photo-1539959099596-e77a95e9c717?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8ece5328b9e203558f4ec229adf09cff&auto=format&fit=crop&w=701&q=80" alt="test">
                         </figure>
                         <div class="content">
                             <div class="post-meta">
