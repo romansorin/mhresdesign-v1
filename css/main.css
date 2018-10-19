@@ -20,6 +20,15 @@ h1, h2, h3, h4, h5, h6 {
     pointer-events: none;
 }
 
+.img-fit {
+    height: 100%; 
+    width: auto;     
+    max-height: calc(100% + 1px);     
+    min-width: calc(100% + 1px);
+    min-height: calc(100% + 1px); 
+    object-fit: cover;
+}
+
 .row {
     margin-right: 0px;
     margin-left: 0px;

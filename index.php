@@ -58,7 +58,7 @@
                 <div class="col-xl-4" style="padding-left: 0px; padding-right: 0px;">
                     <article>
                         <figure class="article-img">
-                            <img src="https://gratisography.com/thumbnails/gratisography-subway-train-arrival-thumbnail.jpg" alt="test">
+                            <img class="img-fit" src="https://gratisography.com/thumbnails/gratisography-subway-train-arrival-thumbnail.jpg" alt="test">
                         </figure>
                         <div class="content">
                             <div class="post-meta">
@@ -71,7 +71,7 @@
                 <div class="col-xl-4" style="padding-left: 0px; padding-right: 0px;">
                     <article>
                         <figure class="article-img ">
-                            <img src="https://images.unsplash.com/photo-1539934675566-f6889aa8f6a2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=148236f5e96a5fc0076a4d13128751bd&auto=format&fit=crop&w=701&q=80" alt="test">
+                            <img class="img-fit" src="https://images.unsplash.com/photo-1539934675566-f6889aa8f6a2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=148236f5e96a5fc0076a4d13128751bd&auto=format&fit=crop&w=701&q=80" alt="test">
                         </figure>
                         <div class="content">
                             <div class="post-meta">
@@ -84,7 +84,7 @@
                 <div class="col-xl-4" style="padding-left: 0px; padding-right: 0px;">
                     <article>
                         <figure class="article-img">
-                            <img src="https://images.unsplash.com/photo-1539895284193-9a389687ee95?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=909631c97e5f1b79bb7e9aea9a0344fc&auto=format&fit=crop&w=700&q=80" alt="test">
+                            <img class="img-fit" src="https://images.unsplash.com/photo-1539895284193-9a389687ee95?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=909631c97e5f1b79bb7e9aea9a0344fc&auto=format&fit=crop&w=700&q=80" alt="test">
                         </figure>
                         <div class="content">
                             <div class="post-meta">
@@ -99,7 +99,7 @@
                 <div class="col-xl-8" style="padding-left: 0px; padding-right: 0px;">
                     <article class="article-long">
                         <figure class="article-img">
-                            <img src="https://images.unsplash.com/photo-1539964452237-866f0522db8b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=739184a0c7d9ae7e54d3516bf6eb76e5&auto=format&fit=crop&w=628&q=80" alt="test">
+                            <img class="img-fit" src="https://images.unsplash.com/photo-1539964452237-866f0522db8b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=739184a0c7d9ae7e54d3516bf6eb76e5&auto=format&fit=crop&w=628&q=80" alt="test">
                         </figure>
                         <div class="content">
                             <div class="post-meta">
@@ -112,7 +112,7 @@
                 <div class="col-xl-4" style="padding-left: 0px; padding-right: 0px;">
                     <article>
                         <figure class="article-img">
-                            <img src="https://images.unsplash.com/photo-1539959099596-e77a95e9c717?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8ece5328b9e203558f4ec229adf09cff&auto=format&fit=crop&w=701&q=80" alt="test">
+                            <img class="img-fit" src="https://images.unsplash.com/photo-1539959099596-e77a95e9c717?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8ece5328b9e203558f4ec229adf09cff&auto=format&fit=crop&w=701&q=80" alt="test">
                         </figure>
                         <div class="content">
                             <div class="post-meta">
