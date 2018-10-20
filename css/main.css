@@ -329,6 +329,10 @@ article {
 }
 
 @media (max-width: 767.98px) {
+    .push-down {
+    padding-top: 75px;
+    }
+    
     #all-news-btn, #all-events-btn {
         padding-left: 50px;
         padding-right: 50px;
