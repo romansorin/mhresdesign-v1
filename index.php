@@ -11,12 +11,13 @@
 <body>
     <div class="push-down"></div>
     <?php include 'inc/header.php' ?>
-    <!-- This is your main container. -->
+    <!-- This is the main container. -->
     <!-- This is the photo slideshow. -->
     <div class="container-fluid no-padding">
         <div class="row no-padding">
             <div class="col-12 no-padding">
                 <div id="frontpage-carousel" class="carousel slide" data-ride="carousel" data-interval="10000">
+                    <!-- To change speed of slideshow, changing 'data-interval' value (parameter taken as milliseconds) -->
                     <ol class="carousel-indicators">
                         <li data-target="#frontpage-carousel" data-slide-to="0" class="active"></li>
                         <li data-target="#frontpage-carousel" data-slide-to="1"></li>
@@ -45,7 +46,7 @@
             </div>
         </div>
     </div>
-    <!-- This is the news section of the main page. -->
+    <!-- News section of the main page. -->
     <div class="container-fluid no-padding news-container">
         <div class="container no-padding">
             <div class="row news-header">
@@ -55,6 +56,8 @@
                 </div>
             </div>
             <div class="row">
+                <!-- 'post-category' means guidance, athletic, certain clubs, etc. -->
+                <!-- 'content <h3>' a brief/condensed version of the associated news -->
                 <div class="col-xl-4" style="padding-left: 0px; padding-right: 0px;">
                     <article>
                         <figure class="article-img">
@@ -130,7 +133,7 @@
             </div>
         </div>
     </div>
-    <!-- This is the calendar of the main page. -->
+    <!-- Calendar of the main page. -->
     <div class="container-fluid no-padding events-container">
         <div class="container no-padding">
             <div class="row events-header">
@@ -152,7 +155,7 @@
             </div>
         </div>
     </div>
-    <!-- This is the social media section of the main page -->
+    <!-- Social media section of the main page -->
     <div class="container no-padding">
         <div class="row social-header">
             <div class="col-sm-12">
@@ -161,6 +164,7 @@
             </div>
         </div>
         <div class="row social-media">
+            <!-- Twitter left -->
             <div class="col-sm-4 crowe-twitter">    
                 <a href="https://twitter.com/PrincipalCrowe">
                     <i class="fa fa-twitter"></i>
@@ -176,6 +180,7 @@
                 </a>
                     <a href="https://www.instagram.com/p/BmDycX-HLD-/?taken-by=rm.sorin" alt="test insta post"><img src="https://scontent-iad3-1.cdninstagram.com/vp/c2fbf259b3bb22bf664d9596d3f688e1/5C612A60/t51.2885-15/e35/38057971_512894979140557_5238749822009212928_n.jpg" alt="test photo" id="embed-ig"></a>
             </div>
+            <!-- Twitter right -->
             <div class="col-sm-4 general-twitter">
                 <a href="https://twitter.com/mentorhigh">
                     <i class="fa fa-twitter"></i>

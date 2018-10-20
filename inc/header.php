@@ -29,6 +29,7 @@
         <a class="navbar-brand" href="/index.php" title="Mentor High School Homepage">
             <h1 id="branding-image">Mentor</h1>
         </a>
+        <!-- Mobile version of navigation -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-bottom-nav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="fa fa-reorder"></span>
         </button>
@@ -89,6 +90,7 @@
         </div>
     </nav>
 </div>
+
 <!-- Hidden search container -->
 <div id="search-div" class="container-fluid" style="display: none;">
     <div class="row" style="height: 100%">
