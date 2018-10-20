@@ -1,4 +1,4 @@
-/* general footer */
+/* General footer */
 .horizontal {
     list-style-type: none;
     display: inline;
@@ -26,7 +26,11 @@
     letter-spacing: 0.25px;
 }
 
-/* top footer specific */
+
+
+
+
+/* Top footer specific */
 #footer-top {
     background-color: #FFF;
     margin-top: 50px;
@@ -37,7 +41,11 @@
     line-height: 2em;
 }
 
-/* bottom footer specific */
+
+
+
+
+/* Bottom footer specific */
 #footer-bottom {
     background-color: #8C1515;
     color: white;
@@ -71,7 +79,12 @@
 #footer-bottom-right {
     float: right;
 }
-/* content on the left of bottom footer */
+
+
+
+
+
+/* Content on the left of bottom footer */
 #footer-brand {
     color: #FFFFFF;
     font-size: 3em !important; 
@@ -106,30 +119,40 @@
     margin-bottom: 0px;
 }
 
-/* content on the right of the bottom footer */
+
+
+
+
+/* Content on the right of the bottom footer */
 #weather {
     float: right;
 }
 
+/* All media queries */
+/* For devices less than the max-width of a phone */
 @media (max-width: 767.98px) { 
     #footer-brand {
         font-size: 2.5em !important;
         padding-left: 0px;
         height: 45px;
     }
+
     #global-footer-info {
         padding-left: 0px;
     }
+
     #global-footer-content {
         margin-top: 50px !important;
         height: 10px;
         line-height: 15px;
         max-width: 140px;
     }
+
     #footer-bottom-right {
         max-width: 187.5px;
         padding: 0px;
     }
+
     #footer-bottom-left {
         max-width: 187.5px;
     }

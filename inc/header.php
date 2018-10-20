@@ -1,4 +1,4 @@
-<!-- top part of navbar -->
+<!-- Top part of navbar -->
 <div class="fixed-top">
     <nav class="navbar navbar-expand-lg navbar-light d-none d-lg-flex">
         <span class="navbar-brand">Resources for:</span>
@@ -24,7 +24,7 @@
         </ul>
     </nav>
 
-    <!-- bottom part of navbar -->
+    <!-- Bottom part of navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="/index.php" title="Mentor High School Homepage">
             <h1 id="branding-image">Mentor</h1>
@@ -89,10 +89,9 @@
         </div>
     </nav>
 </div>
-<!-- hidden search container -->
+<!-- Hidden search container -->
 <div id="search-div" class="container-fluid" style="display: none;">
     <div class="row" style="height: 100%">
-        <!-- this style for buttons https://gyazo.com/83f4a7d25ff7abbda3c0f4c2a3946a25 -->
         <div class="col-md-6" style="border-right: 1px solid #E0E0E0">
             <form class="search-input" action="action_page.php">
                 <input type="text" value="Articles, Keywords, Phrases" onfocus="this.value='';" name="search">

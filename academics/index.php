@@ -8,11 +8,13 @@
 </head>
 
 <body>
+    <div class="push-down"></div>
     <?php include '/srv/http/inc/header.php' ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-               <h1> academics / curriculum </h1>
+               <h1>Academics</h1>
+               <h3>Explore the variety of programs and courses offered at Mentor High School.</h3>
             </div>
         </div>
     </div>

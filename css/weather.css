@@ -1,4 +1,4 @@
-/* icon specific */
+/* Icon specific */
 @font-face {
     font-family: 'weather';
     src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot');
@@ -71,7 +71,11 @@
 .icon-46:before { content: "U"; }
 .icon-47:before { content: "S"; }
 
-/* 'actual' content */
+
+
+
+
+/* Actual content */
 #weather {
   text-transform: none;
   margin-top: 18px;
@@ -95,6 +99,12 @@
   font-size: 24px;
 }
 
+
+
+
+
+/* All media queries */
+/* For devices width of phone and under */
 @media (max-width: 767.98px) { 
   i {
     font-size: 50px;

@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <?php include '../../../inc/header.php' ?>
+    <div class="push-down"></div>
+    <?php include '/srv/http/inc/header.php' ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
