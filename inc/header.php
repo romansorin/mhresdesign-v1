@@ -24,7 +24,6 @@
         </ul>
     </nav>
 
-
     <!-- bottom part of navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="/index.php" title="Mentor High School Homepage">
@@ -40,9 +39,11 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <form class="search-input" action="action_page.php">
-                                    <input type="text" value="test" name="search">
-                                    <br>
-                                    <button type="submit">Index</button>
+                                    <input type="text" value="Search..." onfocus="this.value='';" name="search">
+                                    <div class="row bottom-border">
+                                        <br>
+                                    </div>
+                                    <button type="submit" id="mr-right">Index</button>
                                     <button type="submit">Directory</button>
                                 </form>
                             </div>
@@ -51,37 +52,40 @@
                 </li>
                 <li class="nav-item ml-auto mr-auto">
                     <div class="collapse-hide">
-                        <div class="row">
-                            <span>Resources for:</span>
+                        <div class="row text-center">
+                            <div class="grey-divider"><p>Resources for</p></div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
-                                <a href="/students" class="nav-link hvr-underline-from-center">Students</a>
+                            <div class="col-6 text-center border-right">
+                                <a href="/students" class="nav-link hvr-underline-from-center bottom-border">Students</a>
                                 <a href="/faculty-staff" class="nav-link hvr-underline-from-center">Faculty & Staff</a>
                             </div>    
-                            <div class="col-md-6">
-                                <a href="/parents" class="nav-link hvr-underline-from-center">Parents</a>
+                            <div class="col-6 text-center">
+                                <a href="/parents" class="nav-link hvr-underline-from-center bottom-border">Parents</a>
                                 <a href="/alumni" class="nav-link hvr-underline-from-center">Alumni</a>
                             </div>
                         </div>
-                        <div class="row">
-                            <span>Split sections</span>
+                        <div class="row text-center">
+                            <div class="grey-divider"><p>Sections</p></div>
                         </div>
                     </div>
                 </li>
+                <div class="bottom-border"></div>
                 <li class="nav-item ml-auto mr-auto"><a href="/academics" class="nav-link hvr-underline-from-center">Academics</a></li>
+                <div class="bottom-border"></div>
                 <li class="nav-item ml-auto mr-auto"><a href="/athletics" class="nav-link hvr-underline-from-center">Athletics</a></li>
+                <div class="bottom-border"></div>
                 <li class="nav-item ml-auto mr-auto"><a href="/music" class="nav-link hvr-underline-from-center">Music</a></li>
+                <div class="bottom-border"></div>
                 <li class="nav-item ml-auto mr-auto"><a href="/arts-theatre" class="nav-link hvr-underline-from-center">Arts & Theatre</a></li>
+                <div class="bottom-border"></div>
                 <li class="nav-item ml-auto mr-auto"><a href="/activities" class="nav-link hvr-underline-from-center">Activities</a></li>
+                <div class="bottom-border"></div>
                 <li class="nav-item ml-auto mr-auto"><a href="/guidance" class="nav-link hvr-underline-from-center">Guidance</a></li>
+                <div class="bottom-border"></div>
                 <li class="nav-item ml-auto mr-auto"><a href="/about" class="nav-link hvr-underline-from-center">About</a></li>
-                <li class="nav-item ml-auto mr-auto">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-bottom-nav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span>Close</span>
-                    </button>
-                </li>
             </ul>
+            <div class="bg-dark" style="height: 25px;"></div>
         </div>
     </nav>
 </div>
@@ -105,4 +109,3 @@
         </div>
     </div>
 </div>
-
