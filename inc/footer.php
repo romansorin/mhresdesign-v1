@@ -10,11 +10,11 @@
                 <div class="col-md-4">
                     <h3>Curriculum</h3>
                     <ul>
-                        <li><a href="/srv/http/academics">Academics</a></li>
-                        <li><a href="/srv/http/activities">Activities</a></li>
-                        <li><a href="/srv/http/athletics">Athletics</a></li>
-                        <li><a href="/srv/http/arts-theatre">Arts & Theatre</a></li>
-                        <li><a href="/srv/http/music">Music</a></li>
+                        <li><a href="/academics">Academics</a></li>
+                        <li><a href="/activities">Activities</a></li>
+                        <li><a href="/athletics">Athletics</a></li>
+                        <li><a href="/arts-theatre">Arts & Theatre</a></li>
+                        <li><a href="/music">Music</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -28,10 +28,10 @@
                 <div class="col-md-4">
                     <h3>Resources</h3>
                     <ul>
-                        <li><a href="/srv/http/students">Students</a></li>
-                        <li><a href="/srv/http/faculty-staff">Faculty & Staff</a></li>
-                        <li><a href="/srv/http/parents">Parents</a></li>
-                        <li><a href="/srv/http/alumni">Alumni</a></li>
+                        <li><a href="/students">Students</a></li>
+                        <li><a href="/faculty-staff">Faculty & Staff</a></li>
+                        <li><a href="/parents">Parents</a></li>
+                        <li><a href="/alumni">Alumni</a></li>
                     </ul>
                 </div>
             </div>
@@ -39,17 +39,17 @@
                 <div class="col-md-4">
                     <h3>Directory</h3>
                     <ul>
-                        <li><a href="/srv/http/azIndex">A-Z Index</a></li>
-                        <li><a href="/srv/http/directory">Staff</a></li>
-                        <li><a href="/srv/http/directory">Faculty</a></li>
+                        <li><a href="/azIndex">A-Z Index</a></li>
+                        <li><a href="/directory">Staff</a></li>
+                        <li><a href="/directory">Faculty</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h3>Campus</h3>
                     <ul>
-                        <li><a href="/srv/http/campus">Directions</a></li>
-                        <li><a href="/srv/http/campus">Map</a></li>
-                        <li><a href="/srv/http/events">Events</a></li>
+                        <li><a href="/campus">Directions</a></li>
+                        <li><a href="/campus">Map</a></li>
+                        <li><a href="/events">Events</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
