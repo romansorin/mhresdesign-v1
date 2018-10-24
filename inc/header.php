@@ -44,7 +44,7 @@
                     <div class="collapsed-search-container">
                         <div class="row">
                             <div class="col-md-12">
-                                <form class="search-input" action="action_page.php">
+                                <form class="search-input" action="/inc/search_page.php">
                                     <input type="text" value="Search..." onfocus="this.value='';" name="search">
                                     <div class="row bottom-border">
                                         <br>
@@ -99,14 +99,14 @@
 <div id="search-div" class="container-fluid" style="display: none;">
     <div class="row" style="height: 100%">
         <div class="col-md-6" style="border-right: 1px solid #E0E0E0">
-            <form class="search-input" action="action_page.php">
+            <form class="search-input" action="/inc/search_page.php">
                 <input type="text" value="Articles, Keywords, Phrases" onfocus="this.value='';" name="search">
                 <br>
                 <button type="submit">Search Index</button>
             </form>
         </div>
         <div class="col-md-6">
-            <form class="search-input" action="action_page.php">
+            <form class="search-input" action="/inc/search_page.php">
                 <input type="text" value="Person or Department" onfocus="this.value='';" name="search">
                 <br>
                 <button type="submit">Search Directory</button>
