@@ -10,14 +10,17 @@
         </ul>
         <ul class="nav navbar-nav ml-auto search">
             <div class="search-container">
-                <button type="button" class="toggle" data-toggle="collapse" aria-expanded="false" data-target="#search-container-toggle" onclick="showDiv()"><i class="fa fa-search"></i></button>
-                <div class="collapse" id="search-container-toggle">
+                <button type="button" class="toggle" onclick="collapseDiv()"><i class="fa fa-search"></i></button>
                 <script>
-                    function showDiv() {
-                        document.getElementById('search-div').style.display = "block";
+                    function collapseDiv() {
+                        var x = document.getElementById('search-div');
+                        if (x.style.display === "none") {
+                        x.style.display = "block";
+                        } else {
+                        x.style.display = "none";
+                        }
                     }
                 </script>
-            </div>
             </div>
         </ul>
         <ul class="nav navbar-nav navbar-extra-resources">
