@@ -27,6 +27,12 @@
 					information about logan leak and the university of chicago
 					<br>
 					2017 champs
+                    <br>
+                    state site
+                    <br>
+                    national site
+                    <br>
+                    registration
 				</p>
             </div>
         </div>
