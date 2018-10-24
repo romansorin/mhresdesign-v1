@@ -94,7 +94,6 @@
             <div class="bg-dark" style="height: 25px;"></div>
         </div>
     </nav>
-</div>
 
 <!-- Hidden search container -->
 <div id="search-div" class="container-fluid" style="display: none;">
@@ -114,4 +113,5 @@
             </form>
         </div>
     </div>
+</div>
 </div>
