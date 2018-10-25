@@ -3,9 +3,7 @@
 
 <head>
     <?php include 'inc/includes.php'; ?>
-    <?php include 'css/mainpage.css'; ?>
     <?php //include 'inc/connection.php' ?>
-    <link rel="stylesheet" href="css/global.css">
     <title>Mentor High School</title>
     <meta name="description" content="This is a description">
 </head>
@@ -13,6 +11,7 @@
 <body>
     <div class="push-down"></div>
     <?php include 'inc/header.php' ?>
+    <link rel="stylesheet" href="css/global.css">
     <!-- This is the main container. -->
     <!-- This is the photo slideshow. -->
     <div class="container-fluid no-padding">
