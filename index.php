@@ -3,7 +3,6 @@
 
 <head>
     <?php include 'inc/includes.php'; ?>
-    <?php include 'css/mainpage.css'; ?>
     <?php //include 'inc/connection.php' ?>
     <link rel="stylesheet" href="css/global.css">
     <title>Mentor High School</title>
