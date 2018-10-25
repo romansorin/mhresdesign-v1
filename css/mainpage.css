@@ -407,6 +407,10 @@ article {
     }
 }
 
+/* For devices less than the width of a tablet */
+@media (max-width: 922px) {
+}
+
 /* For devices less than the width of a laptop (basically between tablet and laptop) */
 @media (max-width: 1200px) {
     article {
