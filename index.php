@@ -3,6 +3,7 @@
 
 <head>
     <?php include 'inc/includes.php'; ?>
+    <?php include 'css/mainpage.css'; ?>
     <?php //include 'inc/connection.php' ?>
     <title>Mentor High School</title>
     <meta name="description" content="This is a description">
