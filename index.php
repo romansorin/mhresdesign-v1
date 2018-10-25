@@ -11,7 +11,7 @@
 <body>
     <div class="push-down"></div>
     <?php include 'inc/header.php' ?>
-    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/mainpage.css">
     <!-- This is the main container. -->
     <!-- This is the photo slideshow. -->
     <div class="container-fluid no-padding">
