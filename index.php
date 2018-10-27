@@ -74,7 +74,7 @@
                 </div>
                 <div class="col-xl-4" style="padding-left: 0px; padding-right: 0px;">
                     <article>
-                        <figure class="article-img ">
+                        <figure class="article-img">
                             <img class="img-fit" src="https://images.unsplash.com/photo-1539934675566-f6889aa8f6a2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=148236f5e96a5fc0076a4d13128751bd&auto=format&fit=crop&w=701&q=80" alt="test">
                         </figure>
                         <div class="content">
