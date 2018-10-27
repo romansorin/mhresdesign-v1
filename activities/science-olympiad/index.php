@@ -43,7 +43,7 @@
         <div class="container no-padding">
             <div class="row">
                 <div class="col-md-6 no-padding">
-                    <figure class="article-img">
+                    <figure class="article-img" style="margin-left: 0px;">
                         <img class="img-fit" src="http://img.xcitefun.net/users/2011/02/229016,xcitefun-3.jpg" alt="test">
                     </figure>
                 </div>
