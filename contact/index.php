@@ -20,7 +20,7 @@
                <p>Hours of Operation:</p>
             </div>
             <div class="col-md-6">
-                <h3>For staff specific contact information, please reference our <a href="/srv/http/directory">directory</a>.</h3>
+                <h3>For staff specific contact information, please reference our <a href="/directory">directory</a>.</h3>
             </div>
         </div>
     </div>
