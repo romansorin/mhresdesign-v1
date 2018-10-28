@@ -7,7 +7,7 @@
         <!-- Top portion of footer -->
         <div class="container" id="footer-top">
             <div class="row text-center">
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <h3>Curriculum</h3>
                     <ul>
                         <li><a href="/academics">Academics</a></li>
@@ -17,7 +17,7 @@
                         <li><a href="/music">Music</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <h3>Calendars</h3>
                     <ul>
                         <li><a href="#">District Calendar</a></li>
@@ -25,7 +25,7 @@
                         <li><a href="#">Sports Calendar</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <h3>Resources</h3>
                     <ul>
                         <li><a href="/students">Students</a></li>
@@ -34,9 +34,7 @@
                         <li><a href="/alumni">Alumni</a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <h3>Directory</h3>
                     <ul>
                         <li><a href="/azIndex">A-Z Index</a></li>
@@ -44,7 +42,7 @@
                         <li><a href="/directory">Faculty</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <h3>Campus</h3>
                     <ul>
                         <li><a href="/campus">Directions</a></li>
@@ -52,7 +50,7 @@
                         <li><a href="/events">Events</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <h3>About</h3>
                     <ul><li></li></ul>
                 </div>
