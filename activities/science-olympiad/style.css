@@ -206,3 +206,8 @@
 .local-nav-menu-item {
 	margin: 12px 15px;
 }
+.article-link a {
+	text-decoration: none;
+	color: #0273d3;
+	font-weight: 600;
+}

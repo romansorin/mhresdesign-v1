@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <?php include '/srv/http/inc/includes.php'; ?>
+    <?php include 'C:\Users\Roman\Documents\sorin/inc/includes.php'; ?>
     <link rel="stylesheet" href="style.css">
     <title>Science Olympiad | Mentor High School</title>
     <meta name="description" content="This is a description">
@@ -10,7 +10,7 @@
 
 <body>
     <div class="push-down"></div>
-    <?php include '/srv/http/inc/header.php' ?>
+    <?php include 'C:\Users\Roman\Documents\sorin/inc/header.php' ?>
     <div class="container-fluid no-padding">
         <div class="row">
             <div class="col-md-12 no-padding img-top">
@@ -69,6 +69,7 @@
                     <div class="content mr-left">
                         <h3 class="article-title">2017 Science Olympiad Champions: Students share their OHSU experience</h3>
                         <p class="article-desc">It's a day that the Mentor High School Science Olympiad program will remember for a long time, as it marks the first time it won the Ohio Science Olympiad State Tournament. Prior to winning the state tournament this past spring, Mentor placed fourth or higher 13 times, including second-place finishes in 2007, 2009 and 2015. Additionally, the program has made four appearances at the national tournament, with its highest finish of fifth in 2007. EDIT THIS NOT TO DIRECTLY COPY FOR ARTICLE, BUT TO SOUND GOOOD!</p>
+                        <p class="article-link"><a href="https://ohso.osu.edu/news/2017/12/19/winning-feeling-mentor-high-students-share-their-ohio-science-olympiad-experience">Article link</a></p>
                     </div>
                 </div>
             </div>
@@ -77,11 +78,12 @@
                     <div class="content">
                         <h3 class="article-title">Science Olympiad beyond high school</h3>
                         <p class="article-desc">Logan Leak is a prime example of the impact Science Olympiad can have on a student. The Mentor, Ohio, native was a five-year Science Olympiad participant as a middle and high school student. This past April, Leak—who is now a University of Chicago student studying molecular biology—returned to his home state to volunteer at the Ohio Science Olympiad State Tournament. EDIT THIS NOT TO DIRECTLY COPY FOR ARTICLE, BUT TO SOUND GOOOD!</p>
+                        <p class="article-link"><a href="https://ohso.osu.edu/news/2018/06/04/former-mentor-student-continues-science-olympiad-mission-beyond-high-school">Article link</a></p>
                     </div>
                 </div>
                 <div class="col-md-6 no-padding">
                     <figure class="article-img mr-left">
-                        <img class="img-fit" src="https://pbs.twimg.com/media/Db6dHFRWkAAOUtg.jpg:large" alt="test">
+                        <a href="https://ohso.osu.edu/news/2018/06/04/former-mentor-student-continues-science-olympiad-mission-beyond-high-school"><img class="img-fit" src="https://pbs.twimg.com/media/Db6dHFRWkAAOUtg.jpg:large" alt="test"></a>
                     </figure>
                 </div>
             </div>
