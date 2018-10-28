@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <?php include 'C:\Users\Roman\Documents\sorin/inc/includes.php'; ?>
+    <?php include '/srv/http/inc/includes.php'; ?>
     <link rel="stylesheet" href="style.css">
     <title>Science Olympiad | Mentor High School</title>
     <meta name="description" content="This is a description">
@@ -10,7 +10,7 @@
 
 <body>
     <div class="push-down"></div>
-    <?php include 'C:\Users\Roman\Documents\sorin/inc/header.php' ?>
+    <?php include '/srv/http/inc/header.php' ?>
     <div class="container-fluid no-padding">
         <div class="row">
             <div class="col-md-12 no-padding img-top">
