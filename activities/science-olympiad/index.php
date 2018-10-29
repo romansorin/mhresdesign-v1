@@ -3,7 +3,7 @@
 
 <head>
     <?php include '/srv/http/inc/includes.php'; ?>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/activities.css">
     <title>Science Olympiad | Mentor High School</title>
     <meta name="description" content="This is a description">
 </head>
@@ -29,21 +29,23 @@
                 <div class="col-md-12">
                     <ul class="local-nav-menu-list">
                         <div class="dropdown">
-                            <li class="local-nav-menu-item">Dropdown</li>
+                            <li class="local-nav-menu-item">General</li>
                             <div class="dropdown-content">
-                                <a href="http://example.com">Link link link link</a>
-                                <a href="http://example.com">Link link link link</a>
+                                <a href="https://www.soinc.org/">National Site</a>
+                                <a href="https://ohso.osu.edu/">State Site</a>
+                                <a href="http://example.com">Regional Site</a>
                             </div>
                         </div>
                         <div class="dropdown">
-                            <li class="local-nav-menu-item">Dropdown</li>
+                            <li class="local-nav-menu-item">About</li>
                             <div class="dropdown-content">
-                                <a href="http://example.com">Link 1</a>
-                                <a href="http://example.com">Link 2</a>
+                                <a href="https://www.soinc.org/sites/default/files/uploaded_files/2019_SO_Events.pdf">2019 Events</a>
+                                <a href="https://www.soinc.org/sites/default/files/uploaded_files/2019_SO_Alumni.pdf">Alumni Involvement</a>
                             </div>
                         </div>
-                        <a href="https://example.com"><li class="local-nav-menu-item">Link</li></a>
-                        <a href="https://example.com"><li class="local-nav-menu-item">Link</li></a>
+                        <a href="https://goo.gl/forms/2UZSs54yBig7dVgv1"><li class="local-nav-menu-item">Invitational</li></a>
+                        <a href="https://example.com"><li class="local-nav-menu-item">Booster</li></a>
+                        <a href="https://twitter.com/sciolycpts?lang=en&lang=en"><li class="local-nav-menu-item">Twitter</li></a>
                     </ul>
                 </div>
             </div>
@@ -53,7 +55,7 @@
         <div class="row no-padding" id="activity-content">
             <div class="col-md-12 no-padding" id="main-activity-content">
                 <h2>Information</h2>
-		        <p>Science Olympiad is a science-based competition team in which Mentor has competed for the past # years. SciOly gives students the chance to cultivate a passion for science beyond the classroom and implement it in new and interesting ways. As a highly ranked team known across the nation, Mentor Science Olympiad is a source of pride for all of Mentor and all are welcome!</p>
+		        <p>Science Olympiad is a science-based competition team in which Mentor has placed as state champions since 1990. SciOly gives students the chance to cultivate a passion for science beyond the classroom and implement it in new and interesting ways. As a highly ranked team known across the nation, Mentor Science Olympiad is a source of pride for all of Mentor and all are welcome!</p>
             </div>
         </div>
     </div>
