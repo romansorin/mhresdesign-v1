@@ -29,7 +29,7 @@
                 <div class="col-md-12">
                     <ul class="local-nav-menu-list">
                         <div class="dropdown">
-                            <li class="local-nav-menu-item">General</li>
+                            <li class="local-nav-menu-item hvr-underline-from-center">General</li>
                             <div class="dropdown-content">
                                 <a href="https://www.soinc.org/">National Site</a>
                                 <a href="https://ohso.osu.edu/">State Site</a>
@@ -37,15 +37,15 @@
                             </div>
                         </div>
                         <div class="dropdown">
-                            <li class="local-nav-menu-item">About</li>
+                            <li class="local-nav-menu-item hvr-underline-from-center">About</li>
                             <div class="dropdown-content">
                                 <a href="https://www.soinc.org/sites/default/files/uploaded_files/2019_SO_Events.pdf">2019 Events</a>
                                 <a href="https://www.soinc.org/sites/default/files/uploaded_files/2019_SO_Alumni.pdf">Alumni Involvement</a>
                             </div>
                         </div>
-                        <a href="https://goo.gl/forms/2UZSs54yBig7dVgv1"><li class="local-nav-menu-item">Invitational</li></a>
+                        <a href="https://goo.gl/forms/2UZSs54yBig7dVgv1"><li class="local-nav-menu-item hvr-underline-from-center">Invitational</li></a>
                         <a href="https://example.com"><li class="local-nav-menu-item">Booster</li></a>
-                        <a href="https://twitter.com/sciolycpts?lang=en&lang=en"><li class="local-nav-menu-item">Twitter</li></a>
+                        <a href="https://twitter.com/sciolycpts?lang=en&lang=en"><li class="local-nav-menu-item hvr-underline-from-center">Twitter</li></a>
                     </ul>
                 </div>
             </div>
@@ -63,7 +63,7 @@
         <div class="container no-padding">
             <div class="row">
                 <div class="col-md-6 no-padding">
-                    <figure class="article-img" style="margin-left: 0px;">
+                    <figure class="article-img hvr-grow hvr-shadow" style="margin-left: 0px;">
                         <iframe class="img-fit" width="640" height="480" src="https://www.youtube.com/embed/OPndj0iynI4?wmode=opaque&controls=&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </figure>
                 </div>
@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 no-padding">
-                    <figure class="article-img mr-left">
+                    <figure class="article-img hvr-grow hvr-shadow mr-left">
                         <a href="https://ohso.osu.edu/news/2018/06/04/former-mentor-student-continues-science-olympiad-mission-beyond-high-school"><img class="img-fit" src="https://pbs.twimg.com/media/Db6dHFRWkAAOUtg.jpg:large" alt="test"></a>
                     </figure>
                 </div>
