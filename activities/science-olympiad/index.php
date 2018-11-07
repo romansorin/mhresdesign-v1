@@ -37,6 +37,15 @@
                             </div>
                         </div>
                         <div class="dropdown">
+                            <script>
+jQuery('div.dropdown').hover(function() {
+    jQuery(this).find('.local-nav-menu-item').addClass('active');
+    jQuery(this).find('.dropdown-content').stop(true, true).delay(200).fadeIn(500);
+}, function() {
+    jQuery(this).find('.local-nav-menu-item').removeClass('active');
+    jQuery(this).find('.dropdown-content').stop(true, true).delay(200).fadeOut(500);
+});
+</script>
                             <li class="local-nav-menu-item hvr-underline-from-center">About</li>
                             <div class="dropdown-content">
                                 <a href="https://www.soinc.org/sites/default/files/uploaded_files/2019_SO_Events.pdf">2019 Events</a>
@@ -44,7 +53,7 @@
                             </div>
                         </div>
                         <a href="https://goo.gl/forms/2UZSs54yBig7dVgv1"><li class="local-nav-menu-item hvr-underline-from-center">Invitational</li></a>
-                        <a href="https://example.com"><li class="local-nav-menu-item">Booster</li></a>
+                        <a href="https://example.com"><li class="local-nav-menu-item hvr-underline-from-center">Booster</li></a>
                         <a href="https://twitter.com/sciolycpts?lang=en&lang=en"><li class="local-nav-menu-item hvr-underline-from-center">Twitter</li></a>
                     </ul>
                 </div>
@@ -63,7 +72,7 @@
         <div class="container no-padding">
             <div class="row">
                 <div class="col-md-6 no-padding">
-                    <figure class="article-img hvr-grow hvr-shadow" style="margin-left: 0px;">
+                    <figure class="article-img hvr-shadow" style="margin-left: 0px;">
                         <iframe class="img-fit" width="640" height="480" src="https://www.youtube.com/embed/OPndj0iynI4?wmode=opaque&controls=&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </figure>
                 </div>
@@ -84,8 +93,8 @@
                     </div>
                 </div>
                 <div class="col-md-6 no-padding">
-                    <figure class="article-img hvr-grow hvr-shadow mr-left">
-                        <a href="https://ohso.osu.edu/news/2018/06/04/former-mentor-student-continues-science-olympiad-mission-beyond-high-school"><img class="img-fit" src="https://pbs.twimg.com/media/Db6dHFRWkAAOUtg.jpg:large" alt="test"></a>
+                    <figure class="article-img hvr-shadow mr-left">
+                        <a href="https://ohso.osu.edu/news/2018/06/04/former-mentor-student-continues-science-olympiad-mission-beyond-high-school"><img class="img-fit hvr-grow" src="https://pbs.twimg.com/media/Db6dHFRWkAAOUtg.jpg:large" alt="test"></a>
                     </figure>
                 </div>
             </div>
