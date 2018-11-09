@@ -64,7 +64,7 @@ jQuery('div.dropdown').hover(function() {
         <div class="row no-padding" id="activity-content">
             <div class="col-md-12 no-padding" id="main-activity-content">
                 <h2>Information</h2>
-		        <p>Science Olympiad is a science-based competition team in which Mentor has placed as state champions since 1990. SciOly gives students the chance to cultivate a passion for science beyond the classroom and implement it in new and interesting ways. As a highly ranked team known across the nation, Mentor Science Olympiad is a source of pride for all of Mentor and all are welcome!</p>
+		        <p>Science Olympiad is a science-based competition team in which Mentor has placed as state qualifiers since 1990. SciOly gives students the chance to cultivate a passion for science beyond the classroom and implement it in new and interesting ways. As a highly ranked team known across the nation, Mentor Science Olympiad is a source of pride for all of Mentor and all are welcome!</p>
             </div>
         </div>
     </div>
