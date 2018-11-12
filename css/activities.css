@@ -251,34 +251,34 @@
   right: 0;
 }
 
-/* Shadow */
-.hvr-shadow {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: box-shadow;
-  transition-property: box-shadow;
-}
-.hvr-shadow:hover, .hvr-shadow:focus, .hvr-shadow:active {
-  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {  }
+
+/* Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) { 
+
 }
 
-/* Grow */
-.hvr-grow {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
+/* Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) {
+	.activities-default {
+		display: none;
+	}
+	.article-img {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.activites-mobile {
+		display: block;
+	}
 }
-.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
-  -webkit-transform: scale(1.01);
-  transform: scale(1.01);}
+@media (min-width: 992px) {
+	.activities-mobile {
+		display: none;
+	}
+}
+/* Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) {  
+
+}
