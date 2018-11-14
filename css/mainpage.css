@@ -332,74 +332,82 @@ article {
 }
 
 @media (max-width: 767.98px) {
-	    article {
-        margin: 0 auto;
-        margin-bottom: 30px;
-    }
-
-    .article-long {
-        width: 335px !important;
-    }
-    
-    #all-news-btn, #all-events-btn {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-    
-    .calendar {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        height: 100px;
-    }
-
-    .calendar > .col-sm-2 {
-        width: 100px;
-        height: 100px;
-    }
-
-    .calendar > .col-sm-8 {
-        max-width: 225px;
-        margin: 0;
-    }
-
-    .calendar .date {
-        min-height: 60px;
-        max-width: 75px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        margin-left: 15px;
-        margin-right: 0px;
-    }
-
-    .day {
-        font-size: 1em;
-    }
-    
-    .month {
-        font-size: 0.7em;
-    }
-
-    .event-link-btn {
-       display: none !important;
-    }
-
-    .event-link-btn-disabled {
-        display: none !important;
-    }
-
-    .cal-meta {
-        font-size: 1.1em;
-        margin-left: 25px;
-        margin-top: 15px;
-        width: 100%;
-        display: block;
-    }
-
-    .cal-category {
-        font-size: 0.95em;
-    }
+   article {
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 
+.article-long {
+    width: 335px !important;
+}
+
+#all-news-btn, #all-events-btn {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.calendar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 100px;
+}
+
+.calendar > .col-sm-2 {
+    width: 100px;
+    height: 100px;
+}
+
+.calendar > .col-sm-8 {
+    max-width: 225px;
+    margin: 0;
+}
+
+.calendar .date {
+    min-height: 60px;
+    max-width: 75px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 0px;
+}
+
+.day {
+    font-size: 1em;
+}
+
+.month {
+    font-size: 0.7em;
+}
+
+.event-link-btn {
+ display: none !important;
+}
+
+.event-link-btn-disabled {
+    display: none !important;
+}
+
+.cal-meta {
+    font-size: 1.1em;
+    margin-left: 25px;
+    margin-top: 15px;
+    width: 100%;
+    display: block;
+}
+
+.cal-category {
+    font-size: 0.95em;
+}
+}
+
+@media (max-width: 576px) {
+    .carousel-inner {
+        height: 200px !important;
+    }
+    .time-span {
+        margin-bottom: 40px;
+    }
+}
 @media (max-width: 768px) {
     .carousel-inner {
         height: 350px;
@@ -416,7 +424,6 @@ article {
         display: none;
     }
 }
-
 
 /* For devices less than the width of a laptop (basically between tablet and laptop) */
 @media (max-width: 1200px) {

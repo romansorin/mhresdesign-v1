@@ -222,43 +222,59 @@
 
 /* Underline From Center */
 .hvr-underline-from-center {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-  overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	overflow: hidden;
 }
 .hvr-underline-from-center:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 51%;
-  right: 51%;
-  bottom: 0;
-  background: #910000;
-  height: 2px;
-  -webkit-transition-property: left, right;
-  transition-property: left, right;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 51%;
+	right: 51%;
+	bottom: 0;
+	background: #910000;
+	height: 2px;
+	-webkit-transition-property: left, right;
+	transition-property: left, right;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
 }
 .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
-  left: 0;
-  right: 0;
+	left: 0;
+	right: 0;
 }
 
 
 /*Extra small devices (portrait phones, less than 576px)*/
-@media (max-width: 575.98px) {  }
+@media (max-width: 575.98px) {
+	.img-text-overlay h1 {
+		font-size: 2.1em;
+		margin-bottom: 0px;
+	}
+	.img-text-overlay {
+		left: 10%;
+		top: 110px;
+	}
+	.img-top {
+		height: 200px;
+	}
+	#activity-content {
+		font-size: 1.0625rem;
+	}
+	.content {
+		font-size: 1.0625rem;
+	}
+}
 
 /* Small devices (landscape phones, less than 768px)*/
-@media (max-width: 767.98px) { 
-
-}
+@media (max-width: 767.98px) { }
 
 /* Medium devices (tablets, less than 992px)*/
 @media (max-width: 991.98px) {
@@ -271,6 +287,13 @@
 	}
 	.activites-mobile {
 		display: block;
+	}
+	.article-title {
+		text-align: left;
+		text-transform: none;
+	}
+	.content {
+		margin-top: 0px;
 	}
 }
 @media (min-width: 992px) {

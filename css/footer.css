@@ -129,6 +129,18 @@
 }
 
 /* All media queries */
+
+@media (max-width: 576px) {
+    #weather {
+        margin-top: 30px !important;
+    }
+    #location {
+        font-size: 14px;
+    } 
+    #currently {
+        font-size: 14px;
+    }
+}
 /* For devices less than the max-width of a phone */
 @media (max-width: 767.98px) { 
     #footer-brand {
