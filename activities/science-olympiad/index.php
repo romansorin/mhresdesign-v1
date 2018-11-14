@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <?php include 'C:\Users\Roman\Documents\sorin\inc/includes.php'; ?>
+    <?php include '/srv/http/inc/includes.php'; ?>
     <link rel="stylesheet" href="/css/activities.css">
     <title>Science Olympiad | Mentor High School</title>
     <meta name="description" content="#">
@@ -10,7 +10,7 @@
 
 <body>
     <div class="push-down"></div>
-    <?php include 'C:\Users\Roman\Documents\sorin/inc/header.php' ?>
+    <?php include '/srv/http/inc/header.php' ?>
     <div class="container-fluid no-padding">
         <div class="row">
             <div class="col-md-12 no-padding img-top">
@@ -162,7 +162,7 @@
         </div>
     </div>
 </div>
-<?php include 'C:\Users\Roman\Documents\sorin/inc/footer.php'; ?>
+<?php include '/srv/http/inc/footer.php'; ?>
 </body>
 
 </html>
