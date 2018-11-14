@@ -24,7 +24,7 @@
                         <li data-target="#frontpage-carousel" data-slide-to="1"></li>
                         <li data-target="#frontpage-carousel" data-slide-to="2"></li>
                     </ol>
-                    <div class="carousel-inner" style="height: 400px">
+                    <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img class="d-block w-100" src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/GbbtDTW/new-york-city-nyc-sunset-night-skyline-view-brooklyn-bridge-water-4k-timelapse_41kywuhn__F0000.png" alt="First slide">
                         </div>

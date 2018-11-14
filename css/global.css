@@ -46,17 +46,19 @@ h1, h2, h3, h4, h5, h6 {
 
 /* All media queries */
 @media (max-width: 767.98px) {
-    .push-down {
-        padding-top: 75px;
-    }
+
 }
 
 /* For devices less than the width of a tablet */
 @media (max-width: 922px) {
+
 }
 
 /* For devices less than the width of a laptop (basically between tablet and laptop) */
 @media (max-width: 1200px) {
+    .push-down {
+        padding-top: 76px;
+    }
 }
 
 /* --------------------------------------------- */
