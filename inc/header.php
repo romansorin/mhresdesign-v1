@@ -45,7 +45,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <form class="search-input" action="/inc/search_page.php">
-                                    <input type="text" value="Search..." onfocus="this.value='';" name="search">
+                                    <input type="text" placeholder="Search..." name="search">
                                     <div class="row bottom-border">
                                         <br>
                                     </div>
@@ -100,14 +100,14 @@
     <div class="row" style="height: 100%">
         <div class="col-md-6" style="border-right: 1px solid #E0E0E0">
             <form class="search-input" action="/inc/search_page.php">
-                <input type="text" value="Articles, Keywords, Phrases" onfocus="this.value='';" name="search">
+                <input type="text" placeholder="Articles, Keywords, Phrases" name="search">
                 <br>
                 <button type="submit">Search Index</button>
             </form>
         </div>
         <div class="col-md-6">
             <form class="search-input" action="/inc/search_page.php">
-                <input type="text" value="Person or Department" onfocus="this.value='';" name="search">
+                <input type="text" placeholder="Person or Department" name="search">
                 <br>
                 <button type="submit">Search Directory</button>
             </form>
