@@ -138,14 +138,12 @@
             <div class="container">
                 <div class="row"><h3 class="article-title">Title of an article</h3></div>
                 <div class="row">
-                    <div class="col-md-12">
-                        <figure class="article-img">
-                           <!-- You can have images or videos in these figure tags. -->
-                           <!-- Video (youtube): <iframe class="img-fit" width="640" height="480" src="#" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-                           <!-- Following is an image -->
-                           <!-- The a href tag will link to an article, news, website, etc. -->
-                           <a href="#"><img class="img-fit" src="#" alt="#"></a>
-                       </figure>
+                    <div class="col-md-12"><figure class="article-img">
+                       <!-- You can have images or videos in these figure tags. -->
+                       <!-- Video (youtube): <iframe class="img-fit" width="640" height="480" src="#" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+                       <!-- Following is an image -->
+                       <!-- The a href tag will link to an article, news, website, etc. -->
+                       <a href="#"><img class="img-fit" src="#" alt="#"></a></figure>
                    </div>
                </div>
                <div class="col-md-12">
@@ -170,7 +168,6 @@
             </div>
         </div>
     </div>
-</div>
 </div>
 <?php include '/srv/http/inc/footer.php'; ?>
 </body>
