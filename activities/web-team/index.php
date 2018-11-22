@@ -3,32 +3,176 @@
 
 <head>
     <?php include '/srv/http/inc/includes.php'; ?>
+    <link rel="stylesheet" href="/css/activities.css">
     <title>Web Team | Mentor High School</title>
-    <meta name="description" content="This is a description">
+    <meta name="description" content="#">
 </head>
 
 <body>
     <div class="push-down"></div>
     <?php include '/srv/http/inc/header.php' ?>
-    <div class="container-fluid">
+    <div class="container-fluid no-padding">
         <div class="row">
-            <div class="main-photos col-md-12">
-                <img class="img-responsive" src="" alt="photos here">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper, libero quis interdum convallis, orci sapien imperdiet erat, rutrum malesuada elit libero et lectus. Aenean vitae pellentesque ligula. Nullam a purus malesuada, gravida tellus sit amet, fringilla dui. Duis congue diam turpis, et consequat erat iaculis vitae. Nulla at auctor orci, in aliquam nisi. Suspendisse eu convallis nunc, vitae feugiat orci. Nullam faucibus ipsum nec nisl maximus tempus. Etiam vitae velit sit amet lacus sagittis condimentum sit amet sed ante. Morbi blandit lacus sit amet turpis aliquet accumsan. Donec auctor condimentum neque, sed maximus diam egestas in. Nulla viverra commodo metus vel aliquet. Maecenas euismod justo sed elit porta, non faucibus enim hendrerit. Ut laoreet diam eu rhoncus cursus. Suspendisse lacinia ut eros ut rhoncus. In hac habitasse platea dictumst. Sed volutpat mi purus, non ultricies arcu vestibulum id.</p>
-                <p>Suspendisse eget porta quam, nec mollis augue. Mauris volutpat facilisis lectus eu porttitor. Aenean ut urna odio. Mauris consectetur, urna in laoreet blandit, turpis tortor feugiat lorem, at interdum nisl nulla ut lectus. Sed vulputate, ligula eu aliquet scelerisque, ex justo molestie quam, at imperdiet neque dui in urna. Integer tincidunt varius lacus quis lobortis. Donec vulputate hendrerit dictum. In ut tortor elementum, suscipit lectus vitae, condimentum dolor. Vivamus varius fringilla elementum. Sed aliquam scelerisque est id vehicula. Quisque feugiat dictum mollis. Suspendisse eget lobortis neque, malesuada placerat neque. Duis ut interdum justo. Ut aliquet pellentesque diam in posuere. Fusce non metus egestas massa bibendum bibendum in vel odio. Mauris in purus arcu.</p>
-                <p>Nam tincidunt, leo nec tincidunt semper, lacus enim cursus ipsum, molestie posuere metus elit vitae ipsum. Aenean finibus nunc lorem, quis elementum felis lacinia sodales. Nam imperdiet at leo non sollicitudin. Donec arcu odio, elementum vitae faucibus luctus, mattis tristique dui. Pellentesque feugiat sem ultricies ultricies blandit. Etiam commodo diam a vehicula aliquam. In egestas felis risus, ut varius mauris gravida in. Integer ultricies eros quis ultrices finibus. Nulla ut neque quis libero rutrum molestie nec at augue. Donec pharetra enim sit amet dolor semper rhoncus. Sed sagittis rutrum orci non condimentum. Nullam iaculis purus sed elit facilisis ultricies. Mauris interdum gravida tempor. Pellentesque vel elementum turpis. Maecenas vel ultricies purus. Donec et accumsan odio.</p>
-                <p>Donec ullamcorper lobortis tortor, ornare condimentum mi accumsan non. Vestibulum sollicitudin porta est a auctor. In hac habitasse platea dictumst. Vivamus dictum tellus imperdiet lorem dictum iaculis. Vestibulum vitae mauris lacus. Ut sollicitudin rhoncus nisi at pharetra. Curabitur sem ante, mollis eu augue eu, molestie tristique tortor. Fusce consectetur, ante ut auctor imperdiet, mi magna auctor nunc, vitae pharetra orci dui ac sem. Vivamus placerat enim nibh, eu faucibus nulla rutrum quis. Mauris tincidunt massa et elit consequat tempus. Sed sit amet nunc imperdiet, facilisis lorem a, ultricies massa. Nulla ut ullamcorper quam, vitae lacinia tortor. Phasellus eleifend, nisl sit amet semper facilisis, quam est imperdiet odio, eu sollicitudin purus nisi quis odio.</p>
-                <p>Donec ullamcorper lobortis tortor, ornare condimentum mi accumsan non. Vestibulum sollicitudin porta est a auctor. In hac habitasse platea dictumst. Vivamus dictum tellus imperdiet lorem dictum iaculis. Vestibulum vitae mauris lacus. Ut sollicitudin rhoncus nisi at pharetra. Curabitur sem ante, mollis eu augue eu, molestie tristique tortor. Fusce consectetur, ante ut auctor imperdiet, mi magna auctor nunc, vitae pharetra orci dui ac sem. Vivamus placerat enim nibh, eu faucibus nulla rutrum quis. Mauris tincidunt massa et elit consequat tempus. Sed sit amet nunc imperdiet, facilisis lorem a, ultricies massa. Nulla ut ullamcorper quam, vitae lacinia tortor. Phasellus eleifend, nisl sit amet semper facilisis, quam est imperdiet odio, eu sollicitudin purus nisi quis odio.</p>
-                <p>Donec ullamcorper lobortis tortor, ornare condimentum mi accumsan non. Vestibulum sollicitudin porta est a auctor. In hac habitasse platea dictumst. Vivamus dictum tellus imperdiet lorem dictum iaculis. Vestibulum vitae mauris lacus. Ut sollicitudin rhoncus nisi at pharetra. Curabitur sem ante, mollis eu augue eu, molestie tristique tortor. Fusce consectetur, ante ut auctor imperdiet, mi magna auctor nunc, vitae pharetra orci dui ac sem. Vivamus placerat enim nibh, eu faucibus nulla rutrum quis. Mauris tincidunt massa et elit consequat tempus. Sed sit amet nunc imperdiet, facilisis lorem a, ultricies massa. Nulla ut ullamcorper quam, vitae lacinia tortor. Phasellus eleifend, nisl sit amet semper facilisis, quam est imperdiet odio, eu sollicitudin purus nisi quis odio.</p>
-                <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam ac nulla a dolor condimentum fringilla id ut magna. In rhoncus mi nisi, nec interdum nisi finibus in. Donec et accumsan lectus. Nulla posuere ornare dui, ac pretium tortor consequat eu. Nunc eget justo sed magna imperdiet porta in sit amet nisi. Nullam lobortis, justo ac congue posuere, sapien lorem rhoncus magna, nec condimentum turpis libero in diam.</p>
+            <div class="col-md-12 no-padding img-top">
+                <img class="d-block w-100 img-fit" src="#" alt="Photos will go here">
+                <div class="img-text-overlay">
+                    <a href="/activities"><h6>Activities</h6></a>
+                    <h1>Web Team</h1>
+                </div>
             </div>
         </div>
     </div>
-    <?php include '/srv/http/inc/footer.php'; ?>
+    <div class="activities-default"> <!-- This class is displayed for non-mobile devices -->
+        <div class="container no-padding" id="local-nav-menu">
+            <div id="local-nav-menu-wrapper">
+                <div class="row"><h4 id="local-nav-menu-header">More Information</h4></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="local-nav-menu-list">
+                            <div class="dropdown">
+                                <li class="local-nav-menu-item hvr-underline-from-center">Item 1</li> <!-- Example of an expanding dropdown for more content -->
+                                <div class="dropdown-content">
+                                    <a href="#">Content 1</a>
+                                    <a href="#">Content 2</a>
+                                    <a href="#">Content 3</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <li class="local-nav-menu-item hvr-underline-from-center">Item 2</li>
+                                <div class="dropdown-content">
+                                    <a href="#">Content 1</a>
+                                    <a href="#">Content 2</a>
+                                </div>
+                            </div>
+                            <a href="#"><li class="local-nav-menu-item hvr-underline-from-center">Item 3</li></a> <!-- Or, you can just have links -->
+                            <a href="#"><li class="local-nav-menu-item hvr-underline-from-center">Item 4</li></a>
+                            <a href="#"><li class="local-nav-menu-item hvr-underline-from-center">Item 5</li></a>
+                            <!-- Adds "active" to dropdown when hovered, mainly a styling thing -->
+                            <script>
+                                jQuery('div.dropdown').hover(function() {
+                                    jQuery(this).find('.local-nav-menu-item').addClass('active');
+                                    jQuery(this).find('.dropdown-content').stop(true, true).delay(200).fadeIn(500);
+                                }, function() {
+                                    jQuery(this).find('.local-nav-menu-item').removeClass('active');
+                                    jQuery(this).find('.dropdown-content').stop(true, true).delay(200).fadeOut(500);
+                                });
+                            </script>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container no-padding">
+            <div class="row no-padding" id="activity-content">
+                <div class="col-md-12 no-padding" id="main-activity-content">
+                    <h2>Information</h2>
+                    <p>The Web Team currently meets in room I-103 during mods 9-10 everyday as well as Fridays after school. Roman Sorin is serving as the head student webmaster and is working on the first major redesign of the website since 2010. He is assisted in web design and coding by local professionals Mr. Ryan Rapini and Mr. Matt Kern. Lina Ross is currently serving as Activities Editor working on updating our clubs and activities. All are welcome to join in the effort. You can help once or twice a week for volunteering hours or on a daily basis and receive credit for a non-credit course (Web Team).</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="article-container">
+            <div class="container no-padding">
+                <div class="row">
+                    <div class="col-md-6 no-padding">
+                        <figure class="article-img" style="margin-left: 0px;">
+                            <!-- You can have images or videos in these figure tags. -->
+                            <!-- Video (youtube): <iframe class="img-fit" width="640" height="480" src="#" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+                            <!-- Following is an image -->
+                            <!-- The a href tag will link to an article, news, website, etc. -->
+                            <a href="#"><img class="img-fit" src="#" alt="#"></a>
+                        </figure>
+                    </div>
+                    <div class="col-md-6 no-padding">
+                        <div class="content mr-left">
+                            <h3 class="article-title">Title of an article</h3>
+                            <p class="article-desc">Enter information or description for the article</p>
+                            <p class="article-link"><a href="#">Article link, source</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 no-padding">
+                        <div class="content">
+                            <h3 class="article-title">Title of a second article</h3>
+                            <p class="article-desc">Enter information or description for the other article</p>
+                            <p class="article-link"><a href="#">Article link, source</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 no-padding">
+                        <figure class="article-img mr-left">
+                            <a href="#"><img class="img-fit" src="#" alt="#"></a>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="activities-mobile"> <!-- This class is displayed for mobile devices -->
+        <div class="container" id="local-nav-menu-mobile">
+            <div id="local-nav-menu-wrapper">
+                <div class="row content"><h4 id="local-nav-menu-header-mobile">More Information</h4></div>
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="mobileDropdownMenu" data-toggle="dropdown" aria-haspop="true" aria-expanded="false">
+                        Dropdown
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="mobileDropdownMenu">
+                        <a class="dropdown-item" href="#">Item 1</a>
+                        <a class="dropdown-item" href="#">Item 2</a>
+                        <a class="dropdown-item" href="#">Item 3</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated example</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row" id="activity-content">
+                <div class="col-md-12" id="main-activity-content">
+                    <h2>Information</h2>
+                    <p>The Web Team currently meets in room I-103 during mods 9-10 everyday as well as Fridays after school. Roman Sorin is serving as the head student webmaster and is working on the first major redesign of the website since 2010. He is assisted in web design and coding by local professionals Mr. Ryan Rapini and Mr. Matt Kern. Lina Ross is currently serving as Activities Editor working on updating our clubs and activities. All are welcome to join in the effort. You can help once or twice a week for volunteering hours or on a daily basis and receive credit for a non-credit course (Web Team).</p>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="article-container">
+            <div class="container">
+                <div class="row"><h3 class="article-title">Title of an article</h3></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <figure class="article-img">
+                         <!-- You can have images or videos in these figure tags. -->
+                         <!-- Video (youtube): <iframe class="img-fit" width="640" height="480" src="#" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+                         <!-- Following is an image -->
+                         <!-- The a href tag will link to an article, news, website, etc. -->
+                         <a href="#"><img class="img-fit" src="#" alt="#"></a>
+                     </figure>
+                 </div>
+             </div>
+             <div class="col-md-12">
+                <div class="content">
+                    <p class="article-desc">Enter information or description for the article</p>
+                    <p class="article-link"><a href="#">Article link, source</a></p>
+                </div>
+            </div>
+            <div class="row"><h3 class="article-title">Title of a second article</h3></div>
+            <div class="row">
+                <div class="col-md-12">
+                    <figure class="article-img">
+                        <a href="#"><img class="img-fit" src="#" alt="#"></a>
+                    </figure>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="content">
+                    <p class="article-desc">Enter information or description for the other article</p>
+                    <p class="article-link"><a href="#">Article link, source</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<?php include '/srv/http/inc/footer.php'; ?>
 </body>
 
 </html>
