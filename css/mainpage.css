@@ -402,6 +402,7 @@ article {
     font-size: 0.95em;
 }
 
+
 @media (max-width: 576px) {
     .carousel-inner {
         height: 200px !important;
