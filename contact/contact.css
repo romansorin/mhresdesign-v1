@@ -33,6 +33,9 @@
 .info ul {
 	list-style: none;
 }
+.info a {
+	color: #0273d3;
+}
 #link {
 	text-decoration: underline;
 	color: #910000;
