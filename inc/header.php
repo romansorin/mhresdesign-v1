@@ -1,5 +1,5 @@
 <!-- Top part of navbar -->
-<div class="fixed-top">
+<!--<div class="fixed-top"> -->
     <nav class="navbar navbar-expand-lg navbar-light d-none d-lg-flex">
         <span class="navbar-brand">Resources for:</span>
         <ul class="navbar-nav navbar-resources"> 
@@ -114,4 +114,5 @@
         </div>
     </div>
 </div>
-</div>
+
+<!-- </div> -->
