@@ -108,19 +108,26 @@
                 <div class="row content"><h4 id="local-nav-menu-header-mobile">More Information</h4></div>
                 <div class="dropdown">
                     <button class="btn btn-light dropdown-toggle" type="button" id="mobileDropdownMenu" data-toggle="dropdown" aria-haspop="true" aria-expanded="false">
-                        Dropdown
+                        Select...
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="mobileDropdownMenu">
-                        <a class="dropdown-item" href="#">Item 1</a>
-                        <a class="dropdown-item" href="#">Item 2</a>
-                        <a class="dropdown-item" href="#">Item 3</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated example</a>
+                    <div class="dropdown-menu dropright" aria-labelledby="mobileDropdownMenu">
+                        <button class="btn dropdown-item-btn dropdown-toggle" type="button" id="mobileDropdownSubmenu" data-toggle="dropdown" aria-haspop="true" aria-expanded="false">General</button>
+                        <div class="dropdown-menu" aria-labelledby="mobileDropdownSubmenu">
+                            <a class="dropdown-item" href="https://example.com">Item one</a>
+                        </div>
+                        <button class="btn dropdown-item-btn dropdown-toggle" type="button" id="mobileDropdownSubmenu" data-toggle="dropdown" aria-haspop="true" aria-expanded="false">About</button>
+                        <div class="dropdown-menu" aria-labelledby="mobileDropdownSubmenu">
+                            <a class="dropdown-item" href="https://example.com">Item two</a>
+                        </div>
+                        <a class="dropdown-item" href="https://example.com">Invitational</a>
+                        <a class="dropdown-item" href="https://example.com">Booster</a>
+                        <a class="dropdown-item" href="https://example.com">Twitter</a>
+                        <!-- <div class="dropdown-divider"></div> -->
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container content-padding">
             <div class="row" id="activity-content">
                 <div class="col-md-12 no-padding" id="main-activity-content">
                     <h2>Information</h2>
@@ -128,7 +135,7 @@
                 </div>
             </div>
         </div>
-        <div class="container" id="article-container">
+        <div class="container content-padding" id="article-container">
             <div class="container no-padding">
                 <div class="row"><h3 class="article-title">2017 Science Olympiad Champions: Students share their OHSU experience</h3></div>
                 <div class="row">
