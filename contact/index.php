@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <?php include 'C:\Users\Roman\Documents\sorin/inc/includes.php'; ?>
+    <?php include '/srv/http/inc/includes.php'; ?>
     <link rel="stylesheet" href="contact.css">
     <title>Contact Us | Mentor High School</title>
     <meta name="description" content="This is a description">
@@ -10,7 +10,7 @@
 
 <body>
     <!-- <div class="push-down"></div> -->
-    <?php include 'C:\Users\Roman\Documents\sorin/inc/header.php' ?>
+    <?php include '/srv/http/inc/header.php' ?>
     <div class="container">
         <div id="contact-header"><h1>Contact Mentor</h1></div>
         <div class="row">
@@ -51,7 +51,7 @@
             </div>
         </div>
     </div>
-    <?php include 'C:\Users\Roman\Documents\sorin/inc/footer.php'; ?>
+    <?php include '/srv/http/inc/footer.php'; ?>
 </body>
 
 </html>
