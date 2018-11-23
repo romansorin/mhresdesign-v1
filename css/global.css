@@ -10,9 +10,9 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
 
-.push-down {
+/* .push-down {
     padding-top: 114px;
-}
+} */
 
 .no-padding {
     padding-left: 0 !important;
@@ -41,6 +41,12 @@ h1, h2, h3, h4, h5, h6 {
     min-height: calc(100% + 1px); 
     object-fit: cover; 
 }
+.top-border {
+    border-top: 1px solid #c8cdce;
+}
+.bottom-border {
+    border-bottom: 1px solid #c8cdce;
+}
 
 
 
@@ -56,9 +62,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* For devices less than the width of a laptop (basically between tablet and laptop) */
 @media (max-width: 1200px) {
-    .push-down {
+    /*.push-down {
         padding-top: 76px;
-    }
+    } */
 }
 
 /* --------------------------------------------- */
