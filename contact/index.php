@@ -12,7 +12,7 @@
     <!-- <div class="push-down"></div> -->
     <?php include '/srv/http/inc/header.php' ?>
     <div class="container">
-        <div id="contact-header"><h1>Contact Mentor</h1></div>
+    <div class="contact-header"><h1>Contact Mentor</h1></div>
         <div class="row">
             <div class="col-md-6 info">
                 <h2>General Information</h2>
@@ -31,7 +31,7 @@
                     <strong>Tel:</strong> (440) 255-2818<br><br>
                     Security<br>
                     <strong>Tel:</strong> (440) 255-2597<br><br>
-                    <a id="link" href="https://cityofmentor.com/departments/police/">Mentor Police Department</a><br>
+                    <a href="https://cityofmentor.com/departments/police/" class="link">Mentor Police Department</a><br>
                     <strong>Tel:</strong> (440) 255-1234 (non-emergency)
                 </p>
             </div>
@@ -47,7 +47,7 @@
                 </ul>
                 <h3>Get in touch</h3>
                 <p>Questions, comments, or concerns?</p>
-                <a id="contact-btn" class="btn btn-primary" href="contact.php" role="button">Let us know</a>
+                <a class="btn contact-btn" href="contact.php" role="button">Let us know</a>
             </div>
         </div>
     </div>
