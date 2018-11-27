@@ -279,30 +279,31 @@
                                 <?php foreach($results_image as $article_image) : ?>
                                     <img class="img-fit" src="<?= $article_image->articleimg; ?>" alt="Image for second article">
                                 <?php endforeach; ?>
-                            </figure>
-                        </div>
+                            </a>
+                        </figure>
                     </div>
-                    <div class="col-md-12 no-padding">
-                        <div class="content">
-                            <?php 
-                            $results_content = $activity->fetchArticleContent($pdo, 'science olympiad', 2);
-                            foreach ($results_content as $content) : ?>
-                                <p class="article-desc">
-                                    <?= $content->content; ?>
-                                </p>
-                            <?php endforeach; ?>
-                            <?php
-                            $results_link = $activity->fetchArticleLink($pdo, 'science olympiad', 2);
-                            foreach ($results_link as $link) : ?>
-                                <p class="article-link"><a href="<?= $link->link; ?>">Article link</a></p>
-                            <?php endforeach; ?>
-                        </div>
+                </div>
+                <div class="col-md-12 no-padding">
+                    <div class="content">
+                        <?php 
+                        $results_content = $activity->fetchArticleContent($pdo, 'science olympiad', 2);
+                        foreach ($results_content as $content) : ?>
+                            <p class="article-desc">
+                                <?= $content->content; ?>
+                            </p>
+                        <?php endforeach; ?>
+                        <?php
+                        $results_link = $activity->fetchArticleLink($pdo, 'science olympiad', 2);
+                        foreach ($results_link as $link) : ?>
+                            <p class="article-link"><a href="<?= $link->link; ?>">Article link</a></p>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <?php include '/srv/http/inc/footer.php'; ?>
+</div>
+<?php include '/srv/http/inc/footer.php'; ?>
 </body>
 
 </html>
