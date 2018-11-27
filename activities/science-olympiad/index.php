@@ -13,7 +13,7 @@
 <body>
 
     <?php include '/srv/http/inc/header.php'; ?>
-    <?php $pdo = connectToDb('activities', 'root', '');
+    <?php $pdo = connectToDb('sections', 'read', 'ireadonly');
     $results_info = fetchActivityInformation($pdo,'science olympiad');
     ?>
 
@@ -144,7 +144,7 @@
                     <?php foreach ($results_info as $information) : ?>
                         <p><?= $information->information; ?></p>
                     <?php endforeach; ?>
-                    
+
                 </div>
             </div>
         </div>
