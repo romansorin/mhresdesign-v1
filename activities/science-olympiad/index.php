@@ -30,7 +30,7 @@
             <div class="col-md-12 no-padding img-top">
                 <?php
                 $results_header_image = $activity->fetchHeaderImage($pdo, 'science olympiad');
-                foreach ($results_header_iimage as $header_image) : ?>
+                foreach ($results_header_image as $header_image) : ?>
                     <img class="d-block w-100 img-fit" src="<?= $header_image->headerimg ?>" alt="Science Olympiad header photo">
                 <?php endforeach; ?>
                 <div class="img-text-overlay">
