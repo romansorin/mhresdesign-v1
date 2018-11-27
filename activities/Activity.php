@@ -21,7 +21,7 @@ class Activity {
 	}
 
 	public static function fetchArticleTitle($pdo, $activity, $articleNumber) {
-		$query = "SELECT title FROM activities WHERE activity ='" . $activity . "'AND activity_number='" . $articleNumber . "'";
+		$query = "SELECT title FROM activities WHERE article_number ='" . $articleNumber . "'";
 		$title = $pdo->prepare($query);
 
 	
