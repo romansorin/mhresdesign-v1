@@ -1,5 +1,6 @@
 <?php
-require '/srv/http/inc/math_captcha.php'; /* Require statement will halt execution if the file cannot be found or used */
+/* Require statement will halt execution if the file cannot be found or used */
+require '/srv/http/inc/math_captcha.php'; 
 
 /* Initialize these variables as empty strings */
 $name = $email = $subject = $message = $success = "";
@@ -50,6 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		/* If the parameters are valid, send the message */
 		if (mail($to, $subject, $message)) {
 			$success = "Message sent.";
+			/* in the future, send to another page instead */
 			$name = $email = $subject = $message = ''; /* Reset the values of the form */
 		}
 	}

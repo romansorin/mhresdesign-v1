@@ -1,5 +1,5 @@
 <?php
-/* Simple math captcha to stop more basic spam */
+/* Simple math captcha to stop basic spam */
 
 $answer_error = "";
 $answer = "";

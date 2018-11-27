@@ -47,6 +47,9 @@ h1, h2, h3, h4, h5, h6 {
 .bottom-border {
     border-bottom: 1px solid #c8cdce;
 }
+.mr-left {
+    margin-left: 30px;
+}
 
 
 
