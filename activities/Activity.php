@@ -14,7 +14,7 @@ class Activity {
 	public $content2;
 
 	public static function fetchActivityInformation($pdo, $activity) {
-		$query = "SELECT information FROM activities WHERE activity = $activity";
+		$query = "SELECT information FROM activities WHERE activity = '" . $activity . "'";
 		$info = $pdo->prepare($query);
 
 		$info->execute();
