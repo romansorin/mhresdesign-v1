@@ -26,13 +26,13 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active img-fit">
-                            <img class="d-block w-100" src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/GbbtDTW/new-york-city-nyc-sunset-night-skyline-view-brooklyn-bridge-water-4k-timelapse_41kywuhn__F0000.png" alt="First slide">
+                            <img class="d-block w-100 img-fit" src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/GbbtDTW/new-york-city-nyc-sunset-night-skyline-view-brooklyn-bridge-water-4k-timelapse_41kywuhn__F0000.png" alt="First slide">
                         </div>
                         <div class="carousel-item img-fit">
-                            <img class="d-block w-100" src="http://orig07.deviantart.net/bd5d/f/2014/334/d/c/new_york_skyline_wallpaper_by_neokeitaro-d8839i9.jpg" alt="Second slide">
+                            <img class="d-block w-100 img-fit" src="http://orig07.deviantart.net/bd5d/f/2014/334/d/c/new_york_skyline_wallpaper_by_neokeitaro-d8839i9.jpg" alt="Second slide">
                         </div>
                         <div class="carousel-item img-fit">
-                            <img class="d-block w-100" src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.optoma.co.uk%2Fimages%2FProductApplicationFeatures%2F4kuhd%2Fbanner.jpg&f=1" alt="Third slide">
+                            <img class="d-block w-100 img-fit" src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.optoma.co.uk%2Fimages%2FProductApplicationFeatures%2F4kuhd%2Fbanner.jpg&f=1" alt="Third slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#frontpage-carousel" role="button" data-slide="prev">
