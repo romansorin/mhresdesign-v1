@@ -20,14 +20,14 @@ class Activity {
 	}
 
 	public static function fetchHeaderImage($pdo, $activity) {
-		$query = "SELECT headerimg FROM activity_images WHERE activity = '" . $activity . "'";
+		$query = "SELECT headerimg FROM activity_images WHERE activity = '" . $activity . "' AND headerimg IS NOT NULL";
 
 		$img = $pdo->prepare($query);
 		$img->execute();
 		
 		return $img->fetchAll(PDO::FETCH_CLASS, 'Activity');
 	}
-	
+
 	/**
 	 * [Get the title of an article]
 	 * @param  [Object] $pdo           [PDO object]
