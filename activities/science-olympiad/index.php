@@ -82,8 +82,8 @@
             <div class="row no-padding" id="activity-content">
                 <div class="col-md-12 no-padding" id="main-activity-content">
                     <h2>Information</h2>
-                    <?php foreach ($results_info as $information) : ?>
-                        <p><?= $information->information; ?></p>
+                    <?php foreach ($results_info as $content) : ?>
+                        <p><?= $content->content; ?></p>
                     <?php endforeach; ?>
 
                 </div>
