@@ -20,7 +20,7 @@
     $pdo = $conn->connectToDb('sections', 'reader', 'readonly');
 
     $results_info = $activity->fetchActivityInformation($pdo, 'science olympiad');
-    $results_title1 = $activity->fetchArticleTitle($pdo);
+    $results_title = $activity->fetchArticleTitle($pdo, 'science olympiad');
     /*$results_title2 = $activity->fetchArticleTitle($pdo, 'science olympiad', '2');*/
     /*$results_content1 = $activity->fetchArticleContent($pdo, 'science olympiad', '1');
     $results_content2 = $activity->fetchArticleContent($pdo, 'science olympid', '2');*/
@@ -99,7 +99,7 @@
                     </div>
                     <div class="col-md-6 no-padding">
                         <div class="content mr-left">
-                            <?php foreach ($results_title1 as $title) : ?>
+                            <?php foreach ($results_title as $title) : ?>
                                 <h3 class="article-title">
                                     <?= $title->title; ?>
                                 </h3>
