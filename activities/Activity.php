@@ -1,6 +1,6 @@
 <?php
 
-public class Activity {
+class Activity {
 	public $information;
 
 	public function fetchActivityInformation($pdo, $activity) {
