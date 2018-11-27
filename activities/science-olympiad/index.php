@@ -20,8 +20,7 @@
     $pdo = $conn->connectToDb('sections', 'reader', 'readonly');
 
     $results_info = $activity->fetchActivityInformation($pdo, 'science olympiad');
-    $results_title = $activity->fetchArticleTitle($pdo, 'science olympiad');
-    /*$results_title2 = $activity->fetchArticleTitle($pdo, 'science olympiad', '2');*/
+    $results_title = $activity->fetchArticleTitle($pdo, 'science olympiad', 1);
     /*$results_content1 = $activity->fetchArticleContent($pdo, 'science olympiad', '1');
     $results_content2 = $activity->fetchArticleContent($pdo, 'science olympid', '2');*/
 
