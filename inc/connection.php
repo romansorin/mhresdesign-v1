@@ -1,7 +1,7 @@
 <?php
 
 class Connection {
-	
+
 	/**
 	 * [Function to connect to a database]
 	 * @param  [String] $nameofdb   [Database]
