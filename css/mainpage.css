@@ -7,7 +7,7 @@
     overflow: hidden;
 }
 .carousel-inner {
-    max-height: 400px;
+    height: 400px;
 }
 /* News section */
 
