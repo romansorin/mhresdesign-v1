@@ -18,7 +18,7 @@ class Activity {
 
 		return $info->fetchAll(PDO::FETCH_CLASS, 'Activity');
 	}
-	/*
+
 	public static function fetchHeaderImage($pdo, $activity) {
 		$query = "SELECT headerimg FROM activity_images WHERE activity = '" . $activity . "'";
 
@@ -27,7 +27,7 @@ class Activity {
 		
 		return $img->fetchAll(PDO::FETCH_CLASS, 'Activity');
 	}
-	*/
+	
 	/**
 	 * [Get the title of an article]
 	 * @param  [Object] $pdo           [PDO object]
@@ -86,7 +86,7 @@ class Activity {
 	 * @param  [Int] 	$articleNumber [Specifies the particular article]
 	 * @return [String]                [Returns the image/video link to the caller of the method]
 	 */
-	/*
+	
 	public static function fetchArticleImage($pdo, $activity, $articleNumber) {
 		$query = "SELECT articleimg FROM activity_images WHERE activity = '" . $activity . "' AND articlenum = '$articleNumber'";
 
@@ -95,5 +95,4 @@ class Activity {
 
 		return $img->fetchAll(PDO::FETCH_CLASS, 'Activity');
 	}
-	*/
 }
