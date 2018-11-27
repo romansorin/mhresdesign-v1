@@ -19,8 +19,8 @@
 
     $pdo = $conn->connectToDb('sections', 'reader', 'readonly');
 
-    /*$results_info = $activity->fetchActivityInformation($pdo,'science olympiad');*/
-    $results_info = $activity->fetchArticleTitle($pdo, 'science olympiad', 1);
+    $results_info = $activity->fetchActivityInformation($pdo,'science olympiad');
+    //$results_title1 = $activity->fetchArticleTitle($pdo, 'science olympiad', 1);
     /*$results_title2 = $activity->fetchArticleTitle($pdo, 'science olympiad', '2');*/
     /*$results_content1 = $activity->fetchArticleContent($pdo, 'science olympiad', '1');
     $results_content2 = $activity->fetchArticleContent($pdo, 'science olympiad', '2');*/
@@ -82,8 +82,8 @@
             <div class="row no-padding" id="activity-content">
                 <div class="col-md-12 no-padding" id="main-activity-content">
                     <h2>Information</h2>
-                    <?php foreach ($results_info as $title) : ?>
-                        <p><?= $title->title; ?></p>
+                    <?php foreach ($results_info as $information) : ?>
+                        <p><?= $information->information; ?></p>
                     <?php endforeach; ?>
 
                 </div>

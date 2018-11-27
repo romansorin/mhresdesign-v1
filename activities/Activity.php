@@ -14,16 +14,16 @@ class Activity {
 	public $content2;
 
 	public static function fetchActivityInformation($pdo, $activity) {
-		$query = "SELECT information FROM activities WHERE activity = '" . $activity . "'";
+		$query = "SELECT information FROM activities WHERE activity = $activity";
 		$info = $pdo->prepare($query);
 
 		$info->execute();
 
 		return $info->fetchAll(PDO::FETCH_CLASS, 'Activity');
 	}
-
+/*
 	public static function fetchArticleTitle($pdo, $activity, $articleNumber) {
-		$query = "SELECT `title` FROM `activities` WHERE `activity`=\'science olympiad\' AND `article_number`=1";
+		$query = "SELECT title FROM activities WHERE activity = '" . $activity . "' AND articlenum  = 1";
 		$title = $pdo->prepare($query);
 
 		$title->execute();
