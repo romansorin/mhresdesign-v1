@@ -115,13 +115,13 @@
                                 </p>
                             <?php endforeach; ?>
                             
-                            <?php
+                            <?php/*
                             $results_link = $activity->fetchArticleLink($pdo, 'science olympiad', 1);
-                            foreach ($results_link as $link) : ?>
+                            foreach ($results_link as $link) : */?>
                                 <p class="article-link">
                                     <a href="#">Article link</a>
                                 </p>
-                            <?php endforeach; ?>
+                            <?php /*endforeach; */?>
                         </div>
                     </div>
                 </div>
@@ -138,7 +138,7 @@
 
                             <?php 
                             $results_content = $activity->fetchArticleContent($pdo, 'science olympiad', 2);
-                            foreach ($results_content as $content) :?>
+                            foreach ($results_content as $content) : ?>
                                 <p class="article-desc">
                                     <?= $content->content; ?>
                                 </p>
