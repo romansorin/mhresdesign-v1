@@ -1,14 +1,16 @@
 <?php
 
-function connectToDb($nameofdb, $dbusername, $dbpassword) {
-	try {
+class Connection {
+	public function connectToDb($nameofdb, $dbusername, $dbpassword) {
+		try {
 
-		return new PDO("mysql:host=127.0.0.1;dbname=$nameofdb", $dbusername, $dbpassword);
-		
-	} catch (PDOException $e) {
+			return new PDO("mysql:host=127.0.0.1;dbname=$nameofdb", $dbusername, $dbpassword);
+			
+		} catch (PDOException $e) {
 
-		die('Could not connect.' . $e->getMessage());
+			die('Could not connect.' . $e->getMessage());
+
+		}
 
 	}
-
 }
