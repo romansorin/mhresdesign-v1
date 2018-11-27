@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <?php include 'inc/includes.php'; ?>
+    <?php include 'inc/includes.php'; 
+    include 'inc/connection.php'; ?>
     <link rel="stylesheet" href="css/mainpage.css">
-    <?php //include 'inc/connection.php' ?>
     <title>Mentor High School</title>
     <meta name="description" content="This is a description">
 </head>
