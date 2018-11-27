@@ -101,7 +101,7 @@
                         <div class="content mr-left">
                             <?php foreach ($results_title as $title) : ?>
                                 <h3 class="article-title">
-                                    <?= $title->title; ?>
+                                    <?= $title->title1; ?>
                                 </h3>
                             <?php endforeach; ?>
                             <p class="article-desc">It's a day that the Mentor High School Science Olympiad program will remember for a long time, as it marks the first time it won the Ohio Science Olympiad State Tournament. Prior to winning the state tournament this past spring, Mentor placed fourth or higher 13 times, including second-place finishes in 2007, 2009 and 2015. Additionally, the program has made four appearances at the national tournament, with its highest finish of fifth in 2007.</p>
