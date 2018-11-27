@@ -4,6 +4,7 @@ class Activity {
 	public $information;
 	public $title;
 	public $content;
+	public $articleNumber = 0;
 
 	// 'titles' are considered the article titles below information paragraph
 	public $title2;
@@ -22,7 +23,7 @@ class Activity {
 	}
 
 	public static function fetchArticleTitle($pdo, $articleNumber) {
-		$query = "SELECT title FROM activities WHERE activity = 'science olympiad' AND articlenum = .'$articleNumber'";
+		$query = "SELECT title FROM activities WHERE activity = 'science olympiad' AND articlenum = '$articleNumber'";
 
 		$title = $pdo->prepare($query);
 
