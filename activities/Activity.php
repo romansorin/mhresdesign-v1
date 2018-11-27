@@ -16,11 +16,11 @@ class Activity {
 
 	public static function fetchArticleTitle($pdo) {
 		$query = "SELECT title1 FROM activities WHERE activity = 'science olympiad'";
-		$title = $pdo->prepare($query);
+		$articleTitle = $pdo->prepare($query);
 
-		$title->execute();
+		$articleTitle->execute();
 
-		return $title->fetchAll(PDO::FETCH_CLASS, 'Activity');
+		return $articleTitle->fetchAll(PDO::FETCH_CLASS, 'Activity');
 	}
 	/*
 	public static function fetchArticleContent($pdo, $activity, $articleNumber) {
