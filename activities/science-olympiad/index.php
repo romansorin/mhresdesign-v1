@@ -3,8 +3,9 @@
 
 <head>
     <?php include '/srv/http/inc/includes.php'; 
-    include '/srv/http/inc/connection.php';
-    include '/srv/http/activities/Activity.php';?>
+    require '/srv/http/inc/connection.php';
+    require '/srv/http/activities/Activity.php';
+    ?>
     <link rel="stylesheet" href="/css/activities.css">
     <title>Science Olympiad | Mentor High School</title>
     <meta name="description" content="#">
@@ -12,8 +13,8 @@
 
 <body>
 
-    <?php include '/srv/http/inc/header.php'; ?>
-    <?php $pdo = connectToDb('sections', 'reader', 'readonly');
+    <?php include '/srv/http/inc/header.php';
+    $pdo = connectToDb('sections', 'reader', 'readonly');
     $results_info = fetchActivityInformation($pdo,'science olympiad');
     ?>
 
