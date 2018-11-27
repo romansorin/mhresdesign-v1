@@ -13,11 +13,14 @@
 
 <body>
 
-    <?php include '/srv/http/inc/header.php';
-    $consn = new Connection();
+    <?php 
+    $conn = new Connection();
     $activity = new Activity();
+
     $pdo = $conn->connectToDb('sections', 'reader', 'readonly');
     $results_info = $activity->fetchActivityInformation($pdo,'science olympiad');
+
+    include '/srv/http/inc/header.php';
     ?>
 
     <div class="container-fluid no-padding">
