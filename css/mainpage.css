@@ -8,7 +8,9 @@
 }
 .carousel-inner {
     height: 400px;
-    max-width: 80%;
+}
+.carousel-item img {
+    width: 100%;
 }
 /* News section */
 
