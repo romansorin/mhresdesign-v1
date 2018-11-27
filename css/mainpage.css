@@ -8,7 +8,7 @@
 }
 .carousel-inner {
     height: 400px;
-    background-image: 100% 100%;
+    max-width: 80%;
 }
 /* News section */
 
