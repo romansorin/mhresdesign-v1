@@ -24,15 +24,15 @@
                         <li data-target="#frontpage-carousel" data-slide-to="1"></li>
                         <li data-target="#frontpage-carousel" data-slide-to="2"></li>
                     </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active img-fit">
-                            <img class="d-block w-100 img-fit" src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/GbbtDTW/new-york-city-nyc-sunset-night-skyline-view-brooklyn-bridge-water-4k-timelapse_41kywuhn__F0000.png" alt="First slide">
+                    <div class="carousel-inner" >
+                        <div class="carousel-item active" style="max-width: 100%">
+                            <img class="d-block w-100" src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/GbbtDTW/new-york-city-nyc-sunset-night-skyline-view-brooklyn-bridge-water-4k-timelapse_41kywuhn__F0000.png" alt="First slide">
                         </div>
-                        <div class="carousel-item img-fit">
-                            <img class="d-block w-100 img-fit" src="https://images2.alphacoders.com/700/70070.jpg" alt="Second slide">
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://images2.alphacoders.com/700/70070.jpg" alt="Second slide">
                         </div>
-                        <div class="carousel-item img-fit">
-                            <img class="d-block w-100 img-fit" src="https://cdn.hipwallpaper.com/i/3/52/EQil13.jpg" alt="Third slide">
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://cdn.hipwallpaper.com/i/3/52/EQil13.jpg" alt="Third slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#frontpage-carousel" role="button" data-slide="prev">
