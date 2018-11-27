@@ -28,7 +28,11 @@
     <div class="container-fluid no-padding">
         <div class="row">
             <div class="col-md-12 no-padding img-top">
-                <img class="d-block w-100 img-fit" src="https://wallpapercave.com/wp/W884Eoi.jpg" alt="Science Olympiad header photo">
+                <?php
+                $results_header_image = $activity->fetchHeaderImage($pdo, 'science olympiad');
+                foreach ($results_header_iimage as $header_image) : ?>
+                    <img class="d-block w-100 img-fit" src="<?= $header_image->headerimg ?>" alt="Science Olympiad header photo">
+                <?php endforeach; ?>
                 <div class="img-text-overlay">
                     <a href="/activities"><h6>Activities</h6></a>
                     <h1>Science Olympiad</h1>
