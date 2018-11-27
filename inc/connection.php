@@ -1,8 +1,14 @@
 <?php
-$servername = "#";
-$username = "#";
-$password = "#";
-$dbname = "#";
 
-// connection for reading news from database
-$conn = new mysqli($servername, $username, $password, $dbname);
+function connectToDb($nameofdb, $dbusername, $dbpassword) {
+	try {
+
+		return new PDO("mysql:host=127.0.0.1;dbname=$nameofdb", $dbusername, $dbpassword);
+		
+	} catch (PDOException $e) {
+
+		die('Could not connect.' . $e->getMessage());
+
+	}
+
+}
