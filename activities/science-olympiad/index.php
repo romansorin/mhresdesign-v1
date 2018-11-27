@@ -12,19 +12,13 @@
 </head>
 
 <body>
-
     <?php 
     $conn = new Connection();
     $activity = new Activity();
-
     $pdo = $conn->connectToDb('sections', 'reader', 'readonly');
-
-    
-   
 
     include '/srv/http/inc/header.php';
     ?>
-
     <div class="container-fluid no-padding">
         <div class="row">
             <div class="col-md-12 no-padding img-top">
@@ -82,9 +76,10 @@
                     <?php
                     $results_info = $activity->fetchActivityInformation($pdo, 'science olympiad');
                     foreach ($results_info as $information) : ?>
-                        <p><?= $information->information; ?></p>
+                        <p>
+                            <?= $information->information; ?>
+                        </p>
                     <?php endforeach; ?>
-
                 </div>
             </div>
         </div>
@@ -108,7 +103,10 @@
                             <?php 
                             $results_content = $activity->fetchArticleContent($pdo, 'science olympiad', 1);
                             foreach ($results_content as $content) : ?>
-                            <p class="article-desc"><?= $content->content; ?></p><?php endforeach; ?>
+                                <p class="article-desc">
+                                    <?= $content->content; ?>
+                                </p>
+                            <?php endforeach; ?>
                             <p class="article-link"><a href="https://ohso.osu.edu/news/2017/12/19/winning-feeling-mentor-high-students-share-their-ohio-science-olympiad-experience">Article link</a></p>
                         </div>
                     </div>
@@ -119,13 +117,17 @@
                             <?php 
                             $results_title = $activity->fetchArticleTitle($pdo, 'science olympiad', 2);
                             foreach ($results_title as $title) : ?>
-                            <h3 class="article-title"><?= $title->title; ?></h3>
-                        <?php endforeach; ?>
-                        <?php 
-                        $results_content = $activity->fetchArticleContent($pdo, 'science olympiad', 2);
-                        foreach ($results_content as $content) :?>
-                            <p class="article-desc"><?= $content->content; ?></p>
-                        <?php endforeach; ?>
+                                <h3 class="article-title">
+                                    <?= $title->title; ?>
+                                </h3>
+                            <?php endforeach; ?>
+                            <?php 
+                            $results_content = $activity->fetchArticleContent($pdo, 'science olympiad', 2);
+                            foreach ($results_content as $content) :?>
+                                <p class="article-desc">
+                                    <?= $content->content; ?>
+                                </p>
+                            <?php endforeach; ?>
                             <p class="article-link"><a href="https://ohso.osu.edu/news/2018/06/04/former-mentor-student-continues-science-olympiad-mission-beyond-high-school">Article link</a></p>
                         </div>
                     </div>
@@ -167,17 +169,27 @@
             <div class="row" id="activity-content">
                 <div class="col-md-12 no-padding" id="main-activity-content">
                     <h2>Information</h2>
-
-                    <?php foreach ($results_info as $information) : ?>
-                        <p><?= $information->information; ?></p>
+                    <?php
+                    $results_info = $activity->fetchActivityInformation($pdo, 'science olympiad');
+                    foreach ($results_info as $information) : ?>
+                        <p>
+                            <?= $information->information; ?>
+                        </p>
                     <?php endforeach; ?>
-
                 </div>
             </div>
         </div>
         <div class="container content-padding" id="article-container">
             <div class="container no-padding">
-                <div class="row"><h3 class="article-title">2017 Science Olympiad Champions: Students share their OHSU experience</h3></div>
+                <div class="row">
+                    <?php 
+                    $results_title = $activity->fetchArticleTitle($pdo, 'science olympiad', 1);
+                    foreach ($results_title as $title) : ?>
+                        <h3 class="article-title">
+                            <?= $title->title; ?>
+                        </h3>
+                    <?php endforeach; ?>
+                </div>
                 <div class="row">
                     <div class="col-md-12 no-padding">
                         <figure class="article-img">
@@ -187,11 +199,25 @@
                 </div>
                 <div class="col-md-12 no-padding">
                     <div class="content">
-                        <p class="article-desc">It's a day that the Mentor High School Science Olympiad program will remember for a long time, as it marks the first time it won the Ohio Science Olympiad State Tournament. Prior to winning the state tournament this past spring, Mentor placed fourth or higher 13 times, including second-place finishes in 2007, 2009 and 2015. Additionally, the program has made four appearances at the national tournament, with its highest finish of fifth in 2007.</p>
+                        <?php 
+                        $results_content = $activity->fetchArticleContent($pdo, 'science olympiad', 1);
+                        foreach ($results_content as $content) : ?>
+                            <p class="article-desc">
+                                <?= $content->content; ?>
+                            </p>
+                        <?php endforeach; ?>
                         <p class="article-link"><a href="https://ohso.osu.edu/news/2017/12/19/winning-feeling-mentor-high-students-share-their-ohio-science-olympiad-experience">Article link</a></p>
                     </div>
                 </div>
-                <div class="row"><h3 class="article-title">2017 Science Olympiad Champions: Students share their OHSU experience</h3></div>
+                <div class="row">
+                    <?php 
+                    $results_title = $activity->fetchArticleTitle($pdo, 'science olympiad', 2);
+                    foreach ($results_title as $title) : ?>
+                        <h3 class="article-title">
+                            <?= $title->title; ?>
+                        </h3>
+                    <?php endforeach; ?>
+                </div>
                 <div class="row">
                     <div class="col-md-12 no-padding">
                         <figure class="article-img">
@@ -201,7 +227,13 @@
                 </div>
                 <div class="col-md-12 no-padding">
                     <div class="content">
-                        <p class="article-desc">Logan Leak is a prime example of the impact Science Olympiad can have on a student. The Mentor, Ohio, native was a five-year Science Olympiad participant as a middle and high school student. This past April, Leak—who is now a University of Chicago student studying molecular biology—returned to his home state to volunteer at the Ohio Science Olympiad State Tournament.</p>
+                        <?php 
+                        $results_content = $activity->fetchArticleContent($pdo, 'science olympiad', 2);
+                        foreach ($results_content as $content) : ?>
+                            <p class="article-desc">
+                                <?= $content->content; ?>
+                            </p>
+                        <?php endforeach; ?>
                         <p class="article-link"><a href="https://ohso.osu.edu/news/2018/06/04/former-mentor-student-continues-science-olympiad-mission-beyond-high-school">Article link</a></p>
                     </div>
                 </div>
