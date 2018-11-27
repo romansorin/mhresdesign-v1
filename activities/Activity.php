@@ -69,7 +69,7 @@ class Activity {
 	 * @param  [Int] 	$articleNumber [Specifies the particular article]
 	 * @return [String]                [Returns the article link to the caller of the method]
 	 */
-	/*
+	
 	public static function fetchArticleLink($pdo, $activity, $articleNumber) {
 		$query = "SELECT link FROM activities WHERE activity = '" . $activity . "' AND articlenum = '$articleNumber'";
 
