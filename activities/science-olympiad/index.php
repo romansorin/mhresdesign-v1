@@ -14,8 +14,10 @@
 <body>
 
     <?php include '/srv/http/inc/header.php';
-    $pdo = connectToDb('sections', 'reader', 'readonly');
-    $results_info = fetchActivityInformation($pdo,'science olympiad');
+    $connection = new Connection;
+    $activity = new Activity;
+    $connection->$pdo = connectToDb('sections', 'reader', 'readonly');
+    $activity->$results_info = fetchActivityInformation($pdo,'science olympiad');
     ?>
 
     <div class="container-fluid no-padding">

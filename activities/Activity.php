@@ -3,7 +3,7 @@
 class Activity {
 	public $information;
 
-	public function fetchActivityInformation($pdo, $activity) {
+	function fetchActivityInformation($pdo, $activity) {
 		$info = $pdo->prepare("SELECT information FROM activities WHERE activity= '" . $activity . "'");
 
 		$info->execute();
