@@ -5,14 +5,6 @@ class Activity {
 	public $title;
 	public $content;
 
-	// 'titles' are considered the article titles below information paragraph
-	public $title1;
-	public $title2;
-
-	// 'content' for each article
-	public $content1;
-	public $content2;
-
 	public static function fetchActivityInformation($pdo, $activity) {
 		$query = "SELECT information FROM activities WHERE activity = '" . $activity . "'";
 		$info = $pdo->prepare($query);
@@ -23,7 +15,7 @@ class Activity {
 	}
 
 	public static function fetchArticleTitle($pdo, $activity) {
-		$query = "SELECT information FROM activities WHERE activity = '" . $activity . "'";
+		$query = "SELECT information FROM activities WHERE id = 1";
 		$title = $pdo->prepare($query);
 
 		$title->execute();
