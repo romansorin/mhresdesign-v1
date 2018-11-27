@@ -95,9 +95,9 @@
                     <div class="col-md-6 no-padding">
                         <figure class="article-img" style="margin-left: 0px;">
                             <?php 
-                            $results_link = $activity->fetchArticleImage($pdo, 'science olympiad', 1);
+                            $results_image = $activity->fetchArticleImage($pdo, 'science olympiad', 1);
                             foreach ($results_image as $article_image) : ?>
-                                <iframe class="img-fit" width="640" height="480" src="<?= $article_image->articleimg ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                <iframe class="img-fit" width="640" height="480" src="<?= $article_image->articleimg; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                             <?php endforeach; ?>
                         </figure>
                     </div>
@@ -166,7 +166,7 @@
                                 <a href="<?= $link->link; ?>">
                                 <?php endforeach; ?>
                                 <?php foreach($results_image as $article_image) : ?>
-                                    <img class="img-fit" src="<?= $article_image->articleimg ?>" alt="Image for second article">
+                                    <img class="img-fit" src="<?= $article_image->articleimg; ?>" alt="Image for second article">
                                 <?php endforeach; ?>
                             </a>
                         </figure>
