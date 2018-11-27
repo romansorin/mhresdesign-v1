@@ -10,7 +10,7 @@
 
 <body>
     <div class="push-down"></div>
-    <?php include '/srv/http/inc/header.php' ?>
+    <?php include '/srv/http/inc/header.php' ?> <!-- images -->
     <div class="container-fluid no-padding">
         <div class="row">
             <div class="col-md-12 no-padding img-top">
@@ -18,6 +18,39 @@
                 <div class="img-text-overlay">
                     <a href="/activities"><h6>Activities</h6></a>
                     <h1>Activity</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid no-padding"> <!-- carousel -->
+        <div class="row no-padding">
+            <div class="col-12 no-padding">
+                <div id="activity-carousel" class="carousel slide" data-ride="carousel" data-interval="10000">
+                    <!-- To change speed of slideshow, changing 'data-interval' value (parameter taken as milliseconds) -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#activity-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#activity-carousel" data-slide-to="1"></li>
+                        <li data-target="#activity-carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#activity-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#activity-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
         </div>
