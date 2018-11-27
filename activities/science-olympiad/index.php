@@ -111,8 +111,12 @@
                 <div class="row">
                     <div class="col-md-6 no-padding">
                         <div class="content">
-                            <h3 class="article-title">Science Olympiad beyond high school</h3>
-                            <p class="article-desc">Logan Leak is a prime example of the impact Science Olympiad can have on a student. The Mentor, Ohio, native was a five-year Science Olympiad participant as a middle and high school student. This past April, Leak—who is now a University of Chicago student studying molecular biology—returned to his home state to volunteer at the Ohio Science Olympiad State Tournament.</p>
+                            <?php foreach ($results_title as $title) : ?>
+                            <h3 class="article-title"><?= $title->title; ?></h3>
+                        <?php endforeach; ?>
+                        <?php foreach ($results_content as $content) :?>
+                            <p class="article-desc"><?= $content->content; ?></p>
+                        <?php endforeach; ?>
                             <p class="article-link"><a href="https://ohso.osu.edu/news/2018/06/04/former-mentor-student-continues-science-olympiad-mission-beyond-high-school">Article link</a></p>
                         </div>
                     </div>
