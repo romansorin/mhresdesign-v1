@@ -13,7 +13,7 @@ class Activity {
 
 		return $info->fetchAll(PDO::FETCH_CLASS, 'Activity');
 	}
-
+/*
 	public static function fetchArticleTitle($pdo) {
 		$query = "SELECT `title1` FROM activities WHERE `activity` = 'science olympiad'";
 		$articleTitle = $pdo->prepare($query);
