@@ -157,9 +157,12 @@
                         <figure class="article-img mr-left">
                             <?php
                             $results_link = $activity->fetchArticleLink($pdo, 'science olympiad', 2);
+                            $results_image = $activity->fetchArticleImage($pdo, 'science olympiad', 2);
                             foreach ($results_link as $link) : ?>
-                                <a href="<?= $link->link; ?>"><img class="img-fit" src="https://pbs.twimg.com/media/Db6dHFRWkAAOUtg.jpg:large" alt="test"></a>
-                            <?php endforeach; ?>
+                                <a href="<?= $link->link; ?>">
+                                    <?php endforeach; ?>
+                                    <?php foreach($results_image as $article_image) : ?>
+                                    <img class="img-fit" src="<?= $article_image->articleimg ?>" alt="test"><?php endforeach; ?></a>
                         </figure>
                     </div>
                 </div>
