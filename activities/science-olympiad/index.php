@@ -14,7 +14,7 @@
 <body>
 
     <?php include '/srv/http/inc/header.php';
-    $conn = new Connection();
+    $consn = new Connection();
     $activity = new Activity();
     $pdo = $conn->connectToDb('sections', 'reader', 'readonly');
     $results_info = $activity->fetchActivityInformation($pdo,'science olympiad');
