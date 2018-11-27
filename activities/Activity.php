@@ -1,15 +1,15 @@
 <?php
 
-class Activity {
+public class Activity {
 	public $information;
-}
 
-function fetchActivityInformation($pdo, $activity) {
-	$info = $pdo->prepare("SELECT information FROM activities WHERE activity= '" . $activity . "'");
+	public static function fetchActivityInformation($pdo, $activity) {
+		$info = $pdo->prepare("SELECT information FROM activities WHERE activity= '" . $activity . "'");
 
-	$info->execute();
+		$info->execute();
 
-	return  $info->fetchAll(PDO::FETCH_CLASS, 'Activity');
+		return $info->fetchAll(PDO::FETCH_CLASS, 'Activity');
+	}
 }
 
 ?>
