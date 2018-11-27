@@ -15,7 +15,7 @@ class Activity {
 	}
 
 	public static function fetchArticleTitle($pdo, $activity) {
-		$query = "SELECT information FROM activities WHERE id = 1";
+		$query = "SELECT title FROM activities WHERE id = 1";
 		$title = $pdo->prepare($query);
 
 		$title->execute();
