@@ -76,7 +76,7 @@ class Activity {
 		$ref = $pdo->prepare($query);
 		$ref->execute();
 
-		return $ref->fetchAll(PDO:FETCH_CLASS, 'Activity');
+		return $ref->fetchAll(PDO::FETCH_CLASS, 'Activity');
 	}
 
 	/**
