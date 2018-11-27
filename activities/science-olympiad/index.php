@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <?php include 'C:\Users\Roman\Documents\sorin/inc/includes.php'; 
-    include 'C:\Users\Roman\Documents\sorin/inc/connection.php';
-    include 'C:\Users\Roman\Documents\sorin/activities/Activity.php';?>
+    <?php include '/srv/http/inc/includes.php'; 
+    include '/srv/http/inc/connection.php';
+    include '/srv/http/activities/Activity.php';?>
     <link rel="stylesheet" href="/css/activities.css">
     <title>Science Olympiad | Mentor High School</title>
     <meta name="description" content="#">
@@ -12,7 +12,7 @@
 
 <body>
 
-    <?php include 'C:\Users\Roman\Documents\sorin/inc/header.php'; ?>
+    <?php include '/srv/http/inc/header.php'; ?>
     <?php $pdo = connectToDb('activities', 'root', '');
     $results_info = fetchActivityInformation($pdo,'science olympiad');
     ?>
@@ -144,6 +144,7 @@
                     <?php foreach ($results_info as $information) : ?>
                         <p><?= $information->information; ?></p>
                     <?php endforeach; ?>
+                    
                 </div>
             </div>
         </div>
@@ -181,7 +182,7 @@
         </div>
     </div>
 </div>
-<?php include 'C:\Users\Roman\Documents\sorin/inc/footer.php'; ?>
+<?php include '/srv/http/inc/footer.php'; ?>
 </body>
 
 </html>
