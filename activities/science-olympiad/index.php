@@ -155,7 +155,11 @@
                     </div>
                     <div class="col-md-6 no-padding">
                         <figure class="article-img mr-left">
-                            <a href="https://ohso.osu.edu/news/2018/06/04/former-mentor-student-continues-science-olympiad-mission-beyond-high-school"><img class="img-fit" src="https://pbs.twimg.com/media/Db6dHFRWkAAOUtg.jpg:large" alt="test"></a>
+                            <?php
+                            $results_link = $activity->fetchArticleLink($pdo, 'science olympiad', 2);
+                            foreach ($results_link as $link) : ?>
+                                <a href="<?= $link->link; ?>"><img class="img-fit" src="https://pbs.twimg.com/media/Db6dHFRWkAAOUtg.jpg:large" alt="test"></a>
+                            <?php endforeach; ?>
                         </figure>
                     </div>
                 </div>
