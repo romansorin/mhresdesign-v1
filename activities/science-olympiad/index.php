@@ -19,8 +19,8 @@
 
     $pdo = $conn->connectToDb('sections', 'reader', 'readonly');
 
-    $results_info = $activity->fetchActivityInformation($pdo, 'code');
-    $results_title = $activity->fetchArticleTitle($pdo, 'code');
+    $results_info = $activity->fetchActivityInformation($pdo, 'science olympiad');
+    $results_title = $activity->fetchArticleTitle($pdo, 'science olympiad');
     /*$results_title2 = $activity->fetchArticleTitle($pdo, 'science olympiad', '2');*/
     /*$results_content1 = $activity->fetchArticleContent($pdo, 'science olympiad', '1');
     $results_content2 = $activity->fetchArticleContent($pdo, 'science olympid', '2');*/
@@ -99,9 +99,9 @@
                     </div>
                     <div class="col-md-6 no-padding">
                         <div class="content mr-left">
-                            <?php foreach ($results_title as $content) : ?>
+                            <?php foreach ($results_title as $title) : ?>
                                 <h3 class="article-title">
-                                    <?= $content->content; ?>
+                                    <?= $title->title; ?>
                                 </h3>
                             <?php endforeach; ?>
                             <p class="article-desc">It's a day that the Mentor High School Science Olympiad program will remember for a long time, as it marks the first time it won the Ohio Science Olympiad State Tournament. Prior to winning the state tournament this past spring, Mentor placed fourth or higher 13 times, including second-place finishes in 2007, 2009 and 2015. Additionally, the program has made four appearances at the national tournament, with its highest finish of fifth in 2007.</p>
