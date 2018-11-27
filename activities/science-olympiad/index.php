@@ -19,9 +19,8 @@
 
     $pdo = $conn->connectToDb('sections', 'reader', 'readonly');
 
-    $results_info = $activity->fetchActivityInformation($pdo, 'science olympiad');
-    $results_title = $activity->fetchArticleTitle($pdo, 'science olympiad', 1);
-    $results_content = $activity->fetchArticleContent($pdo, 'science olympiad', 1);
+    
+   
 
     include '/srv/http/inc/header.php';
     ?>
@@ -80,7 +79,9 @@
             <div class="row no-padding" id="activity-content">
                 <div class="col-md-12 no-padding" id="main-activity-content">
                     <h2>Information</h2>
-                    <?php foreach ($results_info as $information) : ?>
+                    <?php
+                    $results_info = $activity->fetchActivityInformation($pdo, 'science olympiad');
+                    foreach ($results_info as $information) : ?>
                         <p><?= $information->information; ?></p>
                     <?php endforeach; ?>
 
@@ -97,12 +98,16 @@
                     </div>
                     <div class="col-md-6 no-padding">
                         <div class="content mr-left">
-                            <?php foreach ($results_title as $title) : ?>
+                            <?php 
+                            $results_title = $activity->fetchArticleTitle($pdo, 'science olympiad', 1);
+                            foreach ($results_title as $title) : ?>
                                 <h3 class="article-title">
                                     <?= $title->title; ?>
                                 </h3>
                             <?php endforeach; ?>
-                            <?php foreach ($results_content as $content) : ?>
+                            <?php 
+                            $results_content = $activity->fetchArticleContent($pdo, 'science olympiad', 1);
+                            foreach ($results_content as $content) : ?>
                             <p class="article-desc"><?= $content->content; ?></p><?php endforeach; ?>
                             <p class="article-link"><a href="https://ohso.osu.edu/news/2017/12/19/winning-feeling-mentor-high-students-share-their-ohio-science-olympiad-experience">Article link</a></p>
                         </div>
@@ -111,10 +116,14 @@
                 <div class="row">
                     <div class="col-md-6 no-padding">
                         <div class="content">
-                            <?php foreach ($results_title as $title) : ?>
+                            <?php 
+                            $results_title = $activity->fetchArticleTitle($pdo, 'science olympiad', 2);
+                            foreach ($results_title as $title) : ?>
                             <h3 class="article-title"><?= $title->title; ?></h3>
                         <?php endforeach; ?>
-                        <?php foreach ($results_content as $content) :?>
+                        <?php 
+                        $results_content = $activity->fetchArticleContent($pdo, 'science olympiad', 2);
+                        foreach ($results_content as $content) :?>
                             <p class="article-desc"><?= $content->content; ?></p>
                         <?php endforeach; ?>
                             <p class="article-link"><a href="https://ohso.osu.edu/news/2018/06/04/former-mentor-student-continues-science-olympiad-mission-beyond-high-school">Article link</a></p>
