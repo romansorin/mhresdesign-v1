@@ -20,18 +20,19 @@ class Activity {
 	}
 
 	public static function fetchArticleTitle($pdo, $activity, $articleNumber) {
-		$title = $pdo->prepare("SELECT title FROM activities WHERE activity = '" . $activity . "' and article_number = '" . $articleNumber . "'");
+		$title = $pdo->prepare("SELECT title FROM activities WHERE activity = '" . $activity . "'");
 
 		$title->execute();
 
 		return $title->fetchAll(PDO::FETCH_CLASS, 'Activity');
 	}
-
+	/*
 	public static function fetchArticleContent($pdo, $activity, $articleNumber) {
 		$content = $pdo->prepare("SELECT content FROM activities WHERE activity = '" . $activity "' and article_number = '" . $articleNumber . "'");
-		
+
 		$content->execute();
 
 		return $content->fetchAll(PDO::FETCH_CLASS, 'Activity');
 	}
+	*/
 }
