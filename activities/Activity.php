@@ -2,6 +2,8 @@
 
 class Activity {
 	public $information;
+	public $title;
+	public $content;
 
 	// 'titles' are considered the article titles below information paragraph
 	public $title1;
