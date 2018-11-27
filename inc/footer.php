@@ -1,5 +1,5 @@
 <head>
-    <?php include 'weather.php'; ?>
+    <?php include 'weather.php';?>
 </head>
 
 <div id="footer">

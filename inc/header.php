@@ -2,7 +2,7 @@
 <!--<div class="fixed-top"> -->
     <nav class="navbar navbar-expand-lg navbar-light d-none d-lg-flex">
         <span class="navbar-brand">Resources for:</span>
-        <ul class="navbar-nav navbar-resources"> 
+        <ul class="navbar-nav navbar-resources">
             <li class="nav-item"><a href="/students" class="nav-link hvr-overline-reveal">Students</a></li>
             <li class="nav-item"><a href="/faculty-staff" class="nav-link hvr-overline-reveal">Faculty & Staff</a></li>
             <li class="nav-item"><a href="/parents" class="nav-link hvr-overline-reveal">Parents</a></li>
@@ -65,7 +65,7 @@
                             <div class="col-6 text-center border-right">
                                 <a href="/students" class="nav-link hvr-underline-from-center bottom-border">Students</a>
                                 <a href="/faculty-staff" class="nav-link hvr-underline-from-center">Faculty & Staff</a>
-                            </div>    
+                            </div>
                             <div class="col-6 text-center">
                                 <a href="/parents" class="nav-link hvr-underline-from-center bottom-border">Parents</a>
                                 <a href="/alumni" class="nav-link hvr-underline-from-center">Alumni</a>

@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <?php include '/srv/http/inc/includes.php'; 
+    <?php include '/srv/http/inc/includes.php';
     require '/srv/http/inc/connection.php';
-    require '/srv/http/activities/Activity.php'; ?>
+    require '/srv/http/activities/Activity.php';?>
     <link rel="stylesheet" href="/css/activities.css">
     <title>Science Olympiad | Mentor High School</title>
     <meta name="description" content="#">
@@ -30,9 +30,9 @@
             <div class="col-md-12 no-padding img-top">
                 <?php
                 $results_header_image = $activity->fetchHeaderImage($pdo, 'science olympiad');
-                foreach ($results_header_image as $header_image) : ?>
-                    <img class="d-block w-100 img-fit" src="<?= $header_image->headerimg; ?>" alt="Science Olympiad header photo">
-                <?php endforeach; ?>
+                foreach ($results_header_image as $header_image): ?>
+                    <img class="d-block w-100 img-fit" src="<?=$header_image->headerimg;?>" alt="Science Olympiad header photo">
+                <?php endforeach;?>
                 <div class="img-text-overlay">
                     <a href="/activities"><h6>Activities</h6></a>
                     <h1>Science Olympiad</h1>
@@ -85,11 +85,11 @@
                     <h2>Information</h2>
                     <?php
                     $results_info = $activity->fetchActivityInformation($pdo, 'science olympiad');
-                    foreach ($results_info as $information) : ?>
+                    foreach ($results_info as $information): ?>
                         <p>
-                            <?= $information->information; ?>
+                            <?=$information->information;?>
                         </p>
-                    <?php endforeach; ?>
+                    <?php endforeach;?>
                 </div>
             </div>
         </div>
@@ -98,80 +98,80 @@
                 <div class="row">
                     <div class="col-md-6 no-padding">
                         <figure class="article-img" style="margin-left: 0px;">
-                            <?php 
+                            <?php
                             $results_image = $activity->fetchArticleImage($pdo, 'science olympiad', 1);
-                            foreach ($results_image as $article_image) : ?>
-                                <iframe class="img-fit" width="640" height="480" src="<?= $article_image->articleimg; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            <?php endforeach; ?>
+                            foreach ($results_image as $article_image): ?>
+                                <iframe class="img-fit" width="640" height="480" src="<?=$article_image->articleimg;?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <?php endforeach;?>
                         </figure>
                     </div>
                     <div class="col-md-6 no-padding">
                         <div class="content mr-left">
-                            <?php 
+                            <?php
                             $results_title = $activity->fetchArticleTitle($pdo, 'science olympiad', 1);
-                            foreach ($results_title as $title) : ?>
+                            foreach ($results_title as $title): ?>
                                 <h3 class="article-title">
-                                    <?= $title->title; ?>
+                                    <?=$title->title;?>
                                 </h3>
-                            <?php endforeach; ?>
+                            <?php endforeach;?>
 
-                            <?php 
+                            <?php
                             $results_content = $activity->fetchArticleContent($pdo, 'science olympiad', 1);
-                            foreach ($results_content as $content) : ?>
+                            foreach ($results_content as $content): ?>
                                 <p class="article-desc">
-                                    <?= $content->content; ?>
+                                    <?=$content->content;?>
                                 </p>
-                            <?php endforeach; ?>
-                            
+                            <?php endforeach;?>
+
                             <?php
                             $results_link = $activity->fetchArticleLink($pdo, 'science olympiad', 1);
-                            foreach ($results_link as $link) : ?>
+                            foreach ($results_link as $link): ?>
                                 <p class="article-link">
-                                    <a href="<?= $link->link; ?>">Article link</a>
+                                    <a href="<?=$link->link;?>">Article link</a>
                                 </p>
-                            <?php endforeach; ?>
+                            <?php endforeach;?>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 no-padding">
                         <div class="content">
-                            <?php 
+                            <?php
                             $results_title = $activity->fetchArticleTitle($pdo, 'science olympiad', 2);
-                            foreach ($results_title as $title) : ?>
+                            foreach ($results_title as $title): ?>
                                 <h3 class="article-title">
-                                    <?= $title->title; ?>
+                                    <?=$title->title;?>
                                 </h3>
-                            <?php endforeach; ?>
+                            <?php endforeach;?>
 
-                            <?php 
+                            <?php
                             $results_content = $activity->fetchArticleContent($pdo, 'science olympiad', 2);
-                            foreach ($results_content as $content) : ?>
+                            foreach ($results_content as $content): ?>
                                 <p class="article-desc">
-                                    <?= $content->content; ?>
+                                    <?=$content->content;?>
                                 </p>
-                            <?php endforeach; ?>
-                            
+                            <?php endforeach;?>
+
                             <?php
                             $results_link = $activity->fetchArticleLink($pdo, 'science olympiad', 2);
-                            foreach ($results_link as $link) : ?>
+                            foreach ($results_link as $link): ?>
                                 <p class="article-link">
-                                    <a href="<?= $link->link; ?>">Article link</a>
+                                    <a href="<?=$link->link;?>">Article link</a>
                                 </p>
-                            <?php endforeach; ?>
+                            <?php endforeach;?>
                         </div>
                     </div>
                     <div class="col-md-6 no-padding">
                         <figure class="article-img mr-left">
                             <?php
-                            $results_link = $activity->fetchArticleLink($pdo, 'science olympiad', 2);
+                            $results_link  = $activity->fetchArticleLink($pdo, 'science olympiad', 2);
                             $results_image = $activity->fetchArticleImage($pdo, 'science olympiad', 2);
-                            foreach ($results_link as $link) : ?>
-                                <a href="<?= $link->link; ?>">
-                                <?php endforeach; ?>
-                                <?php foreach($results_image as $article_image) : ?>
-                                    <img class="img-fit" src="<?= $article_image->articleimg; ?>" alt="Image for second article">
-                                <?php endforeach; ?>
+                            foreach ($results_link as $link): ?>
+                                <a href="<?=$link->link;?>">
+                                <?php endforeach;?>
+                                <?php foreach ($results_image as $article_image): ?>
+                                    <img class="img-fit" src="<?=$article_image->articleimg;?>" alt="Image for second article">
+                                <?php endforeach;?>
                             </a>
                         </figure>
                     </div>
@@ -210,100 +210,100 @@
                     <h2>Information</h2>
                     <?php
                     $results_info = $activity->fetchActivityInformation($pdo, 'science olympiad');
-                    foreach ($results_info as $information) : ?>
+                    foreach ($results_info as $information): ?>
                         <p>
-                            <?= $information->information; ?>
+                            <?=$information->information;?>
                         </p>
-                    <?php endforeach; ?>
+                    <?php endforeach;?>
                 </div>
             </div>
         </div>
         <div class="container content-padding" id="article-container">
             <div class="container no-padding">
                 <div class="row">
-                    <?php 
+                    <?php
                     $results_title = $activity->fetchArticleTitle($pdo, 'science olympiad', 1);
-                    foreach ($results_title as $title) : ?>
+                    foreach ($results_title as $title): ?>
                         <h3 class="article-title">
-                            <?= $title->title; ?>
+                            <?=$title->title;?>
                         </h3>
-                    <?php endforeach; ?>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 no-padding">
-                        <figure class="article-img">
-                            <?php 
-                            $results_image = $activity->fetchArticleImage($pdo, 'science olympiad', 1);
-                            foreach ($results_image as $article_image) : ?>
-                                <iframe class="img-fit" width="640" height="480" src="<?= $article_image->articleimg; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            <?php endforeach; ?>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-md-12 no-padding">
-                    <div class="content">
-                        <?php 
-                        $results_content = $activity->fetchArticleContent($pdo, 'science olympiad', 1);
-                        foreach ($results_content as $content) : ?>
-                            <p class="article-desc">
-                                <?= $content->content; ?>
-                            </p>
-                        <?php endforeach; ?>
-                        <?php
-                        $results_link = $activity->fetchArticleLink($pdo, 'science olympiad', 1);
-                        foreach ($results_link as $link) : ?>
-                            <p class="article-link">
-                                <a href="<?= $link->link; ?>">Article link</a>
-                            </p>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
-                <div class="row">
-                    <?php 
-                    $results_title = $activity->fetchArticleTitle($pdo, 'science olympiad', 2);
-                    foreach ($results_title as $title) : ?>
-                        <h3 class="article-title">
-                            <?= $title->title; ?>
-                        </h3>
-                    <?php endforeach; ?>
+                    <?php endforeach;?>
                 </div>
                 <div class="row">
                     <div class="col-md-12 no-padding">
                         <figure class="article-img">
                             <?php
-                            $results_link = $activity->fetchArticleLink($pdo, 'science olympiad', 2);
+                            $results_image = $activity->fetchArticleImage($pdo, 'science olympiad', 1);
+                            foreach ($results_image as $article_image): ?>
+                                <iframe class="img-fit" width="640" height="480" src="<?=$article_image->articleimg;?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <?php endforeach;?>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-md-12 no-padding">
+                    <div class="content">
+                        <?php
+                        $results_content = $activity->fetchArticleContent($pdo, 'science olympiad', 1);
+                        foreach ($results_content as $content): ?>
+                            <p class="article-desc">
+                                <?=$content->content;?>
+                            </p>
+                        <?php endforeach;?>
+                        <?php
+                        $results_link = $activity->fetchArticleLink($pdo, 'science olympiad', 1);
+                        foreach ($results_link as $link): ?>
+                            <p class="article-link">
+                                <a href="<?=$link->link;?>">Article link</a>
+                            </p>
+                        <?php endforeach;?>
+                    </div>
+                </div>
+                <div class="row">
+                    <?php
+                    $results_title = $activity->fetchArticleTitle($pdo, 'science olympiad', 2);
+                    foreach ($results_title as $title): ?>
+                        <h3 class="article-title">
+                            <?=$title->title;?>
+                        </h3>
+                    <?php endforeach;?>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 no-padding">
+                        <figure class="article-img">
+                            <?php
+                            $results_link  = $activity->fetchArticleLink($pdo, 'science olympiad', 2);
                             $results_image = $activity->fetchArticleImage($pdo, 'science olympiad', 2);
-                            foreach ($results_link as $link) : ?>
-                                <a href="<?= $link->link; ?>">
-                                <?php endforeach; ?>
-                                <?php foreach($results_image as $article_image) : ?>
-                                    <img class="img-fit" src="<?= $article_image->articleimg; ?>" alt="Image for second article">
-                                <?php endforeach; ?>
+                            foreach ($results_link as $link): ?>
+                                <a href="<?=$link->link;?>">
+                                <?php endforeach;?>
+                                <?php foreach ($results_image as $article_image): ?>
+                                    <img class="img-fit" src="<?=$article_image->articleimg;?>" alt="Image for second article">
+                                <?php endforeach;?>
                             </a>
                         </figure>
                     </div>
                 </div>
                 <div class="col-md-12 no-padding">
                     <div class="content">
-                        <?php 
+                        <?php
                         $results_content = $activity->fetchArticleContent($pdo, 'science olympiad', 2);
-                        foreach ($results_content as $content) : ?>
+                        foreach ($results_content as $content): ?>
                             <p class="article-desc">
-                                <?= $content->content; ?>
+                                <?=$content->content;?>
                             </p>
-                        <?php endforeach; ?>
+                        <?php endforeach;?>
                         <?php
                         $results_link = $activity->fetchArticleLink($pdo, 'science olympiad', 2);
-                        foreach ($results_link as $link) : ?>
-                            <p class="article-link"><a href="<?= $link->link; ?>">Article link</a></p>
-                        <?php endforeach; ?>
+                        foreach ($results_link as $link): ?>
+                            <p class="article-link"><a href="<?=$link->link;?>">Article link</a></p>
+                        <?php endforeach;?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<?php include '/srv/http/inc/footer.php'; ?>
+<?php include '/srv/http/inc/footer.php';?>
 </body>
 
 </html>
