@@ -2,15 +2,21 @@
 <html lang="en">
 
 <head>
-    <?php include '/srv/http/inc/includes.php'; ?>
+    <?php include 'C:\Users\Roman\Documents\sorin/inc/includes.php'; 
+    include 'C:\Users\Roman\Documents\sorin/inc/connection.php';
+    include 'C:\Users\Roman\Documents\sorin/activities/Activity.php';?>
     <link rel="stylesheet" href="/css/activities.css">
     <title>Science Olympiad | Mentor High School</title>
     <meta name="description" content="#">
 </head>
 
 <body>
-    <div class="push-down"></div>
-    <?php include '/srv/http/inc/header.php' ?>
+
+    <?php include 'C:\Users\Roman\Documents\sorin/inc/header.php'; ?>
+    <?php $pdo = connectToDb('activities', 'root', '');
+    $results_info = fetchActivityInformation($pdo,'science olympiad');
+    ?>
+
     <div class="container-fluid no-padding">
         <div class="row">
             <div class="col-md-12 no-padding img-top">
@@ -65,7 +71,10 @@
             <div class="row no-padding" id="activity-content">
                 <div class="col-md-12 no-padding" id="main-activity-content">
                     <h2>Information</h2>
-                    <p>Science Olympiad is a science-based competition team in which Mentor has placed as state champions since 1990. SciOly gives students the chance to cultivate a passion for science beyond the classroom and implement it in new and interesting ways. As a highly ranked team known across the nation, Mentor Science Olympiad is a source of pride for all of Mentor and all are welcome!</p>
+                    <?php foreach ($results_info as $information) : ?>
+                        <p><?= $information->information; ?></p>
+                    <?php endforeach; ?>
+
                 </div>
             </div>
         </div>
@@ -131,7 +140,10 @@
             <div class="row" id="activity-content">
                 <div class="col-md-12 no-padding" id="main-activity-content">
                     <h2>Information</h2>
-                    <p>Science Olympiad is a science-based competition team in which Mentor has placed as state champions since 1990. SciOly gives students the chance to cultivate a passion for science beyond the classroom and implement it in new and interesting ways. As a highly ranked team known across the nation, Mentor Science Olympiad is a source of pride for all of Mentor and all are welcome!</p>
+
+                    <?php foreach ($results_info as $information) : ?>
+                        <p><?= $information->information; ?></p>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
@@ -169,7 +181,7 @@
         </div>
     </div>
 </div>
-<?php include '/srv/http/inc/footer.php'; ?>
+<?php include 'C:\Users\Roman\Documents\sorin/inc/footer.php'; ?>
 </body>
 
 </html>
