@@ -119,7 +119,7 @@
                             $results_link = $activity->fetchArticleLink($pdo, 'science olympiad', 1);
                             foreach ($results_link as $link) : ?>
                                 <p class="article-link">
-                                    <a href="<?= $link->link; ?>">Article link</a>
+                                    <a href="#">Article link</a>
                                 </p>
                             <?php endforeach; ?>
                         </div>
@@ -148,7 +148,7 @@
                             $results_link = $activity->fetchArticleLink($pdo, 'science olympiad', 2);
                             foreach ($results_link as $link) : ?>
                                 <p class="article-link">
-                                    <a href="<?= $link->link ?>">Article link</a>
+                                    <a href="#">Article link</a>
                                 </p>
                             <?php endforeach; ?>
                         </div>
