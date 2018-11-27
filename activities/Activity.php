@@ -3,11 +3,35 @@
 class Activity {
 	public $information;
 
+	// 'titles' are considered the article titles below information paragraph
+	public $title1;
+	public $title2;
+
+	// 'content' for each article
+	public $content1;
+	public $content2;
+
 	public static function fetchActivityInformation($pdo, $activity) {
 		$info = $pdo->prepare("SELECT information FROM activities WHERE activity= '" . $activity . "'");
 
 		$info->execute();
 
 		return $info->fetchAll(PDO::FETCH_CLASS, 'Activity');
+	}
+
+	public static function fetchArticleTitle($pdo, $activity, $articleNumber) {
+		$title = $pdo->prepare("SELECT title FROM activities WHERE activity = '" . $activity . "' and article_number = '" . $articleNumber . "'");
+
+		$title->execute();
+
+		return $title->fetchAll(PDO::FETCH_CLASS, 'Activity');
+	}
+
+	public static function fetchArticleContent($pdo, $activity, $articleNumber) {
+		$content = $pdo->prepare("SELECT content FROM activities WHERE activity = '" . $activity "' and article_number = '" . $articleNumber . "'");
+		
+		$content->execute();
+
+		return $content->fetchAll(PDO::FETCH_CLASS, 'Activity');
 	}
 }
