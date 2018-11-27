@@ -22,8 +22,8 @@ class Activity {
 		return $info->fetchAll(PDO::FETCH_CLASS, 'Activity');
 	}
 
-	public static function fetchArticleTitle($pdo, $activity) {
-		$query = "SELECT 'title_1' FROM activities WHERE activity = '" . $activity . "'";
+	public static function fetchArticleTitle($pdo) {
+		$query = "SELECT title1 FROM activities WHERE activity = 'science olympiad'";
 		$title = $pdo->prepare($query);
 
 		$title->execute();
