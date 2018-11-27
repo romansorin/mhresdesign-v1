@@ -94,7 +94,11 @@
                 <div class="row">
                     <div class="col-md-6 no-padding">
                         <figure class="article-img" style="margin-left: 0px;">
-                            <iframe class="img-fit" width="640" height="480" src="https://www.youtube.com/embed/OPndj0iynI4?wmode=opaque&controls=&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <?php 
+                            $results_link = $activity->fetchArticleLink($pdo, 'science olympiad', 1);
+                            foreach ($results_link as $link) : ?>
+                                <iframe class="img-fit" width="640" height="480" src="<?= $link->link ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <?php endforeach; ?>
                         </figure>
                     </div>
                     <div class="col-md-6 no-padding">
@@ -160,9 +164,11 @@
                             $results_image = $activity->fetchArticleImage($pdo, 'science olympiad', 2);
                             foreach ($results_link as $link) : ?>
                                 <a href="<?= $link->link; ?>">
-                                    <?php endforeach; ?>
-                                    <?php foreach($results_image as $article_image) : ?>
-                                    <img class="img-fit" src="<?= $article_image->articleimg ?>" alt="test"><?php endforeach; ?></a>
+                                <?php endforeach; ?>
+                                <?php foreach($results_image as $article_image) : ?>
+                                    <img class="img-fit" src="<?= $article_image->articleimg ?>" alt="Image for second article">
+                                <?php endforeach; ?>
+                            </a>
                         </figure>
                     </div>
                 </div>
