@@ -232,7 +232,11 @@
                 <div class="row">
                     <div class="col-md-12 no-padding">
                         <figure class="article-img">
-                            <iframe class="img-fit" width="640" height="480" src="https://www.youtube.com/embed/OPndj0iynI4?wmode=opaque&controls=&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <?php 
+                            $results_image = $activity->fetchArticleImage($pdo, 'science olympiad', 1);
+                            foreach ($results_image as $article_image) : ?>
+                                <iframe class="img-fit" width="640" height="480" src="<?= $article_image->articleimg; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <?php endforeach; ?>
                         </figure>
                     </div>
                 </div>
@@ -245,7 +249,13 @@
                                 <?= $content->content; ?>
                             </p>
                         <?php endforeach; ?>
-                        <p class="article-link"><a href="https://ohso.osu.edu/news/2017/12/19/winning-feeling-mentor-high-students-share-their-ohio-science-olympiad-experience">Article link</a></p>
+                        <?php
+                        $results_link = $activity->fetchArticleLink($pdo, 'science olympiad', 1);
+                        foreach ($results_link as $link) : ?>
+                            <p class="article-link">
+                                <a href="<?= $link->link; ?>">Article link</a>
+                            </p>
+                        <?php endforeach; ?>
                     </div>
                 </div>
                 <div class="row">
@@ -260,27 +270,39 @@
                 <div class="row">
                     <div class="col-md-12 no-padding">
                         <figure class="article-img">
-                            <a href="https://ohso.osu.edu/news/2018/06/04/former-mentor-student-continues-science-olympiad-mission-beyond-high-school"><img class="img-fit" src="https://pbs.twimg.com/media/Db6dHFRWkAAOUtg.jpg:large" alt="test"></a>
-                        </figure>
+                            <?php
+                            $results_link = $activity->fetchArticleLink($pdo, 'science olympiad', 2);
+                            $results_image = $activity->fetchArticleImage($pdo, 'science olympiad', 2);
+                            foreach ($results_link as $link) : ?>
+                                <a href="<?= $link->link; ?>">
+                                <?php endforeach; ?>
+                                <?php foreach($results_image as $article_image) : ?>
+                                    <img class="img-fit" src="<?= $article_image->articleimg; ?>" alt="Image for second article">
+                                <?php endforeach; ?>
+                            </figure>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-12 no-padding">
-                    <div class="content">
-                        <?php 
-                        $results_content = $activity->fetchArticleContent($pdo, 'science olympiad', 2);
-                        foreach ($results_content as $content) : ?>
-                            <p class="article-desc">
-                                <?= $content->content; ?>
-                            </p>
-                        <?php endforeach; ?>
-                        <p class="article-link"><a href="https://ohso.osu.edu/news/2018/06/04/former-mentor-student-continues-science-olympiad-mission-beyond-high-school">Article link</a></p>
+                    <div class="col-md-12 no-padding">
+                        <div class="content">
+                            <?php 
+                            $results_content = $activity->fetchArticleContent($pdo, 'science olympiad', 2);
+                            foreach ($results_content as $content) : ?>
+                                <p class="article-desc">
+                                    <?= $content->content; ?>
+                                </p>
+                            <?php endforeach; ?>
+                            <?php
+                            $results_link = $activity->fetchArticleLink($pdo, 'science olympiad', 2);
+                            foreach ($results_link as $link) : ?>
+                                <p class="article-link"><a href="<?= $link->link; ?>">Article link</a></p>
+                            <?php endforeach; ?>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<?php include '/srv/http/inc/footer.php'; ?>
+    <?php include '/srv/http/inc/footer.php'; ?>
 </body>
 
 </html>

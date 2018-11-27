@@ -1,7 +1,7 @@
 /* Carousel styling */
+
 #frontpage-carousel {
     margin-bottom: 0px;
-    
 }
 .carousel {
     overflow: hidden;
@@ -9,12 +9,8 @@
 .carousel-inner {
     height: 400px;
 }
-
-
-
-
-
 /* News section */
+
 #news-header-label {
     text-align: center;
     text-transform: none;
@@ -26,26 +22,22 @@
     margin-top: 75px;
     font-family: 'Source Sans Pro', sans-serif;
 }
-
 #news-header-desc {
     text-align: center;
     font-size: 1.5em;
     margin-bottom: 70px;
 }
-
 .news-container {
     background-color: #F9F6EF;
 }
-
 .img-fit {
-    height: 100%; 
-    width: auto;     
-    max-height: calc(100% + 1px);     
+    height: 100%;
+    width: auto;
+    max-height: calc(100% + 1px);
     min-width: calc(100% + 1px);
-    min-height: calc(100% + 1px); 
+    min-height: calc(100% + 1px);
     object-fit: cover;
 }
-
 article {
     width: 335px;
     min-height: 355px;
@@ -53,9 +45,8 @@ article {
     margin-bottom: 30px;
     padding-left: 0px !important;
     padding-right: 0px !important;
-    box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15), 0 3px 3px rgba(0, 0, 0, .15);
 }
-
 .article-img {
     height: 215px;
     background-color: grey;
@@ -64,22 +55,18 @@ article {
     margin-bottom: 0px;
     overflow: hidden;
 }
-
 .article-long {
     width: 715px
 }
-
-.article-long > .content {
+.article-long>.content {
     padding-bottom: 60px !important;
 }
-
 .post-category {
     color: #910000;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 4px;
 }
-
 .content {
     background-color: #FFF;
     padding: 28px;
@@ -87,8 +74,7 @@ article {
     box-shadow: none;
     padding-bottom: 35px;
 }
-
-.content > h3 {
+.content>h3 {
     font-size: 1.250em;
     font-weight: 600;
     text-transform: none;
@@ -96,12 +82,8 @@ article {
     text-align: left;
     font-family: 'Source Sans Pro', sans-serif;
 }
-
-
-
-
-
 /* All news/events button (same styling, different sections */
+
 #all-news-btn, #all-events-btn {
     text-align: center;
     border-radius: 0px;
@@ -117,14 +99,10 @@ article {
     margin-top: 25px;
     margin-bottom: 90px;
     border: 0px;
-    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
-
-
-
-
-
 /* Events/calendar section */
+
 #events-header-label {
     text-align: center;
     text-transform: none;
@@ -136,14 +114,12 @@ article {
     margin-top: 75px;
     font-family: 'Source Sans Pro', sans-serif;
 }
-
 #events-header-desc {
     text-align: center;
     font-size: 1.5em;
     margin-bottom: 70px;
     color: #FFF;
 }
-
 .calendar {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -153,23 +129,19 @@ article {
     height: 100px;
     overflow: hidden;
 }
-
 .calendar h3 {
     display: block;
     line-height: 0.9;
 }
-
 .day {
     font-size: 1.2em;
     font-weight: 600;
 }
-
 .month {
     font-size: 0.9em;
     letter-spacing: 0.09em;
     font-weight: 400;
 }
-
 .calendar .date {
     min-height: 60px;
     width: 75px;
@@ -183,27 +155,23 @@ article {
     color: #FFF;
     padding-top: 10px;
     padding-bottom: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,.25), 0 3px 3px rgba(0,0,0,.25);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .25), 0 3px 3px rgba(0, 0, 0, .25);
 }
-
 .events-container {
     background-color: #2F2424;
 }
-
 .cal-category {
     text-transform: uppercase;
     color: #910000;
     font-size: 0.95em;
     padding-bottom: 5px;
 }
-
 .cal-meta {
     font-weight: 600;
     font-size: 1.1em;
     float: left;
     margin-top: 20px;
 }
-
 .event-link-btn {
     text-align: center;
     border-radius: 0px;
@@ -220,9 +188,8 @@ article {
     padding-top: 10px;
     padding-bottom: 10px;
     border: 0px;
-    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 }
-
 .event-link-btn-disabled {
     text-align: center;
     border-radius: 0px;
@@ -239,27 +206,21 @@ article {
     padding-top: 10px;
     padding-bottom: 10px;
     border: 0px;
-    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 }
-
 .event-link {
-    color: #910000; 
-    text-transform: uppercase; 
+    color: #910000;
+    text-transform: uppercase;
     font-size: 0.9em;
     letter-spacing: 0.015em;
     font-weight: 500;
 }
-
-
-
-
-
 /* Social media section */
+
 .social-media {
     text-align: center;
     padding-top: 40px;
 }
-
 #social-header-label {
     text-align: center;
     text-transform: none;
@@ -271,26 +232,22 @@ article {
     margin-top: 75px;
     font-family: 'Source Sans Pro', sans-serif;
 }
-
 #social-header-desc {
     text-align: center;
     font-size: 1.5em;
     padding-bottom: 50px;
     border-bottom: 1px solid #000;
 }
-
 .fa-twitter {
     color: #E0E0E0;
     font-size: 30px;
     margin-bottom: 5px;
 }
-
-.fa-instagram { 
+.fa-instagram {
     color: #E0E0E0;
     font-size: 30px;
     margin-bottom: 5px;
 }
-
 .sm-title {
     text-transform: uppercase;
     font-size: 1em;
@@ -299,7 +256,6 @@ article {
     letter-spacing: .05em;
     margin-bottom: 20px;
 }
-
 .tweet-content {
     font-size: 1.1em;
     font-weight: 100 !important;
@@ -307,11 +263,9 @@ article {
     line-height: 1.75em;
     margin-bottom: 20px;
 }
-
 .instagram {
     margin-bottom: 40px;
 }
-
 #embed-ig {
     max-height: 360px;
     height: 360px;
@@ -322,116 +276,97 @@ article {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    -webkit-box-shadow: 0px 0px 24px 3px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0px 0px 24px 3px rgba(0,0,0,0.1);
-    box-shadow: 0px 0px 24px 3px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 0px 24px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 24px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 24px 3px rgba(0, 0, 0, 0.1);
 }
-
 .time-span {
     font-size: .75em;
     font-weight: 700;
     color: #303030;
     letter-spacing: .05em;
 }
-
 @media (max-width: 767.98px) {
- article {
-    margin: 0 auto;
-    margin-bottom: 30px;
-}
-
-.article-long {
-    width: 335px !important;
-}
-
-#all-news-btn, #all-events-btn {
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-.calendar {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    height: 100px;
-}
-
-.calendar > .col-sm-2 {
-    width: 100px;
-    height: 100px;
-}
-
-.calendar > .col-sm-8 {
-    max-width: 225px;
-    margin: 0;
-}
-
-.calendar .date {
-    min-height: 60px;
-    max-width: 75px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: 15px;
-    margin-right: 0px;
-}
-
-.day {
-    font-size: 1em;
-}
-
-.month {
-    font-size: 0.7em;
-}
-
-.event-link-btn {
-   display: none !important;
-}
-
-.event-link-btn-disabled {
-    display: none !important;
-}
-
-.cal-meta {
-    font-size: 1.1em;
-    margin-left: 25px;
-    margin-top: 15px;
-    width: 100%;
-    display: block;
-}
-
-.cal-category {
-    font-size: 0.95em;
-}
-
-
-@media (max-width: 576px) {
-    .carousel-inner {
-        height: 200px !important;
-    }
-    .time-span {
-        margin-bottom: 40px;
-    }
-}
-@media (max-width: 768px) {
-    .carousel-inner {
-        height: 350px;
-    }
-}
-
-/* For devices less than the width of a tablet */
-@media (max-width: 922px) {
-    .event-link-btn {
-        display: none;
-    }
-
-    .event-link-btn-disabled {
-        display: none;
-    }
-}
-
-/* For devices less than the width of a laptop (basically between tablet and laptop) */
-@media (max-width: 1200px) {
     article {
-        margin: 0 auto !important;
-        margin-bottom: 30px !important;
+        margin: 0 auto;
+        margin-bottom: 30px;
     }
-}
+    .article-long {
+        width: 335px !important;
+    }
+    #all-news-btn, #all-events-btn {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .calendar {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: 100px;
+    }
+    .calendar>.col-sm-2 {
+        width: 100px;
+        height: 100px;
+    }
+    .calendar>.col-sm-8 {
+        max-width: 225px;
+        margin: 0;
+    }
+    .calendar .date {
+        min-height: 60px;
+        max-width: 75px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+        margin-right: 0px;
+    }
+    .day {
+        font-size: 1em;
+    }
+    .month {
+        font-size: 0.7em;
+    }
+    .event-link-btn {
+        display: none !important;
+    }
+    .event-link-btn-disabled {
+        display: none !important;
+    }
+    .cal-meta {
+        font-size: 1.1em;
+        margin-left: 25px;
+        margin-top: 15px;
+        width: 100%;
+        display: block;
+    }
+    .cal-category {
+        font-size: 0.95em;
+    }
+    @media (max-width: 576px) {
+        .carousel-inner {
+            height: 200px !important;
+        }
+        .time-span {
+            margin-bottom: 40px;
+        }
+    }
+    @media (max-width: 768px) {
+        .carousel-inner {
+            height: 350px;
+        }
+    }
+    /* For devices less than the width of a tablet */
+    @media (max-width: 922px) {
+        .event-link-btn {
+            display: none;
+        }
+        .event-link-btn-disabled {
+            display: none;
+        }
+    }
+    /* For devices less than the width of a laptop (basically between tablet and laptop) */
+    @media (max-width: 1200px) {
+        article {
+            margin: 0 auto !important;
+            margin-bottom: 30px !important;
+        }
+    }

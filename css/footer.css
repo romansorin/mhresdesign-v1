@@ -1,93 +1,71 @@
 /* General footer */
+
 .horizontal {
     list-style-type: none;
     display: inline;
 }
-
 #footer {
     font-family: 'Source Sans Pro', sans-serif;
     border-top: 1px solid #E7E7E7;
 }
-
 #footer ul {
     list-style: none;
     font-size: 1.1em;
 }
-
 #footer ul a {
     color: black;
 }
-
 #footer h3 {
-    text-transform: uppercase; 
-    color: #820000;         
+    text-transform: uppercase;
+    color: #820000;
     font-size: 1.1em;
     font-weight: 700;
     letter-spacing: 0.25px;
 }
-
-
-
-
-
 /* Top footer specific */
+
 #footer-top {
     background-color: #FFF;
     margin-top: 50px;
 }
-
 #footer-top ul {
     padding-left: 0px;
     line-height: 2em;
 }
-
-
-
-
-
 /* Bottom footer specific */
+
 #footer-bottom {
     background-color: #8C1515;
     color: white;
     height: 90px;
 }
-
 #footer-bottom ul {
     list-style: none;
     font-size: 1.1em;
     margin: 0;
     padding: 0;
 }
-
 #footer-bottom li a {
     float: left;
 }
-
 #footer-bottom ul a {
     color: white;
 }
-
 #footer-bottom a {
     color: white;
     text-transform: none;
 }
-
 #footer-bottom-left {
     float: left;
 }
-
 #footer-bottom-right {
     float: right;
 }
-
-
-
-
-
 /* Content on the left of bottom footer */
+
 #footer-brand {
     color: #FFFFFF;
-    font-size: 3em !important; 
+    font-size: 3em !important;
     font-family: 'Crimson Text', serif;
     text-transform: none;
     letter-spacing: -0.75px;
@@ -97,13 +75,11 @@
     margin-top: 5px;
     margin-bottom: 0px;
 }
-
 #global-footer-content {
     line-height: 10px;
     height: 10px;
     margin-top: 60px !important;
 }
-
 #global-footer-info {
     font-weight: 200;
     font-size: 14px;
@@ -111,23 +87,17 @@
     margin-bottom: 0px;
     padding-left: 45px;
 }
-
 #global-footer-contact {
     text-transform: none;
     font-size: 14px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
-
-
-
-
-
 /* Content on the right of the bottom footer */
+
 #weather {
     float: right;
 }
-
 /* All media queries */
 
 @media (max-width: 576px) {
@@ -136,35 +106,32 @@
     }
     #location {
         font-size: 14px;
-    } 
+    }
     #currently {
         font-size: 14px;
     }
 }
 /* For devices less than the max-width of a phone */
-@media (max-width: 767.98px) { 
+
+@media (max-width: 767.98px) {
     #footer-brand {
         font-size: 2.5em !important;
         padding-left: 0px;
         height: 45px;
     }
-
     #global-footer-info {
         padding-left: 0px;
     }
-
     #global-footer-content {
         margin-top: 50px !important;
         height: 10px;
         line-height: 15px;
         max-width: 140px;
     }
-
     #footer-bottom-right {
         max-width: 187.5px;
         padding: 0px;
     }
-
     #footer-bottom-left {
         max-width: 187.5px;
     }

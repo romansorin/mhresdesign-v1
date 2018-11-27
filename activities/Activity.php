@@ -19,6 +19,13 @@ class Activity {
 		return $info->fetchAll(PDO::FETCH_CLASS, 'Activity');
 	}
 
+	/**
+	 * [Get an activity's header image]
+	 * @param  [Object] $pdo      [PDO object]
+	 * @param  [String] $activity [Specifies the desired activity]
+	 * @return [String]           [Returns the URL/path to an image]
+	 */
+	
 	public static function fetchHeaderImage($pdo, $activity) {
 		$query = "SELECT headerimg FROM activity_images WHERE activity = '" . $activity . "' AND headerimg IS NOT NULL";
 
