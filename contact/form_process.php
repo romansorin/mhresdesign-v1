@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 		$to = "rmaximsorin@gmail.com"; /* Recipient of the e-mails */
 
-		$query = "INSERT INTO `contact_form`(`name`, `email`, `subject`, `message`, `submission_time`, `submission_date`, `id`) VALUES ('roman','roman','roman','roman',CURRENT_TIME,CURRENT_DATE,'1')";
+		$query = "INSERT INTO `contact_form`(`name`, `email`, `subject`, `message`, `submission_time`, `submission_date`, `id`) VALUES ('$name','$email','$subject','$message',CURRENT_TIME,CURRENT_DATE,NULL)";
 		$insert_statement = $pdo->prepare($query);
 		$insert_statement->execute();
 		echo 'form submit to db';
