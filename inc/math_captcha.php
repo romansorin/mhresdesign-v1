@@ -16,11 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["answer"])) {
         if ($_POST["answer"] == $expected_answer) {
             $answer_error = "";
+        } elseif (empty($_POST["answer"])) {
+            $answer_error = "Answer is required";
         } else {
             $answer_error = "The answer you entered was incorrect.";
         }
-    } else {
-        $answer_error = "Answer is required";
     }
 }
 
