@@ -11,7 +11,7 @@ $equation = $intA . ' + ' . $intB; /* This is used solely for display purposes *
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $expected_answer = $_POST["intA"] . $_POST["intB"]; /* Store the correct answer to the math problem in $_POST variables */
+    $expected_answer = $intA + $intB; /* Store the correct answer to the math problem in $_POST variables */
 
     if (isset($_POST["answer"])) {
         if ($_POST["answer"] == $expected_answer) {
