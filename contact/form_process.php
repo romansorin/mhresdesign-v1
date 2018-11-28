@@ -45,7 +45,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	if (empty($_POST["message"])) {
 		$message_error = "Message is required";
-	}
+	} else {
+		$message = $_POST["message"];
 
 	/* If no errors are present, set the content of the actual message */
 	if ($name_error == "" and $email_error == "" and $message_error == "") {
@@ -57,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 		$to = "rmaximsorin@gmail.com"; /* Recipient of the e-mails */
 
-		$query = "INSERT INTO `contact_form`(`name`, `email`, `subject`, `message`, `submission_time`, `submission_date`, `id`) VALUES ('$name','$email','$subject','$message_body',CURRENT_TIME,CURRENT_DATE,NULL)";
+		$query = "INSERT INTO `contact_form`(`name`, `email`, `subject`, `message`, `submission_time`, `submission_date`, `id`) VALUES ('$name','$email','$subject','$message',CURRENT_TIME,CURRENT_DATE,NULL)";
 		$insert_statement = $pdo->prepare($query);
 		$insert_statement->execute();
 		echo 'form submit to db';
