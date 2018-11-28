@@ -6,8 +6,12 @@
 .carousel {
     overflow: hidden;
 }
-.carousel-inner {
+.carousel-inner, .carousel-item {
     height: 400px;
+}
+.carousel-item img {
+    object-fit: cover;
+    height: auto;
 }
 /* News section */
 
