@@ -52,17 +52,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 		$to = "rmaximsorin@gmail.com"; /* Recipient of the e-mails */
 
-		/* If the parameters are valid, send the message */
-		if (mail($to, $subject, $message)) {
-			$success = "Message sent.";
-
-			$query = "INSERT INTO contact_form (name, email, subject, message, submission_time, submission_date) VALUES ($name, $email, $subject, $message, CURRENT_TIME, CURRENT_DATE)";
+		$query = "INSERT INTO contact_form (name, email, subject, message, submission_time, submission_date) VALUES ($name, $email, $subject, $message, CURRENT_TIME, CURRENT_DATE)";
 			$insert_statement = $pdo->prepare($query);
 			$insert_statement->execute();
 			echo 'form submit to db';
+
+		/* If the parameters are valid, send the message */
+		/*if (mail($to, $subject, $message)) {
+			$success = "Message sent.";
+
+			
 			/* in the future, send to another page instead */
 			$name = $email = $subject = $message = ''; /* Reset the values of the form */
-		}
+		/*}*/
 	}
 }
 
