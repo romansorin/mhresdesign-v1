@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$to = "rmaximsorin@gmail.com"; /* Recipient of the e-mails */
 
 		/* If the parameters are valid, send the message */
-		if (mail($subject, $message)) {
+		if (mail('user@example.com', $subject, $message_body)) {
 			$success = "Message sent.";
 			$query = "INSERT INTO `contact_form`(`name`, `email`, `subject`, `message`, `submission_time`, `submission_date`, `id`) VALUES ('$name','$email','$subject','$message',CURRENT_TIME,CURRENT_DATE,NULL)";
 			$insert_statement = $pdo->prepare($query);
