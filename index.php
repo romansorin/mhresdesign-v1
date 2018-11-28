@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <div class="push-down"></div>
     <?php include 'inc/header.php' ?>
     <!-- This is the main container. -->
     <!-- This is the photo slideshow. -->
