@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<?php include 'C:\Users\Roman\Documents\sorin\inc/header.php'; ?>
+	<?php include '/srv/http/inc/header.php'; ?>
 	<div class="container">
 		<div class="contact-header"><h1>Contact</h1></div>
 		<div class="row">
