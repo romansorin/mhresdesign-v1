@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$message = $_POST["message"];
 	}
 	/* If no errors are present, set the content of the actual message */
-	if ($name_error == "" and $email_error == "" and $message_error == "") {
+	if ($name_error == "" and $email_error == "" and $message_error == "" and $answer_error == "") {
 		$message_body = '';
 		unset($_POST['submit']);
 		foreach ($_POST as $key => $value) {
@@ -64,6 +64,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			/* in the future, send to another page instead */
 			$name = $email = $subject = $message = ''; /* Reset the values of the form */
 		/*}*/
+	} else {
+		echo 'try again';
 	}
 }
 
