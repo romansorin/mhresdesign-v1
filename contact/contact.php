@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<?php include '/srv/http/inc/header.php'; ?>
+	<?php include 'C:\Users\Roman\Documents\sorin\inc/header.php'; ?>
 	<div class="container">
 		<div class="contact-header"><h1>Contact</h1></div>
 		<div class="row">
@@ -60,11 +60,12 @@
 					</div>
 					<button type="submit" class="btn contact-btn">Submit</button>
 					<div id="success"><?= $success ?></div>
+					<div id="failure"><?= $failure ?></div>
 				</form>
 			</div>
 		</div>
 	</div>
-	<?php include '/srv/http/inc/footer.php'; ?>
+	<?php include 'C:\Users\Roman\Documents\sorin\inc/footer.php'; ?>
 </body>
 
 </html>

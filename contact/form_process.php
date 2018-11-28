@@ -1,5 +1,11 @@
 <?php
 /* Require statement will halt execution if the file cannot be found or used */
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require '/srv/http/inc/PHPMailer/src/Exception.php';
+require '/srv/http/inc/PHPMailer/src/PHPMailer.php';
+require '/srv/http/inc/PHPMailer/src/SMTP.php';
 
 require '/srv/http/inc/math_captcha.php'; 
 include '/srv/http/inc/connection.php';
@@ -9,7 +15,7 @@ $pdo = $conn->connectToDb('logs_submissions', 'writer', 'readandwrite');
 
 /* Initialize these variables as empty strings */
 $name = $email = $subject = $message = $success = "";
-$name_error = $email_error = $message_error = "";
+$name_error = $email_error = $message_error = $failure = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	/* These statements will check each field of the form for input and invalid characters */
@@ -49,26 +55,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$message_body = '';
 		unset($_POST['submit']);
 		foreach ($_POST as $key => $value) {
-			$message_body .= "$key: $value\n";
+			$message_body .= "$key: $value" . "<br><br>\n";
 		}
 
-		$to = "rmaximsorin@gmail.com"; /* Recipient of the e-mails */
+		$mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+		try {
+    		//Server settings
+    		$mail->SMTPDebug = 0;                                 // Enable verbose debug output
+    		$mail->isSMTP();                                      // Set mailer to use SMTP
+    		$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    		$mail->SMTPAuth = true;                               // Enable SMTP authentication
+    		$mail->Username = 'mentorwebteam@gmail.com';                 // SMTP username
+    		$mail->Password = 'hpwpwszvcvozzawk';                           // SMTP password
+    		$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    		$mail->Port = 587;                                    // TCP port to connect to
 
-		/* If the parameters are valid, send the message */
-		/*if (mail($to, $subject, $message_body)) {*/
-			$success = "Message sent.";
-			$query = "INSERT INTO `contact_form`(`name`, `email`, `subject`, `message`, `submission_time`, `submission_date`, `id`) VALUES ('$name','$email','$subject','$message',CURRENT_TIME,CURRENT_DATE,NULL)";
-			$insert_statement = $pdo->prepare($query);
-			$insert_statement->execute();
-			
-			/* in the future, send to another page instead */
-			$name = $email = $subject = $message = ''; /* Reset the values of the form */
-		/*}*/
-	} else {
-		echo 'try again';
-	}
+    		//Recipients
+    		$mail->setFrom('mentorwebteam@gmail.com', 'MHS Mail Client');
+
+    		$mail->addAddress('mentorwebteam@gmail.com');     // Add a recipient
+
+    		//Content
+    		$mail->isHTML(true);                                  // Set email format to HTML
+    		$mail->Subject = "Contact form submission: " . $subject;
+    		$mail->Body    = $message_body;
+    		$mail->AltBody = strip_tags($message_body);
+
+    		$mail->send();
+    		$success = "Message sent.";
+
+    $query = "INSERT INTO `contact_form`(`name`, `email`, `subject`, `message`, `submission_time`, `submission_date`, `id`) VALUES ('$name', '$email', '$subject', '$message', CURRENT_TIME, CURRENT_DATE, NULL)";
+    $insert_statement = $pdo->prepare($query);
+    $insert_statement->execute();
+    $name = $email = $subject = $message = '';
+} catch (Exception $e) {
+	$failure = 'Message could not be sent. Error: ' . $mail->ErrorInfo;
 }
 
+}
+
+}
 /* Cleans up the data for security and parsing purposes */
 function test_input($data) {
 	$data = trim($data);
