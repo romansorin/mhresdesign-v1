@@ -65,7 +65,7 @@
 			</div>
 		</div>
 	</div>
-	<?php include 'C:\Users\Roman\Documents\sorin\inc/footer.php'; ?>
+	<?php include '/srv/http/inc/footer.php'; ?>
 </body>
 
 </html>
