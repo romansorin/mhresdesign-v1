@@ -1,5 +1,10 @@
 <?php
 /* Require statement will halt execution if the file cannot be found or used */
+
+
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+
 require '/srv/http/inc/math_captcha.php'; 
 include '/srv/http/inc/connection.php';
 
