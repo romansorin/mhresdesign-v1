@@ -344,12 +344,18 @@ article {
         .carousel-inner {
             height: 200px !important;
         }
+        .carousel-item {
+            height: 200px !important;
+        }
         .time-span {
             margin-bottom: 40px;
         }
     }
     @media (max-width: 768px) {
         .carousel-inner {
+            height: 350px;
+        }
+        .carousel-item {
             height: 350px;
         }
     }
