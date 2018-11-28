@@ -28,11 +28,11 @@
    <div class="container-fluid no-padding">
         <div class="row">
             <div class="col-md-12 no-padding img-top">
-                <?php /*
-                $results_header_image = $activity->fetchHeaderImage($pdo, 'cooking club');
+                <?php
+                $results_header_image = $activity->fetchHeaderImage($pdo, 'cooking');
                 foreach ($results_header_image as $header_image): ?>
                     <img class="d-block w-100 img-fit" src="<?=$header_image->headerimg;?>" alt="Activity header photo">
-                <?php endforeach; */?>
+                <?php endforeach; ?>
                 <div class="img-text-overlay">
                     <a href="/activities"><h6>Activities</h6></a>
                     <h1>Cooking Club</h1>
@@ -84,7 +84,7 @@
                 <div class="col-md-12 no-padding" id="main-activity-content">
                     <h2>Information</h2>
                     <?php
-                    $results_info = $activity->fetchActivityInformation($pdo, 'cooking club');
+                    $results_info = $activity->fetchActivityInformation($pdo, 'cooking');
                     foreach ($results_info as $information): ?>
                         <p>
                             <?=$information->information;?>
@@ -100,16 +100,15 @@
                         <figure class="article-img" style="margin-left: 0px;">
                             <?php
                             /* This can be an <iframe> or an <img>. The PHP statement is only required in the src field. */
-                            /*
                             $results_image = $activity->fetchArticleImage($pdo, 'activity', 1);
                             foreach ($results_image as $article_image): ?>
                                 <iframe class="img-fit" width="640" height="480" src="<?=$article_image->articleimg;?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            <?php endforeach; */?>
+                            <?php endforeach;?>
                         </figure>
                     </div>
                     <div class="col-md-6 no-padding">
                         <div class="content mr-left">
-                            <?php/*
+                            <?php
                             $results_title = $activity->fetchArticleTitle($pdo, 'activity', 1);
                             foreach ($results_title as $title): ?>
                                 <h3 class="article-title">
@@ -131,14 +130,14 @@
                                 <p class="article-link">
                                     <a href="<?=$link->link;?>">Article link</a>
                                 </p>
-                            <?php endforeach;*/?>
+                            <?php endforeach;?>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 no-padding">
                         <div class="content">
-                            <?php/*
+                            <?php
                             $results_title = $activity->fetchArticleTitle($pdo, 'activity', 2);
                             foreach ($results_title as $title): ?>
                                 <h3 class="article-title">
@@ -160,12 +159,12 @@
                                 <p class="article-link">
                                     <a href="<?=$link->link;?>">Article link</a>
                                 </p>
-                            <?php endforeach;*/?>
+                            <?php endforeach;?>
                         </div>
                     </div>
                     <div class="col-md-6 no-padding">
                         <figure class="article-img mr-left">
-                            <?php/*
+                            <?php
                             $results_link  = $activity->fetchArticleLink($pdo, 'activity', 2);
                             $results_image = $activity->fetchArticleImage($pdo, 'activity', 2);
                             foreach ($results_link as $link): ?>
@@ -173,7 +172,7 @@
                                 <?php endforeach;?>
                                 <?php foreach ($results_image as $article_image): ?>
                                     <img class="img-fit" src="<?=$article_image->articleimg;?>" alt="Image for second article">
-                                <?php endforeach;*/?>
+                                <?php endforeach;?>
                             </a>
                         </figure>
                     </div>
@@ -211,7 +210,7 @@
                 <div class="col-md-12 no-padding" id="main-activity-content">
                     <h2>Information</h2>
                     <?php
-                    $results_info = $activity->fetchActivityInformation($pdo, 'cooking club');
+                    $results_info = $activity->fetchActivityInformation($pdo, 'cooking');
                     foreach ($results_info as $information): ?>
                         <p>
                             <?=$information->information;?>
@@ -223,28 +222,28 @@
         <div class="container content-padding" id="article-container">
             <div class="container no-padding">
                 <div class="row">
-                    <?php/*
+                    <?php
                     $results_title = $activity->fetchArticleTitle($pdo, 'activity', 1);
                     foreach ($results_title as $title): ?>
                         <h3 class="article-title">
                             <?=$title->title;?>
                         </h3>
-                    <?php endforeach;*/?>
+                    <?php endforeach;?>
                 </div>
                 <div class="row">
                     <div class="col-md-12 no-padding">
                         <figure class="article-img">
-                            <?php/*
+                            <?php
                             $results_image = $activity->fetchArticleImage($pdo, 'activity', 1);
                             foreach ($results_image as $article_image): ?>
                                 <iframe class="img-fit" width="640" height="480" src="<?=$article_image->articleimg;?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            <?php endforeach;*/?>
+                            <?php endforeach;?>
                         </figure>
                     </div>
                 </div>
                 <div class="col-md-12 no-padding">
                     <div class="content">
-                        <?php/*
+                        <?php
                         $results_content = $activity->fetchArticleContent($pdo, 'activity', 1);
                         foreach ($results_content as $content): ?>
                             <p class="article-desc">
@@ -257,22 +256,22 @@
                             <p class="article-link">
                                 <a href="<?=$link->link;?>">Article link</a>
                             </p>
-                        <?php endforeach;*/?>
+                        <?php endforeach;?>
                     </div>
                 </div>
                 <div class="row">
-                    <?php/*
+                    <?php
                     $results_title = $activity->fetchArticleTitle($pdo, 'activity', 2);
                     foreach ($results_title as $title): ?>
                         <h3 class="article-title">
-                            <?=$title->title;*/?>
+                            <?=$title->title;?>
                         </h3>
                     <?php endforeach;?>
                 </div>
                 <div class="row">
                     <div class="col-md-12 no-padding">
                         <figure class="article-img">
-                            <?php/*
+                            <?php
                             $results_link  = $activity->fetchArticleLink($pdo, 'activity', 2);
                             $results_image = $activity->fetchArticleImage($pdo, 'activity', 2);
                             foreach ($results_link as $link): ?>
@@ -280,14 +279,14 @@
                                 <?php endforeach;?>
                                 <?php foreach ($results_image as $article_image): ?>
                                     <img class="img-fit" src="<?=$article_image->articleimg;?>" alt="Image for second article">
-                                <?php endforeach;*/?>
+                                <?php endforeach;?>
                             </a>
                         </figure>
                     </div>
                 </div>
                 <div class="col-md-12 no-padding">
                     <div class="content">
-                        <?php/*
+                        <?php
                         $results_content = $activity->fetchArticleContent($pdo, 'activity', 2);
                         foreach ($results_content as $content): ?>
                             <p class="article-desc">
@@ -298,7 +297,7 @@
                         $results_link = $activity->fetchArticleLink($pdo, 'activity', 2);
                         foreach ($results_link as $link): ?>
                             <p class="article-link"><a href="<?=$link->link;?>">Article link</a></p>
-                        <?php endforeach;*/?>
+                        <?php endforeach;?>
                     </div>
                 </div>
             </div>
