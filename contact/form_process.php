@@ -1,10 +1,6 @@
 <?php
 /* Require statement will halt execution if the file cannot be found or used */
 
-
-error_reporting(E_ALL);
-ini_set('display_errors', 'On');
-
 require '/srv/http/inc/math_captcha.php'; 
 include '/srv/http/inc/connection.php';
 
@@ -58,19 +54,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 		$to = "rmaximsorin@gmail.com"; /* Recipient of the e-mails */
 
-		$query = "INSERT INTO `contact_form`(`name`, `email`, `subject`, `message`, `submission_time`, `submission_date`, `id`) VALUES ('$name','$email','$subject','$message',CURRENT_TIME,CURRENT_DATE,NULL)";
-		$insert_statement = $pdo->prepare($query);
-		$insert_statement->execute();
-		echo 'form submit to db';
-
 		/* If the parameters are valid, send the message */
-		/*if (mail($to, $subject, $message)) {
+		if (mail($$subject, $message)) {
 			$success = "Message sent.";
-
+			$query = "INSERT INTO `contact_form`(`name`, `email`, `subject`, `message`, `submission_time`, `submission_date`, `id`) VALUES ('$name','$email','$subject','$message',CURRENT_TIME,CURRENT_DATE,NULL)";
+			$insert_statement = $pdo->prepare($query);
+			$insert_statement->execute();
 			
 			/* in the future, send to another page instead */
 			$name = $email = $subject = $message = ''; /* Reset the values of the form */
-		/*}*/
+		}
 	}
 }
 
