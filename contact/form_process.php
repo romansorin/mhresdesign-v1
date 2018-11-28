@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$message_error = "Message is required";
 	} else {
 		$message = $_POST["message"];
-
+	}
 	/* If no errors are present, set the content of the actual message */
 	if ($name_error == "" and $email_error == "" and $message_error == "") {
 		$message_body = '';
