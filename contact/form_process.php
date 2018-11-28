@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 
 	/* If no errors are present, set the content of the actual message */
-	if ($name_error == "" and $email_error == "" and $message_error == "" and $answer_error == "") {
+	if ($name_error == "" and $email_error == "" and $message_error == "") {
 		$message_body = '';
 		unset($_POST['submit']);
 		foreach ($_POST as $key => $value) {
