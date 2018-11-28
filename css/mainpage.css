@@ -14,7 +14,7 @@
 }
 .carousel-item img {
     object-fit: cover;
-    height: auto;
+    height: 100%;
 }
 /* News section */
 
