@@ -1,6 +1,10 @@
 <?php
 /* Require statement will halt execution if the file cannot be found or used */
 require '/srv/http/inc/math_captcha.php'; 
+include '/srv/http/inc/connection.php';
+
+$conn = new Connection();
+$pdo = $conn->connectToDb('logs_submissions', 'writer', 'readandwrite');
 
 /* Initialize these variables as empty strings */
 $name = $email = $subject = $message = $success = "";
@@ -51,6 +55,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		/* If the parameters are valid, send the message */
 		if (mail($to, $subject, $message)) {
 			$success = "Message sent.";
+
+			$query = "INSERT INTO contact_form (name, email, subject, message, submission_time, submission_date) VALUES ($name, $email, $subject, $message, CURRENT_TIME, CURRENT_DATE)";
+			$insert_statement = $pdo->prepare($query);
+			$insert_statement->execute();
+			echo 'form submit to db';
 			/* in the future, send to another page instead */
 			$name = $email = $subject = $message = ''; /* Reset the values of the form */
 		}

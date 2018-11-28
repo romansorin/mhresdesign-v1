@@ -10,6 +10,15 @@
 </head>
 
 <body>
+    <?php
+
+    $conn = new Connection();
+
+    $main = new MainPage();
+
+    $pdo = $conn->connectToDb('mainpage', 'reader', 'readonly');
+
+    ?>
     <?php include 'inc/header.php' ?>
     <!-- This is the main container. -->
     <!-- This is the photo slideshow. -->
