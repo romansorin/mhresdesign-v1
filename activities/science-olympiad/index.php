@@ -4,6 +4,7 @@
 <head>
     <?php include '/srv/http/inc/includes.php';
     require '/srv/http/inc/connection.php';
+    require '/srv/http/activities/config.php';
     require '/srv/http/activities/Activity.php';?>
     <link rel="stylesheet" href="/css/activities.css">
     <title>Science Olympiad | Mentor High School</title>
@@ -20,7 +21,7 @@
     $activity = new Activity();
 
     /** @var [Object] [Create a PDO object and connect to the database] */
-    $pdo = $conn->connectToDb('sections', 'reader', 'readonly');
+    $pdo = $conn->connectToDb($db, $user, $pass);
 
     include '/srv/http/inc/header.php';
 
