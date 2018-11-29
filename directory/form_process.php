@@ -1,12 +1,9 @@
 <?php
 
-use PHPMailer\PHPMailer\Exception;
 
 /* Require statement will halt execution if the file cannot be found or used */
-require '/srv/http/inc/PHPMailer/src/Exception.php';
-require '/srv/http/inc/PHPMailer/src/PHPMailer.php';
-require '/srv/http/inc/PHPMailer/src/SMTP.php';
-require '/srv/http/inc/PHPMailer/config.php';
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 include '/srv/http/inc/math_captcha.php';
 include '/srv/http/inc/connection.php';
@@ -79,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($name_error == "" and $email_error == "" and $fs_error == "" and $dept_error == "") {
         try {
             /* Insert form data into database */
-            $query            = "INSERT INTO fac_staff (first, last, department, room, unit, subject, email, type, telephone, fax, bio, img, id) VALUES ('$firstname', '$lastname', '$dept', '$room', '$unit', '$subject', '$email', '$type', '$tel', '$fax', '$bio', NULL, NULL)";
+            $query            = "INSERT INTO fac_staff (first, last, department, room, unit, subject, email, type, telephone, fax, bio, img, id) VALUES ('$firstname', '$lastname', '$dept', '$room', '$unit', '$subject', '$email', '$type', '$tel', '$fax', '$bio', '', NULL)";
             $insert_statement = $pdo->prepare($query);
             $insert_statement->execute();
 
