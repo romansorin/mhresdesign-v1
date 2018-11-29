@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    if (empty($unit)) {
+    if (empty($_POST["unit"])) {
         $unit = NULL;
     }
 
