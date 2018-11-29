@@ -5,7 +5,7 @@ include '/srv/http/inc/connection.php';
 include '/srv/http/inc/form_config.php';
 
 $conn = new Connection();
-$pdo  = $conn->connectToDb($db_dir, $user_dir, $pass_dir);
+$pdo  = $conn->connectToDb('directory', 'writer', 'readandwrite');
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
