@@ -4,6 +4,9 @@ include '/srv/http/inc/math_captcha.php';
 include '/srv/http/inc/connection.php';
 include '/srv/http/inc/form_config.php';
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 $conn = new Connection();
 $pdo  = $conn->connectToDb($db_dir, $user_dir, $pass_dir);
 
