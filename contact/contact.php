@@ -46,10 +46,18 @@
 						<textarea class="form-control" id="message" name="message" rows="4" cols="50" value="<?= $message ?>" tabindex="4"></textarea>
 						<span class="error"><?= $message_error ?></span>
 					</div>
-					<?php
-					$MathCaptcha = new MathCaptcha();
-					$MathCaptcha->generateCaptcha();
-					?>
+					<div id="captcha">
+						<h4>CAPTCHA</h4>
+						<p>Please answer this simple math question to ensure that your submission was made by a human, and not automated.</p>
+						<div class="form-group form-inline">
+							<label class="form-label" for="answer">Math question: <?= $equation ?> *</label>
+							<input type="hidden" name="intA" value="<?= $intA ?>">
+							<input type="hidden" name="intB" value="<?= $intB ?>">
+							<input type="text" class="form-control" id="answer" name="answer" value="<?= $answer ?>" tabindex="5">
+							<span class="error" id="answer-error-inline"><?= $answer_error ?></span>
+						</div>
+						<p id="math-example">Enter the answer to the problem. E.g. for 2 + 5, enter 7.</p>
+					</div>
 					<button type="submit" class="btn contact-btn">Submit</button>
 					<div id="success"><?= $success ?></div>
 					<div id="failure"><?= $failure ?></div>
