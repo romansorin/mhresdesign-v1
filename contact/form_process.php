@@ -3,13 +3,17 @@
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require '/srv/http/inc/PHPMailer/src/Exception.php';
 require '/srv/http/inc/PHPMailer/src/PHPMailer.php';
 require '/srv/http/inc/PHPMailer/src/SMTP.php';
 
 require '/srv/http/inc/math_captcha.php';
 require '/srv/http/inc/PHPMailer/config.php';
-require '/srv/http/contact/config.php'
+require 'config.php'
 include '/srv/http/inc/connection.php';
 
 $conn = new Connection();
