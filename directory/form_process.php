@@ -7,6 +7,9 @@ include '/srv/http/inc/form_config.php';
 $conn = new Connection();
 $pdo  = $conn->connectToDb($db_dir, $user_dir, $pass_dir);
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 /* Initialize these variables as empty strings */
 $firstname  = $lastname  = $email  = $fac_staff  = $dept  = $unit  = $subject  = $room  = $tel  = $fax  = $bio  = $success  = "";
 $name_error = $email_error = $fs_error = $dept_error = $failure = "";
@@ -77,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($name_error == "" and $email_error == "" and $fs_error == "" and $dept_error == "") {
         try {
             /* Insert form data into database */
-            $query        = "INSERT INTO fac_staff (first, last, department, room, unit, subject, email, type, telephone, fax, bio, img, id) VALUES ('$firstname', '$lastname', '$dept', '$room', '$unit', '$subject', '$email', '$fac_staff', '$tel', '$fax', '$bio', '', NULL)";
+            $query            = "INSERT INTO fac_staff (first, last, department, room, unit, subject, email, type, telephone, fax, bio, img, id) VALUES ('$firstname', '$lastname', '$dept', '$room', '$unit', '$subject', '$email', '$fac_staff', '$tel', '$fax', '$bio', '', NULL)";
             $insert_statement = $pdo->prepare($query);
             $insert_statement->execute();
 
