@@ -26,6 +26,40 @@
     include '/srv/http/inc/header.php';
 
     ?>
+    <<div class="container-fluid no-padding">
+        <div class="row no-padding">
+            <div class="col-12 no-padding">
+                <div id="frontpage-carousel" class="carousel slide" data-ride="carousel" data-interval="10000">
+                    <!-- To change speed of slideshow, changing 'data-interval' value (parameter taken as milliseconds) -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#frontpage-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#frontpage-carousel" data-slide-to="1"></li>
+                        <li data-target="#frontpage-carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/GbbtDTW/new-york-city-nyc-sunset-night-skyline-view-brooklyn-bridge-water-4k-timelapse_41kywuhn__F0000.png" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://images2.alphacoders.com/700/70070.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://cdn.hipwallpaper.com/i/3/52/EQil13.jpg" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#frontpage-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#frontpage-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
    <div class="container-fluid no-padding">
         <div class="row">
             <div class="col-md-12 no-padding img-top">
@@ -41,6 +75,7 @@
             </div>
         </div>
     </div>
+-->
     <div class="activities-default"> <!-- This is the standard view of the page. -->
         <div class="container no-padding" id="local-nav-menu">
             <div id="local-nav-menu-wrapper">
