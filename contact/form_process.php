@@ -11,10 +11,10 @@ require '/srv/http/inc/PHPMailer/config.php';
 
 include '/srv/http/inc/math_captcha.php';
 include '/srv/http/inc/connection.php';
-include 'config.php';
+include '/srv/http/inc/config.php';
 
 $conn = new Connection();
-$pdo  = $conn->connectToDb($db, $user, $pass);
+$pdo  = $conn->connectToDb($db_logs, $user_logs, $pass_logs);
 
 /* Initialize these variables as empty strings */
 $name       = $email       = $subject       = $message       = $success       = "";
