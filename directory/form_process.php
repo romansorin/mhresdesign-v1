@@ -102,5 +102,3 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
-
-}
