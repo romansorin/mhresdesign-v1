@@ -68,49 +68,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!($fac_staff === "F" || "S")) {
             $fs_error = "You can only type F (faculty) or S (staff).";
         }
+    }
+
+    if (empty($_POST["dept"])) {
+        $dept_error = "Department is required";
+    } else {
+        $dept = test_input($_POST["dept"]);
+        // Check if name only contains letters and whitespace
+        if (!preg_match("/^[a-zA-Z ]*$/", $dept)) {
+            $dept_error = "Only letters and white space allowed";
         }
+    }
 
-        if (empty($_POST["dept"])) {
-            $dept_error = "Department is required";
-        } else {
-            $dept = test_input($_POST["dept"]);
-            // Check if name only contains letters and whitespace
-            if (!preg_match("/^[a-zA-Z ]*$/", $dept)) {
-                $dept_error = "Only letters and white space allowed";
-            }
-        }
+    if (empty($_POST["unit"])) {
+        $unit = NULL;
+    } else {
+        $unit = $_POST["unit"];
+    }
 
-        if (empty($_POST["unit"])) {
-            $unit = NULL;
-        } else {
-            $unit = $_POST["unit"];
-        }
+    /* If no errors are present, set the content of the actual message */
+    if ($name_error == "" and $email_error == "" and $fs_error == "" and $dept_error == "") {
+        try {
+            /* Insert form data into database */
+            $query            = "INSERT INTO fac_staff (first, last, department, room, unit, subject, email, type, telephone, fax, bio, img, id) VALUES ('$firstname', '$lastname', '$dept', '$room', $unit, '$subject', '$email', '$fac_staff', '$tel', '$fax', '$bio', '', NULL)";
+            $insert_statement = $pdo->prepare($query);
+            $insert_statement->execute();
 
-        /* If no errors are present, set the content of the actual message */
-        if ($name_error == "" and $email_error == "" and $fs_error == "" and $dept_error == "") {
-            try {
-                /* Insert form data into database */
-                $query            = "INSERT INTO fac_staff (first, last, department, room, unit, subject, email, type, telephone, fax, bio, img, id) VALUES ('$firstname', '$lastname', '$dept', '$room', $unit, '$subject', '$email', '$fac_staff', '$tel', '$fax', '$bio', '', NULL)";
-                $insert_statement = $pdo->prepare($query);
-                $insert_statement->execute();
+            $success = "Form submitted.";
 
-                $success = "Form submitted.";
-
-                $firstname = $lastname = $email = $dept = $unit = $subject = $fac_staff = $room = $tel = $fax = $bio = ''; // Reset the fields of the form if submission is successful
-            } catch (Exception $e) {
-                $failure = 'Your form could not be submitted.';
-            }
-
+            $firstname = $lastname = $email = $dept = $unit = $subject = $fac_staff = $room = $tel = $fax = $bio = ''; // Reset the fields of the form if submission is successful
+        } catch (Exception $e) {
+            $failure = 'Your form could not be submitted.';
         }
 
     }
+
+}
 
 /* Cleans up the data for security and parsing purposes */
-    function test_input($data) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }{
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}{
 
-    }
+}
