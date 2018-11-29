@@ -12,14 +12,6 @@ $firstname  = $lastname  = $email  = $fac_staff  = $dept  = $unit  = $subject  =
 $name_error = $email_error = $fs_error = $dept_error = $failure = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    $room    = $_POST["room"];
-    $unit    = $_POST["unit"];
-    $subject = $_POST["subject"];
-    $tel     = $_POST["tel"];
-    $fax     = $_POST["fax"];
-    $bio     = $_POST["bio"];
-
     /* These statements will check each field of the form for input and invalid characters */
     if (empty($_POST["firstname"])) {
         $name_error = "Name is required";
@@ -74,11 +66,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
+    $room    = $_POST["room"];
+    $unit    = $_POST["unit"];
+    $subject = $_POST["subject"];
+    $tel     = $_POST["tel"];
+    $fax     = $_POST["fax"];
+    $bio     = $_POST["bio"];
+
     /* If no errors are present, set the content of the actual message */
     if ($name_error == "" and $email_error == "" and $fs_error == "" and $dept_error == "") {
         try {
             /* Insert form data into database */
-            $query        = "INSERT INTO fac_staff (first, last, department, room, unit, subject, email, type, telephone, fax, bio, img, id) VALUES ('$firstname', '$lastname', '$dept', '$room', '$unit', '$subject', '$email', '$fac_staff', '$tel', '$fax', '$bio', '', NULL)";
+            $query            = "INSERT INTO fac_staff (first, last, department, room, unit, subject, email, type, telephone, fax, bio, img, id) VALUES ('$firstname', '$lastname', '$dept', '$room', '$unit', '$subject', '$email', '$fac_staff', '$tel', '$fax', '$bio', '', NULL)";
             $insert_statement = $pdo->prepare($query);
             $insert_statement->execute();
 
