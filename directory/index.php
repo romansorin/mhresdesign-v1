@@ -51,55 +51,55 @@
                         <span class="error"><?=$dept_error?></span>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="unit">Unit (ex. Department of Guidance, Unit 10; Enter a number)</label>
+                        <label class="form-label" for="unit">Unit (ex. Department of Guidance, Unit 10) [Select]</label>
                         <input list="numbers" class="form-control" id="unit" name="unit" value="<?=$unit?>" tabindex="6">
                         <datalist id="numbers">
-                            <option value="9">
-                                <option value="10">
-                                    <option value="11">
-                                        <option value="12">
-                                        </datalist>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label" for="subject">OR : Subject (ex. Department of Mathematics, Calculus)</label>
-                                        <input type="text" class="form-control" id="subject" name="subject" value="<?=$subject?>" tabindex="7">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label" for="room">Room</label>
-                                        <input type="text" class="form-control" id="room" name="room" value="<?=$room?>" tabindex="8">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label" for="tel">Telephone</label>
-                                        <input type="text" class="form-control" id="tel" name="tel" value="<?=$tel?>" tabindex="9">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label" for="fax">Fax</label>
-                                        <input type="text" class="form-control" id="fax" name="fax" value="<?=$fax?>" tabindex="10">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label" for="bio">Bio (prior education, interests, etc.)</label>
-                                        <textarea class="form-control" id="bio" name="bio" rows="4" cols="50" value="<?=$bio?>" tabindex="11"></textarea>
-                                    </div>
-                                    <div id="captcha">
-                                        <h4>CAPTCHA</h4>
-                                        <p>Please answer this simple math question to ensure that your submission was made by a human, and not automated.</p>
-                                        <div class="form-group form-inline">
-                                            <label class="form-label" for="answer">Math question: <?=$equation?> *</label>
-                                            <input type="hidden" name="intA" value="<?=$intA?>">
-                                            <input type="hidden" name="intB" value="<?=$intB?>">
-                                            <input type="text" class="form-control" id="answer" name="answer" value="<?=$answer?>" tabindex="12">
-                                            <span class="error" id="answer-error-inline"><?=$answer_error?></span>
-                                        </div>
-                                        <p id="math-example">Enter the answer to the problem. E.g. for 2 + 5, enter 7.</p>
-                                    </div>
-                                    <button type="submit" class="btn contact-btn">Submit</button>
-                                    <div id="success"><?=$success?></div>
-                                    <div id="failure"><?=$failure?></div>
-                                </form>
-                            </div>
-                        </div>
+                            <option value="9">Unit 9</option>
+                            <option value="10">Unit 10</option>
+                            <option value="11">Unit 11</option>
+                            <option value="12">Unit 12</option>
+                        </datalist>
                     </div>
-                    <?php include '/srv/http/inc/footer.php';?>
-                </body>
+                    <div class="form-group">
+                        <label class="form-label" for="subject">OR : Subject (ex. Department of Mathematics, Calculus)</label>
+                        <input type="text" class="form-control" id="subject" name="subject" value="<?=$subject?>" tabindex="7">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="room">Room</label>
+                        <input type="text" class="form-control" id="room" name="room" value="<?=$room?>" tabindex="8">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="tel">Telephone</label>
+                        <input type="text" class="form-control" id="tel" name="tel" value="<?=$tel?>" tabindex="9">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="fax">Fax</label>
+                        <input type="text" class="form-control" id="fax" name="fax" value="<?=$fax?>" tabindex="10">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="bio">Bio (prior education, interests, etc.)</label>
+                        <textarea class="form-control" id="bio" name="bio" rows="4" cols="50" value="<?=$bio?>" tabindex="11"></textarea>
+                    </div>
+                    <div id="captcha">
+                        <h4>CAPTCHA</h4>
+                        <p>Please answer this simple math question to ensure that your submission was made by a human, and not automated.</p>
+                        <div class="form-group form-inline">
+                            <label class="form-label" for="answer">Math question: <?=$equation?> *</label>
+                            <input type="hidden" name="intA" value="<?=$intA?>">
+                            <input type="hidden" name="intB" value="<?=$intB?>">
+                            <input type="text" class="form-control" id="answer" name="answer" value="<?=$answer?>" tabindex="12">
+                            <span class="error" id="answer-error-inline"><?=$answer_error?></span>
+                        </div>
+                        <p id="math-example">Enter the answer to the problem. E.g. for 2 + 5, enter 7.</p>
+                    </div>
+                    <button type="submit" class="btn contact-btn">Submit</button>
+                    <div id="success"><?=$success?></div>
+                    <div id="failure"><?=$failure?></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <?php include '/srv/http/inc/footer.php';?>
+</body>
 
-                </html>
+</html>
