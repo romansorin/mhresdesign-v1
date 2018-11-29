@@ -3,7 +3,7 @@
 
 <head>
     <?php include '/srv/http/inc/includes.php';?>
-    <?php require '/srv/http/inc/directory/form_process.php';?>
+    <?php require 'form_process.php';?>
     <?php require '/srv/http/inc/math_captcha.php';?>
     <link rel="stylesheet" href="form.css">
     <title>Directory | Mentor High School</title>
