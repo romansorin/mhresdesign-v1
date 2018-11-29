@@ -74,6 +74,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
+    if (empty($_POST["unit"])) {
+        $unit = NULL;
+    }
+
     /* If no errors are present, set the content of the actual message */
     if ($name_error == "" and $email_error == "" and $fs_error == "" and $dept_error == "") {
         try {
