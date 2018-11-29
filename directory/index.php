@@ -52,7 +52,7 @@
                     </div>
                      <div class="form-group">
                         <label class="form-label" for="unit">Unit (ex. Department of Guidance, Unit 10; Enter a number)</label>
-                        <input type="text" class="form-control" id="unit" name="unit" value="<?=$unit?>" tabindex="6">
+                        <input type="number" class="form-control" id="unit" name="unit" value="<?=$unit?>" tabindex="6">
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="subject">OR : Subject (ex. Department of Mathematics, Calculus)</label>
