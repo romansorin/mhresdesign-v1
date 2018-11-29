@@ -1,10 +1,5 @@
 <?php
 
-
-/* Require statement will halt execution if the file cannot be found or used */
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
 include '/srv/http/inc/math_captcha.php';
 include '/srv/http/inc/connection.php';
 include '/srv/http/inc/form_config.php';
@@ -71,12 +66,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
+    if (empty($_POST["unit"])) {
+        $unit = NULL;
+    }
+
+    if (empty($_POST["subject"])) {
+        $subject = NULL;
+    }
+
+     if (empty($_POST["room"])) {
+        $room = NULL;
+    }
+
+     if (empty($_POST["tel"])) {
+        $tel = NULL;
+    }
+
+     if (empty($_POST["fax"])) {
+        $fax = NULL;
+    }
+
+     if (empty($_POST["bio"])) {
+        $bio = NULL;
+    }
+
 
     /* If no errors are present, set the content of the actual message */
     if ($name_error == "" and $email_error == "" and $fs_error == "" and $dept_error == "") {
         try {
             /* Insert form data into database */
-            $query            = "INSERT INTO fac_staff (first, last, department, room, unit, subject, email, type, telephone, fax, bio, img, id) VALUES ('$firstname', '$lastname', '$dept', '$room', '$unit', '$subject', '$email', '$type', '$tel', '$fax', '$bio', '', NULL)";
+            $query            = "INSERT INTO fac_staff (first, last, department, room, unit, subject, email, type, telephone, fax, bio, img, id) VALUES ('$firstname', '$lastname', '$dept', '$room', '$unit', '$subject', '$email', '$fac_staff', '$tel', '$fax', '$bio', NULL, NULL)";
             $insert_statement = $pdo->prepare($query);
             $insert_statement->execute();
 
