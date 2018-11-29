@@ -6,7 +6,7 @@
 .carousel {
     overflow: hidden;
 }
-.carousel-inner  {
+.carousel-inner {
     height: 400px;
 }
 .carousel-item {

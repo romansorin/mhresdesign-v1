@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <?php include '/srv/http/inc/includes.php'; ?>
+    <?php include '/srv/http/inc/includes.php';?>
     <link rel="stylesheet" href="contact.css">
     <title>Contact Us | Mentor High School</title>
     <meta name="description" content="This is a description">
 </head>
 
 <body>
-    <!-- <div class="push-down"></div> -->
-    <?php include '/srv/http/inc/header.php' ?>
+    <!--  -->
+    <?php include '/srv/http/inc/header.php'?>
     <div class="container">
     <div class="contact-header"><h1>Contact Mentor</h1></div>
         <div class="row">
@@ -51,7 +51,7 @@
             </div>
         </div>
     </div>
-    <?php include '/srv/http/inc/footer.php'; ?>
+    <?php include '/srv/http/inc/footer.php';?>
 </body>
 
 </html>

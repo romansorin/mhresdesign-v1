@@ -7,7 +7,7 @@
     require '/srv/http/activities/config.php';
     require '/srv/http/activities/Activity.php';?>
     <link rel="stylesheet" href="/css/activities.css">
-    <title>Cooking Club| Mentor High School</title>
+    <title>Cooking Club | Mentor High School</title>
     <meta name="description" content="#">
 </head>
 

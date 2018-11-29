@@ -1,16 +1,17 @@
 <?php
-/* Require statement will halt execution if the file cannot be found or used */
+
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 
+/* Require statement will halt execution if the file cannot be found or used */
 require '/srv/http/inc/PHPMailer/src/Exception.php';
 require '/srv/http/inc/PHPMailer/src/PHPMailer.php';
 require '/srv/http/inc/PHPMailer/src/SMTP.php';
-
-require '/srv/http/inc/math_captcha.php';
 require '/srv/http/inc/PHPMailer/config.php';
-require 'config.php';
+
+include '/srv/http/inc/math_captcha.php';
 include '/srv/http/inc/connection.php';
+include 'config.php';
 
 $conn = new Connection();
 $pdo  = $conn->connectToDb($db, $user, $pass);
@@ -25,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name_error = "Name is required";
     } else {
         $name = test_input($_POST["name"]);
-        // check if name only contains letters and whitespace
+        // Check if name only contains letters and whitespace
         if (!preg_match("/^[a-zA-Z ]*$/", $name)) {
             $name_error = "Only letters and white space allowed";
         }
@@ -35,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email_error = "Email is required";
     } else {
         $email = test_input($_POST["email"]);
-        // check if e-mail address is the correct format
+        // Check if e-mail address is the correct format
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $email_error = "Invalid email format";
         }
@@ -52,6 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $message = $_POST["message"];
     }
+
     /* If no errors are present, set the content of the actual message */
     if ($name_error == "" and $email_error == "" and $message_error == "" and $answer_error == "") {
         $message_body = '';
@@ -62,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail = new PHPMailer(true); // Passing `true` enables exceptions
         try {
-            //Server settings
+            // Server settings
             $mail->SMTPDebug = 0; // Enable verbose debug output
             $mail->isSMTP(); // Set mailer to use SMTP
             $mail->Host       = 'smtp.gmail.com'; // Specify main and backup SMTP servers
@@ -72,24 +74,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->SMTPSecure = 'tls'; // Enable TLS encryption, `ssl` also accepted
             $mail->Port       = 587; // TCP port to connect to
 
-            //Recipients
+            // Recipients
             $mail->setFrom('mentorwebteam@gmail.com', 'MHS Mail Client');
-
             $mail->addAddress('mentorwebteam@gmail.com'); // Add a recipient
 
-            //Content
+            // Content
             $mail->isHTML(true); // Set email format to HTML
             $mail->Subject = "Contact form submission: " . $subject;
             $mail->Body    = $message_body;
             $mail->AltBody = strip_tags($message_body);
 
             $mail->send();
+
             $success = "Message sent.";
 
-            $query            = "INSERT INTO `contact_form`(`name`, `email`, `subject`, `message`, `submission_time`, `submission_date`, `id`) VALUES ('$name', '$email', '$subject', '$message', CURRENT_TIME, CURRENT_DATE, NULL)";
+            /* Insert form data into database */
+            $query            = "INSERT INTO contact_form (name, email, subject, message, submission_time, submission_date, id) VALUES ('$name', '$email', '$subject', '$message', CURRENT_TIME, CURRENT_DATE, NULL)";
             $insert_statement = $pdo->prepare($query);
             $insert_statement->execute();
-            $name = $email = $subject = $message = '';
+
+            $name = $email = $subject = $message = ''; // Reset the fields of the form if submission is successful
         } catch (Exception $e) {
             $failure = 'Message could not be sent. Error: ' . $mail->ErrorInfo;
         }
@@ -97,6 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
 }
+
 /* Cleans up the data for security and parsing purposes */
 function test_input($data) {
     $data = trim($data);
@@ -104,5 +109,3 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
-
-?>
