@@ -65,9 +65,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (strlen($fac_staff) > 1) {
             $fs_error = "Only input a single character.";
         }
-        if (!($fac_staff === "F" || "S")) {
-            $fs_error = "You can only type F (faculty) or S (staff).";
-        }
     }
 
     if (empty($_POST["dept"])) {
