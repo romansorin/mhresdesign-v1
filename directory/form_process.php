@@ -7,6 +7,9 @@ include '/srv/http/inc/form_config.php';
 $conn = new Connection();
 $pdo  = $conn->connectToDb($db_dir, $user_dir, $pass_dir);
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 /* Initialize these variables as empty strings */
 $firstname  = $lastname  = $email  = $fac_staff  = $dept  = $unit  = $subject  = $room  = $tel  = $fax  = $bio  = $success  = "";
 $name_error = $email_error = $fs_error = $dept_error = $failure = "";
