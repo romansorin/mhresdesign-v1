@@ -69,6 +69,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
+    if (empty($unit)) {
+        $unit = NULL;
+    }
+
     $room    = $_POST["room"];
     $unit    = $_POST["unit"];
     $subject = $_POST["subject"];
@@ -80,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($name_error == "" and $email_error == "" and $fs_error == "" and $dept_error == "") {
         try {
             /* Insert form data into database */
-            $query            = "INSERT INTO fac_staff (first, last, department, room, unit, subject, email, type, telephone, fax, bio, img, id) VALUES ('$firstname', '$lastname', '$dept', '$room', '$unit', '$subject', '$email', '$fac_staff', '$tel', '$fax', '$bio', '', NULL)";
+            $query            = "INSERT INTO fac_staff (first, last, department, room, unit, subject, email, type, telephone, fax, bio, img, id) VALUES ('$firstname', '$lastname', '$dept', '$room', $unit, '$subject', '$email', '$fac_staff', '$tel', '$fax', '$bio', '', NULL)";
             $insert_statement = $pdo->prepare($query);
             $insert_statement->execute();
 
