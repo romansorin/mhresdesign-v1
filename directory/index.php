@@ -6,7 +6,7 @@
     <?php require 'form_process.php';?>
     <?php require '/srv/http/inc/math_captcha.php';?>
     <link rel="stylesheet" href="form.css">
-    <title>Directory| Mentor High School</title>
+    <title>Directory | Mentor High School</title>
     <meta name="description" content="This is a description">
 </head>
 
@@ -81,7 +81,7 @@
                             <label class="form-label" for="answer">Math question: <?=$equation?> *</label>
                             <input type="hidden" name="intA" value="<?=$intA?>">
                             <input type="hidden" name="intB" value="<?=$intB?>">
-                            <input type="text" class="form-control" id="answer" name="answer" value="<?=$answer?>" tabindex="5">
+                            <input type="text" class="form-control" id="answer" name="answer" value="<?=$answer?>" tabindex="12">
                             <span class="error" id="answer-error-inline"><?=$answer_error?></span>
                         </div>
                         <p id="math-example">Enter the answer to the problem. E.g. for 2 + 5, enter 7.</p>

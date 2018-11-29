@@ -10,7 +10,7 @@ require '/srv/http/inc/PHPMailer/config.php';
 
 include '/srv/http/inc/math_captcha.php';
 include '/srv/http/inc/connection.php';
-include '/srv/http/inc/config.php';
+include '/srv/http/inc/form_config.php';
 
 $conn = new Connection();
 $pdo  = $conn->connectToDb($db_dir, $user_dir, $pass_dir);
@@ -77,12 +77,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     /* If no errors are present, set the content of the actual message */
     if ($name_error == "" and $email_error == "" and $fs_error == "" and $dept_error == "") {
         try {
-            $success = "Message sent.";
-
             /* Insert form data into database */
             $query            = "INSERT INTO fac_staff (first, last, department, room, unit, subject, email, type, telephone, fax, bio, img, id) VALUES ('$firstname','$lastname','$dept','$room','$unit','$subject','$email','$type','$tel','$fax','$bio', NULL, NULL)";
             $insert_statement = $pdo->prepare($query);
             $insert_statement->execute();
+
+            $success = "Message sent.";
 
             $firstname = $lastname = $email = $dept = $unit = $subject = $fac_staff = $room = $tel = $fax = $bio = ''; // Reset the fields of the form if submission is successful
         } catch (Exception $e) {
