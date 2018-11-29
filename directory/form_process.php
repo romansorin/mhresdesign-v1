@@ -5,16 +5,21 @@ include '/srv/http/inc/connection.php';
 include '/srv/http/inc/form_config.php';
 
 $conn = new Connection();
-$pdo  = $conn->connectToDb('directory', 'writer', 'readandwrite');
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+$pdo  = $conn->connectToDb($db_dir, $user_dir, $pass_dir);
 
 /* Initialize these variables as empty strings */
 $firstname  = $lastname  = $email  = $fac_staff  = $dept  = $unit  = $subject  = $room  = $tel  = $fax  = $bio  = $success  = "";
 $name_error = $email_error = $fs_error = $dept_error = $failure = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $room    = $_POST["room"];
+    $unit    = $_POST["unit"];
+    $subject = $_POST["subject"];
+    $tel     = $_POST["tel"];
+    $fax     = $_POST["fax"];
+    $bio     = $_POST["bio"];
+
     /* These statements will check each field of the form for input and invalid characters */
     if (empty($_POST["firstname"])) {
         $name_error = "Name is required";
@@ -57,6 +62,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (strlen($fac_staff) > 1) {
             $fs_error = "Only input a single character.";
         }
+        if (!($fac_staff === "F" || "S") {
+            $fs_error = "You can only type F (faculty) or S (staff).";
+        }
     }
 
     if (empty($_POST["dept"])) {
@@ -69,18 +77,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    $room    = $_POST["room"];
-    $unit    = $_POST["unit"];
-    $subject = $_POST["subject"];
-    $tel     = $_POST["tel"];
-    $fax     = $_POST["fax"];
-    $bio     = $_POST["bio"];
+    if (empty($_POST["unit"])) {
+        $unit = NULL;
+    } else {
+        $unit = $_POST["unit"];
+    }
 
     /* If no errors are present, set the content of the actual message */
     if ($name_error == "" and $email_error == "" and $fs_error == "" and $dept_error == "") {
         try {
             /* Insert form data into database */
-            $query            = "INSERT INTO fac_staff (first, last, department, room, unit, subject, email, type, telephone, fax, bio, img, id) VALUES ('$firstname', '$lastname', '$dept', '$room', '$unit', '$subject', '$email', '$fac_staff', '$tel', '$fax', '$bio', '', NULL)";
+            $query            = "INSERT INTO fac_staff (first, last, department, room, unit, subject, email, type, telephone, fax, bio, img, id) VALUES ('$firstname', '$lastname', '$dept', '$room', $unit, '$subject', '$email', '$fac_staff', '$tel', '$fax', '$bio', '', NULL)";
             $insert_statement = $pdo->prepare($query);
             $insert_statement->execute();
 
