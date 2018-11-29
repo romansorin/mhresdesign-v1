@@ -66,36 +66,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    if (empty($_POST["unit"])) {
-        $unit = NULL;
-    }
-
-    if (empty($_POST["subject"])) {
-        $subject = NULL;
-    }
-
-     if (empty($_POST["room"])) {
-        $room = NULL;
-    }
-
-     if (empty($_POST["tel"])) {
-        $tel = NULL;
-    }
-
-     if (empty($_POST["fax"])) {
-        $fax = NULL;
-    }
-
-     if (empty($_POST["bio"])) {
-        $bio = NULL;
-    }
-
-
     /* If no errors are present, set the content of the actual message */
     if ($name_error == "" and $email_error == "" and $fs_error == "" and $dept_error == "") {
         try {
             /* Insert form data into database */
-            $query            = "INSERT INTO fac_staff (first, last, department, room, unit, subject, email, type, telephone, fax, bio, img, id) VALUES ('$firstname', '$lastname', '$dept', '$room', '$unit', '$subject', '$email', '$fac_staff', '$tel', '$fax', '$bio', NULL, NULL)";
+            $query            = "INSERT INTO fac_staff (first, last, department, room, unit, subject, email, type, telephone, fax, bio, img, id) VALUES ('$firstname', '$lastname', '$dept', '$room', '$unit', '$subject', '$email', '$fac_staff', '$tel', '$fax', '$bio', '', NULL)";
             $insert_statement = $pdo->prepare($query);
             $insert_statement->execute();
 
