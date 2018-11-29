@@ -1,0 +1,33 @@
+#answer {
+    height: 65px;
+    width: 65px;
+    margin-left: 10px;
+}
+#answer-error-inline {
+    padding-left: 15px;
+}
+#math-example {
+    font-size: 0.95em !important;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+#captcha h4 {
+    padding-top: 5px;
+    text-transform: none;
+    text-align: left;
+    font-size: 1.60em;
+    pointer-events: none;
+    font-weight: 200;
+    font-family: 'Crimson Text', sans-serif;
+    letter-spacing: -1px;
+}
+#captcha p {
+    font-size: 1.1em;
+}
+/* Media queries */
+
+@media (max-width: 767.98px) {
+    #answer-error-inline {
+        padding-left: 0px;
+    }
+}
