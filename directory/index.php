@@ -51,9 +51,10 @@
                         <span class="error"><?=$dept_error?></span>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="unit">Unit (ex. Department of Guidance, Unit 10) [Select]</label>
+                        <label class="form-label" for="unit">Unit (ex. Department of Guidance, Unit 10)</label>
                         <input list="numbers" class="form-control" id="unit" name="unit" value="<?=$unit?>" tabindex="6">
                         <datalist id="numbers">
+                            <option value="" selected disabled hidden>Choose here</option>
                             <option value="9">Unit 9</option>
                             <option value="10">Unit 10</option>
                             <option value="11">Unit 11</option>
