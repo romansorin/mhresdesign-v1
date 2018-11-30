@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    <!--  -->
     <?php include '/srv/http/inc/header.php'?>
     <div class="container">
     <div class="contact-header"><h1>Contact Mentor</h1></div>

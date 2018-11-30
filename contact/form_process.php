@@ -9,9 +9,9 @@ require '/srv/http/inc/PHPMailer/src/PHPMailer.php';
 require '/srv/http/inc/PHPMailer/src/SMTP.php';
 require '/srv/http/inc/PHPMailer/config.php';
 
-include '/srv/http/inc/form_files/math_captcha.php';
-include '/srv/http/inc/connection.php';
-include '/srv/http/inc/configs.php';
+require '/srv/http/inc/form_files/math_captcha.php';
+require '/srv/http/inc/connection/connection.php';
+require '/srv/http/inc/connection/configs.php';
 
 $conn = new Connection();
 $pdo  = $conn->connectToDb($db_logs, $user_logs, $pass_logs);

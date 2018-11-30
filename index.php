@@ -3,8 +3,8 @@
 
 <head>
     <?php include 'inc/includes.php'; 
-    include 'inc/connection.php';
-    require 'inc/configs.php';
+    include 'inc/connection/connection.php';
+    require 'inc/connection/configs.php';
     require 'MainPage.php';
     ?>
     <link rel="stylesheet" href="css/mainpage.css">

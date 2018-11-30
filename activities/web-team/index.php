@@ -3,8 +3,8 @@
 
 <head>
     <?php include '/srv/http/inc/includes.php';
-    require '/srv/http/inc/connection.php';
-    require '/srv/http/inc/configs.php';
+    require '/srv/http/inc/connection/connection.php';
+    require '/srv/http/inc/connection/configs.php';
     require '/srv/http/activities/Activity.php';?>
     <link rel="stylesheet" href="/css/activities.css">
     <title>Webteam | Mentor High School</title>
