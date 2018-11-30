@@ -36,22 +36,22 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <?php
-                            $results_header_image = $main->fetchHeaderImage($pdo, 1);
-                            foreach ($results_header_image as $header_image): ?>
+                            $results_image = $main->fetchHeaderImage($pdo, 1);
+                            foreach ($results_image as $header_image) : ?>
                             <img class="d-block w-100" src="<?=$header_image->headerimg;?>" alt="First slide">
                             <?php endforeach; ?>
                         </div>
                         <div class="carousel-item">
                              <?php
                             $results_header_image = $main->fetchHeaderImage($pdo, 2);
-                            foreach ($results_header_image as $header_image): ?>
+                            foreach ($results_image as $header_image) : ?>
                             <img class="d-block w-100" src="<?=$header_image->headerimg;?>" alt="Second slide">
                             <?php endforeach; ?>
                         </div>
                         <div class="carousel-item">
                             <?php
                             $results_header_image = $main->fetchHeaderImage($pdo, 3);
-                            foreach ($results_header_image as $header_image): ?>
+                            foreach ($results_image as $header_image) : ?>
                             <img class="d-block w-100" src="<?=$header_image->headerimg;?>" alt="Third slide">
                              <?php endforeach; ?>
                         </div>
