@@ -1,10 +1,10 @@
 <?php
 
 class MainPage {
-	public $headerimg;
+	public $header_image, ,
 
 	public static function fetchHeaderImage($pdo, $slide) {
-		$query = "SELECT headerimg FROM mainpage_images WHERE slidenum = $slide";
+		$query = "SELECT headerimg FROM mainpage_images WHERE slidenum = '$slide'";
 
 		$img = $pdo->prepare($query);
 		$img = execute();
