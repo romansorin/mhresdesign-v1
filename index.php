@@ -15,10 +15,6 @@
 <body>
     <?php
 
-    ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
     $conn = new Connection();
 
     $main = new MainPage();
@@ -48,14 +44,14 @@ error_reporting(E_ALL);
                         </div>
                         <div class="carousel-item">
                              <?php
-                            $results_header_image = $main->fetchHeaderImage($pdo, 2);
+                            $results_image = $main->fetchHeaderImage($pdo, 2);
                             foreach ($results_image as $header_image) : ?>
                             <img class="d-block w-100" src="<?=$header_image->headerimg;?>" alt="Second slide">
                             <?php endforeach; ?>
                         </div>
                         <div class="carousel-item">
                             <?php
-                            $results_header_image = $main->fetchHeaderImage($pdo, 3);
+                            $results_image = $main->fetchHeaderImage($pdo, 3);
                             foreach ($results_image as $header_image) : ?>
                             <img class="d-block w-100" src="<?=$header_image->headerimg;?>" alt="Third slide">
                              <?php endforeach; ?>
