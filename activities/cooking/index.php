@@ -26,7 +26,7 @@ $pdo = $conn->connectToDb($db_sections, $user_sections, $pass_sections);
 include '/srv/http/inc/header.php';
 
 ?>
-    <<div class="container-fluid no-padding">
+    <div class="container-fluid no-padding">
         <div class="row no-padding">
             <div class="col-12 no-padding">
                 <div id="frontpage-carousel" class="carousel slide" data-ride="carousel" data-interval="10000">
@@ -59,23 +59,6 @@ include '/srv/http/inc/header.php';
             </div>
         </div>
     </div>
-    <!--
-   <div class="container-fluid no-padding">
-        <div class="row">
-            <div class="col-md-12 no-padding img-top">
-                <?php
-$results_header_image = $activity->fetchHeaderImage($pdo, 'cooking');
-foreach ($results_header_image as $header_image): ?>
-                    <img class="d-block w-100 img-fit" src="<?=$header_image->headerimg;?>" alt="Activity header photo">
-                <?php endforeach;?>
-                <div class="img-text-overlay">
-                    <a href="/activities"><h6>Activities</h6></a>
-                    <h1>Cooking Club</h1>
-                </div>
-            </div>
-        </div>
-    </div>
--->
     <div class="activities-default"> <!-- This is the standard view of the page. -->
         <div class="container no-padding" id="local-nav-menu">
             <div id="local-nav-menu-wrapper">

@@ -35,6 +35,10 @@ class Activity {
         return $img->fetchAll(PDO::FETCH_CLASS, 'Activity');
     }
 
+    public static function fetchHeaderImageCarousel($pdo, $activity, $slide) {
+        
+    }
+
     /**
      * [Get the title of an article]
      * @param  [Object] $pdo           [PDO object]
