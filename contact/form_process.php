@@ -9,7 +9,7 @@ require '/srv/http/inc/PHPMailer/src/PHPMailer.php';
 require '/srv/http/inc/PHPMailer/src/SMTP.php';
 require '/srv/http/inc/PHPMailer/config.php';
 
-require '/srv/http/inc/form_files/math_captcha.php';
+require '/srv/http/inc/math_captcha.php';
 require '/srv/http/inc/connection/connection.php';
 require '/srv/http/inc/connection/configs.php';
 
