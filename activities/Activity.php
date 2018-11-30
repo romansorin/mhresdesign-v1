@@ -36,7 +36,12 @@ class Activity {
     }
 
     public static function fetchHeaderImageCarousel($pdo, $activity, $slide) {
-        
+        $query = "SELECT headerimg FROM activity_images WHERE activity = '" . $activity . "' AND header_slidenum = '$slide' AND headerimg IS NOT NULL";
+
+        $img = $pdo->prepare($query);
+        $img->execute();
+
+        return $img->fetchAll(PDO::FETCH_CLASS, 'Activity');
     }
 
     /**

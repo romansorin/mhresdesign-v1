@@ -38,13 +38,25 @@ include '/srv/http/inc/header.php';
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/GbbtDTW/new-york-city-nyc-sunset-night-skyline-view-brooklyn-bridge-water-4k-timelapse_41kywuhn__F0000.png" alt="First slide">
+                            <?php
+                            $results_image = $activity->fetchHeaderImageCarousel($pdo, 'cooking', 1);
+                            foreach ($results_image as $header_img) : ?>
+                            <img class="d-block w-100" src="<?= $header_img->headerimg; ?>" alt="First slide">
+                            <?php endforeach; ?>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="https://images2.alphacoders.com/700/70070.jpg" alt="Second slide">
+                             <?php
+                            $results_image = $activity->fetchHeaderImageCarousel($pdo, 'cooking', 2);
+                            foreach ($results_image as $header_img) : ?>
+                            <img class="d-block w-100" src="<?= $header_img->headerimg; ?>" alt="Second slide">
+                            <?php endforeach; ?>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="https://cdn.hipwallpaper.com/i/3/52/EQil13.jpg" alt="Third slide">
+                             <?php
+                            $results_image = $activity->fetchHeaderImageCarousel($pdo, 'cooking', 3);
+                            foreach ($results_image as $header_img) : ?>
+                            <img class="d-block w-100" src="<?= $header_img->headerimg; ?>" alt="Third slide">
+                            <?php endforeach; ?>
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#frontpage-carousel" role="button" data-slide="prev">
