@@ -4,7 +4,7 @@
 <head>
 	<?php include '/srv/http/inc/includes.php';?>
 	<?php require 'form_process.php';?>
-	<?php require '/srv/http/inc/math_captcha.php';?>
+	<?php require '/srv/http/inc/form_files/math_captcha.php';?>
 	<link rel="stylesheet" href="contact.css">
 	<title>Contact Us | Mentor High School</title>
 	<meta name="description" content="This is a description">

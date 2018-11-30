@@ -1,6 +1,6 @@
 <?php
 
-include '/srv/http/inc/math_captcha.php';
+include '/srv/http/inc/form_files/math_captcha.php';
 include '/srv/http/inc/connection.php';
 include '/srv/http/inc/configs.php';
 
