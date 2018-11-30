@@ -3,7 +3,10 @@
 
 <head>
     <?php include 'inc/includes.php'; 
-    include 'inc/connection.php'; ?>
+    include 'inc/connection.php';
+    require 'inc/configs.php';
+    require 'MainPage.php';
+    ?>
     <link rel="stylesheet" href="css/mainpage.css">
     <title>Mentor High School</title>
     <meta name="description" content="This is a description">
@@ -11,13 +14,11 @@
 
 <body>
     <?php
-    /*
     $conn = new Connection();
 
     $main = new MainPage();
 
-    $pdo = $conn->connectToDb('mainpage', 'reader', 'readonly');
-    */
+    $pdo = $conn->connectToDb($db_sections, $user_sections, $pass_sections);
     ?>
     <?php include 'inc/header.php' ?>
     <!-- This is the main container. -->
@@ -34,13 +35,25 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/GbbtDTW/new-york-city-nyc-sunset-night-skyline-view-brooklyn-bridge-water-4k-timelapse_41kywuhn__F0000.png" alt="First slide">
+                            <?php
+                            $results_header_image = $main->fetchHeaderImage($pdo, 1);
+                            foreach ($results_header_image as $header_image): ?>
+                            <img class="d-block w-100" src="<?=$header_image->headerimg;?>" alt="First slide">
+                            <?php endforeach; ?>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="https://images2.alphacoders.com/700/70070.jpg" alt="Second slide">
+                             <?php
+                            $results_header_image = $main->fetchHeaderImage($pdo, 2);
+                            foreach ($results_header_image as $header_image): ?>
+                            <img class="d-block w-100" src="<?=$header_image->headerimg;?>" alt="Second slide">
+                            <?php endforeach; ?>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="https://cdn.hipwallpaper.com/i/3/52/EQil13.jpg" alt="Third slide">
+                            <?php
+                            $results_header_image = $main->fetchHeaderImage($pdo, 3);
+                            foreach ($results_header_image as $header_image): ?>
+                            <img class="d-block w-100" src="<?=$header_image->headerimg;?>" alt="Third slide">
+                             <?php endforeach; ?>
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#frontpage-carousel" role="button" data-slide="prev">
