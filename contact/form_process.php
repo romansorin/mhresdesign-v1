@@ -11,7 +11,7 @@ require '/srv/http/inc/PHPMailer/config.php';
 
 include '/srv/http/inc/math_captcha.php';
 include '/srv/http/inc/connection.php';
-include '/srv/http/inc/config.php';
+include '/srv/http/inc/configs.php';
 
 $conn = new Connection();
 $pdo  = $conn->connectToDb($db_logs, $user_logs, $pass_logs);

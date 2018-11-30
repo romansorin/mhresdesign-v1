@@ -4,7 +4,9 @@
 <head>
     <?php include '/srv/http/inc/includes.php';
     require '/srv/http/inc/connection.php';
-    require '/srv/http/activities/Activity.php';?>
+    require '/srv/http/activities/Activity.php';
+    require '/srv/http/inc/configs.php';
+    ?>
     <link rel="stylesheet" href="/css/activities.css">
     <title>Activity| Mentor High School</title>
     <meta name="description" content="#">
@@ -20,7 +22,7 @@
     $activity = new Activity();
 
     /** @var [Object] [Create a PDO object and connect to the database] */
-    $pdo = $conn->connectToDb('sections', 'reader', 'readonly');
+    $pdo = $conn->connectToDb($db_sections, $user_sections, $pass_sections);
 
     include '/srv/http/inc/header.php';
 
