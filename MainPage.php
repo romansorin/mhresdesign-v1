@@ -7,7 +7,7 @@ class MainPage {
 		$query = "SELECT headerimg FROM mainpage_images WHERE id = '$slide'";
 
 		$img = $pdo->prepare($query);
-		$img = execute();
+        $img->execute();
 
 		return $img->fetchAll(PDO::FETCH_CLASS, 'MainPage');
 	}
