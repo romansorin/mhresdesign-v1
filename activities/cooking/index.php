@@ -70,7 +70,7 @@ foreach ($results_image as $header_img): ?>
                 </div>
                 <div class="img-text-overlay">
                     <a href="/activities"><h6>Activities</h6></a>
-                    <h1>Science Olympiad</h1>
+                    <h1>Cooking Club</h1>
                 </div>
             </div>
         </div>
