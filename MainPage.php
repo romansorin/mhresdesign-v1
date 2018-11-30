@@ -1,7 +1,7 @@
 <?php
 
 class MainPage {
-	public $header_image, ,
+	public $header_image;
 
 	public static function fetchHeaderImage($pdo, $slide) {
 		$query = "SELECT headerimg FROM mainpage_images WHERE slidenum = '$slide'";
