@@ -287,10 +287,23 @@
         margin-top: 15px;
         height: 250px;
     }
+    .carousel-inner {
+        height: 200px !important;
+    }
+    .carousel-item {
+        height: 200px !important;
+    }
 }
 /* Small devices (landscape phones, less than 768px)*/
 
-@media (max-width: 767.98px) {}
+@media (max-width: 767.98px) {
+    .carousel-inner {
+        height: 350px;
+    }
+    .carousel-item {
+        height: 350px;
+    }
+}
 /* Medium devices (tablets, less than 992px)*/
 
 @media (max-width: 991.98px) {

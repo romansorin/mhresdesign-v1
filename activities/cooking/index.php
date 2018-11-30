@@ -39,24 +39,24 @@ include '/srv/http/inc/header.php';
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <?php
-                            $results_image = $activity->fetchHeaderImageCarousel($pdo, 'cooking', 1);
-                            foreach ($results_image as $header_img) : ?>
-                            <img class="d-block w-100" src="<?= $header_img->headerimg; ?>" alt="First slide">
-                            <?php endforeach; ?>
+$results_image = $activity->fetchHeaderImageCarousel($pdo, 'cooking', 1);
+foreach ($results_image as $header_img): ?>
+                            <img class="d-block w-100" src="<?=$header_img->headerimg;?>" alt="First slide">
+                            <?php endforeach;?>
                         </div>
                         <div class="carousel-item">
                              <?php
-                            $results_image = $activity->fetchHeaderImageCarousel($pdo, 'cooking', 2);
-                            foreach ($results_image as $header_img) : ?>
-                            <img class="d-block w-100" src="<?= $header_img->headerimg; ?>" alt="Second slide">
-                            <?php endforeach; ?>
+$results_image = $activity->fetchHeaderImageCarousel($pdo, 'cooking', 2);
+foreach ($results_image as $header_img): ?>
+                            <img class="d-block w-100" src="<?=$header_img->headerimg;?>" alt="Second slide">
+                            <?php endforeach;?>
                         </div>
                         <div class="carousel-item">
                              <?php
-                            $results_image = $activity->fetchHeaderImageCarousel($pdo, 'cooking', 3);
-                            foreach ($results_image as $header_img) : ?>
-                            <img class="d-block w-100" src="<?= $header_img->headerimg; ?>" alt="Third slide">
-                            <?php endforeach; ?>
+$results_image = $activity->fetchHeaderImageCarousel($pdo, 'cooking', 3);
+foreach ($results_image as $header_img): ?>
+                            <img class="d-block w-100" src="<?=$header_img->headerimg;?>" alt="Third slide">
+                            <?php endforeach;?>
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#frontpage-carousel" role="button" data-slide="prev">
@@ -67,6 +67,10 @@ include '/srv/http/inc/header.php';
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                </div>
+                <div class="img-text-overlay">
+                    <a href="/activities"><h6>Activities</h6></a>
+                    <h1>Science Olympiad</h1>
                 </div>
             </div>
         </div>
