@@ -342,7 +342,7 @@ article {
     .carousel-item {
         height: 350px;
     }
-
+}
     @media (max-width: 576px) {
         .carousel-inner {
             height: 200px !important;
@@ -353,9 +353,6 @@ article {
         .time-span {
             margin-bottom: 40px;
         }
-    }
-    @media (max-width: 768px) {
-  
     }
     /* For devices less than the width of a tablet */
     @media (max-width: 922px) {
@@ -368,8 +365,8 @@ article {
     }
 
     @media (max-width: 1024px) {
-                  article {
-            margin-left: 0px;
+        article {
+            margin-left: 0px !important;
         }
     }
 
