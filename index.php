@@ -46,9 +46,9 @@
                             <?php endforeach; ?>
                         </div>
                         <div class="carousel-item">
-                           <?php
-                           $results_image = $main->fetchHeaderImage($pdo, 2);
-                           foreach ($results_image as $header_image) : ?>
+                         <?php
+                         $results_image = $main->fetchHeaderImage($pdo, 2);
+                         foreach ($results_image as $header_image) : ?>
                             <img class="d-block w-100" src="<?=$header_image->headerimg;?>" alt="Second slide">
                         <?php endforeach; ?>
                     </div>
