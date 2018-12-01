@@ -342,9 +342,6 @@ article {
     .carousel-item {
         height: 350px;
     }
-          article {
-            margin-left: 0px;
-        }
 
     @media (max-width: 576px) {
         .carousel-inner {
@@ -367,6 +364,12 @@ article {
         }
         .event-link-btn-disabled {
             display: none;
+        }
+    }
+
+    @media (max-width: 1024px) {
+                  article {
+            margin-left: 0px;
         }
     }
 
