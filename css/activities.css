@@ -334,7 +334,7 @@
 /* Large devices (desktops, less than 1200px)*/
 
 @media (max-width: 1199.98px) {}
-#frontpage-carousel {
+#carousel {
     margin-bottom: 0px;
 }
 .carousel {

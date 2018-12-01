@@ -5,7 +5,7 @@
     <?php include '/srv/http/inc/includes.php';
     require '/srv/http/inc/connection/connection.php';
     require '/srv/http/inc/connection/configs.php';
-    require '/srv/http/activities/Activity.php';?>
+    require '/srv/http/activities/Activity.php'; ?>
     <link rel="stylesheet" href="/css/activities.css">
     <title>Science Olympiad | Mentor High School</title>
     <meta name="description" content="#">
@@ -13,6 +13,7 @@
 
 
 <body>
+
     <?php
 
     /** @var Connection [Create a connection object] */
@@ -24,9 +25,9 @@
     /** @var [Object] [Create a PDO object and connect to the database] */
     $pdo = $conn->connectToDb($db_sections, $user_sections, $pass_sections);
 
-    include '/srv/http/inc/header.php';
-
     ?>
+
+    <?php include '/srv/http/inc/header.php'; ?>
     <div class="container-fluid no-padding">
         <div class="row">
             <div class="col-md-12 no-padding img-top">
@@ -35,6 +36,7 @@
                 foreach ($results_header_image as $header_image): ?>
                     <img class="d-block w-100 img-fit" src="<?=$header_image->headerimg;?>" alt="Science Olympiad header photo">
                 <?php endforeach;?>
+
                 <div class="img-text-overlay">
                     <a href="/activities"><h6>Activities</h6></a>
                     <h1>Science Olympiad</h1>
@@ -167,14 +169,16 @@
                         <figure class="article-img mr-left">
                             <?php
                             $results_link  = $activity->fetchArticleLink($pdo, 'science olympiad', 2);
-                            $results_image = $activity->fetchArticleImage($pdo, 'science olympiad', 2);
                             foreach ($results_link as $link): ?>
                                 <a href="<?=$link->link;?>">
                                 <?php endforeach;?>
-                                <?php foreach ($results_image as $article_image): ?>
+
+                                <?php
+                                $results_image = $activity->fetchArticleImage($pdo, 'science olympiad', 2);
+                                foreach ($results_image as $article_image): ?>
                                     <img class="img-fit" src="<?=$article_image->articleimg;?>" alt="Image for second article">
-                                <?php endforeach;?>
-                            </a>
+                                </a>
+                            <?php endforeach;?>
                         </figure>
                     </div>
                 </div>
