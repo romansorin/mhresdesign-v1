@@ -52,9 +52,6 @@ article {
     margin-bottom: 0px;
     overflow: hidden;
 }
-.article-long {
-    width: 715px;
-}
 .article-long>.content {
     padding-bottom: 60px !important;
 }
@@ -358,7 +355,9 @@ article {
         }
     }
     @media (max-width: 768px) {
-
+        article {
+            margin-left: 0px;
+        }
     }
     /* For devices less than the width of a tablet */
     @media (max-width: 922px) {
@@ -381,4 +380,7 @@ article {
         article {
             width: 335px;
         }
+        .article-long {
+        width: 715px;
+    }
     }
