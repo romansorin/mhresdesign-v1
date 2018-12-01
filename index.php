@@ -24,7 +24,7 @@
     
     ?>
 
-    <?php include 'inc/header.php' ?>
+    <?php include 'inc/header.php'; ?>
     <!-- This is the main container. -->
     <!-- This is the photo slideshow. -->
     <div class="container-fluid no-padding">
