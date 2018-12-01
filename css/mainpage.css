@@ -342,6 +342,9 @@ article {
     .carousel-item {
         height: 350px;
     }
+          article {
+            margin-left: 0px;
+        }
 
     @media (max-width: 576px) {
         .carousel-inner {
@@ -355,9 +358,7 @@ article {
         }
     }
     @media (max-width: 768px) {
-        article {
-            margin-left: 0px;
-        }
+  
     }
     /* For devices less than the width of a tablet */
     @media (max-width: 922px) {
