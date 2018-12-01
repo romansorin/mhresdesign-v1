@@ -1,5 +1,4 @@
 /* Carousel styling */
-
 #frontpage-carousel {
     margin-bottom: 0px;
 }
@@ -16,8 +15,8 @@
     object-fit: cover;
     height: 100%;
 }
-/* News section */
 
+/* News section */
 #news-header-label {
     text-align: center;
     text-transform: none;
@@ -38,7 +37,6 @@
     background-color: #F9F6EF;
 }
 article {
-    width: 335px;
     min-height: 355px;
     margin-left: 30px;
     margin-bottom: 30px;
@@ -53,9 +51,6 @@ article {
     margin-right: 0px;
     margin-bottom: 0px;
     overflow: hidden;
-}
-.article-long {
-    width: 715px
 }
 .article-long>.content {
     padding-bottom: 60px !important;
@@ -81,8 +76,8 @@ article {
     text-align: left;
     font-family: 'Source Sans Pro', sans-serif;
 }
-/* All news/events button (same styling, different sections */
 
+/* All news/events button (same styling, different sections */
 #all-news-btn, #all-events-btn {
     text-align: center;
     border-radius: 0px;
@@ -100,8 +95,8 @@ article {
     border: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
-/* Events/calendar section */
 
+/* Events/calendar section */
 #events-header-label {
     text-align: center;
     text-transform: none;
@@ -285,6 +280,7 @@ article {
     color: #303030;
     letter-spacing: .05em;
 }
+
 @media (max-width: 767.98px) {
     article {
         margin: 0 auto;
@@ -340,6 +336,13 @@ article {
     .cal-category {
         font-size: 0.95em;
     }
+    .carousel-inner {
+        height: 350px;
+    }
+    .carousel-item {
+        height: 350px;
+    }
+}
     @media (max-width: 576px) {
         .carousel-inner {
             height: 200px !important;
@@ -351,14 +354,6 @@ article {
             margin-bottom: 40px;
         }
     }
-    @media (max-width: 768px) {
-        .carousel-inner {
-            height: 350px;
-        }
-        .carousel-item {
-            height: 350px;
-        }
-    }
     /* For devices less than the width of a tablet */
     @media (max-width: 922px) {
         .event-link-btn {
@@ -368,10 +363,25 @@ article {
             display: none;
         }
     }
+
+    @media (max-width: 1024px) {
+        article {
+            margin-left: 0px !important;
+        }
+    }
+
     /* For devices less than the width of a laptop (basically between tablet and laptop) */
     @media (max-width: 1200px) {
         article {
             margin: 0 auto !important;
             margin-bottom: 30px !important;
         }
+    }
+    @media (min-width: 1200px) {
+        article {
+            width: 335px;
+        }
+        .article-long {
+        width: 715px;
+    }
     }
