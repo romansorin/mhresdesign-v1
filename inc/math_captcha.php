@@ -43,7 +43,3 @@ HTML;
 
     echo $html;
 }
-
-function getAnswerError() {
-    return $answer_error;
-}
