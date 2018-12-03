@@ -59,10 +59,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
 
-    /* If no errors are present, set the content of the actual message */
-    $answer_error = $_SESSION["answer_error"];
-
-    if ($name_error == "" and $email_error == "" and $message_error == "" and $answer_error = null) {
+    /* If no errors are present, set the content of the message */
+    if ($name_error == "" and $email_error == "" and $message_error == "" and $_SESSION["answer_error"] = null) {
         $message_body = '';
         unset($_POST['submit']);
         foreach ($_POST as $key => $value) {
