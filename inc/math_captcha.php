@@ -3,7 +3,7 @@
 
 
 function generateCAPTCHA() {
-    global $answer_error = "";
+    global $answer_error;
     $answer = "";
 
     $intA = random_int(0, 9);
