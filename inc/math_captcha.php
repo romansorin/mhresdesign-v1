@@ -18,11 +18,11 @@ function generateCAPTCHA() {
 
         if (isset($_POST["answer"])) {
             if ($_POST["answer"] == $expected_answer) {
-                $answer_error = "";
+                static $answer_error = "";
             } elseif (empty($_POST["answer"])) {
-                $answer_error = "Answer is required";
+                static $answer_error = "Answer is required";
             } else {
-                $answer_error = "The answer you entered was incorrect.";
+                static $answer_error = "The answer you entered was incorrect.";
             }
         }
     }
