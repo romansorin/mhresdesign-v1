@@ -10,6 +10,13 @@
 </head>
 
 <body>
+	<?php
+
+	ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+?>
 	<?php include '/srv/http/inc/header.php';?>
 	<div class="container">
 		<div class="contact-header"><h1>Contact</h1></div>
