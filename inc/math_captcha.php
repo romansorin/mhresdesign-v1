@@ -1,19 +1,15 @@
 <?php
 /* Simple math captcha to stop basic spam */
-session_start();
-$_SESSION["answer_error"];
-/**
- * [generateCAPTCHA: used to generate HTML and equation for a MathCaptcha]
- * @return [String] [Function will return a String value to a global session variable, answer_error]
- * @return [HTML]   [Function will print out the necessary HTML]
- */
-function generateCAPTCHA() {
-    $answer = "";
 
-    $intA = random_int(0, 9);
-    $intB = random_int(0, 9);
+$answer_error = "";
+$answer       = "";
 
-    $equation = $intA . ' + ' . $intB; /* This is to display the equation to the user */
+$intA = random_int(0, 9);
+$intB = random_int(0, 9);
+
+$equation = $intA . ' + ' . $intB; /* This is to display the equation to the user */
+
+function validateAnswer() {
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -25,12 +21,22 @@ function generateCAPTCHA() {
                 $answer_error = "";
             } elseif (empty($_POST["answer"])) {
                 $answer_error = "Answer is required";
+
             } else {
                 $answer_error = "The answer you entered was incorrect.";
+
             }
-            $_SESSION["answer_error"] = $answer_error;
+            return $answer_error;
         }
     }
+}
+
+/**
+ * [generateCAPTCHA: used to generate HTML and equation for a MathCaptcha]
+ * @return [String] [Function will return a String value to a global session variable, answer_error]
+ * @return [HTML]   [Function will print out the necessary HTML]
+ */
+function generateCAPTCHA() {
 
     /* Generates the HTML for MathCaptcha */
     $html = <<<HTML
@@ -42,7 +48,7 @@ function generateCAPTCHA() {
             <input type="hidden" name="intA" value="{$intA}">
             <input type="hidden" name="intB" value="{$intB}">
             <input type="text" class="form-control" id="answer" name="answer" value="{$answer}" tabindex="5">
-            <span class="error" id="answer-error-inline">{$_SESSION["answer_error"]}</span>
+            <span class="error" id="answer-error-inline">{$answer_error}</span>
         </div>
         <p id="math-example">Enter the answer to the problem. E.g. for 2 + 5, enter 7.</p>
         </div>
