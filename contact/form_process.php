@@ -58,9 +58,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = $_POST["message"];
     }
 
-    var_dump($_SESSION["answer_error"]);
-    echo $_SESSION["answer_error"];
-    echo "answer error should be above here";
+    $var = $_SESSION["answer_error"];
+    echo $var
+    die();
 
     /* If no errors are present, set the content of the actual message */
 
