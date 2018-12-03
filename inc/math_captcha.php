@@ -3,11 +3,10 @@
 
 $answer_error = "";
 
-
 function generateCAPTCHA() {
 
-    $answer       = "";
-    
+    $answer = "";
+
     $intA = random_int(0, 9);
     $intB = random_int(0, 9);
 
@@ -19,11 +18,11 @@ function generateCAPTCHA() {
 
         if (isset($_POST["answer"])) {
             if ($_POST["answer"] == $expected_answer) {
-                global $answer_error = "";
+                $answer_error = "";
             } elseif (empty($_POST["answer"])) {
-                global $answer_error = "Answer is required";
+                $answer_error = "Answer is required";
             } else {
-                global $answer_error = "The answer you entered was incorrect.";
+                $answer_error = "The answer you entered was incorrect.";
             }
         }
     }
