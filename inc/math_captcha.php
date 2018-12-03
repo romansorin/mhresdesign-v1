@@ -43,5 +43,6 @@ function generateCAPTCHA() {
         </div>
 HTML;
 
+    echo $_SESSION["answer_error"];
     echo $html;
 }
