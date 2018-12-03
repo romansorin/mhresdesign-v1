@@ -1,10 +1,9 @@
 <?php
 /* Simple math captcha to stop basic spam */
 
-$answer_error = "";
 
 function generateCAPTCHA() {
-
+    global $answer_error = "";
     $answer = "";
 
     $intA = random_int(0, 9);
@@ -18,11 +17,11 @@ function generateCAPTCHA() {
 
         if (isset($_POST["answer"])) {
             if ($_POST["answer"] == $expected_answer) {
-                static $answer_error = "";
+                $answer_error = "";
             } elseif (empty($_POST["answer"])) {
-                static $answer_error = "Answer is required";
+                $answer_error = "Answer is required";
             } else {
-                static $answer_error = "The answer you entered was incorrect.";
+                $answer_error = "The answer you entered was incorrect.";
             }
         }
     }
@@ -46,6 +45,7 @@ HTML;
 }
 
 function returnError() {
+    global $answer_error;
     if ($answer_error == "") {
         return FALSE;
     } else {
