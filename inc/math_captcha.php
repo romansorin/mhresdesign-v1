@@ -43,12 +43,3 @@ HTML;
 
     echo $html;
 }
-
-function returnError() {
-    global $answer_error;
-    if ($answer_error == "") {
-        return $answer_error;
-    } else {
-        return $answer_error;
-    }
-}
