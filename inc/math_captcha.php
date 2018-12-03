@@ -47,7 +47,7 @@ HTML;
 function returnError() {
     global $answer_error;
     if ($answer_error == "") {
-        return "";
+        return $answer_error;
     } else {
         return $answer_error;
     }
