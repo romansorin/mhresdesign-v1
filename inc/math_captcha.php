@@ -37,7 +37,7 @@ function generateCAPTCHA() {
             <input type="hidden" name="intA" value="{$intA}">
             <input type="hidden" name="intB" value="{$intB}">
             <input type="text" class="form-control" id="answer" name="answer" value="{$answer}" tabindex="5">
-            <span class="error" id="answer-error-inline">$_SESSION[$answer_error]</span>
+            <span class="error" id="answer-error-inline">$_SESSION["answer_error"]</span>
         </div>
         <p id="math-example">Enter the answer to the problem. E.g. for 2 + 5, enter 7.</p>
         </div>
