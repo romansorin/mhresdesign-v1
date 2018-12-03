@@ -2,10 +2,12 @@
 /* Simple math captcha to stop basic spam */
 
 $answer_error = "";
-$answer       = "";
+
 
 function generateCAPTCHA() {
 
+    $answer       = "";
+    
     $intA = random_int(0, 9);
     $intB = random_int(0, 9);
 
@@ -44,7 +46,7 @@ HTML;
     echo $html;
 }
 
-function validateError() {
+function returnError() {
     if ($answer_error == "") {
         return FALSE;
     } else {
