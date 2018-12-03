@@ -1,10 +1,9 @@
 <?php
 /* Simple math captcha to stop basic spam */
 
-$_SESSION["answer_error"];
 
 function generateCAPTCHA() {
-
+    $_SESSION["answer_error"];
     $answer = "";
 
     $intA = random_int(0, 9);
