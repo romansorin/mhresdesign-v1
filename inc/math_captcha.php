@@ -1,7 +1,6 @@
 <?php
 /* Simple math captcha to stop basic spam */
-session_start();
-$_SESSION["answer_error"] = "";
+$_SESSION["answer_error"];
 
 /**
  * [generateCAPTCHA: used to generate HTML and equation for a MathCaptcha]
