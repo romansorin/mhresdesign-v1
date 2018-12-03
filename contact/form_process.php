@@ -1,9 +1,8 @@
 <?php
-
+session_start();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
 
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
@@ -59,13 +58,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = $_POST["message"];
     }
 
-    var_dump($_SESSION["answer_error"] );
+    var_dump($_SESSION["answer_error"]);
     echo $_SESSION["answer_error"];
     echo "answer error should be above here";
 
     /* If no errors are present, set the content of the actual message */
 
-    if ($name_error == "" and $email_error == "" and $message_error == "" and $answer_error = "") {
+    if ($name_error == "" and $email_error == "" and $message_error == "" and $answer_error == "") {
         $message_body = '';
         unset($_POST['submit']);
         foreach ($_POST as $key => $value) {
@@ -92,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->isHTML(true); // Set email format to HTML
             $mail->Subject = $subject;
             $mail->Body    = $message_body;
-            $mail->AltBody = strip_tags($message_body);
+            $mail->AltBody = strip_tags($message_body); // Converts message body into plain text if HTML cannot be used
 
             $mail->send();
 
@@ -112,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 }
 
-/* Cleans up the data for security and parsing purposes */
+/* Cleans up the data */
 function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);

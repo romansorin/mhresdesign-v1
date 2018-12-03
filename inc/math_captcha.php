@@ -1,31 +1,38 @@
 <?php
 /* Simple math captcha to stop basic spam */
+session_start();
+$_SESSION["answer_error"] = "";
 
-
+/**
+ * [generateCAPTCHA: used to generate HTML and equation for a MathCaptcha]
+ * @return [String] [Function will return a String value to a global session variable, answer_error]
+ * @return [HTML]   [Function will print out the necessary HTML]
+ */
 function generateCAPTCHA() {
-    $_SESSION["answer_error"];
     $answer = "";
 
     $intA = random_int(0, 9);
     $intB = random_int(0, 9);
 
-    $equation = $intA . ' + ' . $intB; /* This is used solely for display purposes */
+    $equation = $intA . ' + ' . $intB; /* This is to display the equation to the user */
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $expected_answer = $_POST['intA'] + $_POST['intB']; /* Store the correct answer to the math problem in $_POST variables */
 
         if (isset($_POST["answer"])) {
+            /* Check user input and compare to conditions. Result of the condition will be stored in the session variable to be used in an outside file */
             if ($_POST["answer"] == $expected_answer) {
                 $_SESSION["answer_error"] = "";
             } elseif (empty($_POST["answer"])) {
-                $_SESSION["answer_error"] =" Answer is required";
+                $_SESSION["answer_error"] = "Answer is required";
             } else {
                 $_SESSION["answer_error"] = "The answer you entered was incorrect.";
             }
         }
     }
 
+    /* Generates the HTML for MathCaptcha */
     $html = <<<HTML
     <div id="captcha">
         <h4>CAPTCHA</h4>
@@ -41,6 +48,5 @@ function generateCAPTCHA() {
         </div>
 HTML;
 
-    echo $_SESSION["answer_error"];
     echo $html;
 }

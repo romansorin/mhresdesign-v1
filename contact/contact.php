@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php session_start();?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +14,7 @@
 <body>
 	<?php
 
-	ini_set('display_errors', 1);
+ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
@@ -54,7 +54,7 @@ error_reporting(E_ALL);
 						<textarea class="form-control" id="message" name="message" rows="4" cols="50" value="<?=$message?>" tabindex="4"></textarea>
 						<span class="error"><?=$message_error?></span>
 					</div>
-					<?php generateCAPTCHA(); ?>
+					<?php generateCAPTCHA();?>
 					<button type="submit" class="btn contact-btn">Submit</button>
 					<div id="success"><?=$success?></div>
 					<div id="failure"><?=$failure?></div>
