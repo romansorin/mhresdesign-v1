@@ -1,10 +1,10 @@
 <?php
 /* Simple math captcha to stop basic spam */
 
-function generateCAPTCHA() {
+$answer_error = "";
+$answer       = "";
 
-    $answer_error = "";
-    $answer       = "";
+function generateCAPTCHA() {
 
     $intA = random_int(0, 9);
     $intB = random_int(0, 9);
@@ -17,11 +17,11 @@ function generateCAPTCHA() {
 
         if (isset($_POST["answer"])) {
             if ($_POST["answer"] == $expected_answer) {
-                $answer_error = "";
+                global $answer_error = "";
             } elseif (empty($_POST["answer"])) {
-                $answer_error = "Answer is required";
+                global $answer_error = "Answer is required";
             } else {
-                $answer_error = "The answer you entered was incorrect.";
+                global $answer_error = "The answer you entered was incorrect.";
             }
         }
     }
@@ -42,4 +42,12 @@ function generateCAPTCHA() {
 HTML;
 
     echo $html;
+}
+
+function validateError() {
+    if ($answer_error == "") {
+        return FALSE;
+    } else {
+        return TRUE;
+    }
 }
