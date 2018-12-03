@@ -2,7 +2,7 @@
 /* Simple math captcha to stop basic spam */
 
 session_start();
-$_SESSION["answer_error"];
+$_SESSION["answer_error"] = "";
 
 function generateCAPTCHA() {
 
