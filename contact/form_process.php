@@ -60,8 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     /* If no errors are present, set the content of the actual message */
-    $answer_error = $_SESSION["answer_error"];
-    if ($name_error == "" and $email_error == "" and $message_error == "" and $answer_error = "") {
+    if ($name_error == "" and $email_error == "" and $message_error == "" and $_SESSION["answer_error"] = "") {
         $message_body = '';
         unset($_POST['submit']);
         foreach ($_POST as $key => $value) {
@@ -86,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Content
             $mail->isHTML(true); // Set email format to HTML
-            $mail->Subject = "Contact form submission: " . $subject;
+            $mail->Subject = $subject;
             $mail->Body    = $message_body;
             $mail->AltBody = strip_tags($message_body);
 
