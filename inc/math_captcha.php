@@ -36,7 +36,9 @@ function validateAnswer() {
  * @return [String] [Function will return a String value to a global session variable, answer_error]
  * @return [HTML]   [Function will print out the necessary HTML]
  */
-function generateCAPTCHA($answer_error, $answer, $intA, $intB, $equation) {
+function generateCAPTCHA() {
+
+    global $answer_error, $answer, $intA, $intB, $equation;
 
     /* Generates the HTML for MathCaptcha */
     $html = <<<HTML
