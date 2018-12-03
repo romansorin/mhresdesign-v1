@@ -44,7 +44,4 @@ function generateCAPTCHA() {
 HTML;
 
     echo $html;
-    $answer_error = $_SESSION["answer_error"];
-    echo $answer_error;
-    echo "answer error should be above here";
 }

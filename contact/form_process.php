@@ -59,9 +59,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = $_POST["message"];
     }
 
-    /* If no errors are present, set the content of the actual message */
     $answer_error = $_SESSION["answer_error"];
     echo $answer_error;
+    echo "answer error should be above here";
+
+    /* If no errors are present, set the content of the actual message */
+
     if ($name_error == "" and $email_error == "" and $message_error == "" and $answer_error = "") {
         $message_body = '';
         unset($_POST['submit']);
