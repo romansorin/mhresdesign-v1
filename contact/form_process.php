@@ -59,8 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = $_POST["message"];
     }
 
-    $answer_error = $_SESSION["answer_error"];
-    echo $answer_error;
+    echo $_SESSION["answer_error"];
     echo "answer error should be above here";
 
     /* If no errors are present, set the content of the actual message */
