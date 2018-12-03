@@ -1,6 +1,5 @@
 <?php
 /* Simple math captcha to stop basic spam */
-$_SESSION["answer_error"];
 
 /**
  * [generateCAPTCHA: used to generate HTML and equation for a MathCaptcha]
@@ -8,6 +7,7 @@ $_SESSION["answer_error"];
  * @return [HTML]   [Function will print out the necessary HTML]
  */
 function generateCAPTCHA() {
+    $_SESSION["answer_error"] = "";
     $answer = "";
 
     $intA = random_int(0, 9);
