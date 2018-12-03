@@ -4,7 +4,7 @@
 session_start();
 
 function generateCAPTCHA() {
-    global $answer_error;
+    $answer_error = "";
     $answer = "";
 
     $intA = random_int(0, 9);
