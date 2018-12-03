@@ -11,6 +11,8 @@ $equation = $intA . ' + ' . $intB; /* This is to display the equation to the use
 
 function validateAnswer() {
 
+    global $answer_error, $answer, $intA, $intB, $equation;
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $expected_answer = $_POST['intA'] + $_POST['intB']; /* Store the correct answer to the math problem in $_POST variables */
