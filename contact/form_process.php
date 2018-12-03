@@ -1,7 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
@@ -58,7 +55,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $answer_error = validateAnswer();
-    var_dump($answer_error);
 
     /* If no errors are present, set the content of the message */
     if ($name_error == "" and $email_error == "" and $message_error == "" and $answer_error == "") {

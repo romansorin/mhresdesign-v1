@@ -23,10 +23,8 @@ function validateAnswer() {
                 $answer_error = "";
             } elseif (empty($_POST["answer"])) {
                 $answer_error = "Answer is required";
-
             } else {
                 $answer_error = "The answer you entered was incorrect.";
-
             }
             return $answer_error;
         }
