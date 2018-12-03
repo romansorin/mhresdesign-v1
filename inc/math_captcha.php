@@ -20,12 +20,15 @@ function generateCAPTCHA() {
         if (isset($_POST["answer"])) {
             if ($_POST["answer"] == $expected_answer) {
                 $answer_error = "";
+                $answer_error = $_SESSION["answer_error"];
                 $_SESSION["answer_error"] = $answer_error;
             } elseif (empty($_POST["answer"])) {
                 $answer_error = "Answer is required";
+                $answer_error = $_SESSION["answer_error"];
                 $_SESSION["answer_error"] = $answer_error;
             } else {
                 $answer_error = "The answer you entered was incorrect.";
+                $answer_error = $_SESSION["answer_error"];
                 $_SESSION["answer_error"] = $answer_error;
             }
         }
