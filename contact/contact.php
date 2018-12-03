@@ -51,7 +51,9 @@ error_reporting(E_ALL);
 						<textarea class="form-control" id="message" name="message" rows="4" cols="50" value="<?=$message?>" tabindex="4"></textarea>
 						<span class="error"><?=$message_error?></span>
 					</div>
-					<?php generateCAPTCHA();?>
+					<?php 
+					$_SESSION["answer_error"] = "";
+					generateCAPTCHA();?>
 					<button type="submit" class="btn contact-btn">Submit</button>
 					<div id="success"><?=$success?></div>
 					<div id="failure"><?=$failure?></div>

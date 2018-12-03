@@ -7,7 +7,6 @@
  * @return [HTML]   [Function will print out the necessary HTML]
  */
 function generateCAPTCHA() {
-    $_SESSION["answer_error"] = "";
     $answer = "";
 
     $intA = random_int(0, 9);
@@ -22,13 +21,15 @@ function generateCAPTCHA() {
         if (isset($_POST["answer"])) {
             /* Check user input and compare to conditions. Result of the condition will be stored in the session variable to be used in an outside file */
             if ($_POST["answer"] == $expected_answer) {
-                $_SESSION["answer_error"] = "";
+                $answer_error = "";
             } elseif (empty($_POST["answer"])) {
-                $_SESSION["answer_error"] = "Answer is required";
+                $answer_error = "Answer is required";
             } else {
-                $_SESSION["answer_error"] = "The answer you entered was incorrect.";
+                $answer_error = "The answer you entered was incorrect.";
             }
         }
+
+        $_POST["answer_error"] = $answer_error;
     }
 
     /* Generates the HTML for MathCaptcha */
