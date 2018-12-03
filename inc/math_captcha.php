@@ -1,6 +1,7 @@
 <?php
 /* Simple math captcha to stop basic spam */
-
+session_start();
+$_SESSION["answer_error"];
 /**
  * [generateCAPTCHA: used to generate HTML and equation for a MathCaptcha]
  * @return [String] [Function will return a String value to a global session variable, answer_error]
@@ -27,9 +28,8 @@ function generateCAPTCHA() {
             } else {
                 $answer_error = "The answer you entered was incorrect.";
             }
+            $_SESSION["answer_error"] = $answer_error;
         }
-
-        $_SESSION["answer_error"] = $answer_error;
     }
 
     /* Generates the HTML for MathCaptcha */
