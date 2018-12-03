@@ -21,7 +21,7 @@ function generateCAPTCHA() {
         if (isset($_POST["answer"])) {
             /* Check user input and compare to conditions. Result of the condition will be stored in the session variable to be used in an outside file */
             if ($_POST["answer"] == $expected_answer) {
-                $answer_error = "";
+                $answer_error = null;
             } elseif (empty($_POST["answer"])) {
                 $answer_error = "Answer is required";
             } else {
