@@ -80,7 +80,7 @@
                         <label class="form-label" for="bio">Bio (prior education, interests, etc.)</label>
                         <textarea class="form-control" id="bio" name="bio" rows="4" cols="50" value="<?=$bio?>" tabindex="11"></textarea>
                     </div>
-                    <?php generateCaptcha(); ?>
+                    <?php generateCAPTCHA();?>
                     <button type="submit" class="btn contact-btn">Submit</button>
                     <div id="success"><?=$success?></div>
                     <div id="failure"><?=$failure?></div>
