@@ -128,3 +128,5 @@ class CalendarWidget {
         return $date->format('Y-m-d');
     }
 }
+
+?>
