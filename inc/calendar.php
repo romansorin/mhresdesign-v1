@@ -1,4 +1,6 @@
 <?php
+include 'inc/connection/connection.php';
+require 'inc/connection/configs.php';
 class CalendarWidget {
     // Generates a calendar widget on the page,
     public function generate($range = 7, $start_date = null) {
