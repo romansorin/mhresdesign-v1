@@ -88,14 +88,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $mail->send();
 
-            $success = "Message sent.";
-
             /* Insert form data into database */
             $query            = "INSERT INTO contact_form (name, email, subject, message, submission_time, submission_date, id) VALUES ('$name', '$email', '$subject', '$message', CURRENT_TIME, CURRENT_DATE, NULL)";
             $insert_statement = $pdo->prepare($query);
             $insert_statement->execute();
 
             $name = $email = $subject = $message = ''; // Reset the fields of the form if submission is successful
+
+            header("Location: redirect.php");
         } catch (Exception $e) {
             $failure = 'Message could not be sent. Error: ' . $mail->ErrorInfo;
         }
