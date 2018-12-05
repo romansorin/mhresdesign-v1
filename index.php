@@ -169,7 +169,7 @@ foreach ($results_image as $header_image): ?>
                 </div>
             </div>
             <div class="row">
-                <?php include 'inc/calendar.php';
+                <?php require 'inc/calendar.php';
 $calendar = new CalendarWidget;
 $calendar->generate(4);
 ?>
