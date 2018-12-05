@@ -8,6 +8,6 @@ $db_dir   = 'directory';
 $user_dir = 'writer';
 $pass_dir = 'readandwrite';
 
-$db_sections = 'sections';
+$db_sections   = 'sections';
 $user_sections = 'reader';
 $pass_sections = 'readonly';
