@@ -1,16 +1,7 @@
 <?php
-include 'inc/connection/connection.php';
-require 'inc/connection/configs.php';
-
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 
 class CalendarWidget {
 
-    public function test {
-        echo 'blajbkffa';
-    }
     // Generates a calendar widget on the page,
     public function generate($range = 7, $start_date = null) {
         date_default_timezone_set('America/New_York');

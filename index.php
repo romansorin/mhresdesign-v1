@@ -6,6 +6,13 @@
 include 'inc/connection/connection.php';
 require 'inc/connection/configs.php';
 require 'MainPage.php';
+require 'inc/calendar.php';
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
 ?>
     <link rel="stylesheet" href="css/mainpage.css">
     <title>Mentor High School</title>
@@ -169,7 +176,7 @@ foreach ($results_image as $header_image): ?>
                 </div>
             </div>
             <div class="row">
-                <?php require 'inc/calendar.php';
+                <?php 
 $calendar = new CalendarWidget;
 $calendar->generate(4);
 ?>
