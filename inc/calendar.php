@@ -43,7 +43,7 @@ class CalendarWidget {
 
             $conn = new Connection();
 
-            $pdo = $conn->connectToDb($db_sections, $user_sections, $pass_sections);
+            $pdo = $conn->connectToDb('sections', 'reader', 'readonly');
 
             $query = "SELECT category, description, link FROM events WHERE event_date = '$date_selector'";
             $stmt  = $pdo->query($query);
@@ -83,14 +83,14 @@ class CalendarWidget {
 
     // draws one "row" of your calendar. Accepts a date string to display in the header
     // and then an array of $events.
-    public function render($date_month, $date_day, $events) {
+    public function render($date_month, $date_day, $events){
         echo "<div class=\"col-sm-12\">";
         echo "<div class=\"row calendar\">";
         echo "<div class=\"col-sm-2\">";
         echo "<h3 class=\"date\"><span class=\"month\">{$date_month}</span><br><span class=\"day\">{$date_day}</span></h3>";
         echo "</div>";
         echo "<div class=\"col-sm-8\">";
-        foreach ($events as $event) {
+        foreach ($events as $event){
             echo "<div class=\"cal-meta\">";
             echo "<div class=\"cal-category\">";
             echo $event['category'];
