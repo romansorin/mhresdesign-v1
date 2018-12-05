@@ -45,10 +45,6 @@ class CalendarWidget {
             // I would use a query like:
             // SELECT description, link, date FROM events WHERE date = $date_selector
 
-            $conn = new Connection();
-
-            $pdo = $conn->connectToDb('sections', 'reader', 'readonly');
-
             $query = "SELECT category, description, link FROM events WHERE event_date = '$date_selector'";
             $stmt  = $pdo->query($query);
             $info  = $stmt->fetch(PDO::FETCH_ASSOC);
