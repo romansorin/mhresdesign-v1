@@ -135,7 +135,7 @@ foreach ($results_info as $information): ?>
                     <div class="col-md-6 no-padding" id="display">
                         <figure class="article-img" style="margin-left: 0px;">
                             <?php
-if (empty($info['results_image'])) {
+if (empty($results_image)) {
     ?>
 <script>
     $(document).ready(function(){
@@ -216,7 +216,7 @@ foreach ($results_link as $link): ?>
                                 <?php endforeach;?>
 
                                 <?php
-if (empty($info['results_image'])) {
+if (empty($results_image)) {
     ?>
 <script>
     $(document).ready(function(){
