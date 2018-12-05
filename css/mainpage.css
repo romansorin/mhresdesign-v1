@@ -189,6 +189,24 @@ article {
     border: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 }
+.event-link-btn-disabled {
+    text-align: center;
+    border-radius: 0px;
+    background-color: #B1040E;
+    color: white;
+    font-weight: 600;
+    font-size: 1em;
+    letter-spacing: 0.70px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
 .event-link {
     color: #910000;
     text-transform: uppercase;
