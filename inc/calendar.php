@@ -102,7 +102,6 @@ class CalendarWidget {
             } else {
                 echo "<br>";
                 echo "<div class\"col-sm-2 text-center no-padding\">";
-                echo "<a href=\"{$event['link']}\" class=\"event-link\"><button type=\"button\" class=\"btn btn-light event-link-btn-disabled\">View</button></a>";
             }
             echo "</div>";
         }
