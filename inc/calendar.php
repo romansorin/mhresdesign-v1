@@ -35,6 +35,9 @@ class CalendarWidget {
             // Right now I have a hardcoded array as an example.
             // I would use a query like:
             // SELECT description, link, date FROM events WHERE date = $date_selector
+            
+            $conn = new Connection();
+            $pdo = $conn->connectToDb($db_sections, $user_sections, $pass_sections);
 
             $query = "SELECT category, description, link FROM events WHERE event_date = '$date_selector'";
             $stmt  = $pdo->query($query);
