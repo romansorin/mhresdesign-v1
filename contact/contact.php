@@ -12,6 +12,7 @@
 <body>
 	<?php include '/srv/http/inc/header.php';?>
 	<div class="container">
+		<div id="failure"><?=$failure?></div>
 		<div class="contact-header"><h1>Contact</h1></div>
 		<div class="row">
 			<div class="col-sm-12" id="form-info">
@@ -47,8 +48,6 @@
 					</div>
 					<?php generateCAPTCHA();?>
 					<button type="submit" class="btn contact-btn">Submit</button>
-					<div id="success"><?=$success?></div>
-					<div id="failure"><?=$failure?></div>
 				</form>
 			</div>
 		</div>
