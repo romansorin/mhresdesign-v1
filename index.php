@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <?php include 'inc/includes.php'; 
-    include 'inc/connection/connection.php';
-    require 'inc/connection/configs.php';
-    require 'MainPage.php';
-    ?>
+    <?php include 'inc/includes.php';
+include 'inc/connection/connection.php';
+require 'inc/connection/configs.php';
+require 'MainPage.php';
+?>
     <link rel="stylesheet" href="css/mainpage.css">
     <title>Mentor High School</title>
     <meta name="description" content="This is a description">
@@ -16,15 +16,15 @@
 
     <?php
 
-    $conn = new Connection();
+$conn = new Connection();
 
-    $main = new MainPage();
+$main = new MainPage();
 
-    $pdo = $conn->connectToDb($db_sections, $user_sections, $pass_sections);
-    
-    ?>
+$pdo = $conn->connectToDb($db_sections, $user_sections, $pass_sections);
 
-    <?php include 'inc/header.php'; ?>
+?>
+
+    <?php include 'inc/header.php';?>
     <!-- This is the main container. -->
     <!-- This is the photo slideshow. -->
     <div class="container-fluid no-padding">
@@ -40,24 +40,24 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <?php
-                            $results_image = $main->fetchHeaderImage($pdo, 1);
-                            foreach ($results_image as $header_image) : ?>
+$results_image = $main->fetchHeaderImage($pdo, 1);
+foreach ($results_image as $header_image): ?>
                                 <img class="d-block w-100" src="<?=$header_image->headerimg;?>" alt="First slide">
-                            <?php endforeach; ?>
+                            <?php endforeach;?>
                         </div>
                         <div class="carousel-item">
                          <?php
-                         $results_image = $main->fetchHeaderImage($pdo, 2);
-                         foreach ($results_image as $header_image) : ?>
+$results_image = $main->fetchHeaderImage($pdo, 2);
+foreach ($results_image as $header_image): ?>
                             <img class="d-block w-100" src="<?=$header_image->headerimg;?>" alt="Second slide">
-                        <?php endforeach; ?>
+                        <?php endforeach;?>
                     </div>
                     <div class="carousel-item">
                         <?php
-                        $results_image = $main->fetchHeaderImage($pdo, 3);
-                        foreach ($results_image as $header_image) : ?>
+$results_image = $main->fetchHeaderImage($pdo, 3);
+foreach ($results_image as $header_image): ?>
                             <img class="d-block w-100" src="<?=$header_image->headerimg;?>" alt="Third slide">
-                        <?php endforeach; ?>
+                        <?php endforeach;?>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#frontpage-carousel" role="button" data-slide="prev">
@@ -169,12 +169,12 @@
                 </div>
             </div>
             <div class="row">
-                <?php include 'inc/calendar.php'; 
-                $calendar = new CalendarWidget;
-                $calendar->generate(4);
-                ?>
+                <?php include 'inc/calendar.php';
+$calendar = new CalendarWidget;
+$calendar->generate(4);
+?>
             </div>
-        </div>  
+        </div>
         <div class="row">
             <div class="col-sm-12" style="text-align: center;">
                 <a href="/events"><button type="button" class="btn btn-light" id="all-events-btn">View all events</button></a>
@@ -191,7 +191,7 @@
         </div>
         <div class="row social-media">
             <!-- Twitter left -->
-            <div class="col-sm-4 crowe-twitter">    
+            <div class="col-sm-4 crowe-twitter">
                 <a href="https://twitter.com/PrincipalCrowe">
                     <i class="fa fa-twitter"></i>
                     <h4 class="sm-title">@PrincipalCrowe</h4>
@@ -217,7 +217,7 @@
             </div>
         </div>
     </div>
-    <?php include 'inc/footer.php'; ?>
+    <?php include 'inc/footer.php';?>
 </body>
 
 </html>
