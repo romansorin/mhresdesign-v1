@@ -1,7 +1,6 @@
 <?php
 
 class CalendarWidget {
-
     // Generates a calendar widget on the page,
     public function generate($range = 7, $start_date = null) {
         date_default_timezone_set('America/New_York');
