@@ -36,6 +36,7 @@ class CalendarWidget {
             // I would use a query like:
             // SELECT description, link, date FROM events WHERE date = $date_selector
             
+            require 'inc/connection/configs.php';
             $conn = new Connection();
             $pdo = $conn->connectToDb($db_sections, $user_sections, $pass_sections);
 
