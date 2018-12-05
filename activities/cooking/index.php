@@ -130,12 +130,12 @@ foreach ($results_info as $information): ?>
             </div>
         </div>
         <div class="container-fluid" id="article-container">
-            <?php
-$query = "SELECT articleimg FROM activity_images WHERE activity = 'cooking'";
-$stmt  = $pdo->query($query);
-$info  = $stmt->fetch(PDO::FETCH_ASSOC);
-
-if (empty($info['articleimg'])) {
+            <div class="container no-padding">
+                <div class="row">
+                    <div class="col-md-6 no-padding" id="display">
+                        <figure class="article-img" style="margin-left: 0px;">
+                            <?php
+if (empty($info['results_image'])) {
     ?>
 <script>
     $(document).ready(function(){
@@ -145,15 +145,9 @@ if (empty($info['articleimg'])) {
     <?php
 echo 'wordsking';
 }
-?>
-            <div class="container no-padding">
-                <div class="row">
-                    <div class="col-md-6 no-padding" id="display">
-                        <figure class="article-img" style="margin-left: 0px;">
-                            <?php
 /* This can be an <iframe> or an <img>. The PHP statement is only required in the src field. */
 $results_image = $activity->fetchArticleImage($pdo, 'cooking', 1);
-foreach ($results_image as $article_image): ?>
+foreach ($results_image as $article_image):  ?>
                                 <iframe class="img-fit" width="640" height="480" src="<?=$article_image->articleimg;?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                             <?php endforeach;?>
                         </figure>
