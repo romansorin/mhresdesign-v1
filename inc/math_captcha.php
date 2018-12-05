@@ -9,6 +9,10 @@ $intB = random_int(0, 9);
 
 $equation = $intA . ' + ' . $intB; /* This is to display the equation to the user */
 
+/**
+ * [validateAnswer: used to check the value of user input against the generated equation]
+ * @return [String] [Function will return a String value to $answer_error]
+ */
 function validateAnswer() {
 
     global $answer_error, $answer, $intA, $intB, $equation;
@@ -33,7 +37,6 @@ function validateAnswer() {
 
 /**
  * [generateCAPTCHA: used to generate HTML and equation for a MathCaptcha]
- * @return [String] [Function will return a String value to a global session variable, answer_error]
  * @return [HTML]   [Function will print out the necessary HTML]
  */
 function generateCAPTCHA() {
