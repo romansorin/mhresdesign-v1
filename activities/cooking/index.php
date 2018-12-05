@@ -143,11 +143,10 @@ if (empty($info['results_image'])) {
      });
  </script>
     <?php
-echo 'wordsking';
 }
 /* This can be an <iframe> or an <img>. The PHP statement is only required in the src field. */
 $results_image = $activity->fetchArticleImage($pdo, 'cooking', 1);
-foreach ($results_image as $article_image):  ?>
+foreach ($results_image as $article_image): ?>
                                 <iframe class="img-fit" width="640" height="480" src="<?=$article_image->articleimg;?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                             <?php endforeach;?>
                         </figure>
@@ -217,6 +216,15 @@ foreach ($results_link as $link): ?>
                                 <?php endforeach;?>
 
                                 <?php
+if (empty($info['results_image'])) {
+    ?>
+<script>
+    $(document).ready(function(){
+       $("#display").hide();
+     });
+ </script>
+    <?php
+}
 $results_image = $activity->fetchArticleImage($pdo, 'cooking', 2);
 foreach ($results_image as $article_image): ?>
                                     <img class="img-fit" src="<?=$article_image->articleimg;?>" alt="Image for second article">
@@ -228,6 +236,7 @@ foreach ($results_image as $article_image): ?>
             </div>
         </div>
     </div>
+
     <div class="activities-mobile"> <!-- This is the mobile view of the page. -->
         <div class="container" id="local-nav-menu-mobile">
             <div id="local-nav-menu-wrapper">
