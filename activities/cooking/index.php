@@ -132,18 +132,9 @@ foreach ($results_info as $information): ?>
         <div class="container-fluid" id="article-container">
             <div class="container no-padding">
                 <div class="row">
-                    <div class="col-md-6 no-padding" id="display">
+                    <div class="col-md-6 no-padding">
                         <figure class="article-img" style="margin-left: 0px;">
                             <?php
-if (empty($results_ismage)) {
-    ?>
-<script>
-    $(document).ready(function(){
-       $("#display").hide();
-     });
- </script>
-    <?php
-}
 /* This can be an <iframe> or an <img>. The PHP statement is only required in the src field. */
 $results_image = $activity->fetchArticleImage($pdo, 'cooking', 1);
 foreach ($results_image as $article_image): ?>
@@ -207,24 +198,14 @@ foreach ($results_link as $link): ?>
                             <?php endforeach;?>
                         </div>
                     </div>
-                    <div class="col-md-6 no-padding" id="display">
+                    <div class="col-md-6 no-padding">
                         <figure class="article-img mr-left">
                             <?php
 $results_link = $activity->fetchArticleLink($pdo, 'cooking', 2);
 foreach ($results_link as $link): ?>
                                 <a href="<?=$link->link;?>">
                                 <?php endforeach;?>
-
                                 <?php
-if (empty($results_image)) {
-    ?>
-<script>
-    $(document).ready(function(){
-       $("#display").hide();
-     });
- </script>
-    <?php
-}
 $results_image = $activity->fetchArticleImage($pdo, 'cooking', 2);
 foreach ($results_image as $article_image): ?>
                                     <img class="img-fit" src="<?=$article_image->articleimg;?>" alt="Image for second article">
