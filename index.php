@@ -171,7 +171,7 @@ foreach ($results_image as $header_image): ?>
             <div class="row">
                 <?php require 'inc/calendar.php';
 $calendar = new CalendarWidget;
-$calendar->generate(4);
+$calendar->test;
 ?>
             </div>
         </div>
