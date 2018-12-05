@@ -32,19 +32,39 @@ class CalendarWidget {
             // here is where you would pull in the calendar events you want from the database.
             // Right now I have a hardcoded array as an example.
             // I would use a query like:
-            // SELECT text, link, date FROM events WHERE date = $date_selector
+            // SELECT description, link, date FROM events WHERE date = $date_selector
+
+            $conn = new Connection();
+
+            $pdo = $conn->connectToDb($db_sections, $user_sections, $pass_sections);
+
+            $query = "SELECT category, description, link FROM events WHERE event_date = '$date_selector'";
+            $stmt  = $pdo->query($query);
+            $info  = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            // Check if each column of a row is null/empty
+            if (is_null($info['category'])) {
+                $info['category'] = "No events listed";
+            }
+            if (!(isset($info['description']))) {
+                $info['description'] = null;
+            }
+            if (!(isset($info['link'])) || $info['link'] == "") {
+                $info['link'] = null;
+            }
+
             $events = array(
                 array(
-                    "category" => "category",
-                    "text"     => "A fake event.",
-                    "link"     => "http://example.com",
+                    "category" => $info['category'],
+                    "text"     => $info['description'],
+                    "link"     => $info['link'],
                 ),
 
             );
 
             // I pretend your database has the following rows:
             //
-            // id | date | text | link
+            // id | date | text | link | category
             //
             // You can customize this obviously, and then tweak the draw event below
 
@@ -57,34 +77,52 @@ class CalendarWidget {
     // draws one "row" of your calendar. Accepts a date string to display in the header
     // and then an array of $events.
     private function render($date_month, $date_day, $events) {
-        echo "<div class=\"col-sm-12\">";
-        echo "<div class=\"row calendar\">";
-        echo "<div class=\"col-sm-2\">";
-        echo "<h3 class=\"date\"><span class=\"month\">{$date_month}</span><br><span class=\"day\">{$date_day}</span></h3>";
-        echo "</div>";
-        echo "<div class=\"col-sm-8\">";
+        // Heredocs are used for the bigger HTML segments
+        $html = <<<HTML
+        <div class="col-sm-12">
+            <div class="row calendar">
+                <div class="col-sm-2">
+                    <h3 class="date">
+                        <span class="month">{$date_month}</span>
+                        <br>
+                        <span class="day">{$date_day}</span>
+                    </h3>
+                </div>
+            <div class="col-sm-8">
+HTML;
+        echo $html;
         foreach ($events as $event) {
-            echo "<div class=\"cal-meta\">";
-            echo "<div class=\"cal-category\">";
-            echo $event['category'];
-            echo "</div>";
-            echo "<div class=\"cal-content\">";
-            echo $event['text'];
-            echo "</div>";
-            echo "</div>";
-            echo "</div>";
-            if (array_key_exists('link', $event)) {
-                echo "<br>";
-                echo "<div class=\"col-sm-2 text-center\">";
-                echo "<a href=\"{$event['link']}\" class=\"event-link\"><button type=\"button\" class=\"btn btn-light event-link-btn\">View</button></a>";
+            $html = <<<HTML
+            <div class="cal-meta">
+                <div class="cal-category">
+                    {$event["category"]}
+                </div>
+                <div class="cal-content">
+                {$event["text"]}
+                </div>
+            </div>
+        </div>
+HTML;
+            echo $html;
+            // Check if the 'link' in the row is empty, and render the corresponding button (enabled vs. disabled)
+            if (!(is_null($event['link']))) {
+                $html = <<<HTML
+                <br>
+                <div class="col-sm-2 text-center">
+                    <a href="{$event['link']}" class="event-link"><button type="button" class="btn btn-light event-link-btn">View</button></a>
+HTML;
+                echo $html;
             } else {
-                echo "<br>";
-                echo "<div class=\"col-sm-2 text-center\">";
-                echo "<button type=\"button\" class=\"btn event-link-btn-disabled disabled\">View</button>";
+                $html = <<<HTML
+                <br>
+                <div class="col-sm-2 text-center">
+                    <button type="button" class="btn event-link-btn-disabled disabled">View</button>
+HTML;
+                echo $html;
             }
-            echo "</div>";
+            echo '</div>';
         }
-        echo "</div></div>";
+        echo '</div></div>';
     }
 
     // Helpers to format our DateTime
@@ -101,5 +139,3 @@ class CalendarWidget {
         return $date->format('Y-m-d');
     }
 }
-
-?>
