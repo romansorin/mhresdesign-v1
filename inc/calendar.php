@@ -78,9 +78,9 @@ class CalendarWidget {
 
     // draws one "row" of your calendar. Accepts a date string to display in the header
     // and then an array of $events.
-    private function render($date_month, $date_day, $events) {
+    public function render($date_month, $date_day, $events) {
         // Heredocs are used for the bigger HTML segments
-        $html = <<<HTML
+        $html_1 = <<<HTML
         <div class="col-sm-12">
             <div class="row calendar">
                 <div class="col-sm-2">
@@ -92,9 +92,9 @@ class CalendarWidget {
                 </div>
             <div class="col-sm-8">
 HTML;
-        echo $html;
+        echo $html_1;
         foreach ($events as $event) {
-            $html = <<<HTML
+            $html_2 = <<<HTML
             <div class="cal-meta">
                 <div class="cal-category">
                     {$event["category"]}
@@ -105,22 +105,22 @@ HTML;
             </div>
         </div>
 HTML;
-            echo $html;
+            echo $html_2;
             // Check if the 'link' in the row is empty, and render the corresponding button (enabled vs. disabled)
             if (!(is_null($event['link']))) {
-                $html = <<<HTML
+                $html_3 = <<<HTML
                 <br>
                 <div class="col-sm-2 text-center">
                     <a href="{$event['link']}" class="event-link"><button type="button" class="btn btn-light event-link-btn">View</button></a>
 HTML;
-                echo $html;
+                echo $html_3;
             } else {
-                $html = <<<HTML
+                $html_4 = <<<HTML
                 <br>
                 <div class="col-sm-2 text-center">
                     <button type="button" class="btn event-link-btn-disabled disabled">View</button>
 HTML;
-                echo $html;
+                echo $html_4;
             }
             echo '</div>';
         }
