@@ -102,7 +102,7 @@ class CalendarWidget {
             } else {
                 echo "<br>";
                 echo "<div class\"col-sm-2 text-center no-padding\">";
-                echo "<button type=\"button\" class=\"btn event-link-btn-disabled disabled\">View</button>";
+                echo "<button type=\"button\" class=\"btn event-link-btn-disabled\" disabled>View</button>";
             }
             echo "</div>";
         }
