@@ -1,0 +1,60 @@
+/* General styling */
+$font: 'Source Sans Pro', sans-serif;
+$border: 1px solid #c8cdce;
+
+@mixin margin($top, $right, $bottom, $left) {
+    margin: $top, $right, $bottom, $left;
+}
+@mixin padding($top, $right, $bottom, $left) {
+    padding: $top, $right, $bottom, $left;
+}
+
+body {
+    font-family: $font;
+    font-weight: 400;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    font-family: $font;
+    text-transform: uppercase;
+}
+
+.no-padding, .container-fluid {
+    @include padding(0px, 0px, 0px, 0px);
+}
+.disabled {
+    pointer-events: none;
+}
+.row {
+    @include margin(0px, 0px, 0px, 0px);
+}
+.img-fit {
+    height: 100%;
+    width: auto;
+    max-height: calc(100% + 1px);
+    min-width: calc(100% + 1px);
+    min-height: calc(100% + 1px);
+    object-fit: cover;
+}
+.top-border {
+    border-top: $border;
+}
+.bottom-border {
+    border-bottom: $border;
+}
+.mr-left {
+    @include margin(0px, 0px, 0px, 30px);
+}
+/* All media queries */
+
+@media (max-width: 767.98px) {}
+/* For devices less than the width of a tablet */
+
+@media (max-width: 922px) {}
+/* For devices less than the width of a laptop (basically between tablet and laptop) */
+
+@media (max-width: 1200px) {
+    /*.push-down {
+        padding-top: 76px;
+    } */
+}
