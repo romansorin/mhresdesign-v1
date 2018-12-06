@@ -167,12 +167,12 @@
 
 /* Actual content */
 #weather {
+  margin-top: 18px;
+  margin-right: 55px;
   color: #fff;
   font-weight: 400;
   text-transform: none;
-  font-style: normal;
-  margin-top: 18px;
-  margin-right: 55px; }
+  font-style: normal; }
 
 #weather h2 {
   color: #fff;
@@ -180,10 +180,6 @@
   text-transform: none;
   font-style: normal;
   font-size: 20px;
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15); }
 
 #location, #currently {
