@@ -1,18 +1,19 @@
 /* General styling */
 
+/* Mixins */
+
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-weight: 400;
 }
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     text-transform: uppercase;
 }
-
-.no-padding {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+.no-padding, .container-fluid {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
 }
 .disabled {
     pointer-events: none;
@@ -21,16 +22,13 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 0px;
     margin-left: 0px;
 }
-.container-fluid {
-    padding-right: 0px;
-    padding-left: 0px;
-}
 .img-fit {
     height: 100%;
     width: auto;
     max-height: calc(100% + 1px);
     min-width: calc(100% + 1px);
     min-height: calc(100% + 1px);
+    -o-object-fit: cover;
     object-fit: cover;
 }
 .top-border {
@@ -44,10 +42,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* All media queries */
 
-@media (max-width: 767.98px) {}
 /* For devices less than the width of a tablet */
 
-@media (max-width: 922px) {}
 /* For devices less than the width of a laptop (basically between tablet and laptop) */
 
 @media (max-width: 1200px) {
