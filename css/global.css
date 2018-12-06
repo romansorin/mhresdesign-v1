@@ -1,44 +1,57 @@
 /* General styling */
+
 body {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400; }
-
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
 h1, h2, h3, h4, h5, h6 {
-  text-align: center;
-  font-family: "Source Sans Pro", sans-serif;
-  text-transform: uppercase; }
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+}
 
-.no-padding, .container-fluid {
-  padding: 0px, 0px, 0px, 0px; }
-
+.no-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 .disabled {
-  pointer-events: none; }
-
+    pointer-events: none;
+}
 .row {
-  margin: 0px, 0px, 0px, 0px; }
-
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
 .img-fit {
-  height: 100%;
-  width: auto;
-  max-height: calc(100% + 1px);
-  min-width: calc(100% + 1px);
-  min-height: calc(100% + 1px);
-  -o-object-fit: cover;
-  object-fit: cover; }
-
+    height: 100%;
+    width: auto;
+    max-height: calc(100% + 1px);
+    min-width: calc(100% + 1px);
+    min-height: calc(100% + 1px);
+    object-fit: cover;
+}
 .top-border {
-  border-top: 1px solid #c8cdce; }
-
+    border-top: 1px solid #c8cdce;
+}
 .bottom-border {
-  border-bottom: 1px solid #c8cdce; }
-
+    border-bottom: 1px solid #c8cdce;
+}
 .mr-left {
-  margin: 0px, 0px, 0px, 30px; }
-
+    margin-left: 30px;
+}
 /* All media queries */
+
+@media (max-width: 767.98px) {}
 /* For devices less than the width of a tablet */
+
+@media (max-width: 922px) {}
 /* For devices less than the width of a laptop (basically between tablet and laptop) */
+
 @media (max-width: 1200px) {
-  /*.push-down {
+    /*.push-down {
         padding-top: 76px;
-    } */ }
+    } */
+}
