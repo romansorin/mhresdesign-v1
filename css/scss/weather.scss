@@ -211,7 +211,7 @@ $transform: none;
         @include text(50px);
     }
     #weather {
-        @include margin($top: 34px, $left: 15px);
+        @include margin($top: 34px, $right: 15px);
     }
     #weather h2 {
         @include text(18px);
