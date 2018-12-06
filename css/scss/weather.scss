@@ -13,11 +13,17 @@ $transform: none;
     font-style: $font-style;
     font-size: $size;
 }
-@mixin margin($top, $right, $bottom, $left) {
-    margin: $top, $right, $bottom, $left;
+@mixin margin($top: null, $right: null, $bottom: null, $left: null) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
 }
-@mixin padding($top, $right, $bottom, $left) {
-    padding: $top, $right, $bottom, $left;
+@mixin padding($top: null, $right: null, $bottom: null, $left: null) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
 }
 /* Icon specific */
 
@@ -28,8 +34,8 @@ $transform: none;
     src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff') format('woff'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf') format('truetype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
 }
 #weather-icon {
-    @include margin(0px, 0px, 0px, 15px);
-    @include padding(0px, 0px, 0px, 0px);
+    @include margin($left: 15px);
+    @include padding($left: 0px);
     @include text(60px);
     font-family: weather;
     line-height: 0.5;
@@ -182,7 +188,7 @@ $transform: none;
 
 #weather {
     @include text;
-    @include margin(18px, 55px, 0px, 0px);
+    @include margin($top: 18px, $right: 55px);
 }
 #weather h2 {
     @include text(20px);
@@ -193,7 +199,7 @@ $transform: none;
     @include text;
 }
 #temp {
-    @include padding(0px, 0px, 0px, 50px);
+    @include padding($left: 50px);
     @include text(24px);
 }
 /* All media queries */
@@ -205,7 +211,7 @@ $transform: none;
         @include text(50px);
     }
     #weather {
-        @include margin(34px, 15px, 0px, 0px);
+        @include margin($top: 34px, $left: 15px);
     }
     #weather h2 {
         @include text(18px);
