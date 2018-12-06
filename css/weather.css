@@ -6,7 +6,6 @@
   font-weight: 400;
   text-transform: none;
   font-style: normal;
-  font-size: 0px;
   font-family: 'weather';
   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot");
   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix") format("embedded-opentype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf") format("truetype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg") format("svg"); }
@@ -172,7 +171,6 @@
   font-weight: 400;
   text-transform: none;
   font-style: normal;
-  font-size: 0px;
   margin-top: 18px;
   margin-right: 55px; }
 
@@ -192,8 +190,7 @@
   color: #fff;
   font-weight: 400;
   text-transform: none;
-  font-style: normal;
-  font-size: 0px; }
+  font-style: normal; }
 
 #temp {
   padding-left: 50px;
