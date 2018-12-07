@@ -7,6 +7,8 @@ include 'inc/connection/connection.php';
 require 'inc/connection/configs.php';
 require 'MainPage.php';
 require 'inc/calendar.php';
+require_once 'inc/TwitterAPI/TwitterAPIExchange.php';
+require_once 'inc/TwitterAPI/config.php';
 ?>
     <link rel="stylesheet" href="css/mainpage.css">
     <title>Mentor High School</title>
@@ -190,16 +192,47 @@ $calendar->generate(4);
                 <p id="social-header-desc">Stay updated with campus life</p>
             </div>
         </div>
+<?php
+
+$url           = "https://api.twitter.com/1.1/statuses/user_timeline.json";
+$requestMethod = "GET";
+$getfield      = array('?screen_name=rmsorin&count=1&exclude_replies=true&include_replies=false', '?screen_name=jack&count=1&exclude_replies=true&include_replies=false');
+$twitter       = new TwitterAPIExchange($settings);
+$string0       = json_decode($twitter->setGetfield($getfield[0])
+        ->buildOauth($url, $requestMethod)
+        ->performRequest(), $assoc = TRUE);
+$string1 = json_decode($twitter->setGetfield($getfield[1])
+        ->buildOauth($url, $requestMethod)
+        ->performRequest(), $assoc = TRUE);
+
+date_default_timezone_set('America/New_York');
+
+?>
+
         <div class="row social-media">
             <!-- Twitter left -->
-            <div class="col-sm-4 crowe-twitter">
-                <a href="https://twitter.com/PrincipalCrowe">
-                    <i class="fa fa-twitter"></i>
-                    <h4 class="sm-title">@PrincipalCrowe</h4>
-                </a>
-                <p class="tweet-content">Homecoming Assembly kicks off with our Alma Mater <a href="https://twitter.com/mentorhigh">@MentorHigh</a></p>
-                <h4 class="time-span">About 7 minutes ago</h4>
-            </div>
+<?php foreach ($string0 as $items) {
+    if (array_key_exists("errors", $string0)) {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p><p><em>" . $string[errors][0]["message"] . "</em></p>";exit();}
+
+    echo "<pre>";
+    echo "</pre>";
+
+    $dateInUTC = $items["created_at"];
+    $time      = strtotime($dateInUTC . " UTC");
+    $localTime = date("M d, Y " . "|" . " g:i a", $time);
+
+    $html = <<<HTML
+                        <div class="col-sm-4 crowe-twitter">
+                            <a href="https://twitter.com/PrincipalCrowe">
+                                <i class="fa fa-twitter"></i>
+                                <h4 class="sm-title">@{$items["user"]["name"]}</h4>
+                            </a>
+                            <p class="tweet-content">{$items["text"]}</a></p>
+                            <h4 class="time-span">{$localTime}</h4>
+                        </div>
+HTML;
+    echo $html;
+}?>
             <div class="col-sm-4 instagram">
                 <a href="https://instagram.com/rm.sorin">
                     <i class="fa fa-instagram"></i>
@@ -208,14 +241,28 @@ $calendar->generate(4);
                 <a href="https://www.instagram.com/p/BmDycX-HLD-/?taken-by=rm.sorin" alt="test insta post"><img src="https://scontent-iad3-1.cdninstagram.com/vp/c2fbf259b3bb22bf664d9596d3f688e1/5C612A60/t51.2885-15/e35/38057971_512894979140557_5238749822009212928_n.jpg" alt="test photo" id="embed-ig"></a>
             </div>
             <!-- Twitter right -->
-            <div class="col-sm-4 general-twitter">
-                <a href="https://twitter.com/mentorhigh">
-                    <i class="fa fa-twitter"></i>
-                    <h4 class="sm-title">@MentorHigh</h4>
-                </a>
-                <p class="tweet-content">RT <a href="https://twitter.com/mrglavanmhs">@MrGlavanMHS</a>: Thank you <a href="https://twitter.com/repdavejoyce">@RepDaveJoyce</a> for visiting the 2018 Lake County Think Manufacturing Expo and supporting our students and local businesses!</p>
-                <h4 class="time-span">About 12 hours ago</h4>
-            </div>
+<?php foreach ($string1 as $items) {
+    if (array_key_exists("errors", $string1)) {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p><p><em>" . $string[errors][0]["message"] . "</em></p>";exit();}
+
+    echo "<pre>";
+    echo "</pre>";
+
+    $dateInUTC = $items["created_at"];
+    $time      = strtotime($dateInUTC . " UTC");
+    $localTime = date("M d, Y " . "|" . " g:i a", $time);
+
+    $html = <<<HTML
+                        <div class="col-sm-4 general-twitter">
+                            <a href="https://twitter.com/mentorhigh">
+                                <i class="fa fa-twitter"></i>
+                                <h4 class="sm-title">@{$items["user"]["name"]}</h4>
+                            </a>
+                            <p class="tweet-content">{$localTime}</p>
+                            <h4 class="time-span">{$localTime}</h4>
+                        </div>
+HTML;
+    echo $html;
+}?>
         </div>
     </div>
     <?php include 'inc/footer.php';?>
