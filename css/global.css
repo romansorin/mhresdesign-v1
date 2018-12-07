@@ -37,11 +37,3 @@ h1, h2, h3, h4, h5, h6 {
 
 .mr-left {
   margin-left: 30px; }
-
-/* All media queries */
-/* For devices less than the width of a tablet */
-/* For devices less than the width of a laptop (basically between tablet and laptop) */
-@media (max-width: 1200px) {
-  /*.push-down {
-        padding-top: 76px;
-    } */ }
