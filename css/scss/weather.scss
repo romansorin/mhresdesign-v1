@@ -1,30 +1,7 @@
 /* Variables (font) */
 
+@import 'partial';
 $color: #fff;
-$font-weight: 400;
-$font-style: normal;
-$transform: none;
-/* Mixins */
-
-@mixin text($size: null) {
-    color: $color;
-    font-weight: $font-weight;
-    text-transform: $transform;
-    font-style: $font-style;
-    font-size: $size;
-}
-@mixin margin($top: null, $right: null, $bottom: null, $left: null) {
-    margin-top: $top;
-    margin-right: $right;
-    margin-bottom: $bottom;
-    margin-left: $left;
-}
-@mixin padding($top: null, $right: null, $bottom: null, $left: null) {
-    padding-top: $top;
-    padding-right: $right;
-    padding-bottom: $bottom;
-    padding-left: $left;
-}
 /* Icon specific */
 
 @font-face {
@@ -36,7 +13,7 @@ $transform: none;
 #weather-icon {
     @include margin($left: 15px);
     @include padding($left: 0px);
-    @include text(60px);
+    @include text($color, $size: 60px);
     font-family: weather;
     line-height: 0.5;
 }
@@ -188,18 +165,18 @@ $transform: none;
 
 #weather {
     @include margin($top: 18px, $right: 55px);
-    @include text;
+    @include text($color);
 }
 #weather h2 {
-    @include text(20px);
+    @include text($color, $size: 20px);
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
 }
 #location, #currently {
-    @include text;
+    @include text($color);
 }
 #temp {
     @include padding($left: 50px);
-    @include text(24px);
+    @include text($color, $size: 24px);
 }
 /* All media queries */
 
@@ -207,15 +184,15 @@ $transform: none;
 
 @media (max-width: 767.98px) {
     i {
-        @include text(50px);
+        @include text($color, $size: 50px);
     }
     #weather {
         @include margin($top: 34px, $right: 15px);
     }
     #weather h2 {
-        @include text(18px);
+        @include text($color, $size: 18px);
     }
     #temp {
-        @include text(20px);
+        @include text($color, $size: 20px);
     }
 }
