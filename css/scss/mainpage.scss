@@ -1,10 +1,9 @@
 /* Carousel styling */
 
+@import 'base/_colors.scss';
+
 $carousel-height: 400px;
-$white: #fff;
-$black: #000;
-$text-red: #910000;
-$primary-red: #b1040e;
+
 $font-light: 200;
 $font-regular: 400;
 $font-medium: 600;
@@ -66,7 +65,7 @@ article {
 }
 .post-category {
     @include margin($bottom: 4px);
-    @include text($color: $text-red, $weight: $font-medium, $transform: uppercase);
+    @include text($color: $red-text, $weight: $font-medium, $transform: uppercase);
 }
 .content {
     @include padding($top: 28px, $right: 28px, $bottom: 35px, $left: 28px);
@@ -85,7 +84,7 @@ article {
     @include padding($top: 10px, $right: 125px, $bottom: 10px, $left: 125px);
     @include text($color: $white, $size: 1.5em, $weight: $font-medium, $align: center);
     border-radius: 0px;
-    background-color: $primary-red;
+    background-color: $red-primary;
     display: inline-block;
     border: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
@@ -131,7 +130,7 @@ article {
 }
 .cal-category {
     @include padding($bottom: 5px);
-    @include text($color: $text-red, $size: 0.95em, $transform: uppercase);
+    @include text($color: $red-text, $size: 0.95em, $transform: uppercase);
 }
 .cal-meta {
     @include margin($top: 20px);
@@ -143,7 +142,7 @@ article {
     @include padding($top: 10px, $right: 30px, $bottom: 10px, $left: 30px);
     @include text($color: $white, $size: 1em, $weight: $font-regular, $align: center, $spacing: 0.70px);
     border-radius: 0px;
-    background-color: $primary-red;
+    background-color: $red-primary;
     display: inline-block;
     border: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
@@ -153,14 +152,14 @@ article {
     @include padding($top: 10px, $right: 30px, $bottom: 10px, $left: 30px);
     @include text($color: $white, $size: 1em, $weight: $font-regular, $align: center, $spacing: 0.70px);
     border-radius: 0px;
-    background-color: $primary-red;
+    background-color: $red-primary;
     display: inline-block;
     border: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     opacity: .65;
 }
 .event-link {
-    @include text($color: $text-red, $size: 0.9em, $weight: $font-regular, $transform: uppercase, $spacing: 0.015em);
+    @include text($color: $red-text, $size: 0.9em, $weight: $font-regular, $transform: uppercase, $spacing: 0.015em);
 }
 /* Social media section */
 
