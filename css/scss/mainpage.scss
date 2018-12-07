@@ -1,9 +1,7 @@
 /* Carousel styling */
 
 @import 'base/_colors.scss';
-
 $carousel-height: 400px;
-
 $font-light: 200;
 $font-regular: 400;
 $font-medium: 600;
@@ -137,7 +135,7 @@ article {
     @include text($size: 1.1em, $weight: $font-medium);
     float: left;
 }
-.event-link-btn {
+%event-link-btn-properties {
     @include margin($top: 30px, $bottom: 30px);
     @include padding($top: 10px, $right: 30px, $bottom: 10px, $left: 30px);
     @include text($color: $white, $size: 1em, $weight: $font-regular, $align: center, $spacing: 0.70px);
@@ -147,15 +145,11 @@ article {
     border: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 }
+.event-link-btn {
+    @extend %event-link-btn-properties;
+}
 .event-link-btn-disabled {
-    @include margin($top: 30px, $bottom: 30px);
-    @include padding($top: 10px, $right: 30px, $bottom: 10px, $left: 30px);
-    @include text($color: $white, $size: 1em, $weight: $font-regular, $align: center, $spacing: 0.70px);
-    border-radius: 0px;
-    background-color: $red-primary;
-    display: inline-block;
-    border: 0px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    @extend %event-link-btn-properties;
     opacity: .65;
 }
 .event-link {
@@ -176,13 +170,15 @@ article {
     @include text($size: 1.5em, $align: center);
     border-bottom: 1px solid $black;
 }
-.fa-twitter {
+%sm-icon {
     @include margin($bottom: 5px);
     @include text($color: $social-media-icon, $size: 30px);
 }
+.fa-twitter {
+    @extend %sm-icon;
+}
 .fa-instagram {
-    @include margin($bottom: 5px);
-    @include text($color: $social-media-icon, $size: 30px);
+    @extend %sm-icon;
 }
 .sm-title {
     @include margin($bottom: 20px);
