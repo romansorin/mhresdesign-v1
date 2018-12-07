@@ -196,7 +196,7 @@ $calendar->generate(4);
 
 $url           = "https://api.twitter.com/1.1/statuses/user_timeline.json";
 $requestMethod = "GET";
-$getfield      = array('?screen_name=rmsorin&count=1&exclude_replies=true&include_replies=false', '?screen_name=jack&count=1&exclude_replies=true&include_replies=false');
+$getfield      = array('?screen_name=PrincipalCrowe&count=1&exclude_replies=true&include_replies=false', '?screen_name=mentorhigh&count=1&exclude_replies=true&include_replies=false');
 $twitter       = new TwitterAPIExchange($settings);
 $string0       = json_decode($twitter->setGetfield($getfield[0])
         ->buildOauth($url, $requestMethod)
@@ -225,7 +225,7 @@ date_default_timezone_set('America/New_York');
                         <div class="col-sm-4 crowe-twitter">
                             <a href="https://twitter.com/PrincipalCrowe">
                                 <i class="fa fa-twitter"></i>
-                                <h4 class="sm-title">@{$items["user"]["name"]}</h4>
+                                <h4 class="sm-title">@PrincipalCrowe</h4>
                             </a>
                             <p class="tweet-content">{$items["text"]}</a></p>
                             <h4 class="time-span">{$localTime}</h4>
@@ -255,9 +255,9 @@ HTML;
                         <div class="col-sm-4 general-twitter">
                             <a href="https://twitter.com/mentorhigh">
                                 <i class="fa fa-twitter"></i>
-                                <h4 class="sm-title">@{$items["user"]["name"]}</h4>
+                                <h4 class="sm-title">@mentorhigh</h4>
                             </a>
-                            <p class="tweet-content">{$localTime}</p>
+                            <p class="tweet-content">{$items["text"]}</p>
                             <h4 class="time-span">{$localTime}</h4>
                         </div>
 HTML;
