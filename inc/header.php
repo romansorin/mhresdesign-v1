@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/header.css">
 <!-- Top part of navbar -->
 <!--<div class="fixed-top"> -->
     <nav class="navbar navbar-expand-lg navbar-light d-none d-lg-flex">

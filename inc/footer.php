@@ -1,5 +1,6 @@
 <head>
     <?php include 'weather.php';?>
+    <link rel="stylesheet" href="/css/footer.css">
 </head>
 
 <div id="footer">
