@@ -165,18 +165,18 @@ $color: #fff;
 
 #weather {
     @include margin($top: 18px, $right: 55px);
-    @include text($color);
+    @include text($color: $color);
 }
 #weather h2 {
-    @include text($color, $size: 20px);
+@include text($color, $size: 20px, $transform: none);
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
 }
 #location, #currently {
-    @include text($color);
+    @include text($color: $color, $transform: none);
 }
 #temp {
     @include padding($left: 50px);
-    @include text($color, $size: 24px);
+    @include text($color: $color, $size: 24px);
 }
 /* All media queries */
 
@@ -184,15 +184,15 @@ $color: #fff;
 
 @media (max-width: 767.98px) {
     i {
-        @include text($color, $size: 50px);
+        @include text($color: $color, $size: 50px);
     }
     #weather {
         @include margin($top: 34px, $right: 15px);
     }
     #weather h2 {
-        @include text($color, $size: 18px);
+        @include text($color: $color, $size: 18px);
     }
     #temp {
-        @include text($color, $size: 20px);
+        @include text($color: $color, $size: 20px);
     }
 }

@@ -36,7 +36,7 @@ $font: 'Source Sans Pro', sans-serif;
 
 #news-header-label {
     @include margin($top: 75px, $bottom: 20px);
-    @include text($font: $font, $color: $white, $size: 3.0517578125em, $weight: $font-extra-bold, $transform: none, $align: center, $spacing: -1px);
+    @include text($font: $font, $color: $black, $size: 3.0517578125em, $weight: $font-extra-bold, $transform: none, $align: center, $spacing: -1px);
 }
 #news-header-desc {
     @include margin($bottom: 70px);
