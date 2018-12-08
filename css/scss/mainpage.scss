@@ -89,9 +89,9 @@
         article {
             @include margin($bottom: 30px);
             margin: 0 auto;
-            .article-long {
-                width: 335px !important;
-            }
+        }
+        .article-long {
+            width: 335px !important;
         }
         #all-news-btn {
             @include padding($right: 50px, $left: 50px);

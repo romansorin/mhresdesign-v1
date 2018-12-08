@@ -126,8 +126,8 @@
     .news-container article {
       margin-bottom: 30px;
       margin: 0 auto; }
-      .news-container article .article-long {
-        width: 335px !important; }
+    .news-container .article-long {
+      width: 335px !important; }
     .news-container #all-news-btn {
       padding-right: 50px;
       padding-left: 50px; } }
