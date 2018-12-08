@@ -1,0 +1,4 @@
+%socials {
+    @include margin($bottom: 5px);
+    @include text($color: $social-media-icon, $size: 30px);
+}

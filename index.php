@@ -185,7 +185,7 @@ $calendar->generate(4);
         </div>
     </div>
     <!-- Social media section of the main page -->
-    <div class="container no-padding">
+    <div class="container no-padding social-media-container">
         <div class="row social-header">
             <div class="col-sm-12">
                 <h2 id="social-header-label">Connect with us</h2>
@@ -222,7 +222,7 @@ date_default_timezone_set('America/New_York');
     $localTime = date("M d, Y " . "|" . " g:i a", $time);
 
     $html = <<<HTML
-                        <div class="col-sm-4 crowe-twitter">
+                        <div class="col-sm-4 twitter">
                             <a href="https://twitter.com/PrincipalCrowe">
                                 <i class="fa fa-twitter"></i>
                                 <h4 class="sm-title">@PrincipalCrowe</h4>
@@ -252,7 +252,7 @@ HTML;
     $localTime = date("M d, Y " . "|" . " g:i a", $time);
 
     $html = <<<HTML
-                        <div class="col-sm-4 general-twitter">
+                        <div class="col-sm-4 twitter">
                             <a href="https://twitter.com/mentorhigh">
                                 <i class="fa fa-twitter"></i>
                                 <h4 class="sm-title">@mentorhigh</h4>
