@@ -5,19 +5,17 @@
 @import 'module/icons';
 /* Carousel styling */
 
-.carousel {
+#frontpage-carousel {
     overflow: hidden;
-    #frontpage-carousel {
-        @include margin($bottom: 0px);
-        .carousel-inner {
-            height: 400px;
-        }
-        .carousel-item {
-            height: 400px;
-            img {
-                object-fit: cover;
-                height: 100%;
-            }
+    @include margin($bottom: 0px);
+    .carousel-inner {
+        height: 400px;
+    }
+    .carousel-item {
+        height: 400px;
+        img {
+            object-fit: cover;
+            height: 100%;
         }
     }
     @media only screen and (max-width: 768px) {

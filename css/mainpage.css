@@ -42,27 +42,26 @@
   font-size: 30px; }
 
 /* Carousel styling */
-.carousel {
-  overflow: hidden; }
-  .carousel #frontpage-carousel {
-    margin-bottom: 0px; }
-    .carousel #frontpage-carousel .carousel-inner {
-      height: 400px; }
-    .carousel #frontpage-carousel .carousel-item {
-      height: 400px; }
-      .carousel #frontpage-carousel .carousel-item img {
-        -o-object-fit: cover;
-        object-fit: cover;
-        height: 100%; }
+#frontpage-carousel {
+  overflow: hidden;
+  margin-bottom: 0px; }
+  #frontpage-carousel .carousel-inner {
+    height: 400px; }
+  #frontpage-carousel .carousel-item {
+    height: 400px; }
+    #frontpage-carousel .carousel-item img {
+      -o-object-fit: cover;
+      object-fit: cover;
+      height: 100%; }
   @media only screen and (max-width: 768px) {
-    .carousel .carousel-inner {
+    #frontpage-carousel .carousel-inner {
       height: 350px; }
-    .carousel .carousel-item {
+    #frontpage-carousel .carousel-item {
       height: 350px; } }
   @media only screen and (max-width: 576px) {
-    .carousel .carousel-inner {
+    #frontpage-carousel .carousel-inner {
       height: 200px !important; }
-    .carousel .carousel-item {
+    #frontpage-carousel .carousel-item {
       height: 200px !important; } }
 
 /* News section */
