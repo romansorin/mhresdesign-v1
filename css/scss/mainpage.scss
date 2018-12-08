@@ -3,6 +3,14 @@
 @import 'partial';
 @import 'module/buttons';
 @import 'module/icons';
+%label {
+    @include margin($top: 75px, $bottom: 20px);
+    @include text($font: $primary-font, $color: $black, $size: 3.0517578125em, $weight: $font-bolder, $transform: none, $align: center, $spacing: -1px);
+}
+%desc {
+    @include text($size: 1.5em, $align: center);
+    @include margin($bottom: 70px);
+}
 /* Carousel styling */
 
 #frontpage-carousel {
@@ -41,12 +49,10 @@
     background-color: $sandstone;
     .news-header {
         #news-header-label {
-            @include margin($top: 75px, $bottom: 20px);
-            @include text($font: $primary-font, $color: $black, $size: 3.0517578125em, $weight: $font-bolder, $transform: none, $align: center, $spacing: -1px);
+            @extend %label;
         }
         #news-header-desc {
-            @include margin($bottom: 70px);
-            @include text($size: 1.5em, $align: center);
+            @extend %desc;
         }
     }
     article {
@@ -108,12 +114,12 @@
     background-color: $dark-purplered;
     .events-header {
         #events-header-label {
-            @include margin($top: 75px, $bottom: 20px);
-            @include text($font: $primary-font, $color: $white, $size: 3.0517578125em, $weight: $font-bolder, $transform: none, $align: center, $spacing: -.5px);
+            @extend %label;
+            @include text($color: $white);
         }
         #events-header-desc {
-            @include margin($bottom: 70px);
-            @include text($color: $white, $size: 1.5em, $align: center);
+            @extend %desc;
+            @include text($color: $white);
         }
     }
     .calendar {
@@ -221,12 +227,12 @@
 .social-media-container {
     .social-header {
         #social-header-label {
-            @include margin($top: 75px, $bottom: 20px);
-            @include text($font: $primary-font, $color: $black, $size: 3.0517578125em, $weight: $font-bolder, $transform: none, $align: center, $spacing: -1px);
+            @extend %label;
         }
         #social-header-desc {
+            @extend %desc;
             @include padding($bottom: 50px);
-            @include text($size: 1.5em, $align: center);
+            @include margin($bottom: 0px);
             border-bottom: 1px solid $black;
         }
     }

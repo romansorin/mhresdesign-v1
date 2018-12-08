@@ -41,6 +41,22 @@
   color: #e0e0e0;
   font-size: 30px; }
 
+.news-container .news-header #news-header-label, .events-container .events-header #events-header-label, .social-media-container .social-header #social-header-label {
+  margin-top: 75px;
+  margin-bottom: 20px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #000;
+  font-weight: 900;
+  font-size: 3.05176em;
+  text-transform: none;
+  text-align: center;
+  letter-spacing: -1px; }
+
+.news-container .news-header #news-header-desc, .events-container .events-header #events-header-desc, .social-media-container .social-header #social-header-desc {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 70px; }
+
 /* Carousel styling */
 #frontpage-carousel {
   overflow: hidden;
@@ -67,20 +83,6 @@
 /* News section */
 .news-container {
   background-color: #f9f6ef; }
-  .news-container .news-header #news-header-label {
-    margin-top: 75px;
-    margin-bottom: 20px;
-    font-family: "Source Sans Pro", sans-serif;
-    color: #000;
-    font-weight: 900;
-    font-size: 3.05176em;
-    text-transform: none;
-    text-align: center;
-    letter-spacing: -1px; }
-  .news-container .news-header #news-header-desc {
-    margin-bottom: 70px;
-    font-size: 1.5em;
-    text-align: center; }
   .news-container article {
     margin-bottom: 30px;
     margin-left: 30px;
@@ -139,20 +141,9 @@
 .events-container {
   background-color: #2f2424; }
   .events-container .events-header #events-header-label {
-    margin-top: 75px;
-    margin-bottom: 20px;
-    font-family: "Source Sans Pro", sans-serif;
-    color: #fff;
-    font-weight: 900;
-    font-size: 3.05176em;
-    text-transform: none;
-    text-align: center;
-    letter-spacing: -0.5px; }
+    color: #fff; }
   .events-container .events-header #events-header-desc {
-    margin-bottom: 70px;
-    color: #fff;
-    font-size: 1.5em;
-    text-align: center; }
+    color: #fff; }
   .events-container .calendar {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -248,21 +239,9 @@
       display: none; } }
 
 /* Social media section */
-.social-media-container .social-header #social-header-label {
-  margin-top: 75px;
-  margin-bottom: 20px;
-  font-family: "Source Sans Pro", sans-serif;
-  color: #000;
-  font-weight: 900;
-  font-size: 3.05176em;
-  text-transform: none;
-  text-align: center;
-  letter-spacing: -1px; }
-
 .social-media-container .social-header #social-header-desc {
   padding-bottom: 50px;
-  font-size: 1.5em;
-  text-align: center;
+  margin-bottom: 0px;
   border-bottom: 1px solid #000; }
 
 .social-media-container .social-media {
