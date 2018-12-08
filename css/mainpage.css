@@ -97,9 +97,9 @@
       height: 215px;
       background-color: grey;
       overflow: hidden; }
-    .news-container article .article-long {
+    .news-container article #article-long {
       width: 715px !important; }
-      .news-container article .article-long .content {
+      .news-container article #article-long .content {
         padding-bottom: 60px !important; }
     .news-container article .content {
       padding-top: 28px;

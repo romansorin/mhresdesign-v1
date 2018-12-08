@@ -129,7 +129,7 @@ foreach ($results_image as $header_image): ?>
             </div>
             <div class="row">
                 <div class="col-xl-8" style="padding-left: 0px; padding-right: 0px;">
-                    <article class="article-long">
+                    <article id="article-long">
                         <figure class="article-img">
                             <img class="img-fit" src="https://images.unsplash.com/photo-1539964452237-866f0522db8b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=739184a0c7d9ae7e54d3516bf6eb76e5&auto=format&fit=crop&w=628&q=80" alt="test">
                         </figure>
