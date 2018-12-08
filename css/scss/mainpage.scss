@@ -64,7 +64,7 @@
             overflow: hidden;
         }
         .article-long {
-            width: 715px !important;
+            width: 715px;
             .content {
                 @include padding($bottom: 60px !important);
             }
