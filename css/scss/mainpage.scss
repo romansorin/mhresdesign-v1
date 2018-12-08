@@ -203,6 +203,9 @@
                 display: none !important;
             }
         }
+        #all-events-btn {
+            @include padding($right: 50px, $left: 50px);
+        }
     }
     @media (max-width: 922px) {
         .event-link-btn {

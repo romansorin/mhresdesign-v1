@@ -237,7 +237,10 @@
       .events-container .calendar .event-link-btn {
         display: none !important; }
       .events-container .calendar .event-link-btn-disabled {
-        display: none !important; } }
+        display: none !important; }
+    .events-container #all-events-btn {
+      padding-right: 50px;
+      padding-left: 50px; } }
   @media (max-width: 922px) {
     .events-container .event-link-btn {
       display: none; }
