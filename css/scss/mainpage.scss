@@ -233,9 +233,7 @@
         @include padding($top: 40px);
         @include text($align: center);
         i {
-            .fa-twitter, .fa-instagram {
-                @extend %socials;
-            }
+            @extend %socials;
         }
         .sm-title {
             @include margin($bottom: 20px);
