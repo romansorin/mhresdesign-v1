@@ -61,12 +61,6 @@
             background-color: grey;
             overflow: hidden;
         }
-        #article-long {
-            width: 715px !important;
-            .content {
-                @include padding($bottom: 60px !important);
-            }
-        }
         .content {
             @include padding($top: 28px, $right: 28px, $bottom: 35px, $left: 28px);
             @include text($color: $black);
@@ -80,6 +74,12 @@
                 @include margin($bottom: 4px);
                 @include text($color: $red-text, $weight: $font-medium, $transform: uppercase);
             }
+        }
+    }
+    #article-long {
+        width: 715px;
+        .content {
+            @include padding($bottom: 60px !important);
         }
     }
     #all-news-btn {
