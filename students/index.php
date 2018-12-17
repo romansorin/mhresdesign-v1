@@ -8,7 +8,7 @@
 </head>
 
 <body>
-
+    <?php include '/srv/http/template/coming_soon.php'; die();?>
     <?php include '/srv/http/inc/header.php'?>
     <div class="container-fluid">
         <div class="row">
