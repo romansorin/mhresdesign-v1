@@ -7,7 +7,7 @@
     <title>
         Coming Soon
     </title>
-    <link href="coming_soon.css" rel="stylesheet">
+    <link href="/template/coming_soon.css" rel="stylesheet">
     <?php include '/srv/http/inc/includes.php'; ?>
 </head>
 <body>
