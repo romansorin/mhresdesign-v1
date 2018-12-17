@@ -51,24 +51,19 @@
         #footer-bottom-right {
             float: right;
         }
+        #footer-brand {
+            @include margin($top: 5px, $bottom: 0px);
+            @include padding($left: 45px);
+            @include text($font: $secondary-font, $color: $white, $size: 3em !important, $transform: none, $spacing: -0.75px);
+            height: 55px;
+            float: left;
+        }
     }
 }
 /* Bottom footer specific */
 
 /* Content on the left of bottom footer */
 
-#footer-brand {
-    color: #FFFFFF;
-    font-size: 3em !important;
-    font-family: 'Crimson Text', serif;
-    text-transform: none;
-    letter-spacing: -0.75px;
-    float: left;
-    height: 55px;
-    padding-left: 45px;
-    margin-top: 5px;
-    margin-bottom: 0px;
-}
 #global-footer-content {
     line-height: 10px;
     height: 10px;
