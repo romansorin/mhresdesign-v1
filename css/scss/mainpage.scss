@@ -230,22 +230,6 @@
         .sm-title {
             @include margin($bottom: 20px); @include text($color: $social-media-title, $size: 1em, $weight: $font-medium, $spacing: .05em);
         }
-        .instagram {
-            @include margin($bottom: 40px);
-            #embed-ig {
-                @include margin($right: auto, $left: auto);
-                max-height: 360px;
-                height: 360px;
-                max-width: 360px;
-                width: 360px;
-                overflow: hidden;
-                display: block;
-                width: 100%;
-                -webkit-box-shadow: 0px 0px 24px 3px rgba(0, 0, 0, 0.1);
-                -moz-box-shadow: 0px 0px 24px 3px rgba(0, 0, 0, 0.1);
-                box-shadow: 0px 0px 24px 3px rgba(0, 0, 0, 0.1);
-            }
-        }
         .twitter {
             .time-span {
                 @include text($color: $social-media-timespan, $size: .75em, $weight: $font-bold, $spacing: .05em);
