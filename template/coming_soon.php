@@ -28,7 +28,7 @@
                     <span id="signature"><a href="mailto:rmaximsorin@gmail.com" target="_top">Roman Sorin | Developer</a></span>
                 <p>
             </div>
-            <a href="index.php" class="btn btn-dark raise" id="home-btn">Home</a>
+            <a href="../index.php" class="btn btn-dark raise" id="home-btn">Home</a>
         </div>
     </div>
 </body>
