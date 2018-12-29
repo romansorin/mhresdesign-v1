@@ -5,20 +5,19 @@ session_start();
  * @author [Roman Sorin] <[<rmaximsorin@gmail.com>]>
  */
 
+require_once 'C:\Users\Roman\Documents\local\post-system\connection.php';
+require_once 'C:\Users\Roman\Documents\local\post-system\admin/user.php';
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require_once 'C:\Users\Roman\Documents\local\post-system\connection.php';
-require_once 'C:\Users\Roman\Documents\local\post-system\admin/user.php';
-
 $conn    = new Connection();
 $newsPDO = $conn->connectToDb('news', 'reader', 'readonly');
+$newsPDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $postObj = new Post();
 $postObj->checkStatus();
-
-$newsPDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 class Post {
     private $uid;
@@ -108,7 +107,6 @@ class Post {
                 header("Location: ../index.php?error=missing_fields");
                 exit();
             } else {
-
                 $query = "INSERT INTO news (`title`, `content`, `category`, `date_created`, `author`) VALUES ('$title', '$content', '$category', '$mySQL_date', '$name')";
 
                 $insert_statement = $newsPDO->prepare($query);
@@ -170,9 +168,9 @@ class Post {
         // what if i nested all of the code inside of here?
         if (isset($_POST['modifySubmit'])) {
             // create a modal or some javascript function for confirmation
-            $title    = $_POST['title'];
-            $category = $_POST['category'];
-            $content  = $_POST['content'];
+            $title      = $_POST['title'];
+            $category   = $_POST['category'];
+            $content    = $_POST['content'];
             $mySQL_date = $this->setDate();
 
             if (empty($title) || empty($category) || empty($content)) {

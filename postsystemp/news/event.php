@@ -3,17 +3,16 @@ session_start();
 
 require_once 'C:\Users\Roman\Documents\local\post-system\connection.php';
 require_once 'C:\Users\Roman\Documents\local\post-system\admin/user.php';
-$conn     = new Connection();
-$eventPDO = $conn->connectToDb('news', 'reader', 'readonly');
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+$conn     = new Connection();
+$eventPDO = $conn->connectToDb('news', 'reader', 'readonly');
 $eventPDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $event = new Event();
-
 $event->checkStatus();
 
 class Event {
@@ -123,11 +122,10 @@ class Event {
         $mySQL_date  = $this->setDate();
 
         if ($user->hasPermission($req)) {
-            if (empty($category) || empty($description)) {
+            if (empty($category) || empty($description) || empty($event_date)) {
                 header("Location: index.php?error=missing_fields");
                 exit();
             } else {
-
                 $query = "INSERT INTO events (category, description, link, event_date, date_created, author) VALUES ('$category', '$description', '$link', '$event_date', '$mySQL_date', '$name')";
                 $stmt  = $eventPDO->prepare($query);
                 $stmt->execute();
@@ -187,20 +185,20 @@ class Event {
         );
 
         if ($user->hasPermission($req)): ?>
-	            <form action="event.php?id=<?=$arr['id']?>&edit=true" method="post">
-	                <label for="category">Category:</label>
-	                <input type="text" name="category" value="<?=$arr['category']?>">
-	                <br><br>
-	                <label for="description">Description:</label>
-	                <input type="text" name="description" value="<?=$arr['description']?>">
-	                <br><br>
-	                <label for="link">Link:</label>
-	                <textarea name="link"><?=$arr['link']?></textarea>
-	                <br><br>
-	                <input value="Save changes" type="submit" name="modifySubmit">
-	                <input value="Delete event" type="submit" name="deleteEventSubmit">
-	            </form>
-	            <?php
+                <form action="event.php?id=<?=$arr['id']?>&edit=true" method="post">
+                    <label for="category">Category:</label>
+                    <input type="text" name="category" value="<?=$arr['category']?>">
+                    <br><br>
+                    <label for="description">Description:</label>
+                    <input type="text" name="description" value="<?=$arr['description']?>">
+                    <br><br>
+                    <label for="link">Link:</label>
+                    <textarea name="link"><?=$arr['link']?></textarea>
+                    <br><br>
+                    <input value="Save changes" type="submit" name="modifySubmit">
+                    <input value="Delete event" type="submit" name="deleteEventSubmit">
+                </form>
+                <?php
 
         // what if i nested all of the code inside of here?
         if (isset($_POST['modifySubmit'])) {
@@ -221,9 +219,9 @@ class Event {
             $this->deleteEvent($id);
         }
         ?>
-	            <?php else: ?>
-	             <h1>You do not have the necessary permissions.</h1>
-	         <?php endif;
+                <?php else: ?>
+                 <h1>You do not have the necessary permissions.</h1>
+             <?php endif;
     }
 
     private function updateEvent($id, $category, $description, $link, $date_modified) {

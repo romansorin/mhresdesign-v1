@@ -17,11 +17,8 @@ session_start();
 $post = new Post();
 ?>
 	<?php if (isset($_SESSION['userID'])): ?>
-		<h2>You are logged in!</h2>
-		<h2>Name, ID: <?php echo $_SESSION['username'] . ' ' . $_SESSION['userID']; ?></h2>
-		<form action="/post-system/admin/logout.inc.php" method="post">
-			<button type="submit" name="logout">Log out</button>
-		</form>
+		<a href="/post-system/admin">
+			<button type="submit" name="dashboard">Dashboard</button></a>
 		<?php else: ?>
 			<form action="/post-system/signup.inc.php" method="post">
 				<input type="text" name="mail" placeholder="E-mail">
@@ -40,20 +37,7 @@ $post = new Post();
 		<?php endif;?>
 	<?php
 if (isset($_SESSION['userID'])) {
-    $uid  = $_SESSION['userID'];
-    $user = new User($uid);
-
-    if ($user->hasPermission('post_create')): ?>
-		<form action="/post-system/news/post.php?" method="post">
-		<label for="title">Title:</label>
-		<input type="text" name="title">
-		<label for="category">Category:</label>
-		<input type="text" name="category">
-		<label for="content">Content:</label>
-		<textarea name="content"></textarea>
-		<input type="submit" name="createPostSubmit">
-		</form>
-	<?php endif;
+    
 }?>
 <a href="news/index.php"><button type="link">Events</button></a>
 	<div class="article">

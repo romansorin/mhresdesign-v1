@@ -12,13 +12,6 @@
 $event = new Event();
 ?>
 	<h1> Events </h1>
-    	<form action="/post-system/news/event.php" method="post">
-			<input type="text" name="category" placeholder="category">
-			<input type="text" name="description" placeholder="description">
-			<input type="text" name="link" placeholder="link">
-			<input type="text" name="date" placeholder="date (yyyy-mm-dd)">
-			<input type="submit" name="create" value="Create">
-    	</form>
    	<a href="../index.php"><button role="link">Back</button></a>
 
     <div class="article">
