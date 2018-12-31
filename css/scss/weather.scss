@@ -23,7 +23,8 @@
         @include text($color: $white, $size: 24px);
     }
     #weather-icon {
-        @include margin($left: 15px); @include padding($left: 0px);
+        @include margin($left: 15px);
+        @include padding($left: 0px);
         @include text($color: $white, $size: 60px);
         font-family: weather;
         line-height: 0.5;
