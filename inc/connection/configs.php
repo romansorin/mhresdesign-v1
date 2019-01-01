@@ -11,3 +11,11 @@ $pass_dir = 'readandwrite';
 $db_sections   = 'sections';
 $user_sections = 'reader';
 $pass_sections = 'readonly';
+
+$db_users   = 'users';
+$user_users = 'writer';
+$pass_users = 'readandwrite';
+
+$db_news   = 'news';
+$user_news = 'writer';
+$pass_news = 'readandwrite';
