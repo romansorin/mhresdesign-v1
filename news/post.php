@@ -5,16 +5,16 @@ session_start();
  * @author [Roman Sorin] <[<rmaximsorin@gmail.com>]>
  */
 
-require_once 'C:\Users\Roman\Documents\local\post-system\connection.php';
-require_once 'C:\Users\Roman\Documents\local\post-system\admin/user.php';
-
-ini_set('display_errors', 1);
+/*ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+ */
 
+include_once '../inc/connection/connection.php';
+include_once '../users/user.php';
 $conn    = new Connection();
 $newsPDO = $conn->connectToDb('news', 'reader', 'readonly');
-$newsPDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//$newsPDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $postObj = new Post();
 $postObj->checkStatus();
@@ -69,11 +69,21 @@ class Post {
         $posts_arr = $this->retrieveRows();
 
         if ($column == 'title') {
-            echo $posts_arr[$index]['title'];
+            if (!is_null($posts_arr[$index]['title'])) {
+                echo $posts_arr[$index]['title'];
+            } else {
+                echo 'No news listed';
+            }
         } else if ($column == 'category') {
-            echo $posts_arr[$index]['category'];
+            if (!is_null($posts_arr[$index]['category'])) {
+                echo $posts_arr[$index]['category'];
+            } else {
+                echo 'No news listed';
+            }
         } else if ($column == 'content') {
             echo $posts_arr[$index]['content'];
+        } else if ($column == 'image') {
+            echo $posts_arr[$index]['image'];
         } else if ($column == 'id') {
             echo $posts_arr[$index]['id'];
         } else if ($column == 'date_created') {
@@ -90,7 +100,7 @@ class Post {
  * [createPost: Allow a user to create a post without needing to access the database directly (mimics a CMS)]
  * @return [String] [Responds with status (success, failure)]
  */
-    public function createPost() {
+    private function createPost() {
         global $newsPDO;
 
         $req  = $this->getRequiredPermission('createPost');
@@ -130,7 +140,7 @@ class Post {
  * [modifyPost: Allow a user to modify the content of a post.]
  * @return [String] [Responds with status (success, failure)]
  */
-    public function modifyPost() {
+    private function modifyPost() {
         global $newsPDO;
         // add in a date modified display
         $req  = $this->getRequiredPermission('modifyPost');
@@ -197,7 +207,7 @@ class Post {
  * @param  [String]  $content  [Initial/modified body or content of post]
  * @return [String]            [Responds with status (success, failure)]
  */
-    public function updatePost($id, $title, $category, $content, $date_modified) {
+    private function updatePost($id, $title, $category, $content, $date_modified) {
         global $newsPDO;
 
         $req  = $this->getRequiredPermission('modifyPost');
@@ -223,7 +233,7 @@ class Post {
  * @param  [Integer] $id [References the specific ID of the post.]
  * @return [String]      [Responds with status (success, failure)]
  */
-    public function deletePost($id) {
+    private function deletePost($id) {
         global $newsPDO;
 
         $req  = $this->getRequiredPermission('deletePost');
@@ -247,7 +257,7 @@ class Post {
     }
 
 /** [generatePost: Generates a post specified by the ID] */
-    public function generatePost() {
+    private function generatePost() {
         global $newsPDO;
 
         $req  = $this->getRequiredPermission('modifyPost');
@@ -261,10 +271,7 @@ class Post {
         /* Check that a row based off of the id actually exists, otherwise display an error */
         /* This is like the general idea of dynamically generating the page (html) */
         if ($result): ?>
-            <h1><?=$result['title']?></h1>
-            <h1><?=$result['content']?></h1>
-            <h1><?=$result['category']?></h1>
-            <?php if ($user->hasPermission($req)): ?><a href="post.php?id=<?=$result['id']?>&edit=true"><h6>Edit</h6></a> <?php endif;
+            <?php require 'post_html_inc.php';
         endif;
     }
 
@@ -272,7 +279,7 @@ class Post {
  * [retrieveRows: Fetch the latest (5) rows from the table]
  * @return [Array] [Returns an associative array to use in other methods]
  */
-    public function retrieveRows() {
+    private function retrieveRows() {
         global $newsPDO;
 
         $query     = "(SELECT * FROM news ORDER BY id ASC) ORDER BY id DESC";
@@ -295,12 +302,12 @@ class Post {
     /////////////////////////
 
 /** [getID: Retrieve ID of user from session] */
-    public function getID() {
+    private function getID() {
         return $this->uid;
     }
 
 /** [getUsername: Retrieve username of user from session] */
-    public function getUsername() {
+    private function getUsername() {
         return $this->name;
     }
 
@@ -309,17 +316,17 @@ class Post {
  * @param [String] $function   [Specify the desired function]
  * @param [String] $permission [Specify the permission that a user requires]
  */
-    public function setRequiredPermission($function, $permission) {
+    private function setRequiredPermission($function, $permission) {
         $this->required_permissions[$function] = $permission;
     }
 
 /** [getRequiredPermission: Retrieve permission for a specific method] */
-    public function getRequiredPermission($function) {
+    private function getRequiredPermission($function) {
         return $this->required_permissions[$function];
     }
 
 /** [getDate: Retrieve the date/time which a post was created] */
-    public function getDate($id) {
+    private function getDate($id) {
         global $newsPDO;
         $query         = 'SELECT date_created FROM news WHERE id = ' . $id . ' LIMIT 1';
         $stmt          = $newsPDO->query($query);
@@ -330,7 +337,7 @@ class Post {
     }
 
 /** [setDate: Helper function for createPost to format date/time into mySQL format] */
-    public function setDate() {
+    private function setDate() {
         date_default_timezone_set('America/New_York');
         $date = new DateTime();
         return $date->format('Y-m-d H:i:s');
