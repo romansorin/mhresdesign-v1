@@ -1,5 +1,9 @@
 <?php
-require_once 'C:\Users\Roman\Documents\local\post-system\requires.php';
+
+include '../inc/connection/connection.php';
+
+// TODO: 
+// external login page?
 
 $conn    = new Connection();
 $userPDO = $conn->connectToDb('users', 'reader', 'readonly');
