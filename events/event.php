@@ -1,12 +1,8 @@
 <?php
 session_start();
 
-require_once 'C:\Users\Roman\Documents\local\post-system\connection.php';
+include_once 'C:\Users\Roman\Documents\sorin/inc/connection/connection.php';
 require_once 'C:\Users\Roman\Documents\local\post-system\admin/user.php';
-
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 
 $conn     = new Connection();
 $eventPDO = $conn->connectToDb('news', 'reader', 'readonly');
@@ -27,8 +23,6 @@ class Event {
             echo $events_arr[$index]['category'];
         } else if ($column == 'description') {
             echo $events_arr[$index]['description'];
-        } else if ($column == 'link') {
-            echo $events_arr[$index]['link'];
         } else if ($column == 'id') {
             echo $events_arr[$index]['id'];
         } else if ($column == 'date_created') {
@@ -74,9 +68,9 @@ class Event {
         /* Check that a row based off of the id actually exists, otherwise display an error */
         /* This is like the general idea of dynamically generating the page (html) */
         if ($result): ?>
+            <!-- html template would go here -->
             <h1><?=$result['category']?></h1>
             <h1><?=$result['description']?></h1>
-            <h1><?=$result['link']?></h1>
             <?php if ($user->hasPermission($req)): ?><a href="event.php?id=<?=$result['id']?>&edit=true"><h6>Edit</h6></a> <?php endif;
         endif;
     }
@@ -109,14 +103,13 @@ class Event {
 
     public function createEvent() {
         global $eventPDO;
-        // allow user to create and enter a new post with title, description, and link
+        // allow user to create and enter a new post with title, description
         //
         $req  = $this->getRequiredPermission('createEvent');
         $user = new User($this->getID());
 
         $category    = $_POST['category'];
         $description = $_POST['description'];
-        $link        = $_POST['link'];
         $event_date  = $_POST['date'];
         $name        = $this->getUsername();
         $mySQL_date  = $this->setDate();
@@ -126,7 +119,7 @@ class Event {
                 header("Location: index.php?error=missing_fields");
                 exit();
             } else {
-                $query = "INSERT INTO events (category, description, link, event_date, date_created, author) VALUES ('$category', '$description', '$link', '$event_date', '$mySQL_date', '$name')";
+                $query = "INSERT INTO events (category, description, event_date, date_created, author) VALUES ('$category', '$description', '$event_date', '$mySQL_date', '$name')";
                 $stmt  = $eventPDO->prepare($query);
                 $stmt->execute();
 
@@ -180,7 +173,6 @@ class Event {
         $arr = array(
             "category"    => $result['category'],
             "description" => $result['description'],
-            "link"        => $result['link'],
             "id"          => $result['id'],
         );
 
@@ -192,9 +184,6 @@ class Event {
                     <label for="description">Description:</label>
                     <input type="text" name="description" value="<?=$arr['description']?>">
                     <br><br>
-                    <label for="link">Link:</label>
-                    <textarea name="link"><?=$arr['link']?></textarea>
-                    <br><br>
                     <input value="Save changes" type="submit" name="modifySubmit">
                     <input value="Delete event" type="submit" name="deleteEventSubmit">
                 </form>
@@ -205,14 +194,13 @@ class Event {
             // create a modal or some javascript function for confirmation
             $category    = $_POST['category'];
             $description = $_POST['description'];
-            $link        = $_POST['link'];
             $mySQL_date  = $this->setDate();
 
             if (empty($category) || empty($description)) {
                 header("Location: index.php?error=missing_fields");
                 exit();
             } else {
-                $this->updateEvent($id, $category, $description, $link, $mySQL_date);
+                $this->updateEvent($id, $category, $description, $mySQL_date);
             }
 
         } else if (isset($_POST['deleteEventSubmit'])) {
@@ -224,14 +212,14 @@ class Event {
              <?php endif;
     }
 
-    private function updateEvent($id, $category, $description, $link, $date_modified) {
+    private function updateEvent($id, $category, $description, $date_modified) {
         global $eventPDO;
 
         $req  = $this->getRequiredPermission('modifyEvent');
         $user = new User($this->getID());
 
         if ($user->hasPermission($req)) {
-            $query = "UPDATE events SET category = '$category', description = '$description', link = '$link', date_modified = '$date_modified' WHERE id = " . $id . "";
+            $query = "UPDATE events SET category = '$category', description = '$description', date_modified = '$date_modified' WHERE id = " . $id . "";
             $stmt  = $eventPDO->prepare($query);
             $stmt->execute();
 
