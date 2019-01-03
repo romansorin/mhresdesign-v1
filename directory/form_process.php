@@ -1,6 +1,5 @@
 <?php
 
-require '/srv/http/inc/math_captcha.php';
 require '/srv/http/inc/connection/connection.php';
 require '/srv/http/inc/connection/configs.php';
 
@@ -74,10 +73,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    $answer_error = validateAnswer();
-
     /* If no errors are present, set the content of the actual message */
-    if ($name_error == "" and $email_error == "" and $fs_error == "" and $dept_error == "" and $answer_error == "") {
+    if ($name_error == "" and $email_error == "" and $fs_error == "" and $dept_error == "") {
         try {
             /* Insert form data into database */
             if ($_POST["unit"] === '') {
