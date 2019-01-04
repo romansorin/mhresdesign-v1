@@ -56,7 +56,8 @@
         }
     }
     article {
-        @include margin($bottom: 30px, $left: 30px); @include padding($right: 0px !important, $left: 0px !important);
+        @include margin($bottom: 30px, $left: 30px);
+        @include padding($right: 0px !important, $left: 0px !important);
         width: 335px;
         min-height: 355px;
         box-shadow: 0 0 10px rgba(0, 0, 0, .15), 0 3px 3px rgba(0, 0, 0, .15);
@@ -68,14 +69,24 @@
             overflow: hidden;
         }
         .content {
-            @include padding($top: 28px, $right: 28px, $bottom: 35px, $left: 28px); @include text($color: $black);
+            @include padding($top: 28px, $right: 28px, $bottom: 35px, $left: 28px);
+            @include text($color: $black);
             background-color: $white;
             box-shadow: none;
             h3 {
-                @include margin($bottom: 0px); @include text($font: $primary-font, $size: 1.25em, $weight: $font-medium, $transform: none, $align: left);
+                @include margin($bottom: 0px);
+                @include text($font: $primary-font, $size: 1.25em, $weight: $font-medium, $transform: none, $align: left);
             }
             .post-category {
-                @include margin($bottom: 4px); @include text($color: $red-text, $weight: $font-medium, $transform: uppercase);
+                @include margin($bottom: 4px);
+                @include text($color: $red-text, $weight: $font-medium, $transform: uppercase);
+            }
+            a {
+                color: inherit;
+                &:hover {
+                    text-decoration: none;
+                    color: #00548f;
+                }
             }
         }
     }
@@ -111,14 +122,17 @@
     background-color: $dark-purplered;
     .events-header {
         #events-header-label {
-            @extend %label; @include text($color: $white);
+            @extend %label;
+            @include text($color: $white);
         }
         #events-header-desc {
-            @extend %desc; @include text($color: $white);
+            @extend %desc;
+            @include text($color: $white);
         }
     }
     .calendar {
-        @include margin($top: 20px, $bottom: 20px); @include text($font: $primary-font, $color: $black);
+        @include margin($top: 20px, $bottom: 20px);
+        @include text($font: $primary-font, $color: $black);
         background-color: $white;
         height: 100px;
         overflow: hidden;
@@ -127,7 +141,9 @@
             line-height: 0.9;
         }
         .date {
-            @include margin($top: 13px, $right: 30px, $bottom: 13px, $left: 30px); @include padding($top: 10px, $right: 0px, $bottom: 10px, $left: 0px); @include text($color: $white);
+            @include margin($top: 13px, $right: 30px, $bottom: 13px, $left: 30px);
+            @include padding($top: 10px, $right: 0px, $bottom: 10px, $left: 0px);
+            @include text($color: $white);
             min-height: 60px;
             width: 75px;
             background-color: $dark-purplered;
@@ -140,10 +156,12 @@
             }
         }
         .cal-meta {
-            @include margin($top: 20px); @include text($size: 1.1em, $weight: $font-medium);
+            @include margin($top: 20px);
+            @include text($size: 1.1em, $weight: $font-medium);
             float: left;
             .cal-category {
-                @include padding($bottom: 5px); @include text($color: $red-text, $size: 0.95em, $transform: uppercase);
+                @include padding($bottom: 5px);
+                @include text($color: $red-text, $size: 0.95em, $transform: uppercase);
             }
         }
         .event-link {
@@ -184,7 +202,8 @@
                 }
             }
             .cal-meta {
-                @include margin($top: 15px, $left: 25px); @include text($size: 1.1em);
+                @include margin($top: 15px, $left: 25px);
+                @include text($size: 1.1em);
                 width: 100%;
                 display: block;
                 .cal-category {
@@ -219,24 +238,30 @@
             @extend %label;
         }
         #social-header-desc {
-            @extend %desc; @include padding($bottom: 50px); @include margin($bottom: 0px);
+            @extend %desc;
+            @include padding($bottom: 50px);
+            @include margin($bottom: 0px);
             border-bottom: 1px solid $black;
         }
     }
     .social-media {
-        @include padding($top: 40px); @include text($align: center);
+        @include padding($top: 40px);
+        @include margin($bottom: 100px);
+        @include text($align: center);
         i {
             @extend %socials;
         }
         .sm-title {
-            @include margin($bottom: 20px); @include text($color: $social-media-title, $size: 1em, $weight: $font-medium, $spacing: .05em);
+            @include margin($bottom: 20px);
+            @include text($color: $social-media-title, $size: 1em, $weight: $font-medium, $spacing: .05em);
         }
         .twitter {
             .time-span {
                 @include text($color: $social-media-timespan, $size: .75em, $weight: $font-bold, $spacing: .05em);
             }
             .tweet-content {
-                @include margin($bottom: 20px); @include text($color: $social-media-content, $size: 1.1em, $weight: $font-light !important);
+                @include margin($bottom: 20px);
+                @include text($color: $social-media-content, $size: 1.1em, $weight: $font-light !important);
                 line-height: 1.75em;
             }
         }
