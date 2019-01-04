@@ -1,0 +1,23 @@
+#editMenuDropdown::after {
+    display: none;
+}
+#editMenuDropdown {
+	border: none;
+	background-color: transparent;
+	color: rgba(0, 0, 0, 0.54);
+}
+
+#editMenuDropdown:hover {
+	background-color: transparent;
+	color: black;
+}
+
+#editMenuDropdown:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+#editMenuDropdown:active {
+	background-color: transparent;
+	fill: transparent;
+}

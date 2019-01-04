@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/news.css">
     <title>Untitled</title>
-    <?php require '../inc/includes.php'; include_once '../inc/connection/connection.php'; ?>
+    <?php require '../inc/includes.php';include_once '../inc/connection/connection.php';?>
 </head>
 <body>
     <?php include '../inc/header.php';?>
@@ -15,13 +16,26 @@
         <div class="row">
             <div class="heading">
                 <h1 id="title"><?=$result['title']?></h1>
-                <h4 id="category"><?=$result['category']?></h4>
+                <h2 id="category"><?=$result['category']?></h2>
+                <h2 id="date"><?=$result['date_created']?></h2>
+
+
+
+
+                <div class="dropdown">
+
+                <?php if ($user->hasPermission($req)): ?><button class="btn btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown" id="editMenuDropdown">
+                    <i class="fa fa-ellipsis-h"></i></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="post.php?id=<?=$result['id']?>&edit=true">Edit</a></li>
+                    </ul>
+                    <?php endif;?>
+                </div>
             </div>
         </div>
         <div class="row">
             <?=$result['content']?>
         </div>
-    <?php if ($user->hasPermission($req)): ?><a href="post.php?id=<?=$result['id']?>&edit=true"><h6>Edit</h6></a> <?php endif;?>
     </div>
     <?php include '../inc/footer.php';?>
 </body>
