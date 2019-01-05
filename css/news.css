@@ -1,0 +1,69 @@
+/* Mixins */
+#post-div-wrapper {
+  width: 45%; }
+
+.heading {
+  margin-top: 55px;
+  margin-bottom: 60px; }
+  .heading #title {
+    font-family: "Source Sans Pro", sans-serif;
+    color: black;
+    font-weight: 700;
+    font-size: 3rem;
+    text-transform: none;
+    text-align: left;
+    margin-bottom: 0px; }
+  .heading #subinfo-inline {
+    clear: both; }
+    .heading #subinfo-inline h2 {
+      display: inline-block;
+      margin-top: 0px;
+      font-family: "Source Sans Pro", sans-serif;
+      color: grey;
+      font-weight: 400;
+      font-size: 1rem;
+      text-transform: none; }
+    .heading #subinfo-inline #category {
+      font-style: italic; }
+    .heading #subinfo-inline .vertical-line {
+      display: inline-block;
+      border-right: 1px solid grey;
+      width: 1px;
+      margin-left: 3px;
+      margin-right: 3px;
+      height: 17px;
+      -webkit-transform: translateY(4px);
+      -ms-transform: translateY(4px);
+      transform: translateY(4px); }
+    .heading #subinfo-inline .dropdown {
+      vertical-align: middle;
+      padding: 0px;
+      display: inline-block; }
+    .heading #subinfo-inline i {
+      font-weight: 300;
+      font-size: 15px;
+      -webkit-transform: scale(1.25, 1);
+      -ms-transform: scale(1.25, 1);
+      transform: scale(1.25, 1); }
+  .heading #editMenuDropdown {
+    border: none;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.54); }
+    .heading #editMenuDropdown:after {
+      display: none; }
+    .heading #editMenuDropdown:hover {
+      background-color: transparent;
+      color: black; }
+    .heading #editMenuDropdown:focus {
+      outline: none;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+    .heading #editMenuDropdown:active {
+      background-color: transparent;
+      fill: transparent; }
+
+.content {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #000;
+  font-size: 21px;
+  margin-bottom: 100px; }

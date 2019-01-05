@@ -46,6 +46,7 @@
 						<textarea class="form-control" id="message" name="message" rows="4" cols="50" value="<?=$message?>" tabindex="4"></textarea>
 						<span class="error"><?=$message_error?></span>
 					</div>
+					<?php generateCAPTCHA();?>
 					<button type="submit" class="btn contact-btn">Submit</button>
 				</form>
 			</div>

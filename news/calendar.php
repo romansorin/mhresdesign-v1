@@ -1,5 +1,8 @@
 <?php
 
+$conn   = new Connection();
+$calPDO = $conn->connectToDb($db_news, $user_news, $pass_news);
+
 class CalendarWidget {
     // Generates a calendar widget on the page,
     public function generate($range = 7, $start_date = null) {
@@ -34,13 +37,11 @@ class CalendarWidget {
             // Right now I have a hardcoded array as an example.
             // I would use a query like:
             // SELECT description, link, date FROM events WHERE date = $date_selector
+            //
 
-            require 'inc/connection/configs.php';
-            $conn = new Connection();
-            $pdo  = $conn->connectToDb($db_sections, $user_sections, $pass_sections);
-
-            $query = "SELECT category, description, link FROM events WHERE event_date = '$date_selector'";
-            $stmt  = $pdo->query($query);
+            global $calPDO;
+            $query = "SELECT category, description, id FROM events WHERE event_date = '$date_selector'";
+            $stmt  = $calPDO->query($query);
             $info  = $stmt->fetch(PDO::FETCH_ASSOC);
 
             // Check if each column of a row is null/empty
@@ -50,15 +51,15 @@ class CalendarWidget {
             if (!(isset($info['description']))) {
                 $info['description'] = null;
             }
-            if (!(isset($info['link'])) || $info['link'] == "") {
-                $info['link'] = null;
+            if (!(isset($info['id'])) || $info['id'] == "") {
+                $info['id'] = null;
             }
 
             $events = array(
                 array(
                     "category" => $info['category'],
                     "text"     => $info['description'],
-                    "link"     => $info['link'],
+                    "id"       => $info['id'],
                 ),
 
             );
@@ -77,35 +78,9 @@ class CalendarWidget {
 
     // draws one "row" of your calendar. Accepts a date string to display in the header
     // and then an array of $events.
+    // front page render.
     public function render($date_month, $date_day, $events) {
-        echo "<div class=\"col-sm-12\">";
-        echo "<div class=\"row calendar\">";
-        echo "<div class=\"col-sm-2\">";
-        echo "<h3 class=\"date\"><span class=\"month\">{$date_month}</span><br><span class=\"day\">{$date_day}</span></h3>";
-        echo "</div>";
-        echo "<div class=\"col-sm-8\">";
-        foreach ($events as $event) {
-            echo "<div class=\"cal-meta\">";
-            echo "<div class=\"cal-category\">";
-            echo $event['category'];
-            echo "</div>";
-            echo "<div class=\"cal-content\">";
-            echo $event['text'];
-            echo "</div>";
-            echo "</div>";
-            echo "</div>";
-            if (!(is_null($event['link']))) {
-                echo "<br>";
-                echo "<div class=\"col-sm-2 text-center no-padding\">";
-                echo "<a href=\"{$event['link']}\" class=\"event-link\"><button type=\"button\" class=\"btn btn-light event-link-btn\">View</button></a>";
-            } else {
-                echo "<br>";
-                echo "<div class=\"col-sm-2 text-center no-padding\">";
-                echo "<button type=\"button\" class=\"btn event-link-btn-disabled\" disabled>View</button>";
-            }
-            echo "</div>";
-        }
-        echo "</div></div>";
+        require 'calendar_render_html.php';
     }
 
     // Helpers to format our DateTime
@@ -122,5 +97,3 @@ class CalendarWidget {
         return $date->format('Y-m-d');
     }
 }
-
-?>

@@ -27,6 +27,9 @@
         <ul class="nav navbar-nav navbar-extra-resources">
             <li class="nav-item"><a href="/directory">Directory</a></li>
             <li class="nav-item"><a href="/campus">Campus</a></li>
+            <?php if (isset($_SESSION['userID'])): ?>
+            <li class="nav-item"><a href="/admin">Admin Dashboard</a></li>
+            <?php endif; ?>
         </ul>
     </nav>
 

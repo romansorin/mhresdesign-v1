@@ -91,7 +91,8 @@
     width: 335px;
     min-height: 355px;
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15), 0 3px 3px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15), 0 3px 3px rgba(0, 0, 0, 0.15); }
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15), 0 3px 3px rgba(0, 0, 0, 0.15);
+    background-color: #fff; }
     .news-container article .article-img {
       margin-right: 0px;
       margin-bottom: 0px;

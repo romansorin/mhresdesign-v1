@@ -61,6 +61,7 @@
         width: 335px;
         min-height: 355px;
         box-shadow: 0 0 10px rgba(0, 0, 0, .15), 0 3px 3px rgba(0, 0, 0, .15);
+        background-color: $white;
         .article-img {
             @include margin($right: 0px, $bottom: 0px, $left: 0px);
             height: 215px;

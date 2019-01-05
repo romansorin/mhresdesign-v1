@@ -9,6 +9,7 @@ require '/srv/http/inc/PHPMailer/src/PHPMailer.php';
 require '/srv/http/inc/PHPMailer/src/SMTP.php';
 require '/srv/http/inc/PHPMailer/config.php';
 
+require '/srv/http/inc/math_captcha.php';
 require '/srv/http/inc/connection/connection.php';
 require '/srv/http/inc/connection/configs.php';
 
@@ -53,9 +54,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = $_POST["message"];
     }
 
+    $answer_error = validateAnswer();
 
     /* If no errors are present, set the content of the message */
-    if ($name_error == "" and $email_error == "" and $message_error == "") {
+    if ($name_error == "" and $email_error == "" and $message_error == "" and $answer_error == "") {
         $message_body = '';
         unset($_POST['submit']);
         foreach ($_POST as $key => $value) {
