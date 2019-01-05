@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/news.css">
     <title><?= $result['title']; ?></title>
-    <?php require '../inc/includes.php';include_once '../inc/connection/connection.php';?>
+    <?php require '../inc/includes.php'; include_once '../inc/connection/connection.php';?>
 </head>
 <body>
     <?php include '../inc/header.php';?>
