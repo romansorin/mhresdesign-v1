@@ -1,23 +1,71 @@
-#editMenuDropdown::after {
-    display: none;
+@import 'base/colors';
+@import 'base/typography';
+@import 'partial';
+@import 'module/buttons';
+@import 'module/icons';
+#post-div-wrapper {
+    width: 45%;
 }
-#editMenuDropdown {
-	border: none;
-	background-color: transparent;
-	color: rgba(0, 0, 0, 0.54);
+.heading {
+	margin-top: 55px;
+	margin-bottom: 60px;
+    #title {
+        @include text($font: $primary-font, $color: black, $size: 3rem, $weight: 700, $transform: none, $align: left);
+        margin-bottom: 0px;
+    }
+    #subinfo-inline {
+        clear: both;
+        h2 {
+            display: inline-block;
+            margin-top: 0px;
+            @include text($font: $primary-font, $color: grey, $size: 1rem, $weight: 400, $transform: none);
+        }
+        #category {
+            @include text($style: italic);
+        }
+        .vertical-line {
+            display: inline-block;
+            border-right: 1px solid grey;
+            width: 1px;
+            margin-left: 3px;
+            margin-right: 3px;
+            height: 17px;
+            transform: translateY(4px);
+        }
+        .dropdown {
+            vertical-align: middle;
+            padding: 0px;
+            display: inline-block;
+        }
+        i {
+        	font-weight: 300;
+        	font-size: 15px;
+			transform: scale(1.25, 1);
+        }
+    }
+    #editMenuDropdown {
+        border: none;
+        background-color: transparent;
+        color: rgba(0, 0, 0, 0.54);
+        &:after {
+            display: none;
+        }
+        &:hover {
+            background-color: transparent;
+            color: black;
+        }
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        &:active {
+            background-color: transparent;
+            fill: transparent;
+        }
+    }
 }
 
-#editMenuDropdown:hover {
-	background-color: transparent;
-	color: black;
-}
-
-#editMenuDropdown:focus {
-	outline: none;
-	box-shadow: none;
-}
-
-#editMenuDropdown:active {
-	background-color: transparent;
-	fill: transparent;
+.content {
+	@include text($font: $primary-font, $color: $black, $size: 21px);
+	margin-bottom: 100px;
 }

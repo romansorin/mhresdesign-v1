@@ -86,9 +86,6 @@ class Post {
             echo $posts_arr[$index]['image'];
         } else if ($column == 'id') {
             echo $posts_arr[$index]['id'];
-        } else if ($column == 'date_created') {
-            $id = $posts_arr[$index]['id'];
-            echo $this->getDate($id);
         }
     }
 
@@ -268,6 +265,8 @@ class Post {
         $stmt   = $newsPDO->query($query);
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
+        $result['date_created'] = $this->getDate($id);
+
         /* Check that a row based off of the id actually exists, otherwise display an error */
         /* This is like the general idea of dynamically generating the page (html) */
         if ($result): ?>
@@ -332,7 +331,7 @@ class Post {
         $stmt          = $newsPDO->query($query);
         $date          = $stmt->fetch(PDO::FETCH_ASSOC);
         $mySQL_date    = new Datetime($date['date_created']);
-        $dateFormatted = $mySQL_date->format('F d, Y \a\t g:i a');
+        $dateFormatted = $mySQL_date->format('M j, Y');
         return $dateFormatted;
     }
 
