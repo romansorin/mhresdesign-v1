@@ -28,7 +28,7 @@
             <li class="nav-item"><a href="/directory">Directory</a></li>
             <li class="nav-item"><a href="/campus">Campus</a></li>
             <?php if (isset($_SESSION['userID'])): ?>
-            <li class="nav-item"><a href="/admin">Admin Dashboard</a></li>
+            <li class="nav-item"><a href="/dashboard">Admin Dashboard</a></li>
             <?php endif; ?>
         </ul>
     </nav>
@@ -53,8 +53,8 @@
                                     <div class="row bottom-border">
                                         <br>
                                     </div>
-                                    <button type="submit" id="mr-right">Index</button>
-                                    <button type="submit">Directory</button>
+                                    <button type="submit" id="mr-right" name="indexSearch">Index</button>
+                                    <button type="submit" name="directorySearch">Directory</button>
                                 </form>
                             </div>
                         </div>
