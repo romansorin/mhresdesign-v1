@@ -18,6 +18,7 @@ session_start();
 				<div class="col-md-7 no-padding bg-img-col">
 					<img src="https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="code background" id="bg-img">
 				</div>
+				
 				<div class="col-md-5 content" id="login">
 					<div class="heading-wrapper">
 						<h1>Welcome</h1>
@@ -44,6 +45,7 @@ session_start();
 
 					</div>
 				</div>
+
 				<div class="col-md-5 content" id="signup">
 					<div class="heading-wrapper">
 						<h1>Welcome</h1>
@@ -60,7 +62,7 @@ session_start();
 								</div>
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-inputs" name="username" placeholder="Username">
+								<input type="text" class="form-inputs" name="user" placeholder="Username">
 							</div>
 							<div class="form-group">
 								<input type="text" class="form-inputs" name="email" placeholder="Email">
