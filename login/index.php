@@ -18,8 +18,8 @@ session_start();
 				<div class="col-md-7 no-padding bg-img-col">
 					<img src="https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="code background" id="bg-img">
 				</div>
-				
-				<div class="col-md-5 content" id="login">
+				<div class="col-md-5">
+				<div class="content" id="login">
 					<div class="heading-wrapper">
 						<h1>Welcome</h1>
 						<h2>Welcome back! Please login to your account.</h2>
@@ -46,7 +46,7 @@ session_start();
 					</div>
 				</div>
 
-				<div class="col-md-5 content" id="signup">
+				<div class="content" id="signup">
 					<div class="heading-wrapper">
 						<h1>Welcome</h1>
 						<h2>Please complete to create your account.</h2>
@@ -81,7 +81,7 @@ session_start();
 					</div>
 				</div>
 
-				<div class="col-md-5 content" id="forgot-password">
+				<div class="content" id="forgot-password">
 					<div class="heading-wrapper">
 						<h1>Reset password</h1>
 						<h2>Enter your email and we will send a password reset link.</h2>
@@ -98,9 +98,10 @@ session_start();
 			</div>
 		</div>
 	</div>
+	</body>
 
 <?php else:
-    header("Location: ../admin");
+    header("Location: ../dashboard");
     exit();
 endif;?>
 <script src="main.js"></script>
