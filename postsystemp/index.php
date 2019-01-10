@@ -40,33 +40,44 @@
 			<div class="row">
 				<div class="brand">
 					<div class="col-8">
-						<a class="navbar-brand" href="#">Dashboard</a>
+						<a class="navbar-brand" id="dashboard-brand-redir">Dashboard</a>
 					</div>
 					<div class="col-4">
-						<i class="fa fa-reorder toggler"></i>
+						<i class="fa fa-stream toggler"></i>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<nav class="nav nav-tabs flex-column" id="tabs" role="tablist">
-					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Home</a>
-					<a class="nav-link active" id="dashboard-tab" data-toggle="tab" href="#dashboard" role="tab" aria-controls="dashboard" aria-selected="true">Dashboard</a>
-					<a class="nav-link" id="pages-tab" data-toggle="tab" href="#pages" role="tab" aria-controls="pages" aria-selected="false">Pages</a>
+					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false"><i class="fa fa-home"></i>Home</a>
+					<a class="nav-link active" id="dashboard-tab" data-toggle="tab" href="#dashboard" role="tab" aria-controls="dashboard" aria-selected="true"><i class="fa fa-chart-bar"></i>Dashboard</a>
+					<a class="nav-link" id="pages-tab" data-toggle="tab" href="#pages" role="tab" aria-controls="pages" aria-selected="false"><i class="fa fa-pen"></i>Pages</a>
 				</nav>
 			</div>
 		</div>
 
 		<div class="sidebar" id="sidebar-collapsed">
-			<i class="fa fa-reorder toggler"></i>
-			<nav class="nav nav-tabs flex-column">
-				<a class="navbar-brand" href="#">N</a>
-				<a class="nav-link active" href="#">A</a>
-				<a class="nav-link" href="#">Link</a>
-				<a class="nav-link" href="#">Link</a>
-				<a class="nav-link disabled" href="#">Disabled</a>
-			</nav>
+			<div class="row">
+				<div class="brand">
+					<div class="col-12">
+						<i class="fa fa-stream toggler"></i>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<nav class="nav nav-tabs flex-column" id="tabs" role="tablist">
+					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false"><i class="fa fa-home"></i></a>
+					<a class="nav-link active" id="dashboard-tab" data-toggle="tab" href="#dashboard" role="tab" aria-controls="dashboard" aria-selected="true"><i class="fa fa-chart-bar"></i></a>
+					<a class="nav-link" id="pages-tab" data-toggle="tab" href="#pages" role="tab" aria-controls="pages" aria-selected="false"><i class="fa fa-pen"></i></a>
+				</nav>
+			</div>
 		</div>
 
+		<div class="tab-content" style="margin-left: 500px;">
+			<div class="tab-pane" id="home" role="tabpanel" aria-labelledby="home-tab">home</div>
+			<div class="tab-pane active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">dashboard</div>
+			<div class="tab-pane" id="pages" role="tabpanel" aria-labelledby="pages-tab">pages</div>
+		</div>
 
 
 		<script src="main.js"></script>
