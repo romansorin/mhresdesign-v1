@@ -73,10 +73,15 @@
 			</div>
 		</div>
 
-		<div class="tab-content" style="margin-left: 500px;">
-			<div class="tab-pane" id="home" role="tabpanel" aria-labelledby="home-tab">home</div>
-			<div class="tab-pane active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">dashboard</div>
-			<div class="tab-pane" id="pages" role="tabpanel" aria-labelledby="pages-tab">pages</div>
+
+		<div class="content-wrapper container">
+			<div class="row">
+				<div class="tab-content">
+					<div class="tab-pane" id="home" role="tabpanel" aria-labelledby="home-tab">home</div>
+					<div class="tab-pane active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">dashddboard</div>
+					<div class="tab-pane" id="pages" role="tabpanel" aria-labelledby="pages-tab">pages</div>
+				</div>
+			</div>
 		</div>
 
 
