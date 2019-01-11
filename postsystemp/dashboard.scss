@@ -1,5 +1,6 @@
 #sidebar-collapsed {
     display: none;
+    width: 86px;
 }
 #top-nav {
     background-color: #fff;
@@ -74,7 +75,7 @@
                 padding-left: 12px;
             }
             i {
-                 color: #A3A0FB;
+                color: #A3A0FB;
             }
         }
         .nav-link {
@@ -162,8 +163,23 @@
     font-size: 16px;
     letter-spacing: 4px;
 }
+#dashboard-brand-redir {
+    cursor: pointer;
+}
+.content-expanded {
+    margin-left: 260px;
+    margin-top: 30px;
+}
+.content-collapsed {
+    margin-top: 30px;
+    margin-left: 121px;
+}
 /** {
   background: #000 !important;
   color: #0f0 !important;
   outline: solid #f00 1px !important;
 }*/
+
+/*
+
+ */
