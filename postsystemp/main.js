@@ -25,7 +25,11 @@ $('.toggler').click(function() {
         expanded.hide();
         collapsed.show();
         $('.content-wrapper').addClass('content-collapsed');
-        $('.nav-tabs #' + newActiveTab).removeClass('active'); // Reset new
+        if (typeof newActiveTab === 'undefined') {
+            $('.nav-tabs #dashboard-tab').removeClass('active');
+        } else {
+            $('.nav-tabs #' + newActiveTab).removeClass('active'); // Reset new
+        }
         $('.nav-tabs #' + activeTab).addClass('active'); // and add it to the recently selected tab
         newActiveTab = $('.nav-tabs a.active').attr('id'); // find the new active class
         /* Same for collapsed. Removing and adding classes ensures that classes don't stay active on the toggled sidebar, essentially

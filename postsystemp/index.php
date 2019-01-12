@@ -74,13 +74,43 @@
 		</div>
 
 
-		<div class="content-wrapper container">
+		<div class="content-wrapper">
+			<div class="container-fluid">
 			<div class="row">
 				<div class="tab-content">
-					<div class="tab-pane" id="home" role="tabpanel" aria-labelledby="home-tab">home</div>
-					<div class="tab-pane active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">dashddboard</div>
-					<div class="tab-pane" id="pages" role="tabpanel" aria-labelledby="pages-tab">pages</div>
+					<div class="tab-pane" id="home" role="tabpanel" aria-labelledby="home-tab">
+						<h1 class="tab-heading">Home</h1>
+					</div>
+					<div class="tab-pane active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+						<h1 class="tab-heading">Dashboard</h1>
+					</div>
+					<div class="tab-pane" id="pages" role="tabpanel" aria-labelledby="pages-tab">
+						<h1 class="tab-heading">Your Pages</h1>
+						<div class="container no-padding">
+							<div class="row">
+								<div class="card-wrapper container">
+									<div class="card-img row">
+										<img class="img-fluid" src="https://images.pexels.com/photos/908284/pexels-photo-908284.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="bg img">
+									</div>
+									<div class="card-content">
+										<h1 class="card-title">Create a new post</h1>
+										<p class="card-info">Some information here.</p>
+									</div>
+								</div>
+								<div class="card-wrapper container">
+									<div class="card-img row">
+										<img class="img-fluid" src="https://images.pexels.com/photos/1509428/pexels-photo-1509428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="bg img">
+									</div>
+									<div class="card-content">
+										<h1 class="card-title">Create a new event</h1>
+										<p class="card-info">Some information here.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
+			</div>
 			</div>
 		</div>
 

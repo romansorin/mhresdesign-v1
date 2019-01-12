@@ -1,6 +1,12 @@
+body {
+    background-color: #F2F4F9;
+}
 #sidebar-collapsed {
     display: none;
     width: 86px;
+    .toggler {
+        padding-left: 15px;
+    }
 }
 #top-nav {
     background-color: #fff;
@@ -53,6 +59,7 @@
     left: 0;
     background-color: #43425D;
     height: 100%;
+    transition: .5s ease-in-out;
     .navbar-brand {
         color: inherit;
     }
@@ -172,7 +179,7 @@
 }
 .content-collapsed {
     margin-top: 30px;
-    margin-left: 121px;
+    margin-left: 110px;
 }
 /** {
   background: #000 !important;
@@ -180,6 +187,63 @@
   outline: solid #f00 1px !important;
 }*/
 
-/*
+.five {
+    width: 100px;
+    height: 100px;
+    background-color: #E0CABB;
+    margin: 0 auto;
+    position: relative;
+    left: 50px;
+    transition: .5s ease-in-out;
+}
+.five:hover {
+    left: -50px;
+}
+.tab-heading {
+    color: #43425D;
+    margin-top: 0px;
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-transform: none;
+    text-align: left;
+}
+.card-wrapper {
+    width: 320px;
+    overflow: hidden;
+    padding: 0;
+    background-color: white;
+    -webkit-box-shadow: 0px 7px 20px -2px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 7px 20px -2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 7px 20px -2px rgba(0, 0, 0, 0.25);
+    height: 350px;
+    margin-right: 50px;
+    .card-img {
+        overflow: hidden;
+        padding: 0;
+        max-width: 100%;
+        max-height: 100%;
+        height: 200px;
+    }
+    .card-content {
+        padding-left: 25px;
+        padding-top: 20px;
+        padding-right: 25px;
+        .card-title {
+            font-size: 22px;
+            padding-bottom: 10px;
+            font-weight: 600;
+            color: #444444;
+            text-align: left;
+            margin: 0;
+            text-transform: none;
+        }
+        .card-info {
+            color: #444444;
+        }
+    }
+}
 
- */
+.no-padding {
+    padding-left: 0px;
+    padding-right: 0px;
+}

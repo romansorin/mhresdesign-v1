@@ -1,17 +1,12 @@
-<?php
-session_start();
-?>
 
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-
-	<?php require '../inc/includes.php';include_once '../inc/connection/connection.php';?>
+	<?php include '../inc/includes.php'; ?>
 	<link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
-	<?php if (!isset($_SESSION['userID'])): ?>
 
 		<div class="container-fluid">
 			<div class="row">
@@ -25,7 +20,7 @@ session_start();
 						<h2>Welcome back! Please login to your account.</h2>
 					</div>
 					<div class="form-wrapper">
-						<form action="login.inc.php" method="post">
+						<form action="#" method="post">
 							<div class="form-group">
 								<input type="text" class="form-inputs" name="mailuser" placeholder="Username">
 							</div>
@@ -52,7 +47,7 @@ session_start();
 						<h2>Please complete to create your account.</h2>
 					</div>
 					<div class="form-wrapper">
-						<form action="signup.inc.php" method="post">
+						<form action="#" method="post">
 							<div class="form-row">
 								<div class="form-group col-md-6" id="firstNameInput">
 									<input type="text" class="form-inputs" name="firstName" placeholder="First name">
@@ -100,10 +95,6 @@ session_start();
 	</div>
 	</body>
 
-<?php else:
-    header("Location: ../dashboard");
-    exit();
-endif;?>
 <script src="main.js"></script>
 </body>
 </html>
