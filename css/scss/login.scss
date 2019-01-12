@@ -1,0 +1,116 @@
+@import 'base/colors';
+@import 'base/typography';
+@import 'partial';
+@import 'module/buttons';
+@import 'module/icons';
+.bg-img-col {
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
+    #bg-img {
+        height: 100vh;
+
+    }
+}
+.col-md-5 {
+	background-color: $white;	
+}
+.content {
+    background-color: $white;
+}
+.heading-wrapper {
+    display: block;
+    @include margin($top: 150px, $bottom: 60px);
+    h1 {
+        @include text($size: 44px, $weight: 700, $transform: uppercase, $color: #4d4f5c, $spacing: 10px);
+        @include margin($bottom: 15px);
+    }
+    h2 {
+        @include text($size: 20px, $weight: 400, $transform: none, $color: #4d4f5c);
+    }
+}
+.form-wrapper {
+    text-align: center;
+    .form-inputs {
+        @include margin($bottom: 35px);
+        @include padding($bottom: 10px, $left: 5px);
+        @include text($font: $primary-font, $weight: 400, $color: #43425D, $size: 20px);
+        border: none;
+        border-bottom: 2px solid #E9E9F0;
+        width: 445px;
+        &:hover {
+            border-color: #43425D;
+        }
+        &:focus {
+            border-color: #3B86FF;
+            outline: none;
+            cursor: #3B86FF;
+        }
+    }
+    *::placeholder {
+        color: #43425D;
+    }
+    .form-row {
+        [class*=col-] {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    .btn-dark {
+        @include text($font: $primary-font, $size: 18px, $weight: 400, $color: $white);
+        @include margin($top: 30px);
+        @include padding($top: 15px, $right: 75px, $bottom: 15px, $left: 75px);
+        background-color: #43425D;
+        border-color: #43425D;
+        &:hover, &:focus {
+            background-color: #2F2E50;
+        }
+    }
+    .btn-outline-dark {
+        @include margin($top: 30px);
+        @include padding($top: 15px, $right: 75px, $bottom: 15px, $left: 75px);
+        @include text($font: $primary-font, $size: 18px, $weight: 400, $color: #4D4F5C);
+        border-color: #4D4F5C;
+        background-color: $none;
+        &:hover {
+            background-color: #2F2E50;
+            border-color: #2F2E50;
+            color: $white;
+        }
+        &:focus {
+            border-color: #2F2E50
+        }
+    }
+}
+#login {
+    #login-submit-btn {
+        @include margin($right: 35px);
+    }
+    #forgotPassword {
+        cursor: pointer;
+    }
+}
+#signup {
+    display: none;
+    .col-md-6 {
+        .form-inputs {
+            width: 218px;
+        }
+    }
+    .form-inputs {
+        width: 465px;
+    }
+    #firstNameInput {
+        text-align: right;
+    }
+    #lastNameInput {
+        text-align: left;
+    }
+    #signin-redirect-ref {
+        @include margin($top: 15px);
+        cursor: pointer;
+    }
+}
+#forgot-password {
+    display: none;
+}

@@ -1,0 +1,274 @@
+@import 'base/colors';
+@import 'base/typography';
+@import 'partial';
+@import 'module/buttons';
+@import 'module/icons';
+%label {
+    @include margin($top: 75px, $bottom: 20px);
+    @include text($font: $primary-font, $color: $black, $size: 3.0517578125em, $weight: $font-bolder, $transform: none, $align: center, $spacing: -1px);
+}
+%desc {
+    @include text($size: 1.5em, $align: center);
+    @include margin($bottom: 70px);
+}
+/* Carousel styling */
+
+#frontpage-carousel {
+    overflow: hidden;
+    @include margin($bottom: 0px);
+    .carousel-inner {
+        height: 400px;
+    }
+    .carousel-item {
+        height: 400px;
+        img {
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .carousel-inner {
+            height: 350px;
+        }
+        .carousel-item {
+            height: 350px;
+        }
+    }
+    @media only screen and (max-width: 576px) {
+        .carousel-inner {
+            height: 200px !important;
+        }
+        .carousel-item {
+            height: 200px !important;
+        }
+    }
+}
+/* News section */
+
+.news-container {
+    background-color: $sandstone;
+    .news-header {
+        #news-header-label {
+            @extend %label;
+        }
+        #news-header-desc {
+            @extend %desc;
+        }
+    }
+    article {
+        @include margin($bottom: 30px, $left: 30px);
+        @include padding($right: 0px !important, $left: 0px !important);
+        width: 335px;
+        min-height: 355px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .15), 0 3px 3px rgba(0, 0, 0, .15);
+        background-color: $white;
+        .article-img {
+            @include margin($right: 0px, $bottom: 0px, $left: 0px);
+            height: 215px;
+            background-color: grey;
+            overflow: hidden;
+        }
+        .content {
+            @include padding($top: 28px, $right: 28px, $bottom: 35px, $left: 28px);
+            @include text($color: $black);
+            background-color: $white;
+            box-shadow: none;
+            h3 {
+                @include margin($bottom: 0px);
+                @include text($font: $primary-font, $size: 1.25em, $weight: $font-medium, $transform: none, $align: left);
+            }
+            .post-category {
+                @include margin($bottom: 4px);
+                @include text($color: $red-text, $weight: $font-medium, $transform: uppercase);
+            }
+            a {
+                color: inherit;
+                &:hover {
+                    text-decoration: none;
+                    color: #00548f;
+                }
+            }
+        }
+    }
+    #article-long {
+        width: 715px;
+        .content {
+            @include padding($bottom: 60px !important);
+        }
+    }
+    #all-news-btn {
+        @extend %all-section-btn-properties;
+    }
+    @media (max-width: 767.98px) {
+        article {
+            @include margin($bottom: 30px);
+            margin: 0 auto;
+        }
+        #article-long {
+            width: 335px !important;
+        }
+        #all-news-btn {
+            @include padding($right: 50px, $left: 50px);
+        }
+    }
+    @media (max-width: 1200px) {
+        article {
+            @include margin($bottom: 30px !important);
+            margin: 0 auto !important;
+        }
+    }
+}
+.events-container {
+    background-color: $dark-purplered;
+    .events-header {
+        #events-header-label {
+            @extend %label;
+            @include text($color: $white);
+        }
+        #events-header-desc {
+            @extend %desc;
+            @include text($color: $white);
+        }
+    }
+    .calendar {
+        @include margin($top: 20px, $bottom: 20px);
+        @include text($font: $primary-font, $color: $black);
+        background-color: $white;
+        height: 100px;
+        overflow: hidden;
+        h3 {
+            display: block;
+            line-height: 0.9;
+        }
+        .date {
+            @include margin($top: 13px, $right: 30px, $bottom: 13px, $left: 30px);
+            @include padding($top: 10px, $right: 0px, $bottom: 10px, $left: 0px);
+            @include text($color: $white);
+            min-height: 60px;
+            width: 75px;
+            background-color: $dark-purplered;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .25), 0 3px 3px rgba(0, 0, 0, .25);
+            .day {
+                @include text($size: 1.2em, $weight: $font-medium);
+            }
+            .month {
+                @include text($size: 0.9em, $weight: $font-regular, $spacing: 0.09em);
+            }
+        }
+        .cal-meta {
+            @include margin($top: 20px);
+            @include text($size: 1.1em, $weight: $font-medium);
+            float: left;
+            .cal-category {
+                @include padding($bottom: 5px);
+                @include text($color: $red-text, $size: 0.95em, $transform: uppercase);
+            }
+        }
+        .event-link {
+            @include text($color: $red-text, $size: 0.9em, $weight: $font-regular, $transform: uppercase, $spacing: 0.015em);
+        }
+        .event-link-btn {
+            @extend %event-link-btn-properties;
+        }
+        .event-link-btn-disabled {
+            @extend %event-link-btn-properties;
+            opacity: .65;
+        }
+    }
+    #all-events-btn {
+        @extend %all-section-btn-properties;
+    }
+    @media (max-width: 767.98px) {
+        .calendar {
+            @include margin($top: 20px, $bottom: 20px);
+            height: 100px;
+            .col-sm-2 {
+                width: 100px;
+                height: 100px;
+            }
+            .col-sm-8 {
+                max-width: 225px;
+                margin: 0;
+            }
+            .date {
+                @include margin($top: 15px, $right: 0px, $bottom: 15px, $left: 15px);
+                min-height: 60px;
+                max-width: 75px;
+                .day {
+                    @include text($size: 1em);
+                }
+                .month {
+                    @include text($size: 0.7em);
+                }
+            }
+            .cal-meta {
+                @include margin($top: 15px, $left: 25px);
+                @include text($size: 1.1em);
+                width: 100%;
+                display: block;
+                .cal-category {
+                    @include text($size: 0.95em);
+                }
+            }
+            .event-link-btn {
+                display: none !important;
+            }
+            .event-link-btn-disabled {
+                display: none !important;
+            }
+        }
+        #all-events-btn {
+            @include padding($right: 50px, $left: 50px);
+        }
+    }
+    @media (max-width: 922px) {
+        .event-link-btn {
+            display: none;
+        }
+        .event-link-btn-disabled {
+            display: none;
+        }
+    }
+}
+/* Social media section */
+
+.social-media-container {
+    .social-header {
+        #social-header-label {
+            @extend %label;
+        }
+        #social-header-desc {
+            @extend %desc;
+            @include padding($bottom: 50px);
+            @include margin($bottom: 0px);
+            border-bottom: 1px solid $black;
+        }
+    }
+    .social-media {
+        @include padding($top: 40px);
+        @include margin($bottom: 100px);
+        @include text($align: center);
+        i {
+            @extend %socials;
+        }
+        .sm-title {
+            @include margin($bottom: 20px);
+            @include text($color: $social-media-title, $size: 1em, $weight: $font-medium, $spacing: .05em);
+        }
+        .twitter {
+            .time-span {
+                @include text($color: $social-media-timespan, $size: .75em, $weight: $font-bold, $spacing: .05em);
+            }
+            .tweet-content {
+                @include margin($bottom: 20px);
+                @include text($color: $social-media-content, $size: 1.1em, $weight: $font-light !important);
+                line-height: 1.75em;
+            }
+        }
+        @media (max-width: 576px) {
+            .time-span {
+                @include margin($bottom: 40px);
+            }
+        }
+    }
+}

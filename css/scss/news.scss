@@ -1,0 +1,101 @@
+@import 'base/colors';
+@import 'base/typography';
+@import 'partial';
+@import 'module/buttons';
+@import 'module/icons';
+body {
+    min-height: 100%;
+}
+#post-div-wrapper {
+    width: 45%;
+    @media only screen and (max-width: 1024px) {
+        width: 80%;
+    }
+    @media only screen and (max-width: 768px) {
+        width: 95%;
+    }
+    @include margin($bottom: 130px);
+    .heading {
+        @include margin($top: 55px, $bottom: 60px);
+        #title {
+            @include text($font: $primary-font, $color: black, $size: 3rem, $weight: 700, $transform: none, $align: left);
+            @include margin($bottom: 0px);
+        }
+        #subinfo-inline {
+            clear: both;
+            h2 {
+                display: inline-block;
+                @include margin($top: 0px);
+                @include text($font: $primary-font, $color: grey, $size: 1rem, $weight: 400, $transform: none);
+            }
+            #category {
+                @include text($style: italic);
+            }
+            .vertical-line {
+                @include margin($right: 3px, $left: 3px);
+                display: inline-block;
+                border-right: 1px solid grey;
+                width: 1px;
+                height: 17px;
+                transform: translateY(4px);
+            }
+            .dropdown {
+                vertical-align: middle;
+                padding: 0px;
+                display: inline-block;
+            }
+            i {
+                font-weight: 300;
+                font-size: 15px;
+                transform: scale(1.25, 1);
+            }
+            .dropdown-menu {
+                box-shadow: 0 1px 2px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .35);
+                padding: 8px 0;
+                border-radius: 3px;
+                background: $white;
+                max-width: 280px;
+                transform: translate3d(0px, 24px, 0px) !important;
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+                li {
+                    text-align: left;
+                    color: rgba(0, 0, 0, 0.84);
+                    width: 100%;
+                    line-height: 1.4;
+                    white-space: nowrap;
+                    padding: 5px 15px;
+                    &:hover {
+                        color: $black;
+                    }
+                }
+            }
+        }
+        #editMenuDropdown {
+            border: none;
+            background-color: $none;
+            color: rgba(0, 0, 0, 0.54);
+            &:after {
+                display: none;
+            }
+            &:hover {
+                background-color: $none;
+                color: $black;
+            }
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+            &:active {
+                background-color: $none;
+                fill: $none;
+            }
+        }
+    }
+    .content {
+        @include text($font: $primary-font, $color: $black, $size: 21px);
+        @include margin($bottom: 100px);
+    }
+}

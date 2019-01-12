@@ -1,0 +1,89 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600");
+/* Colors */
+/* Mixins */
+body {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+#img-background {
+  background-image: -webkit-gradient(linear, left top, right top, from(#ed6ea0), to(#ec8c69));
+  background-image: -webkit-linear-gradient(left, #ed6ea0 0%, #ec8c69 100%);
+  background-image: -o-linear-gradient(left, #ed6ea0 0%, #ec8c69 100%);
+  background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
+  min-height: 100%;
+  position: absolute;
+  -webkit-filter: blur(2px);
+  filter: blur(2px); }
+
+#background {
+  height: 100%;
+  position: absolute; }
+  #background #content {
+    color: #3C3C3C;
+    text-align: center;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.45);
+    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.45);
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 82%;
+    margin-top: 50px;
+    max-height: 600px; }
+    #background #content #coming-soon {
+      font-family: Raleway, sans-serif;
+      font-weight: 300;
+      color: #3C3C3C;
+      margin: 0 auto;
+      text-transform: uppercase;
+      padding-top: 115px;
+      border-bottom: 1px solid #3C3C3C; }
+    #background #content #message {
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      font-weight: 200;
+      font-size: 1.4rem;
+      padding-top: 50px;
+      padding-bottom: 25px;
+      line-height: 1.25em; }
+      #background #content #message a {
+        color: inherit;
+        text-decoration: underline; }
+      #background #content #message #signature {
+        font-size: 1.15rem; }
+        #background #content #message #signature a {
+          text-decoration: none; }
+    #background #content #home-btn {
+      font-family: Raleway, sans-serif;
+      border-radius: 3px;
+      font-size: 1.1em;
+      padding-left: 50px;
+      padding-right: 50px;
+      -webkit-transition: 0.25s;
+      -o-transition: 0.25s;
+      transition: 0.25s;
+      margin-bottom: 150px; }
+
+/* CSS Effects */
+.raise:hover, .raise:focus {
+  -webkit-box-shadow: 0 0.5em 0.75em -0.4em rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0.5em 0.75em -0.4em rgba(0, 0, 0, 0.75);
+  -webkit-transform: translateY(-0.25em);
+  -ms-transform: translateY(-0.25em);
+  transform: translateY(-0.25em); }

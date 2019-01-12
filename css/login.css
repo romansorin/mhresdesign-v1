@@ -1,0 +1,116 @@
+/* Mixins */
+@media only screen and (max-width: 768px) {
+  .bg-img-col {
+    display: none; } }
+
+.bg-img-col #bg-img {
+  height: 100vh; }
+
+.col-md-5 {
+  background-color: #fff; }
+
+.content {
+  background-color: #fff; }
+
+.heading-wrapper {
+  display: block;
+  margin-top: 150px;
+  margin-bottom: 60px; }
+  .heading-wrapper h1 {
+    color: #4d4f5c;
+    font-weight: 700;
+    font-size: 44px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 15px; }
+  .heading-wrapper h2 {
+    color: #4d4f5c;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: none; }
+
+.form-wrapper {
+  text-align: center; }
+  .form-wrapper .form-inputs {
+    margin-bottom: 35px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #43425D;
+    font-weight: 400;
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px solid #E9E9F0;
+    width: 445px; }
+    .form-wrapper .form-inputs:hover {
+      border-color: #43425D; }
+    .form-wrapper .form-inputs:focus {
+      border-color: #3B86FF;
+      outline: none;
+      cursor: #3B86FF; }
+  .form-wrapper *::-webkit-input-placeholder {
+    color: #43425D; }
+  .form-wrapper *:-ms-input-placeholder {
+    color: #43425D; }
+  .form-wrapper *::-ms-input-placeholder {
+    color: #43425D; }
+  .form-wrapper *::placeholder {
+    color: #43425D; }
+  .form-wrapper .form-row [class*=col-] {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .form-wrapper .btn-dark {
+    font-family: "Source Sans Pro", sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 30px;
+    padding-top: 15px;
+    padding-right: 75px;
+    padding-bottom: 15px;
+    padding-left: 75px;
+    background-color: #43425D;
+    border-color: #43425D; }
+    .form-wrapper .btn-dark:hover, .form-wrapper .btn-dark:focus {
+      background-color: #2F2E50; }
+  .form-wrapper .btn-outline-dark {
+    margin-top: 30px;
+    padding-top: 15px;
+    padding-right: 75px;
+    padding-bottom: 15px;
+    padding-left: 75px;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #4D4F5C;
+    font-weight: 400;
+    font-size: 18px;
+    border-color: #4D4F5C;
+    background-color: transparent; }
+    .form-wrapper .btn-outline-dark:hover {
+      background-color: #2F2E50;
+      border-color: #2F2E50;
+      color: #fff; }
+    .form-wrapper .btn-outline-dark:focus {
+      border-color: #2F2E50; }
+
+#login #login-submit-btn {
+  margin-right: 35px; }
+
+#login #forgotPassword {
+  cursor: pointer; }
+
+#signup {
+  display: none; }
+  #signup .col-md-6 .form-inputs {
+    width: 218px; }
+  #signup .form-inputs {
+    width: 465px; }
+  #signup #firstNameInput {
+    text-align: right; }
+  #signup #lastNameInput {
+    text-align: left; }
+  #signup #signin-redirect-ref {
+    margin-top: 15px;
+    cursor: pointer; }
+
+#forgot-password {
+  display: none; }

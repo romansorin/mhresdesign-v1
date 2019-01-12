@@ -1,0 +1,78 @@
+/* global */
+
+.contact-header h1 {
+    color: #414141;
+    text-transform: none;
+    text-align: left;
+    font-size: 3em;
+    pointer-events: none;
+    font-weight: 300;
+    font-family: 'Crimson Text', sans-serif;
+    letter-spacing: -1px;
+}
+.link {
+    text-decoration: underline;
+    color: #910000;
+}
+.contact-btn {
+    background-color: transparent;
+    border: 1px solid #910000;
+    color: #910000;
+    border-radius: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+/* style for index.php */
+
+.info {
+    color: #414141;
+    text-transform: none;
+    text-align: left;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+.info h2 {
+    font-size: 2em;
+    text-transform: none;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+.info h3 {
+    font-size: 1.4em;
+    text-transform: none;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+.info ul {
+    list-style: none;
+}
+/* css for contact.php (actual feedback form) */
+
+#form-info p {
+    margin-bottom: 0px;
+    font-size: 1.1em;
+}
+#contact {
+    margin-bottom: 50px;
+}
+.form-label {
+    font-size: 1.1em;
+}
+.form-control {
+    border-radius: 0px;
+    border: 1px solid #414141;
+}
+.error {
+    color: #cc0000;
+}
+#firstname, #lastname, #email, #fac_staff, #dept, #unit, #room, #tel, #fax, #bio {
+    height: 50px;
+}
+#success {
+    padding: 20px 0 0 0;
+    font-size: 20px;
+}
