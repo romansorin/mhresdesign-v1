@@ -6,6 +6,9 @@
 .bg-img-col #bg-img {
   height: 100vh; }
 
+.col-md-5 {
+  background-color: #fff; }
+
 .content {
   background-color: #fff; }
 

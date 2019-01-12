@@ -1,14 +1,14 @@
 $(document).ready(function() {
     $('#signup-redirect-ref').click(function() {
         $('.content').hide();
-        $('#signup').show();
+        $('#signup').fadeIn("slow");
     });
     $('#signin-redirect-ref').click(function() {
         $('.content').hide();
-        $('#login').show();
-    })
+        $('#login').fadeIn("slow");
+    });
     $('#forgotPassword').click(function() {
         $('.content').hide();
-        $('#forgot-password').show();
-    })
+        $('#forgot-password').fadeIn("slow");
+    });
 });
