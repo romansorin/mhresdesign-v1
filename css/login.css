@@ -41,11 +41,14 @@
     font-size: 20px;
     border: none;
     border-bottom: 2px solid #E9E9F0;
-    width: 445px; }
+    width: 445px;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+    transition: .2s ease-in-out; }
     .form-wrapper .form-inputs:hover {
       border-color: #43425D; }
     .form-wrapper .form-inputs:focus {
-      border-color: #3B86FF;
+      border-color: #66afe9;
       outline: none;
       cursor: #3B86FF; }
   .form-wrapper *::-webkit-input-placeholder {
@@ -60,25 +63,30 @@
     padding-left: 15px;
     padding-right: 15px; }
   .form-wrapper .btn-dark {
+    width: 195px;
     font-family: "Source Sans Pro", sans-serif;
     color: #fff;
     font-weight: 400;
     font-size: 18px;
     margin-top: 30px;
     padding-top: 15px;
-    padding-right: 75px;
+    padding-right: 65px;
     padding-bottom: 15px;
-    padding-left: 75px;
+    padding-left: 65px;
     background-color: #43425D;
     border-color: #43425D; }
     .form-wrapper .btn-dark:hover, .form-wrapper .btn-dark:focus {
       background-color: #2F2E50; }
+    @media only screen and (max-width: 992px) {
+      .form-wrapper .btn-dark {
+        margin: auto; } }
   .form-wrapper .btn-outline-dark {
+    width: 195px;
     margin-top: 30px;
     padding-top: 15px;
-    padding-right: 75px;
+    padding-right: 65px;
     padding-bottom: 15px;
-    padding-left: 75px;
+    padding-left: 65px;
     font-family: "Source Sans Pro", sans-serif;
     color: #4D4F5C;
     font-weight: 400;
@@ -91,9 +99,15 @@
       color: #fff; }
     .form-wrapper .btn-outline-dark:focus {
       border-color: #2F2E50; }
+    @media only screen and (max-width: 992px) {
+      .form-wrapper .btn-outline-dark {
+        margin: auto; } }
 
 #login #login-submit-btn {
   margin-right: 35px; }
+  @media only screen and (max-width: 1024px) {
+    #login #login-submit-btn {
+      margin-right: 0px; } }
 
 #login #forgotPassword {
   cursor: pointer; }
@@ -108,9 +122,10 @@
     text-align: right; }
   #signup #lastNameInput {
     text-align: left; }
-  #signup #signin-redirect-ref {
-    margin-top: 15px;
-    cursor: pointer; }
 
 #forgot-password {
   display: none; }
+
+.signin-redirect-ref {
+  margin-top: 15px;
+  cursor: pointer; }
