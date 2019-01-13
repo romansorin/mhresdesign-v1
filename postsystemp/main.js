@@ -59,3 +59,13 @@ $('#dashboard-brand-redir').click(function(e) {
     e.preventDefault();
     $('#dashboard-tab').tab('show');
 });
+
+function showCreatePost() {
+    document.getElementById('content').style.display="none";
+    document.getElementById('create_post_content').style.display="block";
+}
+
+function showCreateEvent() {
+    document.getElementById('content').style.display="none";
+    document.getElementById('create_event_content').style.display="block";
+}
