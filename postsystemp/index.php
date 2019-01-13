@@ -11,99 +11,57 @@
 
 <body>
 
-	<nav class="navbar navbar-expand-lg" id="top-nav">
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<div class="navbar-nav ml-auto">
-				<div class="nav-item border-divider"></div>
-				<a class="nav-link" href="#" id="usernameDropdownToggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Username<span class="caret-dropdown"></span></button>
-				</a>
-				<div id="usernameDropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="usernameDropdown">
-					<span class="dropdown-item-text" href="#"><strong>Status:</strong> Online</span>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="#">Settings</a>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="#">Feedback</a>
-					<div class="dropdown-divider"></div>
-					<!--<a class="dropdown-item" href="#">Lock</a>
-						<div class="dropdown-divider"></div>-->
-						<a class="dropdown-item" href="logout.inc.php">Logout</a>
-					</div>
-				</div>
-			</div>
-		</nav>
-
-		<div class="sidebar" id="sidebar-expanded">
-			<div class="row">
-				<div class="brand">
-					<div class="col-8">
-						<a class="navbar-brand" id="dashboard-brand-redir">Dashboard</a>
-					</div>
-					<div class="col-4">
-						<i class="fa fa-stream toggler"></i>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<nav class="nav nav-tabs flex-column" id="tabs" role="tablist">
-					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false"><i class="fa fa-home"></i>Home</a>
-					<a class="nav-link active" id="dashboard-tab" data-toggle="tab" href="#dashboard" role="tab" aria-controls="dashboard" aria-selected="true"><i class="fa fa-chart-bar"></i>Dashboard</a>
-					<a class="nav-link" id="pages-tab" data-toggle="tab" href="#pages" role="tab" aria-controls="pages" aria-selected="false"><i class="fa fa-pen"></i>Pages</a>
-				</nav>
-			</div>
-		</div>
-
-		<div class="sidebar" id="sidebar-collapsed">
-			<div class="row">
-				<div class="brand">
-					<div class="col-12">
-						<i class="fa fa-stream toggler"></i>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<nav class="nav nav-tabs flex-column" id="tabs" role="tablist">
-					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false"><i class="fa fa-home"></i></a>
-					<a class="nav-link active" id="dashboard-tab" data-toggle="tab" href="#dashboard" role="tab" aria-controls="dashboard" aria-selected="true"><i class="fa fa-chart-bar"></i></a>
-					<a class="nav-link" id="pages-tab" data-toggle="tab" href="#pages" role="tab" aria-controls="pages" aria-selected="false"><i class="fa fa-pen"></i></a>
-				</nav>
-			</div>
-		</div>
-
-
-		<div class="content-wrapper">
-			<div class="container-fluid">
+	<?php include 'dashboard_navbar.php';?>
+	<?php include 'dashboard_sidebars.php';?>
+	<?php include 'create_post.php';?>
+	<div class="content-wrapper" id="content">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="tab-content">
 					<div class="tab-pane" id="home" role="tabpanel" aria-labelledby="home-tab">
 						<h1 class="tab-heading">Home</h1>
 					</div>
 					<div class="tab-pane active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-						<h1 class="tab-heading">Dashboard</h1>
-					</div>
-					<div class="tab-pane" id="pages" role="tabpanel" aria-labelledby="pages-tab">
-						<h1 class="tab-heading">Your Pages</h1>
-						<div class="container no-padding">
-							<div class="row">
-								<div class="card-wrapper container">
-									<div class="card-img row">
-										<img class="img-fluid" src="https://images.pexels.com/photos/908284/pexels-photo-908284.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="bg img">
-									</div>
-									<div class="card-content">
-										<h1 class="card-title">Create a new post</h1>
-										<p class="card-info">Some information here.</p>
+						<div id="dashboard-tab-content">
+							<h1 class="tab-heading">Dashboard</h1>
+							<div class="container no-padding">
+								<div class="row">
+									<div class="dashboard-wrapper container">
+										<div class="row">
+											<h2>Welcome to your dashboard.</h2>
+										</div>
+										<div class="row">
+											<p>This is not technically a release of the dashboard, but more of a concept design and wireframe for what it will become. Many functions do not work at this point and therefore are disabled. <br><br>However, your recommendations and comments are still appreciated! Any feature requests should also be submit either directly to <a href="mailto:rmaximsorin@gmail.com">rmaximsorin@gmail.com</a> or through the <a href="../contact">contact</a> page.</p>
+										</div>
 									</div>
 								</div>
-								<div class="card-wrapper container">
-									<div class="card-img row">
-										<img class="img-fluid" src="https://images.pexels.com/photos/1509428/pexels-photo-1509428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="bg img">
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="pages" role="tabpanel" aria-labelledby="pages-tab">
+						<div id="pages-tab-content">
+							<h1 class="tab-heading">Your Pages</h1>
+							<div class="container no-padding">
+								<div class="row">
+									<div class="card-wrapper container">
+										<div class="card-img row">
+											<img class="img-fluid" src="https://images.pexels.com/photos/908284/pexels-photo-908284.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="bg img">
+										</div>
+										<div class="card-content">
+											<h1 class="card-title">Create a new post</h1>
+											<p class="card-info">Some information here.</p>
+											<button class="btn btn-primary create-btn" onclick="showCreatePost()">Create</button>
+										</div>
 									</div>
-									<div class="card-content">
-										<h1 class="card-title">Create a new event</h1>
-										<p class="card-info">Some information here.</p>
+									<div class="card-wrapper container">
+										<div class="card-img row">
+											<img class="img-fluid" src="https://images.pexels.com/photos/1509428/pexels-photo-1509428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="bg img">
+										</div>
+										<div class="card-content">
+											<h1 class="card-title">Create a new event</h1>
+											<p class="card-info">Some information here.</p>
+											<button class="btn btn-primary create-btn" onclick="showCreateEvent()" disabled>Create</button>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -111,11 +69,24 @@
 					</div>
 				</div>
 			</div>
-			</div>
 		</div>
+	</div>
+	<div class="container-fluid unavailable">
+      <div class="container" id="content">
+            <div class="row">
+                <h1 id="coming-soon">
+                    Mobile unavailable
+                </h1>
+            </div>
+            <div class="row mx-auto" id="message">
+                <p>
+                    Unfortunately, the mobile version of the dashboard is not supported at this time. Please login to the dashboard using a desktop device.
+                </p>
+            </div>
+            <a href="../index.php" class="btn btn-dark raise" id="home-btn">Home</a>
+        </div>
+        </div>
+	<script src="main.js"></script>
 
-
-		<script src="main.js"></script>
-
-	</body>
-	</html>
+</body>
+</html>
