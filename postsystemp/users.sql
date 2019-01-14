@@ -2,10 +2,10 @@
 -- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Dec 29, 2018 at 07:09 AM
--- Server version: 5.7.24
--- PHP Version: 7.1.24
+-- Host: 127.0.0.1
+-- Generation Time: Jan 14, 2019 at 03:57 AM
+-- Server version: 10.1.35-MariaDB
+-- PHP Version: 7.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -65,7 +65,10 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`username`, `email`, `password`, `reg_date`, `id`) VALUES
 ('admin', 'mail@mail.com', '$2y$10$DaLIhHPkt.9cbTkMJYN5DuTJk0qrjdULYPCps/2Ai8cqxfoi6oKS.', '0000-00-00 00:00:00', 12),
-('roman', 'roman@local.me', '$2y$10$D3YwHfKy3Qh7UN9RSDSJSuPlq1fQerxtMeLR13SDtZ/FCHnNiUYia', '2018-12-26 20:10:36', 19);
+('roman', 'roman@local.me', '$2y$10$D3YwHfKy3Qh7UN9RSDSJSuPlq1fQerxtMeLR13SDtZ/FCHnNiUYia', '2018-12-26 20:10:36', 19),
+('Sider1998', 'NaomiMAustin@armyspy.com', '$2y$10$kmSWo83ePECEy9kCqaVQ9.sJnP6srBn1XwQIVy7Ft7lDqdZ.slXKe', '2019-01-06 14:20:35', 21),
+('Gaid1987', 'MarkAHeller@armyspy.com', '$2y$10$9.IjqD2CujUXuWkAxT6JNOIqZukJ6S.myR/wtN7xrqv2JuNlCs/3K', '2019-01-06 14:25:23', 22),
+('audrie', 'aryan@mail.com', '$2y$10$kz.P/GbaiffUOd8v7gInmOzH.L18gctV/E4ApHDiw0UCRKrakb21u', '2019-01-13 21:54:09', 23);
 
 -- --------------------------------------------------------
 
@@ -128,7 +131,7 @@ ALTER TABLE `user_permissions`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `user_permissions`
