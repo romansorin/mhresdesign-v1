@@ -1,4 +1,4 @@
-<div class="content-wrapper" id="create_post_content" style="display: none">
+<div class="content-wrapper" id="create_post_content" style="display: none;">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="tab-content">

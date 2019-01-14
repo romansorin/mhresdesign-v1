@@ -6,7 +6,7 @@
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<div class="navbar-nav ml-auto">
 			<div class="nav-item border-divider"></div>
-			<a class="nav-link" href="#" id="usernameDropdownToggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Username<span class="caret-dropdown"></span></button>
+			<a class="nav-link" href="#" id="usernameDropdownToggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?=$_SESSION['username']?><span class="caret-dropdown"></span></button>
 			</a>
 			<div id="usernameDropdown" class="dropdown-menu dropdown-menu-right" aria-labelledby="usernameDropdown">
 				<span class="dropdown-item-text" href="#"><strong>Status:</strong> Online</span>
@@ -17,7 +17,7 @@
 				<div class="dropdown-divider"></div>
 				<a class="dropdown-item disabled" href="#">Lock</a>
 				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="logout.inc.php">Logout</a>
+				<a class="dropdown-item" name="logout" href="../login/logout.inc.php?logout=true">Logout</a>
 			</div>
 		</div>
 	</div>
