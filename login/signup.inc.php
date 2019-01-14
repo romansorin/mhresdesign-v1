@@ -7,14 +7,12 @@ $conn    = new Connection();
 $userPDO = $conn->connectToDb($db_users, $user_users, $pass_users);
 
 if (isset($_POST['signup-submit'])) {
-    $first          = $_POST['firstName'];
-    $last           = $_POST['lastName'];
-    $username       = $_POST['user'];
-    $email          = $_POST['email'];
-    $password       = $_POST['password'];
-    $passwordRepeat = $_POST['password-repeat'];
+    $username       = $_POST['user-input-signup'];
+    $email          = $_POST['email-input-signup'];
+    $password       = $_POST['password-input-signup'];
+    $passwordRepeat = $_POST['password-confirm-input-signup'];
 
-    if (empty($first) || empty($last) || empty($username) || empty($email) || empty($password) || empty($passwordRepeat)) {
+    if (empty($username) || empty($email) || empty($password) || empty($passwordRepeat)) {
         header("Location: index.php?error=empty_fields");
         exit();
     } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -24,7 +22,7 @@ if (isset($_POST['signup-submit'])) {
         header("Location: index.php?error=invalid_username");
         exit();
     } else if ($password !== $passwordRepeat) {
-        header("Location: index.php?error=invalid_confirm_password");
+        header("Location: index.php?error=invalid_password_confirm");
         exit();
     } else if (strlen($password) < 5) {
         header("Location: index.php?error=min_password_chars");
@@ -46,7 +44,7 @@ if (isset($_POST['signup-submit'])) {
             $hashedPassword    = password_hash($password, PASSWORD_DEFAULT);
             $registration_date = setDate();
 
-            $query = "INSERT INTO users (firstName, lastName, username, email, password, reg_date) VALUES ('$first', '$last', '$username', '$email', '$hashedPassword', '$registration_date')";
+            $query = "INSERT INTO users (username, email, password, reg_date) VALUES ('$username', '$email', '$hashedPassword', '$registration_date')";
             $stmt  = $userPDO->prepare($query);
             $stmt->execute();
 

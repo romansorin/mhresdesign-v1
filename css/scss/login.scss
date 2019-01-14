@@ -3,125 +3,145 @@
 @import 'partial';
 @import 'module/buttons';
 @import 'module/icons';
-.bg-img-col {
-    @media only screen and (max-width: 768px) {
-        display: none;
-    }
-    #bg-img {
-        height: 100vh;
-    }
+.no-padding {
+  padding-left: 0px;
+  padding-right: 0px;
 }
-.col-md-5 {
-    background-color: $white;
+.login-bg {
+  background: linear-gradient(135deg, #EA5C54 0%, #bb6dec 100%);
+  overflow: hidden;
+  max-height: 100vh;
 }
-.content {
-    background-color: $white;
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
-.heading-wrapper {
-    display: block;
-    @include margin($top: 150px, $bottom: 60px);
-    h1 {
-        @include text($size: 44px, $weight: 700, $transform: uppercase, $color: #4d4f5c, $spacing: 10px);
-        @include margin($bottom: 15px);
-    }
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+.form-content {
+  .login-header {
     h2 {
-        @include text($size: 20px, $weight: 400, $transform: none, $color: #4d4f5c);
+      text-transform: none;
+      text-align: left;
+      color: #33373a;
+      line-height: 31px;
+      padding: 0;
+      font-size: 30px;
+      margin: 0 0 20px;
     }
-}
-.form-wrapper {
-    text-align: center;
-    .form-inputs {
-        @include margin($bottom: 35px);
-        @include padding($bottom: 10px, $left: 5px);
-        @include text($font: $primary-font, $weight: 400, $color: #43425D, $size: 20px);
-        border: none;
-        border-bottom: 2px solid #E9E9F0;
-        width: 445px;
-        transition: .2s ease-in-out;
-        &:hover {
-            border-color: #43425D;
-        }
-        &:focus {
-            border-color: #66afe9;
-            outline: none;
-            cursor: #3B86FF;
-        }
+  }
+  height: 100vh;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    display: block;
+    color: #432F93;
+    font-size: 14px;
+    &:hover {
+      text-decoration: none;
     }
-    *::placeholder {
-        color: #43425D;
+  }
+  #login-btn {
+    display: block;
+  }
+  .form-group {
+    display: block;
+    margin: 0 auto 20px;
+    outline: none;
+    position: relative;
+  }
+  /* only concept colors 
+  .error {
+    border-color: #F0544E !important;
+    color: #F0544E !important;
+  }
+  */
+  .form-input {
+    min-height: 46px;
+    font-size: 15px;
+    width: 500px;
+    padding-left: 20px;
+    border: 1px solid #dbe2ea;
+    border-radius: 4px;
+    display: block;
+    -webkit-box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    color: #5c6b7e;
+    outline: none;
+    &:hover:not(.input-error) {
+      border-color: #43425D;
     }
-    .form-row {
-        [class*=col-] {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
+    &:focus {
+      border-color: #66afe9;
+      outline: none;
     }
-    .btn-dark {
-        width: 195px;
-        @include text($font: $primary-font, $size: 18px, $weight: 400, $color: $white);
-        @include margin($top: 30px);
-        @include padding($top: 15px, $right: 65px, $bottom: 15px, $left: 65px);
-        background-color: #43425D;
-        border-color: #43425D;
-        &:hover, &:focus {
-            background-color: #2F2E50;
-        }
-        @media only screen and (max-width: 992px) {
-            margin: auto;
-        }
+  }
+  .btn-dark {
+    @include text($font: $primary-font, $size: 18px, $weight: 400, $color: $white);
+    @include margin($top: 30px, $bottom: 15px);
+    @include padding($top: 15px, $right: 75px, $bottom: 15px, $left: 75px);
+    background-color: #432F93;
+    border-color: #43425D;
+    -webkit-box-shadow: 0px 6px 36px 0px rgba(67, 47, 147, 0.20);
+    -moz-box-shadow: 0px 6px 36px 0px rgba(67, 47, 147, 0.20);
+    box-shadow: 0px 6px 36px 0px rgba(67, 47, 147, 0.20);
+    &:hover, &:focus {
+      background-color: #2F2E50;
     }
-    .btn-outline-dark {
-        width: 195px;
-        @include margin($top: 30px);
-        @include padding($top: 15px, $right: 65px, $bottom: 15px, $left: 65px);
-        @include text($font: $primary-font, $size: 18px, $weight: 400, $color: #4D4F5C);
-        border-color: #4D4F5C;
-        background-color: $none;
-        &:hover {
-            background-color: #2F2E50;
-            border-color: #2F2E50;
-            color: $white;
-        }
-        &:focus {
-            border-color: #2F2E50
-        }
-        @media only screen and (max-width: 992px) {
-            margin: auto;
-        }
+    &:focus {
+      box-shadow: none;
+      outline: none;
     }
-}
-#login {
-    #login-submit-btn {
-        @include margin($right: 35px);
-        @media only screen and (max-width: 1024px) {
-            @include margin($right: 0px);
-        }
+    border-radius:50px;
+    border:2px solid #43425D;
+    text-transform:none;
+    &:hover {
+      cursor: pointer;
     }
-    #forgotPassword {
-        cursor: pointer;
-    }
+  }
+  *::placeholder {
+    color: #dbe2ea;
+  }
 }
 #signup {
-    display: none;
-    .col-md-6 {
-        .form-inputs {
-            width: 218px;
-        }
-    }
-    .form-inputs {
-        width: 465px;
-    }
-    #firstNameInput {
-        text-align: right;
-    }
-    #lastNameInput {
-        text-align: left;
-    }
+  display: none;
+  #signup-btn {
+    margin-top: 15px;
+  }
 }
 #forgot-password {
-    display: none;
+  display: none;
 }
-.signin-redirect-ref {
-    @include margin($top: 15px);
-    cursor: pointer;
+.input-error {
+  border-color: #d7a2a8!important;
+  padding: 0;
+  color: #bc2031!important;
+}
+.inline-error {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  font-size: 14px;
+}
+#forgot-password-anchor {
+  text-align: right;
+}
+#form-login-remember {
+  #remember-me-checkbox {
+    padding-left: 30px;
+    color: #432F93;
+    font-size: 16px;
+  }
+  [type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
+    -webkit-box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
+  }
 }

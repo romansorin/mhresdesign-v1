@@ -1,13 +1,14 @@
 <?php
 
 include '../inc/connection/connection.php';
+include '../inc/connection/configs.php';
 
 $conn    = new Connection();
-$userPDO = $conn->connectToDb('users', 'reader', 'readonly');
+$userPDO = $conn->connectToDb($db_users, $user_users, $pass_users);
 
 if (isset($_POST['login-submit'])) {
-    $mail_user = $_POST['mailuser'];
-    $password  = $_POST['password'];
+    $mail_user = $_POST['mailuser-input-login'];
+    $password  = $_POST['password-input-login'];
 
     if (empty($mail_user) || empty($password)) {
         header("Location: index.php?error=empty_fields");
