@@ -1,17 +1,12 @@
-$('#signup-redirect-ref').click(function() {
+$('a[href="#signup"]').click(function(e) {
     $('.content').hide();
-    $('#signup').fadeIn("slow");
+    $('#signup').show();
 });
-$('.signin-redirect-ref').click(function() {
+$('a[href="#login"]').click(function(e) {
     $('.content').hide();
-    $('#login').fadeIn("slow");
+    $('#login').show();
 });
-$('#forgotPassword').click(function() {
+$('a[href="#forgot-password"]').click(function(e) {
     $('.content').hide();
-    $('#forgot-password').fadeIn("slow");
-});
-$('#password-reset-submit').click(function(e) {
-    e.preventDefault();
-    let info = document.getElementById('info');
-    info.innerHTML = 'test!';
+    $('#forgot-password').show();
 });
