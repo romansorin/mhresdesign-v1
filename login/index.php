@@ -43,6 +43,7 @@ else:
 								<!-- class="input-error -->
 								<input type="password"  class="form-input" name="password-input-login" id="password-input-login" placeholder="Password" autocomplete="off" value>
 								<!--<span class="input-error inline-error">Required</span>-->
+
 							</div>
 							<div class="form-row">
 								<div class="col">
