@@ -4,144 +4,171 @@
 @import 'module/buttons';
 @import 'module/icons';
 .no-padding {
-  padding-left: 0px;
-  padding-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 .login-bg {
-  background: linear-gradient(135deg, #EA5C54 0%, #bb6dec 100%);
-  overflow: hidden;
-  max-height: 100vh;
+    background: linear-gradient(135deg, #EA5C54 0%, #bb6dec 100%);
+    overflow: hidden;
+    max-height: 100vh;
 }
 #particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 canvas {
-  display: block;
-  vertical-align: bottom;
+    display: block;
+    vertical-align: bottom;
 }
 .form-content {
-  .login-header {
-    h2 {
-      text-transform: none;
-      text-align: left;
-      color: #33373a;
-      line-height: 31px;
-      padding: 0;
-      font-size: 30px;
-      margin: 0 0 20px;
+    .login-header {
+        h2 {
+            text-transform: none;
+            text-align: left;
+            color: #33373a;
+            line-height: 31px;
+            padding: 0;
+            font-size: 30px;
+            margin: 0 0 20px;
+        }
     }
-  }
-  height: 100vh;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  a {
-    display: block;
-    color: #432F93;
-    font-size: 14px;
-    &:hover {
-      text-decoration: none;
+    height: 100vh;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+        display: block;
+        color: #432F93;
+        font-size: 14px;
+        &:hover {
+            text-decoration: none;
+        }
     }
-  }
-  #login-btn {
-    display: block;
-  }
-  .form-group {
-    display: block;
-    margin: 0 auto 20px;
-    outline: none;
-    position: relative;
-  }
-  /* only concept colors 
+    #login-btn {
+        display: block;
+    }
+    .form-group {
+        display: block;
+        margin: 0 auto 20px;
+        outline: none;
+        position: relative;
+    }
+    /* only concept colors 
   .error {
     border-color: #F0544E !important;
     color: #F0544E !important;
   }
   */
-  .form-input {
-    min-height: 46px;
-    font-size: 15px;
-    width: 500px;
-    padding-left: 20px;
-    border: 1px solid #dbe2ea;
-    border-radius: 4px;
-    display: block;
-    -webkit-box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
-    margin: 0 auto;
-    color: #5c6b7e;
-    outline: none;
-    &:hover:not(.input-error) {
-      border-color: #43425D;
+    .form-input {
+        min-height: 46px;
+        font-size: 15px;
+        width: 500px;
+        padding-left: 20px;
+        border: 1px solid #dbe2ea;
+        border-radius: 4px;
+        display: block;
+        -webkit-box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
+        margin: 0 auto;
+        color: #5c6b7e;
+        transition: .2s ease-in;
+        outline: none;
+        &:hover:not(.input-error) {
+            border-color: #43425D;
+            transition: .25s ease-out;
+        }
+        &:hover:focus, &:focus {
+            border-color: #66afe9;
+            outline: none;
+        }
     }
-    &:focus {
-      border-color: #66afe9;
-      outline: none;
+    .btn-dark {
+        @include text($font: $primary-font, $size: 18px, $weight: 400, $color: $white);
+        @include margin($top: 30px, $bottom: 15px);
+        @include padding($top: 15px, $right: 75px, $bottom: 15px, $left: 75px);
+        background-color: #432F93;
+        border-color: #43425D;
+        -webkit-box-shadow: 0px 6px 36px 0px rgba(67, 47, 147, 0.20);
+        -moz-box-shadow: 0px 6px 36px 0px rgba(67, 47, 147, 0.20);
+        box-shadow: 0px 6px 36px 0px rgba(67, 47, 147, 0.20);
+        &:hover, &:focus {
+            background-color: #2F2E50;
+        }
+        &:focus {
+            box-shadow: none;
+            outline: none;
+        }
+        border-radius:50px;
+        border:2px solid #43425D;
+        text-transform:none;
+        &:hover {
+            cursor: pointer;
+        }
     }
-  }
-  .btn-dark {
-    @include text($font: $primary-font, $size: 18px, $weight: 400, $color: $white);
-    @include margin($top: 30px, $bottom: 15px);
-    @include padding($top: 15px, $right: 75px, $bottom: 15px, $left: 75px);
-    background-color: #432F93;
-    border-color: #43425D;
-    -webkit-box-shadow: 0px 6px 36px 0px rgba(67, 47, 147, 0.20);
-    -moz-box-shadow: 0px 6px 36px 0px rgba(67, 47, 147, 0.20);
-    box-shadow: 0px 6px 36px 0px rgba(67, 47, 147, 0.20);
-    &:hover, &:focus {
-      background-color: #2F2E50;
+    *::placeholder {
+        color: #dbe2ea;
     }
-    &:focus {
-      box-shadow: none;
-      outline: none;
-    }
-    border-radius:50px;
-    border:2px solid #43425D;
-    text-transform:none;
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  *::placeholder {
-    color: #dbe2ea;
-  }
 }
 #signup {
-  display: none;
-  #signup-btn {
-    margin-top: 15px;
-  }
+    display: none;
+    #signup-btn {
+        margin-top: 15px;
+    }
 }
 #forgot-password {
-  display: none;
+    display: none;
 }
 .input-error {
-  border-color: #d7a2a8!important;
-  padding: 0;
-  color: #bc2031!important;
+    border-color: #d7a2a8!important;
+    padding: 0;
+    color: #bc2031!important;
 }
 .inline-error {
-  position: absolute;
-  right: 10px;
-  top: 12px;
-  font-size: 14px;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    font-size: 14px;
 }
 #forgot-password-anchor {
-  text-align: right;
+    text-align: right;
 }
 #form-login-remember {
-  #remember-me-checkbox {
-    padding-left: 30px;
-    color: #432F93;
-    font-size: 16px;
-  }
-  [type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
-    -webkit-box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
-  }
+    #remember-me-checkbox {
+        padding-left: 30px;
+        color: #432F93;
+        font-size: 16px;
+    }
+    [type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
+        -webkit-box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
+    }
+}
+#view-pass {
+    color: #dbe2ea;
+    padding-right: 5px;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    font-size: 14px;
+    transition: .15s ease-out;
+    &:hover {
+        color: #43425D;
+        cursor: pointer;
+        :before {
+            content: "\f06e";
+            transition: .15s ease-in;
+        }
+    }
+    .fa-eye {
+        color: #43425D;
+        transition: .15s ease-in;
+    }
+}
+#hide-particles-btn {
+  background: transparent;
+  outline: none;
 }

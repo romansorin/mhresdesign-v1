@@ -8,15 +8,15 @@ session_start();
 	<meta charset="utf-8">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	    <link rel="stylesheet" href="checkbox.css">
+	<link rel="stylesheet" href="checkbox.css">
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<title>Login</title>
 	<?php include '../inc/includes.php';?>
+	<?php include 'login.inc.php';?>
 	<link rel="stylesheet" href="../css/login.css">
 	<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-	 <!-- Compiled and minified CSS -->
 
 </head>
 <body>
@@ -29,29 +29,31 @@ else:
 		<div class="container-fluid">
 			<div class="full-background login row">
 				<div class="col-md-6 no-padding d-none d-lg-block login-bg">
+					<!--<button class="btn btn-light" id="hide-particles-btn">Hide</button>-->
 					<div id="particles-js"></div>
 				</div>
 				<div class="col-lg-6 col-md-12 no-padding form-content">
 					<div id="login" class="content">
-						<form action="login.inc.php" method="post" id="#login-form">
+						<form action="<?=htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post" id="#login-form">
 							<div class="login-header"><h2>Login</h2></div>
 							<div class="form-group">
-								<input type="text" class="form-input" name="mailuser-input-login" id="mailuser-input-login" placeholder="Username" autocomplete="off" value>
-								<!--<span class="input-error inline-error">Required</span>-->
+								<input type="text" class="form-input" name="mailuser-input-login" id="mailuser-input-login" placeholder="Username" autocomplete="off">
+								<span class="input-error inline-error" id="mail_user_error"><?=$mail_user_error?></span>
 							</div>
 							<div class="form-group">
 								<!-- class="input-error -->
-								<input type="password"  class="form-input" name="password-input-login" id="password-input-login" placeholder="Password" autocomplete="off" value>
-								<!--<span class="input-error inline-error">Required</span>-->
+								<input type="password"  class="form-input" name="password-input-login" id="password-input-login" placeholder="Password" autocomplete="off">
+								<span id="view-pass"><i class="far fa-eye-slash"></i></span>
+								<span class="input-error inline-error" id="pass_error"><?=$pass_error?></span>
 
 							</div>
 							<div class="form-row">
 								<div class="col">
 									<div id="form-login-remember" class="form-group">
-											<label>
-        <input type="checkbox"  />
-        <span id="remember-me-checkbox">Remember me</span>
-      </label>
+										<label>
+											<input type="checkbox"  />
+											<span id="remember-me-checkbox">Remember me</span>
+										</label>
 									</div>
 								</div>
 								<div class="col">

@@ -71,10 +71,16 @@ canvas {
     box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
     margin: 0 auto;
     color: #5c6b7e;
+    -webkit-transition: .2s ease-in;
+    -o-transition: .2s ease-in;
+    transition: .2s ease-in;
     outline: none; }
     .form-content .form-input:hover:not(.input-error) {
-      border-color: #43425D; }
-    .form-content .form-input:focus {
+      border-color: #43425D;
+      -webkit-transition: .25s ease-out;
+      -o-transition: .25s ease-out;
+      transition: .25s ease-out; }
+    .form-content .form-input:hover:focus, .form-content .form-input:focus {
       border-color: #66afe9;
       outline: none; }
   .form-content .btn-dark {
@@ -144,3 +150,31 @@ canvas {
   -webkit-box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.15); }
+
+#view-pass {
+  color: #dbe2ea;
+  padding-right: 5px;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  font-size: 14px;
+  -webkit-transition: .15s ease-out;
+  -o-transition: .15s ease-out;
+  transition: .15s ease-out; }
+  #view-pass:hover {
+    color: #43425D;
+    cursor: pointer; }
+    #view-pass:hover :before {
+      content: "\f06e";
+      -webkit-transition: .15s ease-in;
+      -o-transition: .15s ease-in;
+      transition: .15s ease-in; }
+  #view-pass .fa-eye {
+    color: #43425D;
+    -webkit-transition: .15s ease-in;
+    -o-transition: .15s ease-in;
+    transition: .15s ease-in; }
+
+#hide-particles-btn {
+  background: transparent;
+  outline: none; }
