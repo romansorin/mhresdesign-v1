@@ -29,22 +29,21 @@ else:
 		<div class="container-fluid">
 			<div class="full-background login row">
 				<div class="col-md-6 no-padding d-none d-lg-block login-bg">
+					<!-- TODO: Some kind of button or link for hiding the particles if requestred -->
 					<!--<button class="btn btn-light" id="hide-particles-btn">Hide</button>-->
 					<div id="particles-js"></div>
 				</div>
 				<div class="col-lg-6 col-md-12 no-padding form-content">
 					<div id="login" class="content">
-						<form action="<?=htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post" id="#login-form">
+						<form action="login.inc.php" method="post" id="#login-form">
 							<div class="login-header"><h2>Login</h2></div>
 							<div class="form-group">
 								<input type="text" class="form-input" name="mailuser-input-login" id="mailuser-input-login" placeholder="Username" autocomplete="off">
-								<span class="input-error inline-error" id="mail_user_error"><?=$mail_user_error?></span>
 							</div>
 							<div class="form-group">
 								<!-- class="input-error -->
 								<input type="password"  class="form-input" name="password-input-login" id="password-input-login" placeholder="Password" autocomplete="off">
 								<span id="view-pass"><i class="far fa-eye-slash"></i></span>
-								<span class="input-error inline-error" id="pass_error"><?=$pass_error?></span>
 
 							</div>
 							<div class="form-row">
@@ -63,6 +62,7 @@ else:
 
 							<button type="submit" class="btn btn-dark" name="login-submit" id="login-btn">Login</button>
 							<a href="#signup"><span>Create an account</span></a>
+							<p id="form-message"></p>
 						</form>
 					</div>
 					<div id="signup" class="content">

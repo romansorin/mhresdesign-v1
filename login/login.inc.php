@@ -35,9 +35,9 @@ if (isset($_POST['login-submit'])) {
             $password_check = password_verify($password, $row['password']);
 
             if ($password_check === false) {
-                
+
                 $pass_error = "Invalid email / password combination.";
-               
+
             } else if ($password_check === true) {
                 session_start();
                 $_SESSION['userID']   = $row['id'];
@@ -50,9 +50,9 @@ if (isset($_POST['login-submit'])) {
                 exit();
             }
         } else {
-           
+
             $pass_error = "Invalid email / password combination.";
-           
+
         }
     }
 }
