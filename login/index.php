@@ -29,13 +29,13 @@ else:
 		<div class="container-fluid">
 			<div class="full-background login row">
 				<div class="col-md-6 no-padding d-none d-lg-block login-bg">
-					<!-- TODO: Some kind of button or link for hiding the particles if requestred -->
+					<!-- TODO: Some kind of button or link for hiding the particles if requested -->
 					<!--<button class="btn btn-light" id="hide-particles-btn">Hide</button>-->
 					<div id="particles-js"></div>
 				</div>
 				<div class="col-lg-6 col-md-12 no-padding form-content">
 					<div id="login" class="content">
-						<form action="login.inc.php" method="post" id="#login-form">
+						<form action="login.inc.php" method="post" id="login-form">
 							<div class="login-header"><h2>Login</h2></div>
 							<div class="form-group">
 								<input type="text" class="form-input" name="mailuser-input-login" id="mailuser-input-login" placeholder="Username" autocomplete="off">
@@ -44,7 +44,6 @@ else:
 								<!-- class="input-error -->
 								<input type="password"  class="form-input" name="password-input-login" id="password-input-login" placeholder="Password" autocomplete="off">
 								<span id="view-pass"><i class="far fa-eye-slash"></i></span>
-
 							</div>
 							<div class="form-row">
 								<div class="col">
@@ -66,7 +65,7 @@ else:
 						</form>
 					</div>
 					<div id="signup" class="content">
-						<form action="signup.inc.php" method="post" id="#signup-form">
+						<form action="signup.inc.php" method="post" id="signup-form">
 							<div class="login-header"><h2>Sign Up</h2></div>
 							<div class="form-group">
 								<input type="text" class="form-input" name="user-input-signup" id="user-input-signup" placeholder="Username" autocomplete="off">
@@ -85,7 +84,7 @@ else:
 						</form>
 					</div>
 					<div id="forgot-password" class="content">
-						<form action="pass-reset.inc.php" method="post" id="#forgot-password-form">
+						<form action="pass-reset.inc.php" method="post" id="forgot-password-form">
 							<div class="login-header"><h2>Forgot Password</h2></div>
 							<div class="form-group">
 								<input type="email" class="form-input" name="mail-input-forgot" id="mail-input-forgot" placeholder="Email" autocomplete="off">
@@ -99,6 +98,7 @@ else:
 		</div>
 		<script src="main.js"></script>
 		<script src="app.js"></script>
+    <script src="ajax.js"></script>
 	<?php endif;?>
 </body>
 </html>
