@@ -30,13 +30,7 @@ canvas {
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  /* only concept colors 
-  .error {
-    border-color: #F0544E !important;
-    color: #F0544E !important;
-  }
-  */ }
+  justify-content: center; }
   .form-content .login-header h2 {
     text-transform: none;
     text-align: left;
