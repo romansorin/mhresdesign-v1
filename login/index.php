@@ -17,7 +17,6 @@ session_start();
 	<?php include 'login.inc.php';?>
 	<link rel="stylesheet" href="../css/login.css">
 	<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
 </head>
 <body>
 	<?php
@@ -25,7 +24,7 @@ if (isset($_SESSION['userID'])):
     header("Location: ../dashboard");
     exit();
 else:
-?>
+    ?>
 		<div class="container-fluid">
 			<div class="full-background login row">
 				<div class="col-md-6 no-padding d-none d-lg-block login-bg">

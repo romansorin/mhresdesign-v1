@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="57c9ff82-2d66-4bbb-8dbd-4d0828c1ab4c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/scss/login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/scss/login.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/login/ajax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/login/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/login/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,12 +34,12 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login/login.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+            <state relative-caret-position="828">
+              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -39,8 +47,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login/ajax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="133" column="20" selection-start-line="133" selection-start-column="20" selection-end-line="133" selection-end-column="20" />
+            <state relative-caret-position="507">
+              <caret line="206" column="4" selection-start-line="206" selection-start-column="4" selection-end-line="206" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -48,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+            <state relative-caret-position="195">
+              <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -67,6 +84,10 @@
     <findStrings>
       <find>#</find>
       <find>id=&quot;#</find>
+      <find>alert</find>
+      <find>$('#view-pass')</find>
+      <find>requiredError</find>
+      <find>'</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -75,12 +96,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/login/login.inc.php" />
         <option value="$PROJECT_DIR$/login/main.js" />
         <option value="$PROJECT_DIR$/login/index.php" />
-        <option value="$PROJECT_DIR$/login/login.inc.php" />
         <option value="$PROJECT_DIR$/login/ajax.js" />
       </list>
     </option>
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1366" />
@@ -115,8 +147,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="jsx.switch.disabled" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Linters.JSHint" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -130,6 +173,16 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="ajax.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/login/ajax.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.ajax.js" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -140,67 +193,96 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547644263366</updated>
-      <workItem from="1547644267732" duration="16025000" />
+      <workItem from="1547644267732" duration="23649000" />
+      <workItem from="1547771725401" duration="2803000" />
+      <workItem from="1547777895398" duration="6949000" />
+      <workItem from="1547786155985" duration="6061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16025000" />
+    <option name="enabled" value="true" />
+    <option name="totallyTimeSpent" value="39462000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24622357" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295129" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" weight="0.32930514" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295129" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3295129" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Inspection Results" order="10" weight="0.32844576" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3295129" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Time Tracking" order="3" weight="0.32930514" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32930514" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/login/main.js">
+    <entry file="file://$PROJECT_DIR$/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
+        <state relative-caret-position="143">
+          <caret line="3448" column="17" selection-start-line="3448" selection-start-column="17" selection-end-line="3448" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/index.php">
+    <entry file="file://$PROJECT_DIR$/inc/PHPMailer/src/PHPMailer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        <state relative-caret-position="135">
+          <caret line="2648" column="20" selection-start-line="2648" selection-start-column="20" selection-end-line="2648" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login/login.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        <state relative-caret-position="828">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login/ajax.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="133" column="20" selection-start-line="133" selection-start-column="20" selection-end-line="133" selection-end-column="20" />
+        <state relative-caret-position="507">
+          <caret line="206" column="4" selection-start-line="206" selection-start-column="4" selection-end-line="206" selection-end-column="4" />
         </state>
       </provider>
     </entry>

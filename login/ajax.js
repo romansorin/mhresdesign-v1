@@ -53,6 +53,7 @@ $("#login-form").submit(function (event) {
                     break;
                 default:
                     validChecks();
+                    window.location.href = "../dashboard";
                     break;
             }
         }
@@ -201,4 +202,3 @@ viewPass.click(function (event) {
         $(this).find($(".far")).removeClass('fa-eye').addClass('fa-eye-slash');
     }
 });
-

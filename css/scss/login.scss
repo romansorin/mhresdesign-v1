@@ -120,6 +120,24 @@ canvas {
     padding: 0;
     color: #bc2031!important;
 }
+.input-error::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #d7a2a8;
+}
+.input-error:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #d7a2a8;
+    opacity: 1;
+}
+.input-error::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #d7a2a8;
+    opacity: 1;
+}
+.input-error:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #d7a2a8;
+}
 .inline-error {
     position: absolute;
     right: 10px;
@@ -163,6 +181,6 @@ canvas {
     }
 }
 #hide-particles-btn {
-  background: transparent;
-  outline: none;
+    background: transparent;
+    outline: none;
 }
