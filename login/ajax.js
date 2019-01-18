@@ -16,7 +16,6 @@ let errorStates = {
 };
 
 // @TODO: make placeholders red on error
-// @TODO: commenting
 // @TODO: figure out why invalid username / password is so slow responding..
 
 // Errors array to easily access the provided errors and the error codes which are returned from login.inc.php
@@ -78,6 +77,7 @@ function userNullCheck() {
             break;
     }
 }
+
 /** [invalidCredentialsCheck: Check if username/password are valid and matching] */
 function invalidCredentialsCheck() {
     errorStates.invalidCredentials = true;
@@ -103,6 +103,7 @@ function invalidCredentialsCheck() {
             userInputField.after(errors.invalidCredentials);
     }
 }
+
 /** [validChecks: Executed if all other checks are false, resets the error fields] */
 function validChecks() {
     // @TODO: utilize a for-each loop to assign false?
@@ -142,6 +143,7 @@ function userFieldChecks() {
         userInputField.next().remove();
     }
 }
+
 /** [passFieldChecks: Check for empty fields & character length] */
 function passFieldChecks() {
     password = passInputField.val();
@@ -179,6 +181,7 @@ function passFieldChecks() {
         viewPass.show();
     }
 }
+
 /** [Run these when input fields lose focus to validate the input] */
 userInputField.focusout(function () {
     userFieldChecks();
@@ -190,7 +193,7 @@ passInputField.focusout(function () {
 
 viewPass.click(function (event) {
     event.preventDefault();
-    if (passInputField.attr('type') == 'password') {
+    if (passInputField.attr('type') === 'password') {
         passInputField.attr('type', 'text');
         $(this).find($(".far")).removeClass('fa-eye-slash').addClass('fa-eye');
     } else {
