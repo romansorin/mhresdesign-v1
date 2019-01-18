@@ -1,59 +1,71 @@
-const userInputField = $('#mailuser-input-login');
-const passInputField = $('#password-input-login');
-const viewPass = $('#view-pass');
+const userInputField = document.getElementById('mailuser-input-login');
+const passInputField = document.getElementById('password-input-login');
+const viewPass = document.getElementById('view-pass');
 
-let userNullErrorState = false;
-let invalidCredentialsErrorState = false;
+let username;
+let password;
+let submit;
 
-const requiredError = "<span class='input-error inline-error'>This field is required.</span>";
-const minCharsError = "<span class='input-error inline-error'>Password must be a minimum of 5 characters.</span>";
-const userNullError = "<span class='input-error inline-error'>User does not exist.</span>";
-const invalidCredentialsError = "<span class='input-error inline-error'>Invalid username/password.</span>";
+let errorStates = {
+    userNull: false,
+    invalidCredentials: false
+};
 
-$('#login-form').submit(function (event) {
+// @TODO: make placeholders red on error
+
+const errors = {
+    required: "<span class='input-error inline-error'>This field is required.</span>",
+    minChars: "<span class='input-error inline-error'>Password must be a minimum of 5 characters.</span>",
+    userNull: "<span class='input-error inline-error'>User does not exist.</span>",
+    invalidCredentials: "<span class='input-error inline-error'>Invalid username/password.</span>",
+    userNullReturned: "userNullError",
+    invalidCredentialsReturned: "invalidCredentialsError"
+};
+
+$("#login-form").submit(function (event) {
     event.preventDefault();
+    username = $("#mailuser-input-login").val();
+    password = $("#password-input-login").val();
+    submit = $("#login-btn").val();
 
-    const username = $('#mailuser-input-login').val();
-    const password = $('#password-input-login').val();
-    const submit = $('#login-btn').val();
 
     $.ajax({
         type: "POST",
         url: "login.inc.php",
         data: {username: username, password: password, submit: submit},
         success: function (result) {
-            if (result === 'userNullError') {
-                userNullErrorState = true;
-                if (!userInputField.hasClass('input-error')) {
-                    userInputField.addClass('input-error');
-                    userInputField.after(userNullError);
+            if (result === errors.userNullReturned) {
+                errorStates.userNull = true;
+                if (!userInputField.hasClass("input-error")) {
+                    userInputField.addClass("input-error");
+                    userInputField.after(errors.userNull);
                 } else {
                     userInputField.next().remove();
-                    userInputField.after(userNullError);
+                    userInputField.after(errors.userNull);
                 }
-            } else if (result === 'invalidCredentialsError') {
-                invalidCredentialsErrorState = true;
-                if (!userInputField.hasClass('input-error')) {
-                    userInputField.addClass('input-error');
+            } else if (result === errors.invalidCredentialsReturned) {
+                errorStates.invalidCredentials = true;
+                if (!userInputField.hasClass("input-error")) {
+                    userInputField.addClass("input-error");
                 } else {
                     userInputField.next().remove();
                 }
-                if (!passInputField.hasClass('input-error')) {
-                    passInputField.addClass('input-error');
+                if (!passInputField.hasClass("input-error")) {
+                    passInputField.addClass("input-error");
                     viewPass.hide();
-                    passInputField.after(invalidCredentialsError);
+                    passInputField.after(errors.invalidCredentials);
                 } else {
                     userInputField.next().remove();
                     viewPass.hide();
-                    userInputField.after(invalidCredentialsError);
+                    userInputField.after(errors.invalidCredentials);
                 }
             } else {
-                userNullErrorState = false;
-                invalidCredentialsErrorState = false;
-                if (userInputField.hasClass('input-error')) {
+                errorStates.userNull = false;
+                errorStates.invalidCredentials = false;
+                if (userInputField.hasClass("input-error")) {
                     userInputField.next().remove();
                 }
-                if (passInputField.hasClass('input-error')) {
+                if (passInputField.hasClass("input-error")) {
                     passInputField.next().remove();
                     viewPass.show();
                 }
@@ -63,41 +75,45 @@ $('#login-form').submit(function (event) {
 });
 
 userInputField.focusout(function () {
-    if ($('#mailuser-input-login').val().length === 0) {
-        if (!userInputField.hasClass('input-error')) {
-            userInputField.addClass('input-error');
-            userInputField.after(requiredError);
+    username = $("#mailuser-input-login").val();
+    if (username.length === 0) {
+        if (!userInputField.hasClass("input-error")) {
+            userInputField.addClass("input-error");
+            userInputField.after(errors.required);
         }
-    } else if (!userNullErrorState && !invalidCredentialsErrorState) {
-        userInputField.removeClass('input-error');
+    } else if (!errorStates.userNull && !errorStates.invalidCredentials) {
+        userInputField.removeClass("input-error");
         userInputField.next().remove();
     }
 });
 
 passInputField.focusout(function () {
-    if ($('#password-input-login').val().length === 0) {
-        if (!passInputField.hasClass('input-error')) {
-            passInputField.addClass('input-error');
+    password = $("#password-input-login").val();
+    if (password.length === 0) {
+        if (!passInputField.hasClass("input-error")) {
+            passInputField.addClass("input-error");
             viewPass.hide();
-            passInputField.after(requiredError);
+            passInputField.after(errors.required);
         } else {
             passInputField.next().remove();
             viewPass.hide();
-            passInputField.after(requiredError);
+            passInputField.after(errors.required);
         }
-    } else if ($('#password-input-login').val().length < 5) {
-        if (!passInputField.hasClass('input-error')) {
-            passInputField.addClass('input-error');
+    } else if (password.length < 5) {
+        if (!passInputField.hasClass("input-error")) {
+            passInputField.addClass("input-error");
             viewPass.hide();
-            passInputField.after(minCharsError);
+            passInputField.after(errors.minChars);
         } else {
             passInputField.next().remove();
             viewPass.hide();
-            passInputField.after(minCharsError);
+            passInputField.after(errors.minChars);
         }
-    } else if (!invalidCredentialsErrorState) {
-        passInputField.removeClass('input-error');
-        passInputField.next().remove();
+    } else if (!errorStates.invalidCredentials) {
+        if (passInputField.hasClass("input-error")) {
+            passInputField.removeClass("input-error");
+            passInputField.next().remove();
+        }
         viewPass.show();
     }
 });

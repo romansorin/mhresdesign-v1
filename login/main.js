@@ -22,7 +22,3 @@ $('#view-pass').click(function(e) {
         $(this).find($(".far")).removeClass('fa-eye').addClass('fa-eye-slash');
     }
 });
-/* implement client-side input field validation too ! */
-$('#hide-particles-btn').click(function() {
-    $('#particles-js').toggle();
-});
