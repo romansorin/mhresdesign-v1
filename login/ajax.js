@@ -1,12 +1,14 @@
 const userInputField = $("#mailuser-input-login");
 const passInputField = $("#password-input-login");
-let viewPass = $("#view-pass");
+const login = $("#login-btn");
+const viewPass = $("#view-pass");
 
 let username;
 let password;
 let submit;
 
 let errorStates = {
+    userInput: false,
     userNull: false,
     invalidCredentials: false
 };
@@ -15,6 +17,8 @@ let errorStates = {
 // @TODO: replace if-else's with switch where reasonable
 // @TODO: handle case of clicking submit button without any input?
 // @TODO: make username and password field input checks (for null, minchars, etc) into independent functions so they can possibly be used in the submit event
+// @TODO: commenting
+// @TODO: figure out why invalid username / password is so slow responding..
 
 const errors = {
     required: "<span class='input-error inline-error'>This field is required.</span>",
@@ -27,15 +31,17 @@ const errors = {
 
 $("#login-form").submit(function (event) {
     event.preventDefault();
-    username = $("#mailuser-input-login").val();
-    password = $("#password-input-login").val();
-    submit = $("#login-btn").val();
+    username = userInputField.val();
+    password = passInputField.val();
+    submit = login.val();
 
     $.ajax({
         type: "POST",
         url: "login.inc.php",
         data: {username: username, password: password, submit: submit},
         success: function (result) {
+            userFieldChecks();
+            passFieldChecks();
             switch (result) {
                 case errors.userNullReturned:
                     userNullCheck();
@@ -56,30 +62,31 @@ function userNullCheck() {
     errorStates.userNull = true;
     if (!userInputField.hasClass("input-error")) {
         userInputField.addClass("input-error");
-        userInputField.after(errors.userNull);
+        if (!errorStates.userInput) {
+            userInputField.after(errors.userNull);
+        }
     } else {
-        userInputField.next().remove();
-        userInputField.after(errors.userNull);
+        if (!errorStates.userInput) {
+            userInputField.next().remove();
+            userInputField.after(errors.userNull);
+        }
     }
 }
 
 function invalidCredentialsCheck() {
     errorStates.invalidCredentials = true;
     if (!userInputField.hasClass("input-error")) {
-
         userInputField.addClass("input-error");
     } else {
-
-        userInputField.next().remove();
+        if (!errorStates.userInput) {
+            userInputField.next().remove();
+        }
     }
     if (!passInputField.hasClass("input-error")) {
-
         passInputField.addClass("input-error");
         viewPass.hide();
         passInputField.after(errors.invalidCredentials);
-
     } else {
-
         userInputField.next().remove();
         viewPass.hide();
         userInputField.after(errors.invalidCredentials);
@@ -87,6 +94,8 @@ function invalidCredentialsCheck() {
 }
 
 function validChecks() {
+    // @TODO: utilize a for-each loop to assign false?
+    errorStates.userInput = false;
     errorStates.userNull = false;
     errorStates.invalidCredentials = false;
     if (userInputField.hasClass("input-error")) {
@@ -98,21 +107,30 @@ function validChecks() {
     }
 }
 
-userInputField.focusout(function () {
-    username = $("#mailuser-input-login").val();
+function userFieldChecks() {
+    username = userInputField.val();
     if (username.length === 0) {
+        errorStates.userInput = true;
         if (!userInputField.hasClass("input-error")) {
             userInputField.addClass("input-error");
             userInputField.after(errors.required);
+        } else {
+            userInputField.next().remove();
+            userInputField.after(errors.required);
         }
-    } else if (!errorStates.userNull && !errorStates.invalidCredentials) {
+        // @TODO: maybe something to test the collective state of all elements in the array?
+    } else if (!errorStates.userNull && !errorStates.invalidCredentials && !errorStates.userInput) {
+        userInputField.removeClass("input-error");
+        userInputField.next().remove();
+    } else {
+        errorStates.userInput = false;
         userInputField.removeClass("input-error");
         userInputField.next().remove();
     }
-});
+}
 
-passInputField.focusout(function () {
-    password = $("#password-input-login").val();
+function passFieldChecks() {
+    password = passInputField.val();
     if (password.length === 0) {
         if (!passInputField.hasClass("input-error")) {
             passInputField.addClass("input-error");
@@ -140,6 +158,14 @@ passInputField.focusout(function () {
         }
         viewPass.show();
     }
+}
+
+userInputField.focusout(function () {
+    userFieldChecks();
+});
+
+passInputField.focusout(function () {
+    passFieldChecks();
 });
 
 viewPass.click(function (event) {
