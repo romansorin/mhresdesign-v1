@@ -1,6 +1,40 @@
 // Define field variables for later use in functions
-const userInputField = $("#mailuser-input-login");
-const passInputField = $("#password-input-login");
+const userInputField = {
+    id: $("#user-input-login"),
+    hasErrorClass: function () {
+        return this.id.hasClass("input-error");
+    },
+    addErrorClass: function () {
+        this.id.addClass("input-error");
+    },
+    removeErrorClass: function () {
+        this.id.removeClass("input-error");
+    },
+    removeNext: function () {
+        this.id.next().remove();
+    },
+    after: function (arrayProperty) {
+        this.id.after(arrayProperty);
+    }
+};
+const passInputField = {
+    id: $("#password-input-login"),
+    hasErrorClass: function () {
+        return this.id.hasClass("input-error");
+    },
+    addErrorClass: function () {
+        this.id.addClass("input-error");
+    },
+    removeErrorClass: function () {
+        this.id.removeClass("input-error");
+    },
+    removeNext: function () {
+        this.id.next().remove();
+    },
+    after: function (arrayProperty) {
+        this.id.after(arrayProperty);
+    }
+};
 const login = $("#login-btn");
 const viewPass = $("#view-pass");
 
@@ -15,7 +49,6 @@ let errorStates = {
     invalidCredentials: false
 };
 
-// @TODO: make placeholders red on error
 // @TODO: figure out why invalid username / password is so slow responding..
 
 // Errors array to easily access the provided errors and the error codes which are returned from login.inc.php
@@ -31,8 +64,8 @@ const errors = {
 $("#login-form").submit(function (event) {
     event.preventDefault();
     // Set the value here so the values are updated
-    username = userInputField.val();
-    password = passInputField.val();
+    username = userInputField.id.val();
+    password = passInputField.id.val();
     submit = login.val();
 
     $.ajax({
@@ -64,15 +97,21 @@ $("#login-form").submit(function (event) {
 /** [userNullCheck: Checks if the username does not exist in the database] */
 function userNullCheck() {
     errorStates.userNull = true;
-    switch (userInputField.hasClass("input-error")) { // Check if error class is already applied
+    switch (userInputField.hasErrorClass()) { // Check if error class is already applied
+        // test: it does not have an error yet, so it should run 77 and 78
+        // test again: double click.
+        // test again: empty field error.
+        // test again: no error
         case false: // If it isn't, add the class and check if the "userInput" error is already defined
-            userInputField.addClass("input-error");
-            if (errorStates.userInput === false)
+            userInputField.addErrorClass();
+            if (!errorStates.userInput) {
+                userInputField.removeNext();
                 userInputField.after(errors.userNull);
+            }
             break;
         case true: // If the class exist, remove the error message and add the userNull error message instead
-            if (errorStates.userInput === false) {
-                userInputField.next().remove();
+            if (!errorStates.userInput) {
+                userInputField.removeNext();
                 userInputField.after(errors.userNull);
             }
             break;
@@ -82,24 +121,24 @@ function userNullCheck() {
 /** [invalidCredentialsCheck: Check if username/password are valid and matching] */
 function invalidCredentialsCheck() {
     errorStates.invalidCredentials = true;
-    switch (userInputField.hasClass("input-error")) {
+    switch (userInputField.hasErrorClass()) {
         case false:
-            if (!userInputField.hasClass("input-error"))
-                userInputField.addClass("input-error");
+            if (!userInputField.hasErrorClass())
+                userInputField.addErrorClass();
             break;
         case true:
             if (!errorStates.userInput)
-                userInputField.next().remove();
+                userInputField.removeNext();
             break;
     }
-    switch (passInputField.hasClass("input-error")) {
+    switch (passInputField.hasErrorClass()) {
         case false:
-            passInputField.addClass("input-error");
+            passInputField.addErrorClass();
             viewPass.hide();
             passInputField.after(errors.invalidCredentials);
             break;
         case true:
-            userInputField.next().remove();
+            userInputField.removeNext();
             viewPass.hide();
             userInputField.after(errors.invalidCredentials);
     }
@@ -111,84 +150,93 @@ function validChecks() {
     errorStates.userInput = false;
     errorStates.userNull = false;
     errorStates.invalidCredentials = false;
-    if (userInputField.hasClass("input-error"))
-        userInputField.next().remove();
-    if (passInputField.hasClass("input-error")) {
-        passInputField.next().remove();
+    if (userInputField.hasErrorClass())
+        userInputField.removeNext();
+    if (passInputField.hasErrorClass()) {
+        passInputField.removeNext();
         viewPass.show();
     }
 }
 
 /** [userFieldChecks: Check for empty username fields and error states] */
 function userFieldChecks() {
-    username = userInputField.val();
+    username = userInputField.id.val();
     if (username.length === 0) {
         errorStates.userInput = true;
-        switch (userInputField.hasClass("input-error")) {
+        switch (userInputField.hasErrorClass()) {
             case false:
-                userInputField.addClass("input-error");
-                userInputField.after(errors.required);
+                if (!errorStates.userNull) {
+                    userInputField.addErrorClass()
+                    userInputField.after(errors.required);
+                }
                 break;
             case true:
-                userInputField.next().remove();
-                userInputField.after(errors.required);
+                if (!errorStates.userNull) {
+                    userInputField.removeNext()
+                    userInputField.after(errors.required);
+                }
                 break;
         }
 // @TODO: maybe something to test the collective state of all elements in the array?
-    } else if (errorStates.userNull === false && errorStates.invalidCredentials === false && errorStates.userInput === false) {
-        userInputField.removeClass("input-error");
-        userInputField.next().remove();
+    } else if (errorStates.userNull === false && errorStates.invalidCredentials === false && errorStates.userInput === false && errorStates.passInput === false) {
+        if (userInputField.hasErrorClass()) {
+            userInputField.removeErrorClass();
+            userInputField.id.next().remove();
+        }
     } else {
         errorStates.userInput = false;
-        userInputField.removeClass("input-error");
-        userInputField.next().remove();
+        userInputField.removeErrorClass();
+        userInputField.removeNext();
     }
 }
 
 /** [passFieldChecks: Check for empty fields & character length] */
 function passFieldChecks() {
-    password = passInputField.val();
+    password = passInputField.id.val();
     if (password.length === 0) {
-        switch (passInputField.hasClass("input-error")) {
+        switch (passInputField.hasErrorClass()) {
             case false:
-                passInputField.addClass("input-error");
+                passInputField.addErrorClass();
                 viewPass.hide();
                 passInputField.after(errors.required);
                 break;
             case true:
-                passInputField.next().remove();
+                passInputField.removeNext();
                 viewPass.hide();
                 passInputField.after(errors.required);
                 break;
         }
     } else if (password.length < 5) {
-        switch (passInputField.hasClass("input-error")) {
+        switch (passInputField.hasErrorClass()) {
             case false:
-                passInputField.addClass("input-error");
+                passInputField.addErrorClass();
                 viewPass.hide();
                 passInputField.after(errors.minChars);
                 break;
             case true:
-                passInputField.next().remove();
+                passInputField.removeNext();
                 viewPass.hide();
                 passInputField.after(errors.minChars);
                 break;
         }
-    } else if (errorStates.invalidCredentials === false) {
-        if (passInputField.hasClass("input-error")) {
-            passInputField.removeClass("input-error");
-            passInputField.next().remove();
+    } else if (!errorStates.invalidCredentials) {
+        if (passInputField.hasErrorClass()) {
+            passInputField.removeErrorClass();
+            passInputField.removeNext();
         }
         viewPass.show();
+    } else {
+        passInputField.removeErrorClass();
+        passInputField.removeNext();
     }
 }
 
 /** [Run these when input fields lose focus to validate the input] */
-userInputField.focusout(function () {
+userInputField.id.focusout(function () {
     userFieldChecks();
 });
 
-passInputField.focusout(function () {
+passInputField.id.focusout(function () {
     passFieldChecks();
 });
 

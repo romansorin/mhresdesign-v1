@@ -5,7 +5,7 @@ include '../inc/connection/configs.php';
 
 $conn = new Connection();
 $userPDO = $conn->connectToDb($db_users, $user_users, $pass_users);
-
+// @TODO: Remember me cookie
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
