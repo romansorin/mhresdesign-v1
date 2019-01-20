@@ -12,13 +12,16 @@ if (isset($_POST['submit'])) {
     $password = $_POST['password'];
     $passwordConfirm = $_POST['passwordConfirm'];
 
+    if (empty($username) || empty($email) || empty($password) || empty($passwordConfirm)) {
+        exit();
+    }
     if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
         echo "invalidUserCharsError";
-    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($email)) {
         echo "invalidEmailCharsError";
-    } else if ($password !== $passwordConfirm) {
+    } else if ($password !== $passwordConfirm && !empty($password) && !empty($passwordConfirm)) {
         echo "passConfirmError";
-    } else if (strcasecmp($username, $password) == 0) {
+    } else if (strcasecmp($username, $password) == 0 && !empty($username) && !empty($password)) {
         echo "passMatchError";
     } else {
         $query = "SELECT count(*) FROM users WHERE username='$username'";

@@ -131,6 +131,8 @@ let errorStates = {
     userInput: false,
     emailInput: false,
     passInput: false,
+    passConfirm: false,
+    passMatch: false,
     userNull: false,
     userExists: false,
     emailExists: false,
@@ -226,6 +228,7 @@ function userLoginFieldChecks() {
         userLoginInputField.removeNext();
     }
 }
+
 function passLoginFieldChecks() {
     password = passLoginInputField.id.val();
     if (password.length === 0) {
@@ -265,6 +268,7 @@ function passLoginFieldChecks() {
         passLoginInputField.removeNext();
     }
 }
+
 function userNullCheck() {
     errorStates.userNull = true;
     switch (userLoginInputField.hasErrorClass()) { // Check if error class is already applied
@@ -283,6 +287,7 @@ function userNullCheck() {
             break;
     }
 }
+
 function invalidCredentialsCheck() {
     errorStates.invalidCredentials = true;
     switch (userLoginInputField.hasErrorClass()) {
@@ -307,6 +312,7 @@ function invalidCredentialsCheck() {
             userLoginInputField.after(errors.invalidCredentials);
     }
 }
+
 function validLoginChecks() {
     // @TODO: utilize a for-each loop to assign false?
     errorStates.userInput = false;
@@ -346,7 +352,6 @@ $('#signup-form').submit(function (event) {
             emailSignupFieldChecks();
             passSignupFieldChecks();
             passConfirmFieldChecks();
-            console.log(result);
             switch (result) {
                 case errors.userExistsReturned:
                     userExistsCheck();
@@ -361,12 +366,13 @@ $('#signup-form').submit(function (event) {
                     invalidEmailCharsCheck();
                     break;
                 case errors.passMatchReturned:
+                    passMatchCheck();
                     break;
                 case errors.passConfirmReturned:
+                    passConfirmCheck();
                     break;
                 default:
                     validSignupChecks();
-                    // window.location.href = "index.php";
                     break;
             }
         }
@@ -391,43 +397,38 @@ function userSignupFieldChecks() {
                 }
                 break;
         }
-    }
-    else {
+    } else if (!errorStates.invalidUserChars) {
         errorStates.userInput = false;
         userSignupInputField.removeErrorClass();
         userSignupInputField.removeNext();
     }
 }
+
 function emailSignupFieldChecks() {
     email = emailSignupInputField.id.val();
     if (email.length === 0) {
         errorStates.emailInput = true;
         switch (emailSignupInputField.hasErrorClass()) {
             case false:
-                if (!errorStates.emailExists) {
-                    emailSignupInputField.addErrorClass();
-                    emailSignupInputField.after(errors.required);
-                }
+                emailSignupInputField.addErrorClass();
+                emailSignupInputField.after(errors.required);
                 break;
             case true:
-                if (!errorStates.emailExists) {
-                    emailSignupInputField.removeNext();
-                    emailSignupInputField.after(errors.required);
-                }
+                emailSignupInputField.removeNext();
+                emailSignupInputField.after(errors.required);
                 break;
         }
-    }
-// @TODO: maybe something to test the collective state of all elements in the array?
-    else {
+    } else {
         errorStates.emailInput = false;
         emailSignupInputField.removeErrorClass();
         emailSignupInputField.removeNext();
     }
 }
+
 function passSignupFieldChecks() {
-    username = userSignupInputField.id.val();
     password = passSignupInputField.id.val();
     if (password.length === 0) {
+        errorStates.passInput = true;
         switch (passSignupInputField.hasErrorClass()) {
             case false:
                 passSignupInputField.addErrorClass();
@@ -435,30 +436,29 @@ function passSignupFieldChecks() {
                 break;
             case true:
                 passSignupInputField.removeNext();
-                viewPass.hide();
                 passSignupInputField.after(errors.required);
                 break;
         }
     } else if (password.length < 5) {
+        errorStates.passInput = true;
         switch (passSignupInputField.hasErrorClass()) {
             case false:
                 passSignupInputField.addErrorClass();
-                viewPass.hide();
                 passSignupInputField.after(errors.minChars);
                 break;
             case true:
                 passSignupInputField.removeNext();
-                viewPass.hide();
                 passSignupInputField.after(errors.minChars);
                 break;
         }
     } else {
+        errorStates.passInput = false;
         passSignupInputField.removeErrorClass();
         passSignupInputField.removeNext();
     }
 }
+
 function passConfirmFieldChecks() {
-    password = passSignupInputField.id.val();
     passwordConfirm = passConfirmInputField.id.val();
     if (passwordConfirm.length === 0) {
         errorStates.passInput = true;
@@ -472,12 +472,13 @@ function passConfirmFieldChecks() {
                 passConfirmInputField.after(errors.required);
                 break;
         }
-    }  else {
+    } else {
         errorStates.passInput = false;
         passConfirmInputField.removeErrorClass();
         passConfirmInputField.removeNext();
     }
 }
+
 function userExistsCheck() {
     errorStates.userExists = true;
     switch (userSignupInputField.hasErrorClass()) {
@@ -491,6 +492,7 @@ function userExistsCheck() {
             break;
     }
 }
+
 function emailExistsCheck() {
     errorStates.emailExists = true;
     switch (emailSignupInputField.hasErrorClass()) {
@@ -504,6 +506,7 @@ function emailExistsCheck() {
             break;
     }
 }
+
 function invalidUserCharsCheck() {
     errorStates.invalidUserChars = true;
     switch (userSignupInputField.hasErrorClass()) {
@@ -517,20 +520,90 @@ function invalidUserCharsCheck() {
             break;
     }
 }
+
 function invalidEmailCharsCheck() {
     errorStates.invalidEmailChars = true;
     switch (emailSignupInputField.hasErrorClass()) {
         case false:
-            emailSignupInputField.addErrorClass();
-            emailSignupInputField.after(errors.invalidEmailChars);
+            if (!errorStates.emailInput) {
+                emailSignupInputField.addErrorClass();
+                emailSignupInputField.after(errors.invalidEmailChars);
+            }
             break;
         case true:
-            emailSignupInputField.removeNext();
-            emailSignupInputField.after(errors.invalidEmailChars);
+            if (!errorStates.emailInput) {
+                emailSignupInputField.removeNext();
+                emailSignupInputField.after(errors.invalidEmailChars);
+            }
             break;
     }
 }
-function validSignupChecks() {}
+
+function passMatchCheck() {
+    errorStates.passMatch = true;
+    switch (passSignupInputField.hasErrorClass()) {
+        case false:
+            if (!errorStates.passInput) {
+                passSignupInputField.addErrorClass();
+                passSignupInputField.after(errors.passMatch);
+            }
+            break;
+        case true:
+            if (!errorStates.passInput) {
+                passSignupInputField.removeNext();
+                passSignupInputField.after(errors.passMatch);
+            }
+            break;
+    }
+    switch (userSignupInputField.hasErrorClass()) {
+        case false:
+            if (!errorStates.userInput) {
+                userSignupInputField.addErrorClass();
+            }
+            break;
+        case true:
+            if (!errorStates.userInput) {
+                userSignupInputField.removeNext();
+            }
+            break;
+    }
+}
+
+function passConfirmCheck() {
+    errorStates.passConfirm = true;
+    switch (passSignupInputField.hasErrorClass()) {
+        case false:
+            passSignupInputField.addErrorClass();
+            passSignupInputField.after(errors.passConfirm);
+            break;
+        case true:
+            passSignupInputField.removeNext();
+            passSignupInputField.after(errors.passConfirm);
+            break;
+    }
+    switch (passConfirmInputField.hasErrorClass()) {
+        case false:
+            passConfirmInputField.addErrorClass();
+            break;
+        case true:
+            passConfirmInputField.removeNext();
+            break;
+    }
+}
+
+function validSignupChecks() {
+    if (errorStates.userInput === false && errorStates.emailInput === false && errorStates.passInput === false) {
+        if (userSignupInputField.hasErrorClass())
+            userSignupInputField.removeNext();
+        if (passSignupInputField.hasErrorClass())
+            passSignupInputField.removeNext();
+        if (emailSignupInputField.hasErrorClass())
+            emailSignupInputField.removeNext();
+        if (passConfirmInputField.hasErrorClass())
+            passConfirmInputField.removeNext();
+        window.location.href = "index.php";
+    }
+}
 
 userSignupInputField.id.focusout(function () {
     userSignupFieldChecks();
