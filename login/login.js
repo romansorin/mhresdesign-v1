@@ -1,18 +1,19 @@
+/* Declare field variables for all three forms (login, signup, forgot password) with the same functions but separate ID's */
 const userLoginInputField = {
-    id: $("#user-input-login"),
-    hasErrorClass: function () {
+    id: $("#user-input-login"), // 'id' corresponds to the input field's id
+    hasErrorClass: function () { // Checks if the given object/field has been assigned the error class, responds truthy or falsy
         return this.id.hasClass("input-error");
     },
-    addErrorClass: function () {
+    addErrorClass: function () { // Adds error class, likely called after checking through hasErrorClass
         this.id.addClass("input-error");
     },
-    removeErrorClass: function () {
+    removeErrorClass: function () { // Removes error class
         this.id.removeClass("input-error");
     },
-    removeNext: function () {
+    removeNext: function () { // Removes the next element in the DOM (ex. the subtitle after a title, the input after a label)
         this.id.next().remove();
     },
-    after: function (arrayProperty) {
+    after: function (arrayProperty) { // Add an element after the object / node which is calling the function
         this.id.after(arrayProperty);
     }
 };
@@ -108,41 +109,39 @@ const passConfirmInputField = {
     }
 };
 
+/* Declare variables for the buttons to reference */
 const login = $("#login-btn");
 const signup = $("#signup-btn");
+const forgot = $("#forgotpass-btn");
 const viewPass = $("#view-pass");
 
+/* Declare general variables for the AJAX calls to process the values when requested */
 let username, email, password, passwordConfirm, submit;
 
-/* Necessary checks:
- + If any fields are empty (required fields)
- + If email does not contain @
- + If password and passwordConfirm do not match
- + Minimum characters > 5
- + Username cannot have invalid characters
- + Password cannot match username
- + Username already exists
- + Email already exists
- */
 // @TODO: Stay on page (login, singup, forgot password) on refresh
 // @TODO: Do not re-submit form data on refresh or going back
 
+/* These error states are important for determining which error should show on a given field. If a field has two or more errors, conditional checks can be made within the
+    associated functions to display a specific error. These are also used to determine if the form should submit if all checks pass / there is no return from the PHP files.
+    The keys are assigned as 'false' to represent that there are no errors, and 'true' if an error exists
+ */
 let errorStates = {
-    userInput: false,
-    emailInput: false,
-    passInput: false,
-    passConfirm: false,
-    passMatch: false,
-    userNull: false,
-    userExists: false,
-    emailExists: false,
-    invalidUserChars: false,
-    invalidEmailChars: false,
-    invalidCredentials: false
+    userInput: false, // Empty fields
+    emailInput: false, // Empty fields
+    passInput: false, // Empty fields
+    passConfirm: false, // Empty fields and not matching default field
+    passMatch: false, // The name is a bit confusing, but passMatch refers to the password matching the username
+    userNull: false, // Username not existing in the database
+    userExists: false, // Username already existing in the database
+    emailExists: false, // Email already existing in the database
+    invalidUserChars: false, // Invalid chars
+    invalidEmailChars: false, // Invalid chars
+    invalidCredentials: false // Password is not correct for a given username
 };
 
 // @TODO: figure out why invalid username / password is so slow responding..
 
+/* An array to hold all of the error messages in one place, in case any need to be changed / added / removed */
 const errors = {
     required: "<span class='input-error inline-error'>This field is required.</span>",
     minChars: "<span class='input-error inline-error'>Password must be a minimum of 5 characters.</span>",
@@ -154,6 +153,7 @@ const errors = {
     invalidUserChars: "<span class='input-error inline-error'>Username can only contain alphanumerics.</span>",
     invalidEmailChars: "<span class='input-error inline-error'>Email must contain '@' and valid format.</span>",
     invalidCredentials: "<span class='input-error inline-error'>Invalid username/password.</span>",
+    // These are all returned from respective PHP files
     passConfirmReturned: "passConfirmError",
     passMatchReturned: "passMatchError",
     userNullReturned: "userNullError",
@@ -165,10 +165,10 @@ const errors = {
 };
 
 
-// Login
+/* Login form submission event */
 $("#login-form").submit(function (event) {
-    event.preventDefault();
-    // Set the value here so the values are updated
+    event.preventDefault(); // Don't want the form to submit automatically without going through validation, so we prevent it here */
+    // Set the value here so the values are updated and accurate
     username = userLoginInputField.id.val();
     password = passLoginInputField.id.val();
     submit = login.val();
@@ -181,7 +181,7 @@ $("#login-form").submit(function (event) {
             /* In the case that a user submits the login form without entering any fields, check if these fields are empty. If they are, respond with a "required" error */
             userLoginFieldChecks();
             passLoginFieldChecks();
-            /* This switch checks the result which is returned from login.inc.php in the form of a string */
+            /* This switch checks the result which is returned from login.inc.php in the form of a string, where the string is then compared to a given error in the errors array */
             switch (result) {
                 case errors.userNullReturned:
                     userNullCheck();
@@ -191,44 +191,42 @@ $("#login-form").submit(function (event) {
                     break;
                 default:
                     validLoginChecks();
-                    window.location.href = "../dashboard";
                     break;
             }
         }
     });
 });
 
+/* Checks */
+/* Checks the value of the username login field to determine if it is empty */
 function userLoginFieldChecks() {
     username = userLoginInputField.id.val();
     if (username.length === 0) {
         errorStates.userInput = true;
         switch (userLoginInputField.hasErrorClass()) {
             case false:
-                if (!errorStates.userNull) {
+                if (!errorStates.userNull) { // userNull can be read as "user not existing"
                     userLoginInputField.addErrorClass();
                     userLoginInputField.after(errors.required);
                 }
                 break;
             case true:
                 if (!errorStates.userNull) {
-                    userLoginInputField.removeNext();
+                    userLoginInputField.removeNext(); // removeNext is necessary because another message may exist, and will interfere with the new 'after' message
                     userLoginInputField.after(errors.required);
                 }
                 break;
         }
 // @TODO: maybe something to test the collective state of all elements in the array?
-    } else if (errorStates.userNull === false && errorStates.invalidCredentials === false && errorStates.userInput === false && errorStates.passInput === false) {
+    } else {
+        errorStates.userInput = false;
         if (userLoginInputField.hasErrorClass()) {
             userLoginInputField.removeErrorClass();
             userLoginInputField.removeNext();
         }
-    } else {
-        errorStates.userInput = false;
-        userLoginInputField.removeErrorClass();
-        userLoginInputField.removeNext();
     }
 }
-
+/* Checks the value of the password field for character length, a null input, and handles the display of the 'viewPass' functionality */
 function passLoginFieldChecks() {
     password = passLoginInputField.id.val();
     if (password.length === 0) {
@@ -268,7 +266,7 @@ function passLoginFieldChecks() {
         passLoginInputField.removeNext();
     }
 }
-
+/* Checks if the username provided does not exist in the database */
 function userNullCheck() {
     errorStates.userNull = true;
     switch (userLoginInputField.hasErrorClass()) { // Check if error class is already applied
@@ -287,7 +285,7 @@ function userNullCheck() {
             break;
     }
 }
-
+/* Checks if the login and password match, returning the respective state */
 function invalidCredentialsCheck() {
     errorStates.invalidCredentials = true;
     switch (userLoginInputField.hasErrorClass()) {
@@ -312,7 +310,7 @@ function invalidCredentialsCheck() {
             userLoginInputField.after(errors.invalidCredentials);
     }
 }
-
+/* If all other checks are valid, assign all errorStates to false and remove error classes/messages if they exist */
 function validLoginChecks() {
     // @TODO: utilize a for-each loop to assign false?
     errorStates.userInput = false;
@@ -324,8 +322,10 @@ function validLoginChecks() {
         passLoginInputField.removeNext();
         viewPass.show();
     }
+    window.location.href = "../dashboard"; // Redirect the user to the dashboard if they log in successfully
 }
 
+/* Events */
 userLoginInputField.id.focusout(function () {
     userLoginFieldChecks();
 });
@@ -333,7 +333,7 @@ passLoginInputField.id.focusout(function () {
     passLoginFieldChecks();
 });
 
-// Signup
+/* Signup form submission event */
 $('#signup-form').submit(function (event) {
     event.preventDefault();
 
@@ -347,7 +347,12 @@ $('#signup-form').submit(function (event) {
         type: "POST",
         url: "signup.inc.php",
         data: {username: username, email: email, password: password, passwordConfirm: passwordConfirm, submit: submit},
+        // @TODO: make separate AJAX calls for user exists and email exists to display at the same time
+        // @TODO: allow javascript to handle passMatch and passConfirm so less ajax calls need to be made
         success: function (result) {
+            /* As also seen above in the login event handler, these functions are called despite mostly being used for the focusout events; this is to
+               ensure that a user clicking "submit" without entering any data cannot make the submission
+            */
             userSignupFieldChecks();
             emailSignupFieldChecks();
             passSignupFieldChecks();
@@ -378,7 +383,7 @@ $('#signup-form').submit(function (event) {
         }
     })
 });
-
+/* This function checks for an empty input, as well as checking the error against other error states which have precedence over an empty field */
 function userSignupFieldChecks() {
     username = userSignupInputField.id.val();
     if (username.length === 0) {
@@ -403,7 +408,7 @@ function userSignupFieldChecks() {
         userSignupInputField.removeNext();
     }
 }
-
+/* Checks for empty input */
 function emailSignupFieldChecks() {
     email = emailSignupInputField.id.val();
     if (email.length === 0) {
@@ -424,7 +429,7 @@ function emailSignupFieldChecks() {
         emailSignupInputField.removeNext();
     }
 }
-
+/* Checks for empty input and minimum characters */
 function passSignupFieldChecks() {
     password = passSignupInputField.id.val();
     if (password.length === 0) {
@@ -457,7 +462,7 @@ function passSignupFieldChecks() {
         passSignupInputField.removeNext();
     }
 }
-
+/* Checks for empty input */
 function passConfirmFieldChecks() {
     passwordConfirm = passConfirmInputField.id.val();
     if (passwordConfirm.length === 0) {
@@ -478,7 +483,7 @@ function passConfirmFieldChecks() {
         passConfirmInputField.removeNext();
     }
 }
-
+/* Checks if the user already exists in the database */
 function userExistsCheck() {
     errorStates.userExists = true;
     switch (userSignupInputField.hasErrorClass()) {
@@ -492,7 +497,7 @@ function userExistsCheck() {
             break;
     }
 }
-
+/* Checks if the email already exists in the database */
 function emailExistsCheck() {
     errorStates.emailExists = true;
     switch (emailSignupInputField.hasErrorClass()) {
@@ -506,7 +511,7 @@ function emailExistsCheck() {
             break;
     }
 }
-
+/* Checks that the user does not contain any invalid characters, which are defined in the php file */
 function invalidUserCharsCheck() {
     errorStates.invalidUserChars = true;
     switch (userSignupInputField.hasErrorClass()) {
@@ -520,7 +525,7 @@ function invalidUserCharsCheck() {
             break;
     }
 }
-
+/* Checks that the email does not contain any invalid characters, which are defined in the php file */
 function invalidEmailCharsCheck() {
     errorStates.invalidEmailChars = true;
     switch (emailSignupInputField.hasErrorClass()) {
@@ -538,7 +543,7 @@ function invalidEmailCharsCheck() {
             break;
     }
 }
-
+/* Checks that the username and password are not the same (case-insensitive) for security reasons */
 function passMatchCheck() {
     errorStates.passMatch = true;
     switch (passSignupInputField.hasErrorClass()) {
@@ -568,7 +573,7 @@ function passMatchCheck() {
             break;
     }
 }
-
+/* Checks that the password and password confirmation are equal */
 function passConfirmCheck() {
     errorStates.passConfirm = true;
     switch (passSignupInputField.hasErrorClass()) {
@@ -590,9 +595,9 @@ function passConfirmCheck() {
             break;
     }
 }
-
+/* If all other checks are valid, assign all errorStates to false and remove error classes/messages if they exist */
 function validSignupChecks() {
-    if (errorStates.userInput === false && errorStates.emailInput === false && errorStates.passInput === false) {
+    if (errorStates.userInput === false && errorStates.emailInput === false && errorStates.passInput === false) { // Do NOT allow submission if these are not false
         if (userSignupInputField.hasErrorClass())
             userSignupInputField.removeNext();
         if (passSignupInputField.hasErrorClass())
@@ -605,6 +610,7 @@ function validSignupChecks() {
     }
 }
 
+/* Events */
 userSignupInputField.id.focusout(function () {
     userSignupFieldChecks();
 });
@@ -621,11 +627,11 @@ passConfirmInputField.id.focusout(function () {
 // ViewPass icon
 viewPass.click(function (event) {
     event.preventDefault();
-    if (passLoginInputField.attr('type') === 'password') {
-        passLoginInputField.attr('type', 'text');
+    if (passLoginInputField.id.attr('type') === 'password') {
+        passLoginInputField.id.attr('type', 'text');
         $(this).find($(".far")).removeClass('fa-eye-slash').addClass('fa-eye');
     } else {
-        passLoginInputField.attr('type', 'password');
+        passLoginInputField.id.attr('type', 'password');
         $(this).find($(".far")).removeClass('fa-eye').addClass('fa-eye-slash');
     }
 });
