@@ -37,7 +37,7 @@ else:
 						<form action="login.inc.php" method="post" id="login-form">
 							<div class="login-header"><h2>Login</h2></div>
 							<div class="form-group">
-								<input type="text" class="form-input" name="mailuser-input-login" id="mailuser-input-login" placeholder="Username" autocomplete="off">
+								<input type="text" class="form-input" name="user-input-login" id="user-input-login" placeholder="Username" autocomplete="off">
 							</div>
 							<div class="form-group">
 								<!-- class="input-error -->
@@ -70,7 +70,7 @@ else:
 								<input type="text" class="form-input" name="user-input-signup" id="user-input-signup" placeholder="Username" autocomplete="off">
 							</div>
 							<div class="form-group">
-								<input type="email" class="form-input" name="email-input-signup" id="email-input-signup" placeholder="Email" autocomplete="off">
+								<input type="text" class="form-input" name="email-input-signup" id="email-input-signup" placeholder="Email" autocomplete="off">
 							</div>
 							<div class="form-group">
 								<input type="password" class="form-input" name="password-input-signup" id="password-input-signup" placeholder="Password" autocomplete="off">
@@ -97,7 +97,7 @@ else:
 		</div>
 		<script src="main.js"></script>
 		<script src="app.js"></script>
-    <script src="ajax.js"></script>
+        <script src="login.js"></script>
 	<?php endif;?>
 </body>
 </html>

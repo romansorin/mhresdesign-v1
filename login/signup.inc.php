@@ -3,49 +3,41 @@
 include '../inc/connection/connection.php';
 include '../inc/connection/configs.php';
 
-$conn    = new Connection();
+$conn = new Connection();
 $userPDO = $conn->connectToDb($db_users, $user_users, $pass_users);
 
-if (isset($_POST['signup-submit'])) {
-    $username       = $_POST['user-input-signup'];
-    $email          = $_POST['email-input-signup'];
-    $password       = $_POST['password-input-signup'];
-    $passwordRepeat = $_POST['password-confirm-input-signup'];
+if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $passwordConfirm = $_POST['passwordConfirm'];
 
-    if (empty($username) || empty($email) || empty($password) || empty($passwordRepeat)) {
-        header("Location: index.php?error=empty_fields");
-        exit();
+    if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
+        echo "invalidUserCharsError";
     } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: index.php?error=invalid_email");
-        exit();
-    } else if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-        header("Location: index.php?error=invalid_username");
-        exit();
-    } else if ($password !== $passwordRepeat) {
-        header("Location: index.php?error=invalid_password_confirm");
-        exit();
-    } else if (strlen($password) < 5) {
-        header("Location: index.php?error=min_password_chars");
-        exit();
+        echo "invalidEmailCharsError";
+    } else if ($password !== $passwordConfirm) {
+        echo "passConfirmError";
+    } else if (strcasecmp($username, $password) == 0) {
+        echo "passMatchError";
     } else {
-        $query      = "SELECT count(*) FROM users WHERE username='$username'";
+        $query = "SELECT count(*) FROM users WHERE username='$username'";
         $usersCount = $userPDO->query($query)->fetchColumn();
 
-        $query     = "SELECT count(*) FROM users WHERE email='$email'";
+        $query = "SELECT count(*) FROM users WHERE email='$email'";
         $mailCount = $userPDO->query($query)->fetchColumn();
 
         if ($usersCount > 0) {
-            header("Location: index.php?error=username_taken");
-            exit();
+            echo "userExistsError";
         } else if ($mailCount > 0) {
-            header("Location: index.php?error=email_taken");
-            exit();
+            echo "emailExistsError";
         } else {
-            $hashedPassword    = password_hash($password, PASSWORD_DEFAULT);
+            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
             $registration_date = setDate();
 
+            // add 'default' permissions to user?
             $query = "INSERT INTO users (username, email, password, reg_date) VALUES ('$username', '$email', '$hashedPassword', '$registration_date')";
-            $stmt  = $userPDO->prepare($query);
+            $stmt = $userPDO->prepare($query);
             $stmt->execute();
 
             if ($stmt) {
@@ -59,7 +51,8 @@ if (isset($_POST['signup-submit'])) {
     }
 }
 
-function setDate() {
+function setDate()
+{
     date_default_timezone_set('America/New_York');
     $date = new DateTime();
     return $date->format('Y-m-d H:i:s');
