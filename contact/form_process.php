@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail = new PHPMailer(true); // Passing `true` enables exceptions
         try {
 
-            mailConfig();
+            supportRequestMail();
             // Content
             $mail->isHTML(true); // Set email format to HTML
             $mail->Subject = "Contact form submission: " . $subject;
