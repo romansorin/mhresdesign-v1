@@ -20,7 +20,7 @@ Local development was hosted through XAMPP (Apache 7.2, MySQL 7 + MariaDB), whic
 ## Authors
 
 * **Roman Sorin** - *Initial work* - [romansorin](https://github.com/romansorin)
-* **Ryan Rapini** - *Introduced me to PHP concepts, frameworks, helped with issues, built CalendarWidget when I didn't know how to* - [ryanrapini](https://github.com/romansorin)
+* **Ryan Rapini** - *Introduced me to PHP concepts, frameworks, helped with issues, built CalendarWidget when I didn't know how to* - [ryanrapini](https://github.com/ryanrapini)
 * **Matt Kern** - *Assisted in setting server up with Ryan, used for help with MySQL concepts, structure, and methodologies*
 
 ## License
