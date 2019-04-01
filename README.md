@@ -1,5 +1,5 @@
 # MHResdesign v1
-## This repo is no longer maintained and has been discontinued as of Jan. 14, 2019
+## This repo is no longer maintained and has been discontinued as of Jan. 14, 2019. See [the new repo](https://github.com/romansorin/mhlaravel) for more activity.
 
 This repository served as my starting point for redesigning and recoding the website for Mentor High School and served as a way for me to dive head-in into my web development career. As I had no real prior web development experience, much of the code found here is undocumented, poorly written, and inefficient. Despite no longer maintaining or using the code found here, this initial version of the Mentor High revamp served as a beneficial learning ground.
 
